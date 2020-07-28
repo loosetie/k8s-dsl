@@ -12,7 +12,7 @@ to the latest internal value, and may reject unrecognized values. More info:
                    
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources */
   override val apiVersion: String
-    get() = "/v1"
+    get() = "v1"
   /** Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint
 the client submits requests to. Cannot be updated. In CamelCase. More info: 
                    
@@ -41,7 +41,7 @@ to the latest internal value, and may reject unrecognized values. More info:
                    
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources */
   override val apiVersion: String
-    get() = "/v1"
+    get() = "v1"
   /** Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint
 the client submits requests to. Cannot be updated. In CamelCase. More info: 
                    
@@ -92,7 +92,7 @@ to the latest internal value, and may reject unrecognized values. More info:
                    
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources */
   override val apiVersion: String
-    get() = "/v1"
+    get() = "v1"
   /** Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint
 the client submits requests to. Cannot be updated. In CamelCase. More info: 
                    
@@ -295,7 +295,7 @@ to the latest internal value, and may reject unrecognized values. More info:
                    
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources */
   override val apiVersion: String
-    get() = "/v1"
+    get() = "v1"
   /** Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint
 the client submits requests to. Cannot be updated. In CamelCase. More info: 
                    
@@ -945,7 +945,7 @@ Read-only. More info:
 interface OwnerReference_v1_: K8sTopLevel {
   /** API version of the referent. */
   override val apiVersion: String
-    get() = "/v1"
+    get() = "v1"
   /** Kind of the referent. More info: 
                    
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds */
@@ -981,7 +981,7 @@ to the latest internal value, and may reject unrecognized values. More info:
                    
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources */
   override val apiVersion: String
-    get() = "/v1"
+    get() = "v1"
   /** Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint
 the client submits requests to. Cannot be updated. In CamelCase. More info: 
                    
@@ -1223,7 +1223,7 @@ to the latest internal value, and may reject unrecognized values. More info:
                    
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources */
   override val apiVersion: String
-    get() = "/v1"
+    get() = "v1"
   /** Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint
 the client submits requests to. Cannot be updated. In CamelCase. More info: 
                    
@@ -1280,7 +1280,7 @@ to the latest internal value, and may reject unrecognized values. More info:
                    
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources */
   override val apiVersion: String
-    get() = "/v1"
+    get() = "v1"
   /** Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint
 the client submits requests to. Cannot be updated. In CamelCase. More info: 
                    
@@ -1403,7 +1403,7 @@ to the latest internal value, and may reject unrecognized values. More info:
                    
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources */
   override val apiVersion: String
-    get() = "/v1"
+    get() = "v1"
   /** Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint
 the client submits requests to. Cannot be updated. In CamelCase. More info: 
                    
@@ -1437,7 +1437,7 @@ to the latest internal value, and may reject unrecognized values. More info:
                    
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources */
   override val apiVersion: String
-    get() = "/v1"
+    get() = "v1"
   /** Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint
 the client submits requests to. Cannot be updated. In CamelCase. More info: 
                    
@@ -1493,7 +1493,7 @@ to the latest internal value, and may reject unrecognized values. More info:
                    
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources */
   override val apiVersion: String
-    get() = "/v1"
+    get() = "v1"
   /** Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint
 the client submits requests to. Cannot be updated. In CamelCase. More info: 
                    
@@ -1513,7 +1513,7 @@ to the latest internal value, and may reject unrecognized values. More info:
                    
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources */
   override val apiVersion: String
-    get() = "/v1"
+    get() = "v1"
   /** Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint
 the client submits requests to. Cannot be updated. In CamelCase. More info: 
                    
@@ -1571,7 +1571,7 @@ to the latest internal value, and may reject unrecognized values. More info:
                    
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources */
   override val apiVersion: String
-    get() = "/v1"
+    get() = "v1"
   /** Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint
 the client submits requests to. Cannot be updated. In CamelCase. More info: 
                    
@@ -1591,7 +1591,7 @@ to the latest internal value, and may reject unrecognized values. More info:
                    
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources */
   override val apiVersion: String
-    get() = "/v1"
+    get() = "v1"
   /** Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint
 the client submits requests to. Cannot be updated. In CamelCase. More info: 
                    
@@ -1611,7 +1611,7 @@ to the latest internal value, and may reject unrecognized values. More info:
                    
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources */
   override val apiVersion: String
-    get() = "/v1"
+    get() = "v1"
   /** Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint
 the client submits requests to. Cannot be updated. In CamelCase. More info: 
                    
@@ -1645,7 +1645,7 @@ to the latest internal value, and may reject unrecognized values. More info:
                    
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources */
   override val apiVersion: String
-    get() = "/v1"
+    get() = "v1"
   /** Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint
 the client submits requests to. Cannot be updated. In CamelCase. More info: 
                    
@@ -1734,7 +1734,7 @@ to the latest internal value, and may reject unrecognized values. More info:
                    
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources */
   override val apiVersion: String
-    get() = "/v1"
+    get() = "v1"
   /** Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint
 the client submits requests to. Cannot be updated. In CamelCase. More info: 
                    
@@ -1754,7 +1754,7 @@ to the latest internal value, and may reject unrecognized values. More info:
                    
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources */
   override val apiVersion: String
-    get() = "/v1"
+    get() = "v1"
   /** Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint
 the client submits requests to. Cannot be updated. In CamelCase. More info: 
                    
@@ -1782,7 +1782,7 @@ to the latest internal value, and may reject unrecognized values. More info:
                    
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources */
   override val apiVersion: String
-    get() = "/v1"
+    get() = "v1"
   /** Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint
 the client submits requests to. Cannot be updated. In CamelCase. More info: 
                    
@@ -1817,7 +1817,7 @@ to the latest internal value, and may reject unrecognized values. More info:
                    
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources */
   override val apiVersion: String
-    get() = "/v1"
+    get() = "v1"
   /** Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint
 the client submits requests to. Cannot be updated. In CamelCase. More info: 
                    
@@ -1954,7 +1954,7 @@ to the latest internal value, and may reject unrecognized values. More info:
                    
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources */
   override val apiVersion: String
-    get() = "/v1"
+    get() = "v1"
   /** Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint
 the client submits requests to. Cannot be updated. In CamelCase. More info: 
                    
@@ -2088,7 +2088,7 @@ to the latest internal value, and may reject unrecognized values. More info:
                    
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources */
   override val apiVersion: String
-    get() = "/v1alpha1"
+    get() = "v1alpha1"
   /** Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint
 the client submits requests to. Cannot be updated. In CamelCase. More info: 
                    
@@ -2186,7 +2186,7 @@ to the latest internal value, and may reject unrecognized values. More info:
                    
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources */
   override val apiVersion: String
-    get() = "/v1alpha1"
+    get() = "v1alpha1"
   /** Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint
 the client submits requests to. Cannot be updated. In CamelCase. More info: 
                    
@@ -2220,7 +2220,7 @@ to the latest internal value, and may reject unrecognized values. More info:
                    
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources */
   override val apiVersion: String
-    get() = "/v1alpha1"
+    get() = "v1alpha1"
   /** Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint
 the client submits requests to. Cannot be updated. In CamelCase. More info: 
                    
@@ -2242,7 +2242,7 @@ to the latest internal value, and may reject unrecognized values. More info:
                    
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources */
   override val apiVersion: String
-    get() = "/v1alpha1"
+    get() = "v1alpha1"
   /** Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint
 the client submits requests to. Cannot be updated. In CamelCase. More info: 
                    
@@ -2294,7 +2294,7 @@ to the latest internal value, and may reject unrecognized values. More info:
                    
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources */
   override val apiVersion: String
-    get() = "/v1alpha1"
+    get() = "v1alpha1"
   /** Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint
 the client submits requests to. Cannot be updated. In CamelCase. More info: 
                    
