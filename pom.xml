@@ -30,6 +30,8 @@
 
     <spring-boot.version>2.3.2.RELEASE</spring-boot.version>
     <mockk.version>1.10.0</mockk.version>
+    <jackson.version>2.10.5</jackson.version> <!-- Serialization is broken with 2.11.1 (iscsi vs. csi) -->
+    <jackson-bom.version>${jackson.version}</jackson-bom.version>
   </properties>
 
 
@@ -60,6 +62,20 @@
         <groupId>org.jetbrains.kotlin</groupId>
         <artifactId>kotlin-reflect</artifactId>
         <version>${kotlin.version}</version>
+      </dependency>
+
+      <!-- These two dependencies are necessary, as this is how dependency versions from spring can be overwritten -->
+      <dependency>
+        <groupId>com.fasterxml.jackson.datatype</groupId>
+        <artifactId>jackson-datatype-joda-money</artifactId>
+        <version>${jackson.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.fasterxml.jackson</groupId>
+        <artifactId>jackson-bom</artifactId>
+        <version>${jackson-bom.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
       </dependency>
 
       <dependency>
