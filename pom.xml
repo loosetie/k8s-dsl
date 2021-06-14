@@ -14,6 +14,7 @@
     <module>util-jackson</module>
     <module>v1_16</module>
     <module>v1_17</module>
+    <module>v1_18</module>
     <module>kubevirt_v0_31_0</module>
   </modules>
 
