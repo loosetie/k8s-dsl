@@ -18,6 +18,7 @@
     <module>v1_19</module>
     <module>v1_20</module>
     <module>v1_21</module>
+    <module>shared</module>
     <module>kubevirt_v0_31_0</module>
   </modules>
 
@@ -44,6 +45,11 @@
       <dependency>
         <groupId>de.loosetie.k8s</groupId>
         <artifactId>lt-k8s-dsl-api</artifactId>
+        <version>${project.parent.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>de.loosetie.k8s</groupId>
+        <artifactId>lt-k8s-dsl-shared</artifactId>
         <version>${project.parent.version}</version>
       </dependency>
       <dependency>
