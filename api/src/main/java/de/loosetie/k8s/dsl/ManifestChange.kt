@@ -3,13 +3,13 @@ package de.loosetie.k8s.dsl
 enum class ManifestChange {
   NEW,
   UNCHANGED,
-  EXTENDED,
-  CHANGED,
-  REMOVED
+  EXTENDED, // Some fields have changed
+  CHANGED, // Some new fields appeared
+  REMOVED // ID doe not appear in newer version
 }
 
 enum class ManifestFieldChange {
-  NEW, // Neu hinzugekommen: Teste nur nach name
-  UNCHANGED, // Alles gleich
-  CHANGED // name gleich, etwas anderes nicht
+  NEW, // If name does not exist yet
+  UNCHANGED, // Nothing has changed
+  CHANGED // The same name, something else has changed
 }
