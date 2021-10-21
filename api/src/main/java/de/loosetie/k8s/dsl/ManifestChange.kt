@@ -10,6 +10,7 @@ enum class ManifestChange {
 
 enum class ManifestFieldChange {
   NEW, // If name does not exist yet
-  UNCHANGED, // Nothing has changed
-  CHANGED // The same name, something else has changed
+  UNCHANGED, // Nothing has changed,
+  CHANGED, // The same name, type has changed
+  DESC_CHANGED // The same name, different description -> goes to extended
 }
