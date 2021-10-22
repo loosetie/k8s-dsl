@@ -45,29 +45,4 @@ interface Podpresetspec_settings_k8s_io_v1alpha1_k8s1_19: K8sManifest {
   /** Volumes defines the collection of Volume to inject into the pod. */
   val volumes: List<Volume_core_v1_k8s1_19>?
 }      
-@K8sDslMarker
-interface Podpresetspec_settings_k8s_io_v1alpha1_k8s1_19: K8sManifest {
-  /** Env defines the collection of EnvVar to inject into containers. */
-  val env: List<EnvVar_core_v1_k8s1_20>?
-  /** EnvFrom defines the collection of EnvFromSource to inject into containers. */
-  val envFrom: List<EnvFromSource_core_v1_k8s1_20>?
-  /** Selector is a label query over a set of resources, in this case pods. Required. */
-  val selector: LabelSelector_meta_v1_k8s1_20?
-  /** VolumeMounts defines the collection of VolumeMount to inject into containers. */
-  val volumeMounts: List<VolumeMount_core_v1_k8s1_20>?
-  /** Volumes defines the collection of Volume to inject into the pod. */
-  val volumes: List<Volume_core_v1_k8s1_20>?
-}      
-@K8sDslMarker
-interface Podpresetspec_settings_k8s_io_v1alpha1_k8s1_19: K8sManifest {
-  /** Env defines the collection of EnvVar to inject into containers. */
-  val env: List<EnvVar_core_v1_k8s1_21>?
-  /** EnvFrom defines the collection of EnvFromSource to inject into containers. */
-  val envFrom: List<EnvFromSource_core_v1_k8s1_21>?
-  /** Selector is a label query over a set of resources, in this case pods. Required. */
-  val selector: LabelSelector_meta_v1_k8s1_21?
-  /** VolumeMounts defines the collection of VolumeMount to inject into containers. */
-  val volumeMounts: List<VolumeMount_core_v1_k8s1_21>?
-  /** Volumes defines the collection of Volume to inject into the pod. */
-  val volumes: List<Volume_core_v1_k8s1_21>?
-}
+      

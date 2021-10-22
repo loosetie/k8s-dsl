@@ -60,12 +60,3 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
   val spec: Jobspec_batch_v1_k8s1_21?
 }
 
-@K8sDslMarker
-interface JobTemplateSpec_batch_v1beta1_k8s1_20: K8sManifest, HasMetadata {
-  /** Standard object's metadata of the jobs created from this template. More info:
-https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata */
-  val metadata: ObjectMeta_meta_v1_k8s1_21?
-  /** Specification of the desired behavior of the job. More info:
-https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status */
-  val spec: Jobspec_batch_v1_k8s1_21?
-}
