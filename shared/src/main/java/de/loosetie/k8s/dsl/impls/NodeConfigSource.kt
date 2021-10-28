@@ -1,0 +1,21 @@
+package de.loosetie.k8s.dsl.impls
+
+import com.fasterxml.jackson.annotation.JsonIgnore
+import com.fasterxml.jackson.annotation.JsonPropertyOrder
+import de.loosetie.k8s.dsl.K8sManifest
+import de.loosetie.k8s.dsl.HasParent
+import de.loosetie.k8s.dsl.manifests.*
+
+@JsonPropertyOrder("configMap")
+class NodeConfigSource_core_v1_k8s1_16Impl(
+  @JsonIgnore
+  override val parent: K8sManifest? = null
+)
+: NodeConfigSource_core_v1_k8s1_16, HasParent {
+  override var configMap: ConfigMapNodeConfigSource_core_v1_k8s1_16? = null
+}
+typealias NodeConfigSource_core_v1_k8s1_17Impl = NodeConfigSource_core_v1_k8s1_16Impl
+typealias NodeConfigSource_core_v1_k8s1_18Impl = NodeConfigSource_core_v1_k8s1_17Impl
+typealias NodeConfigSource_core_v1_k8s1_19Impl = NodeConfigSource_core_v1_k8s1_18Impl
+typealias NodeConfigSource_core_v1_k8s1_20Impl = NodeConfigSource_core_v1_k8s1_19Impl
+typealias NodeConfigSource_core_v1_k8s1_21Impl = NodeConfigSource_core_v1_k8s1_20Impl

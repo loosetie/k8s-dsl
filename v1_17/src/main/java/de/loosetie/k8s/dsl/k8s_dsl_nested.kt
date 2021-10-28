@@ -7,8 +7,8 @@ import de.loosetie.k8s.dsl.impls.*
 /** preferredVersion is the version preferred by the API server, which probably is the storage version. */
 @K8sDslMarker
 fun APIGroup.preferredVersion(init: GroupVersionForDiscovery.() -> Unit) {
-  this as APIGroup_meta_v1Impl
-  GroupVersionForDiscovery_meta_v1Impl(this)
+  this as APIGroup_meta_v1_k8s1_17Impl
+  GroupVersionForDiscovery_meta_v1_k8s1_17Impl(this)
     .also { preferredVersion = it }
     .apply(init)
 }
@@ -21,8 +21,8 @@ server using an internal IP. Server looks at X-Forwarded-For header or X-Real-Ip
 order) to get the client IP. */
 @K8sDslMarker
 fun APIGroup.serverAddressByClientCIDRs(init: ServerAddressByClientCIDR.() -> Unit) {
-  this as APIGroup_meta_v1Impl
-  ServerAddressByClientCIDR_meta_v1Impl(this)
+  this as APIGroup_meta_v1_k8s1_17Impl
+  ServerAddressByClientCIDR_meta_v1_k8s1_17Impl(this)
     .also { serverAddressByClientCIDRs = serverAddressByClientCIDRs?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -30,8 +30,8 @@ fun APIGroup.serverAddressByClientCIDRs(init: ServerAddressByClientCIDR.() -> Un
 /** versions are the versions supported in this group. */
 @K8sDslMarker
 fun APIGroup.versions(init: GroupVersionForDiscovery.() -> Unit) {
-  this as APIGroup_meta_v1Impl
-  GroupVersionForDiscovery_meta_v1Impl(this)
+  this as APIGroup_meta_v1_k8s1_17Impl
+  GroupVersionForDiscovery_meta_v1_k8s1_17Impl(this)
     .also { versions = versions?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -39,8 +39,8 @@ fun APIGroup.versions(init: GroupVersionForDiscovery.() -> Unit) {
 /** Last time the condition transitioned from one status to another. */
 @K8sDslMarker
 fun APIServiceCondition.lastTransitionTime(init: Time.() -> Unit) {
-  this as APIServiceCondition_apiregistration_k8s_io_v1Impl
-  Time_meta_v1Impl(this)
+  this as APIServiceCondition_apiregistration_k8s_io_v1_k8s1_17Impl
+  Time_meta_v1_k8s1_17Impl(this)
     .also { lastTransitionTime = it }
     .apply(init)
 }
@@ -48,8 +48,8 @@ fun APIServiceCondition.lastTransitionTime(init: Time.() -> Unit) {
 /**  */
 @K8sDslMarker
 fun APIService.metadata(init: ObjectMeta.() -> Unit) {
-  this as APIService_apiregistration_k8s_io_v1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as APIService_apiregistration_k8s_io_v1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -57,8 +57,8 @@ fun APIService.metadata(init: ObjectMeta.() -> Unit) {
 /** Spec contains information for locating and communicating with a server */
 @K8sDslMarker
 fun APIService.spec(init: Apiservicespec.() -> Unit) {
-  this as APIService_apiregistration_k8s_io_v1Impl
-  Apiservicespec_apiregistration_k8s_io_v1Impl(this)
+  this as APIService_apiregistration_k8s_io_v1_k8s1_17Impl
+  Apiservicespec_apiregistration_k8s_io_v1_k8s1_17Impl(this)
     .also { spec = it }
     .apply(init)
 }
@@ -66,8 +66,8 @@ fun APIService.spec(init: Apiservicespec.() -> Unit) {
 /** Status contains derived information about an API server */
 @K8sDslMarker
 fun APIService.status(init: Apiservicestatus.() -> Unit) {
-  this as APIService_apiregistration_k8s_io_v1Impl
-  Apiservicestatus_apiregistration_k8s_io_v1Impl(this)
+  this as APIService_apiregistration_k8s_io_v1_k8s1_17Impl
+  Apiservicestatus_apiregistration_k8s_io_v1_k8s1_17Impl(this)
     .also { status = it }
     .apply(init)
 }
@@ -80,8 +80,8 @@ server using an internal IP. Server looks at X-Forwarded-For header or X-Real-Ip
 order) to get the client IP. */
 @K8sDslMarker
 fun APIVersions.serverAddressByClientCIDRs(init: ServerAddressByClientCIDR.() -> Unit) {
-  this as APIVersions_meta_v1Impl
-  ServerAddressByClientCIDR_meta_v1Impl(this)
+  this as APIVersions_meta_v1_k8s1_17Impl
+  ServerAddressByClientCIDR_meta_v1_k8s1_17Impl(this)
     .also { serverAddressByClientCIDRs = serverAddressByClientCIDRs?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -89,8 +89,8 @@ fun APIVersions.serverAddressByClientCIDRs(init: ServerAddressByClientCIDR.() ->
 /** Describes node affinity scheduling rules for the pod. */
 @K8sDslMarker
 fun Affinity.nodeAffinity(init: NodeAffinity.() -> Unit) {
-  this as Affinity_core_v1Impl
-  NodeAffinity_core_v1Impl(this)
+  this as Affinity_core_v1_k8s1_17Impl
+  NodeAffinity_core_v1_k8s1_17Impl(this)
     .also { nodeAffinity = it }
     .apply(init)
 }
@@ -98,8 +98,8 @@ fun Affinity.nodeAffinity(init: NodeAffinity.() -> Unit) {
 /** Describes pod affinity scheduling rules (e.g. co-locate this pod in the same node, zone, etc. as some other pod(s)). */
 @K8sDslMarker
 fun Affinity.podAffinity(init: PodAffinity.() -> Unit) {
-  this as Affinity_core_v1Impl
-  PodAffinity_core_v1Impl(this)
+  this as Affinity_core_v1_k8s1_17Impl
+  PodAffinity_core_v1_k8s1_17Impl(this)
     .also { podAffinity = it }
     .apply(init)
 }
@@ -108,8 +108,8 @@ fun Affinity.podAffinity(init: PodAffinity.() -> Unit) {
 pod(s)). */
 @K8sDslMarker
 fun Affinity.podAntiAffinity(init: PodAntiAffinity.() -> Unit) {
-  this as Affinity_core_v1Impl
-  PodAntiAffinity_core_v1Impl(this)
+  this as Affinity_core_v1_k8s1_17Impl
+  PodAntiAffinity_core_v1_k8s1_17Impl(this)
     .also { podAntiAffinity = it }
     .apply(init)
 }
@@ -118,8 +118,8 @@ fun Affinity.podAntiAffinity(init: PodAntiAffinity.() -> Unit) {
 the selectors match, then the ClusterRole's permissions will be added */
 @K8sDslMarker
 fun AggregationRule.clusterRoleSelectors(init: LabelSelector.() -> Unit) {
-  this as AggregationRule_rbac_authorization_k8s_io_v1Impl
-  LabelSelector_meta_v1Impl(this)
+  this as AggregationRule_rbac_authorization_k8s_io_v1_k8s1_17Impl
+  LabelSelector_meta_v1_k8s1_17Impl(this)
     .also { clusterRoleSelectors = clusterRoleSelectors?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -127,8 +127,8 @@ fun AggregationRule.clusterRoleSelectors(init: LabelSelector.() -> Unit) {
 /**  */
 @K8sDslMarker
 fun AuditSink.metadata(init: ObjectMeta.() -> Unit) {
-  this as AuditSink_auditregistration_k8s_io_v1alpha1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as AuditSink_auditregistration_k8s_io_v1alpha1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -136,8 +136,8 @@ fun AuditSink.metadata(init: ObjectMeta.() -> Unit) {
 /** Spec defines the audit configuration spec */
 @K8sDslMarker
 fun AuditSink.spec(init: Auditsinkspec.() -> Unit) {
-  this as AuditSink_auditregistration_k8s_io_v1alpha1Impl
-  Auditsinkspec_auditregistration_k8s_io_v1alpha1Impl(this)
+  this as AuditSink_auditregistration_k8s_io_v1alpha1_k8s1_17Impl
+  Auditsinkspec_auditregistration_k8s_io_v1alpha1_k8s1_17Impl(this)
     .also { spec = it }
     .apply(init)
 }
@@ -146,8 +146,8 @@ fun AuditSink.spec(init: Auditsinkspec.() -> Unit) {
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata */
 @K8sDslMarker
 fun Binding.metadata(init: ObjectMeta.() -> Unit) {
-  this as Binding_core_v1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as Binding_core_v1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -155,8 +155,8 @@ fun Binding.metadata(init: ObjectMeta.() -> Unit) {
 /** The target object that you want to bind to the standard object. */
 @K8sDslMarker
 fun Binding.target(init: ObjectReference.() -> Unit) {
-  this as Binding_core_v1Impl
-  ObjectReference_core_v1Impl(this)
+  this as Binding_core_v1_k8s1_17Impl
+  ObjectReference_core_v1_k8s1_17Impl(this)
     .also { target = it }
     .apply(init)
 }
@@ -167,8 +167,8 @@ beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-
 More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata */
 @K8sDslMarker
 fun CSIDriver.metadata(init: ObjectMeta.() -> Unit) {
-  this as CSIDriver_storage_k8s_io_v1beta1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as CSIDriver_storage_k8s_io_v1beta1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -176,8 +176,8 @@ fun CSIDriver.metadata(init: ObjectMeta.() -> Unit) {
 /** Specification of the CSI Driver. */
 @K8sDslMarker
 fun CSIDriver.spec(init: Csidriverspec.() -> Unit) {
-  this as CSIDriver_storage_k8s_io_v1beta1Impl
-  Csidriverspec_storage_k8s_io_v1beta1Impl(this)
+  this as CSIDriver_storage_k8s_io_v1beta1_k8s1_17Impl
+  Csidriverspec_storage_k8s_io_v1beta1_k8s1_17Impl(this)
     .also { spec = it }
     .apply(init)
 }
@@ -185,8 +185,8 @@ fun CSIDriver.spec(init: Csidriverspec.() -> Unit) {
 /** allocatable represents the volume resources of a node that are available for scheduling. This field is beta. */
 @K8sDslMarker
 fun CSINodeDriver.allocatable(init: VolumeNodeResources.() -> Unit) {
-  this as CSINodeDriver_storage_k8s_io_v1Impl
-  VolumeNodeResources_storage_k8s_io_v1Impl(this)
+  this as CSINodeDriver_storage_k8s_io_v1_k8s1_17Impl
+  VolumeNodeResources_storage_k8s_io_v1_k8s1_17Impl(this)
     .also { allocatable = it }
     .apply(init)
 }
@@ -194,8 +194,8 @@ fun CSINodeDriver.allocatable(init: VolumeNodeResources.() -> Unit) {
 /** metadata.name must be the Kubernetes node name. */
 @K8sDslMarker
 fun CSINode.metadata(init: ObjectMeta.() -> Unit) {
-  this as CSINode_storage_k8s_io_v1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as CSINode_storage_k8s_io_v1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -203,8 +203,8 @@ fun CSINode.metadata(init: ObjectMeta.() -> Unit) {
 /** spec is the specification of CSINode */
 @K8sDslMarker
 fun CSINode.spec(init: Csinodespec.() -> Unit) {
-  this as CSINode_storage_k8s_io_v1Impl
-  Csinodespec_storage_k8s_io_v1Impl(this)
+  this as CSINode_storage_k8s_io_v1_k8s1_17Impl
+  Csinodespec_storage_k8s_io_v1_k8s1_17Impl(this)
     .also { spec = it }
     .apply(init)
 }
@@ -215,8 +215,8 @@ gate. This field is optional, and may be empty if no secret is required. If the 
 secret, all secrets are passed. */
 @K8sDslMarker
 fun CSIPersistentVolumeSource.controllerExpandSecretRef(init: SecretReference.() -> Unit) {
-  this as CSIPersistentVolumeSource_core_v1Impl
-  SecretReference_core_v1Impl(this)
+  this as CSIPersistentVolumeSource_core_v1_k8s1_17Impl
+  SecretReference_core_v1_k8s1_17Impl(this)
     .also { controllerExpandSecretRef = it }
     .apply(init)
 }
@@ -226,8 +226,8 @@ driver to complete the CSI ControllerPublishVolume and ControllerUnpublishVolume
 be empty if no secret is required. If the secret object contains more than one secret, all secrets are passed. */
 @K8sDslMarker
 fun CSIPersistentVolumeSource.controllerPublishSecretRef(init: SecretReference.() -> Unit) {
-  this as CSIPersistentVolumeSource_core_v1Impl
-  SecretReference_core_v1Impl(this)
+  this as CSIPersistentVolumeSource_core_v1_k8s1_17Impl
+  SecretReference_core_v1_k8s1_17Impl(this)
     .also { controllerPublishSecretRef = it }
     .apply(init)
 }
@@ -237,8 +237,8 @@ complete the CSI NodePublishVolume and NodeUnpublishVolume calls. This field is 
 is required. If the secret object contains more than one secret, all secrets are passed. */
 @K8sDslMarker
 fun CSIPersistentVolumeSource.nodePublishSecretRef(init: SecretReference.() -> Unit) {
-  this as CSIPersistentVolumeSource_core_v1Impl
-  SecretReference_core_v1Impl(this)
+  this as CSIPersistentVolumeSource_core_v1_k8s1_17Impl
+  SecretReference_core_v1_k8s1_17Impl(this)
     .also { nodePublishSecretRef = it }
     .apply(init)
 }
@@ -248,8 +248,8 @@ complete the CSI NodeStageVolume and NodeStageVolume and NodeUnstageVolume calls
 empty if no secret is required. If the secret object contains more than one secret, all secrets are passed. */
 @K8sDslMarker
 fun CSIPersistentVolumeSource.nodeStageSecretRef(init: SecretReference.() -> Unit) {
-  this as CSIPersistentVolumeSource_core_v1Impl
-  SecretReference_core_v1Impl(this)
+  this as CSIPersistentVolumeSource_core_v1_k8s1_17Impl
+  SecretReference_core_v1_k8s1_17Impl(this)
     .also { nodeStageSecretRef = it }
     .apply(init)
 }
@@ -259,8 +259,8 @@ complete the CSI NodePublishVolume and NodeUnpublishVolume calls. This field is 
 is required. If the secret object contains more than one secret, all secret references are passed. */
 @K8sDslMarker
 fun CSIVolumeSource.nodePublishSecretRef(init: LocalObjectReference.() -> Unit) {
-  this as CSIVolumeSource_core_v1Impl
-  LocalObjectReference_core_v1Impl(this)
+  this as CSIVolumeSource_core_v1_k8s1_17Impl
+  LocalObjectReference_core_v1_k8s1_17Impl(this)
     .also { nodePublishSecretRef = it }
     .apply(init)
 }
@@ -269,8 +269,8 @@ fun CSIVolumeSource.nodePublishSecretRef(init: LocalObjectReference.() -> Unit) 
 https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it */
 @K8sDslMarker
 fun CephFSPersistentVolumeSource.secretRef(init: SecretReference.() -> Unit) {
-  this as CephFSPersistentVolumeSource_core_v1Impl
-  SecretReference_core_v1Impl(this)
+  this as CephFSPersistentVolumeSource_core_v1_k8s1_17Impl
+  SecretReference_core_v1_k8s1_17Impl(this)
     .also { secretRef = it }
     .apply(init)
 }
@@ -279,8 +279,8 @@ fun CephFSPersistentVolumeSource.secretRef(init: SecretReference.() -> Unit) {
 https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it */
 @K8sDslMarker
 fun CephFSVolumeSource.secretRef(init: LocalObjectReference.() -> Unit) {
-  this as CephFSVolumeSource_core_v1Impl
-  LocalObjectReference_core_v1Impl(this)
+  this as CephFSVolumeSource_core_v1_k8s1_17Impl
+  LocalObjectReference_core_v1_k8s1_17Impl(this)
     .also { secretRef = it }
     .apply(init)
 }
@@ -288,8 +288,8 @@ fun CephFSVolumeSource.secretRef(init: LocalObjectReference.() -> Unit) {
 /** timestamp for the last update to this condition */
 @K8sDslMarker
 fun CertificateSigningRequestCondition.lastUpdateTime(init: Time.() -> Unit) {
-  this as CertificateSigningRequestCondition_certificates_k8s_io_v1beta1Impl
-  Time_meta_v1Impl(this)
+  this as CertificateSigningRequestCondition_certificates_k8s_io_v1beta1_k8s1_17Impl
+  Time_meta_v1_k8s1_17Impl(this)
     .also { lastUpdateTime = it }
     .apply(init)
 }
@@ -297,8 +297,8 @@ fun CertificateSigningRequestCondition.lastUpdateTime(init: Time.() -> Unit) {
 /**  */
 @K8sDslMarker
 fun CertificateSigningRequest.metadata(init: ObjectMeta.() -> Unit) {
-  this as CertificateSigningRequest_certificates_k8s_io_v1beta1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as CertificateSigningRequest_certificates_k8s_io_v1beta1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -306,8 +306,8 @@ fun CertificateSigningRequest.metadata(init: ObjectMeta.() -> Unit) {
 /** The certificate request itself and any additional information. */
 @K8sDslMarker
 fun CertificateSigningRequest.spec(init: Certificatesigningrequestspec.() -> Unit) {
-  this as CertificateSigningRequest_certificates_k8s_io_v1beta1Impl
-  Certificatesigningrequestspec_certificates_k8s_io_v1beta1Impl(this)
+  this as CertificateSigningRequest_certificates_k8s_io_v1beta1_k8s1_17Impl
+  Certificatesigningrequestspec_certificates_k8s_io_v1beta1_k8s1_17Impl(this)
     .also { spec = it }
     .apply(init)
 }
@@ -315,8 +315,8 @@ fun CertificateSigningRequest.spec(init: Certificatesigningrequestspec.() -> Uni
 /** Derived information about the request. */
 @K8sDslMarker
 fun CertificateSigningRequest.status(init: Certificatesigningrequeststatus.() -> Unit) {
-  this as CertificateSigningRequest_certificates_k8s_io_v1beta1Impl
-  Certificatesigningrequeststatus_certificates_k8s_io_v1beta1Impl(this)
+  this as CertificateSigningRequest_certificates_k8s_io_v1beta1_k8s1_17Impl
+  Certificatesigningrequeststatus_certificates_k8s_io_v1beta1_k8s1_17Impl(this)
     .also { status = it }
     .apply(init)
 }
@@ -324,8 +324,8 @@ fun CertificateSigningRequest.status(init: Certificatesigningrequeststatus.() ->
 /** Optional: points to a secret object containing parameters used to connect to OpenStack. */
 @K8sDslMarker
 fun CinderPersistentVolumeSource.secretRef(init: SecretReference.() -> Unit) {
-  this as CinderPersistentVolumeSource_core_v1Impl
-  SecretReference_core_v1Impl(this)
+  this as CinderPersistentVolumeSource_core_v1_k8s1_17Impl
+  SecretReference_core_v1_k8s1_17Impl(this)
     .also { secretRef = it }
     .apply(init)
 }
@@ -333,8 +333,8 @@ fun CinderPersistentVolumeSource.secretRef(init: SecretReference.() -> Unit) {
 /** Optional: points to a secret object containing parameters used to connect to OpenStack. */
 @K8sDslMarker
 fun CinderVolumeSource.secretRef(init: LocalObjectReference.() -> Unit) {
-  this as CinderVolumeSource_core_v1Impl
-  LocalObjectReference_core_v1Impl(this)
+  this as CinderVolumeSource_core_v1_k8s1_17Impl
+  LocalObjectReference_core_v1_k8s1_17Impl(this)
     .also { secretRef = it }
     .apply(init)
 }
@@ -342,8 +342,8 @@ fun CinderVolumeSource.secretRef(init: LocalObjectReference.() -> Unit) {
 /** Standard object's metadata. */
 @K8sDslMarker
 fun ClusterRoleBinding.metadata(init: ObjectMeta.() -> Unit) {
-  this as ClusterRoleBinding_rbac_authorization_k8s_io_v1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as ClusterRoleBinding_rbac_authorization_k8s_io_v1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -352,17 +352,17 @@ fun ClusterRoleBinding.metadata(init: ObjectMeta.() -> Unit) {
 return an error. */
 @K8sDslMarker
 fun ClusterRoleBinding.roleRef(init: RoleRef.() -> Unit) {
-  this as ClusterRoleBinding_rbac_authorization_k8s_io_v1Impl
-  RoleRef_rbac_authorization_k8s_io_v1Impl(this)
+  this as ClusterRoleBinding_rbac_authorization_k8s_io_v1_k8s1_17Impl
+  RoleRef_rbac_authorization_k8s_io_v1_k8s1_17Impl(this)
     .also { roleRef = it }
     .apply(init)
 }
 
 /** Subjects holds references to the objects the role applies to. */
 @K8sDslMarker
-fun ClusterRoleBinding.subjects(init: Subject_rbac_authorization_k8s_io_v1.() -> Unit) {
-  this as ClusterRoleBinding_rbac_authorization_k8s_io_v1Impl
-  Subject_rbac_authorization_k8s_io_v1Impl(this)
+fun ClusterRoleBinding.subjects(init: Subject_rbac_authorization_k8s_io_v1_k8s1_17.() -> Unit) {
+  this as ClusterRoleBinding_rbac_authorization_k8s_io_v1_k8s1_17Impl
+  Subject_rbac_authorization_k8s_io_v1_k8s1_17Impl(this)
     .also { subjects = subjects?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -371,8 +371,8 @@ fun ClusterRoleBinding.subjects(init: Subject_rbac_authorization_k8s_io_v1.() ->
 set, then the Rules are controller managed and direct changes to Rules will be stomped by the controller. */
 @K8sDslMarker
 fun ClusterRole.aggregationRule(init: AggregationRule.() -> Unit) {
-  this as ClusterRole_rbac_authorization_k8s_io_v1Impl
-  AggregationRule_rbac_authorization_k8s_io_v1Impl(this)
+  this as ClusterRole_rbac_authorization_k8s_io_v1_k8s1_17Impl
+  AggregationRule_rbac_authorization_k8s_io_v1_k8s1_17Impl(this)
     .also { aggregationRule = it }
     .apply(init)
 }
@@ -380,8 +380,8 @@ fun ClusterRole.aggregationRule(init: AggregationRule.() -> Unit) {
 /** Standard object's metadata. */
 @K8sDslMarker
 fun ClusterRole.metadata(init: ObjectMeta.() -> Unit) {
-  this as ClusterRole_rbac_authorization_k8s_io_v1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as ClusterRole_rbac_authorization_k8s_io_v1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -389,8 +389,8 @@ fun ClusterRole.metadata(init: ObjectMeta.() -> Unit) {
 /** Rules holds all the PolicyRules for this ClusterRole */
 @K8sDslMarker
 fun ClusterRole.rules(init: PolicyRule.() -> Unit) {
-  this as ClusterRole_rbac_authorization_k8s_io_v1Impl
-  PolicyRule_rbac_authorization_k8s_io_v1Impl(this)
+  this as ClusterRole_rbac_authorization_k8s_io_v1_k8s1_17Impl
+  PolicyRule_rbac_authorization_k8s_io_v1_k8s1_17Impl(this)
     .also { rules = rules?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -398,8 +398,8 @@ fun ClusterRole.rules(init: PolicyRule.() -> Unit) {
 /** List of component conditions observed */
 @K8sDslMarker
 fun ComponentStatus.conditions(init: ComponentCondition.() -> Unit) {
-  this as ComponentStatus_core_v1Impl
-  ComponentCondition_core_v1Impl(this)
+  this as ComponentStatus_core_v1_k8s1_17Impl
+  ComponentCondition_core_v1_k8s1_17Impl(this)
     .also { conditions = conditions?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -408,8 +408,8 @@ fun ComponentStatus.conditions(init: ComponentCondition.() -> Unit) {
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata */
 @K8sDslMarker
 fun ComponentStatus.metadata(init: ObjectMeta.() -> Unit) {
-  this as ComponentStatus_core_v1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as ComponentStatus_core_v1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -421,8 +421,8 @@ setup will error unless it is marked optional. Paths must be relative and may no
 '..'. */
 @K8sDslMarker
 fun ConfigMapProjection.items(init: KeyToPath.() -> Unit) {
-  this as ConfigMapProjection_core_v1Impl
-  KeyToPath_core_v1Impl(this)
+  this as ConfigMapProjection_core_v1_k8s1_17Impl
+  KeyToPath_core_v1_k8s1_17Impl(this)
     .also { items = items?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -434,8 +434,8 @@ setup will error unless it is marked optional. Paths must be relative and may no
 '..'. */
 @K8sDslMarker
 fun ConfigMapVolumeSource.items(init: KeyToPath.() -> Unit) {
-  this as ConfigMapVolumeSource_core_v1Impl
-  KeyToPath_core_v1Impl(this)
+  this as ConfigMapVolumeSource_core_v1_k8s1_17Impl
+  KeyToPath_core_v1_k8s1_17Impl(this)
     .also { items = items?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -444,8 +444,8 @@ fun ConfigMapVolumeSource.items(init: KeyToPath.() -> Unit) {
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata */
 @K8sDslMarker
 fun ConfigMap.metadata(init: ObjectMeta.() -> Unit) {
-  this as ConfigMap_core_v1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as ConfigMap_core_v1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -453,8 +453,8 @@ fun ConfigMap.metadata(init: ObjectMeta.() -> Unit) {
 /** Time at which the container was last (re-)started */
 @K8sDslMarker
 fun ContainerStateRunning.startedAt(init: Time.() -> Unit) {
-  this as ContainerStateRunning_core_v1Impl
-  Time_meta_v1Impl(this)
+  this as ContainerStateRunning_core_v1_k8s1_17Impl
+  Time_meta_v1_k8s1_17Impl(this)
     .also { startedAt = it }
     .apply(init)
 }
@@ -462,8 +462,8 @@ fun ContainerStateRunning.startedAt(init: Time.() -> Unit) {
 /** Time at which the container last terminated */
 @K8sDslMarker
 fun ContainerStateTerminated.finishedAt(init: Time.() -> Unit) {
-  this as ContainerStateTerminated_core_v1Impl
-  Time_meta_v1Impl(this)
+  this as ContainerStateTerminated_core_v1_k8s1_17Impl
+  Time_meta_v1_k8s1_17Impl(this)
     .also { finishedAt = it }
     .apply(init)
 }
@@ -471,8 +471,8 @@ fun ContainerStateTerminated.finishedAt(init: Time.() -> Unit) {
 /** Time at which previous execution of the container started */
 @K8sDslMarker
 fun ContainerStateTerminated.startedAt(init: Time.() -> Unit) {
-  this as ContainerStateTerminated_core_v1Impl
-  Time_meta_v1Impl(this)
+  this as ContainerStateTerminated_core_v1_k8s1_17Impl
+  Time_meta_v1_k8s1_17Impl(this)
     .also { startedAt = it }
     .apply(init)
 }
@@ -480,8 +480,8 @@ fun ContainerStateTerminated.startedAt(init: Time.() -> Unit) {
 /** Details about a running container */
 @K8sDslMarker
 fun ContainerState.running(init: ContainerStateRunning.() -> Unit) {
-  this as ContainerState_core_v1Impl
-  ContainerStateRunning_core_v1Impl(this)
+  this as ContainerState_core_v1_k8s1_17Impl
+  ContainerStateRunning_core_v1_k8s1_17Impl(this)
     .also { running = it }
     .apply(init)
 }
@@ -489,8 +489,8 @@ fun ContainerState.running(init: ContainerStateRunning.() -> Unit) {
 /** Details about a terminated container */
 @K8sDslMarker
 fun ContainerState.terminated(init: ContainerStateTerminated.() -> Unit) {
-  this as ContainerState_core_v1Impl
-  ContainerStateTerminated_core_v1Impl(this)
+  this as ContainerState_core_v1_k8s1_17Impl
+  ContainerStateTerminated_core_v1_k8s1_17Impl(this)
     .also { terminated = it }
     .apply(init)
 }
@@ -498,8 +498,8 @@ fun ContainerState.terminated(init: ContainerStateTerminated.() -> Unit) {
 /** Details about a waiting container */
 @K8sDslMarker
 fun ContainerState.waiting(init: ContainerStateWaiting.() -> Unit) {
-  this as ContainerState_core_v1Impl
-  ContainerStateWaiting_core_v1Impl(this)
+  this as ContainerState_core_v1_k8s1_17Impl
+  ContainerStateWaiting_core_v1_k8s1_17Impl(this)
     .also { waiting = it }
     .apply(init)
 }
@@ -507,8 +507,8 @@ fun ContainerState.waiting(init: ContainerStateWaiting.() -> Unit) {
 /** List of environment variables to set in the container. Cannot be updated. */
 @K8sDslMarker
 fun Container.env(init: EnvVar.() -> Unit) {
-  this as Container_core_v1Impl
-  EnvVar_core_v1Impl(this)
+  this as Container_core_v1_k8s1_17Impl
+  EnvVar_core_v1_k8s1_17Impl(this)
     .also { env = env?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -519,8 +519,8 @@ multiple sources, the value associated with the last source will take precedence
 duplicate key will take precedence. Cannot be updated. */
 @K8sDslMarker
 fun Container.envFrom(init: EnvFromSource.() -> Unit) {
-  this as Container_core_v1Impl
-  EnvFromSource_core_v1Impl(this)
+  this as Container_core_v1_k8s1_17Impl
+  EnvFromSource_core_v1_k8s1_17Impl(this)
     .also { envFrom = envFrom?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -528,8 +528,8 @@ fun Container.envFrom(init: EnvFromSource.() -> Unit) {
 /** Actions that the management system should take in response to container lifecycle events. Cannot be updated. */
 @K8sDslMarker
 fun Container.lifecycle(init: Lifecycle.() -> Unit) {
-  this as Container_core_v1Impl
-  Lifecycle_core_v1Impl(this)
+  this as Container_core_v1_k8s1_17Impl
+  Lifecycle_core_v1_k8s1_17Impl(this)
     .also { lifecycle = it }
     .apply(init)
 }
@@ -538,8 +538,8 @@ fun Container.lifecycle(init: Lifecycle.() -> Unit) {
 https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes */
 @K8sDslMarker
 fun Container.livenessProbe(init: Probe.() -> Unit) {
-  this as Container_core_v1Impl
-  Probe_core_v1Impl(this)
+  this as Container_core_v1_k8s1_17Impl
+  Probe_core_v1_k8s1_17Impl(this)
     .also { livenessProbe = it }
     .apply(init)
 }
@@ -550,8 +550,8 @@ port from being exposed. Any port which is listening on the default "0.0.0.0" ad
 accessible from the network. Cannot be updated. */
 @K8sDslMarker
 fun Container.ports(init: ContainerPort.() -> Unit) {
-  this as Container_core_v1Impl
-  ContainerPort_core_v1Impl(this)
+  this as Container_core_v1_k8s1_17Impl
+  ContainerPort_core_v1_k8s1_17Impl(this)
     .also { ports = ports?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -560,8 +560,8 @@ fun Container.ports(init: ContainerPort.() -> Unit) {
 Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes */
 @K8sDslMarker
 fun Container.readinessProbe(init: Probe.() -> Unit) {
-  this as Container_core_v1Impl
-  Probe_core_v1Impl(this)
+  this as Container_core_v1_k8s1_17Impl
+  Probe_core_v1_k8s1_17Impl(this)
     .also { readinessProbe = it }
     .apply(init)
 }
@@ -570,8 +570,8 @@ fun Container.readinessProbe(init: Probe.() -> Unit) {
 https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/ */
 @K8sDslMarker
 fun Container.resources(init: ResourceRequirements.() -> Unit) {
-  this as Container_core_v1Impl
-  ResourceRequirements_core_v1Impl(this)
+  this as Container_core_v1_k8s1_17Impl
+  ResourceRequirements_core_v1_k8s1_17Impl(this)
     .also { resources = it }
     .apply(init)
 }
@@ -580,8 +580,8 @@ fun Container.resources(init: ResourceRequirements.() -> Unit) {
 info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/ */
 @K8sDslMarker
 fun Container.securityContext(init: SecurityContext.() -> Unit) {
-  this as Container_core_v1Impl
-  SecurityContext_core_v1Impl(this)
+  this as Container_core_v1_k8s1_17Impl
+  SecurityContext_core_v1_k8s1_17Impl(this)
     .also { securityContext = it }
     .apply(init)
 }
@@ -594,8 +594,8 @@ the StartupProbe feature flag. More info:
 https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes */
 @K8sDslMarker
 fun Container.startupProbe(init: Probe.() -> Unit) {
-  this as Container_core_v1Impl
-  Probe_core_v1Impl(this)
+  this as Container_core_v1_k8s1_17Impl
+  Probe_core_v1_k8s1_17Impl(this)
     .also { startupProbe = it }
     .apply(init)
 }
@@ -603,8 +603,8 @@ fun Container.startupProbe(init: Probe.() -> Unit) {
 /** volumeDevices is the list of block devices to be used by the container. This is a beta feature. */
 @K8sDslMarker
 fun Container.volumeDevices(init: VolumeDevice.() -> Unit) {
-  this as Container_core_v1Impl
-  VolumeDevice_core_v1Impl(this)
+  this as Container_core_v1_k8s1_17Impl
+  VolumeDevice_core_v1_k8s1_17Impl(this)
     .also { volumeDevices = volumeDevices?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -612,8 +612,8 @@ fun Container.volumeDevices(init: VolumeDevice.() -> Unit) {
 /** Pod volumes to mount into the container's filesystem. Cannot be updated. */
 @K8sDslMarker
 fun Container.volumeMounts(init: VolumeMount.() -> Unit) {
-  this as Container_core_v1Impl
-  VolumeMount_core_v1Impl(this)
+  this as Container_core_v1_k8s1_17Impl
+  VolumeMount_core_v1_k8s1_17Impl(this)
     .also { volumeMounts = volumeMounts?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -622,8 +622,8 @@ fun Container.volumeMounts(init: VolumeMount.() -> Unit) {
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata */
 @K8sDslMarker
 fun ControllerRevision.metadata(init: ObjectMeta.() -> Unit) {
-  this as ControllerRevision_apps_v1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as ControllerRevision_apps_v1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -632,8 +632,8 @@ fun ControllerRevision.metadata(init: ObjectMeta.() -> Unit) {
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata */
 @K8sDslMarker
 fun CronJob.metadata(init: ObjectMeta.() -> Unit) {
-  this as CronJob_batch_v1beta1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as CronJob_batch_v1beta1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -642,8 +642,8 @@ fun CronJob.metadata(init: ObjectMeta.() -> Unit) {
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status */
 @K8sDslMarker
 fun CronJob.spec(init: Cronjobspec.() -> Unit) {
-  this as CronJob_batch_v1beta1Impl
-  Cronjobspec_batch_v1beta1Impl(this)
+  this as CronJob_batch_v1beta1_k8s1_17Impl
+  Cronjobspec_batch_v1beta1_k8s1_17Impl(this)
     .also { spec = it }
     .apply(init)
 }
@@ -652,8 +652,8 @@ fun CronJob.spec(init: Cronjobspec.() -> Unit) {
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status */
 @K8sDslMarker
 fun CronJob.status(init: Cronjobstatus.() -> Unit) {
-  this as CronJob_batch_v1beta1Impl
-  Cronjobstatus_batch_v1beta1Impl(this)
+  this as CronJob_batch_v1beta1_k8s1_17Impl
+  Cronjobstatus_batch_v1beta1_k8s1_17Impl(this)
     .also { status = it }
     .apply(init)
 }
@@ -661,8 +661,8 @@ fun CronJob.status(init: Cronjobstatus.() -> Unit) {
 /** webhook describes how to call the conversion webhook. Required when `strategy` is set to `Webhook`. */
 @K8sDslMarker
 fun CustomResourceConversion.webhook(init: WebhookConversion.() -> Unit) {
-  this as CustomResourceConversion_apiextensions_k8s_io_v1Impl
-  WebhookConversion_apiextensions_k8s_io_v1Impl(this)
+  this as CustomResourceConversion_apiextensions_k8s_io_v1_k8s1_17Impl
+  WebhookConversion_apiextensions_k8s_io_v1_k8s1_17Impl(this)
     .also { webhook = it }
     .apply(init)
 }
@@ -670,8 +670,8 @@ fun CustomResourceConversion.webhook(init: WebhookConversion.() -> Unit) {
 /** lastTransitionTime last time the condition transitioned from one status to another. */
 @K8sDslMarker
 fun CustomResourceDefinitionCondition.lastTransitionTime(init: Time.() -> Unit) {
-  this as CustomResourceDefinitionCondition_apiextensions_k8s_io_v1Impl
-  Time_meta_v1Impl(this)
+  this as CustomResourceDefinitionCondition_apiextensions_k8s_io_v1_k8s1_17Impl
+  Time_meta_v1_k8s1_17Impl(this)
     .also { lastTransitionTime = it }
     .apply(init)
 }
@@ -681,8 +681,8 @@ https://kubernetes.io/docs/reference/using-api/api-concepts/#receiving-resources
 are specified, a single column displaying the age of the custom resource is used. */
 @K8sDslMarker
 fun CustomResourceDefinitionVersion.additionalPrinterColumns(init: CustomResourceColumnDefinition.() -> Unit) {
-  this as CustomResourceDefinitionVersion_apiextensions_k8s_io_v1Impl
-  CustomResourceColumnDefinition_apiextensions_k8s_io_v1Impl(this)
+  this as CustomResourceDefinitionVersion_apiextensions_k8s_io_v1_k8s1_17Impl
+  CustomResourceColumnDefinition_apiextensions_k8s_io_v1_k8s1_17Impl(this)
     .also { additionalPrinterColumns = additionalPrinterColumns?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -690,8 +690,8 @@ fun CustomResourceDefinitionVersion.additionalPrinterColumns(init: CustomResourc
 /** schema describes the schema used for validation, pruning, and defaulting of this version of the custom resource. */
 @K8sDslMarker
 fun CustomResourceDefinitionVersion.schema(init: CustomResourceValidation.() -> Unit) {
-  this as CustomResourceDefinitionVersion_apiextensions_k8s_io_v1Impl
-  CustomResourceValidation_apiextensions_k8s_io_v1Impl(this)
+  this as CustomResourceDefinitionVersion_apiextensions_k8s_io_v1_k8s1_17Impl
+  CustomResourceValidation_apiextensions_k8s_io_v1_k8s1_17Impl(this)
     .also { schema = it }
     .apply(init)
 }
@@ -699,8 +699,8 @@ fun CustomResourceDefinitionVersion.schema(init: CustomResourceValidation.() -> 
 /** subresources specify what subresources this version of the defined custom resource have. */
 @K8sDslMarker
 fun CustomResourceDefinitionVersion.subresources(init: CustomResourceSubresources.() -> Unit) {
-  this as CustomResourceDefinitionVersion_apiextensions_k8s_io_v1Impl
-  CustomResourceSubresources_apiextensions_k8s_io_v1Impl(this)
+  this as CustomResourceDefinitionVersion_apiextensions_k8s_io_v1_k8s1_17Impl
+  CustomResourceSubresources_apiextensions_k8s_io_v1_k8s1_17Impl(this)
     .also { subresources = it }
     .apply(init)
 }
@@ -708,8 +708,8 @@ fun CustomResourceDefinitionVersion.subresources(init: CustomResourceSubresource
 /**  */
 @K8sDslMarker
 fun CustomResourceDefinition.metadata(init: ObjectMeta.() -> Unit) {
-  this as CustomResourceDefinition_apiextensions_k8s_io_v1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as CustomResourceDefinition_apiextensions_k8s_io_v1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -717,8 +717,8 @@ fun CustomResourceDefinition.metadata(init: ObjectMeta.() -> Unit) {
 /** spec describes how the user wants the resources to appear */
 @K8sDslMarker
 fun CustomResourceDefinition.spec(init: Customresourcedefinitionspec.() -> Unit) {
-  this as CustomResourceDefinition_apiextensions_k8s_io_v1Impl
-  Customresourcedefinitionspec_apiextensions_k8s_io_v1Impl(this)
+  this as CustomResourceDefinition_apiextensions_k8s_io_v1_k8s1_17Impl
+  Customresourcedefinitionspec_apiextensions_k8s_io_v1_k8s1_17Impl(this)
     .also { spec = it }
     .apply(init)
 }
@@ -726,8 +726,8 @@ fun CustomResourceDefinition.spec(init: Customresourcedefinitionspec.() -> Unit)
 /** status indicates the actual state of the CustomResourceDefinition */
 @K8sDslMarker
 fun CustomResourceDefinition.status(init: Customresourcedefinitionstatus.() -> Unit) {
-  this as CustomResourceDefinition_apiextensions_k8s_io_v1Impl
-  Customresourcedefinitionstatus_apiextensions_k8s_io_v1Impl(this)
+  this as CustomResourceDefinition_apiextensions_k8s_io_v1_k8s1_17Impl
+  Customresourcedefinitionstatus_apiextensions_k8s_io_v1_k8s1_17Impl(this)
     .also { status = it }
     .apply(init)
 }
@@ -735,8 +735,8 @@ fun CustomResourceDefinition.status(init: Customresourcedefinitionstatus.() -> U
 /** scale indicates the custom resource should serve a `/scale` subresource that returns an `autoscaling/v1` Scale object. */
 @K8sDslMarker
 fun CustomResourceSubresources.scale(init: CustomResourceSubresourceScale.() -> Unit) {
-  this as CustomResourceSubresources_apiextensions_k8s_io_v1Impl
-  CustomResourceSubresourceScale_apiextensions_k8s_io_v1Impl(this)
+  this as CustomResourceSubresources_apiextensions_k8s_io_v1_k8s1_17Impl
+  CustomResourceSubresourceScale_apiextensions_k8s_io_v1_k8s1_17Impl(this)
     .also { scale = it }
     .apply(init)
 }
@@ -746,8 +746,8 @@ resource primary endpoint ignore changes to the `status` stanza of the object. 2
 `/status` subresource ignore changes to anything other than the `status` stanza of the object. */
 @K8sDslMarker
 fun CustomResourceSubresources.status(init: CustomResourceSubresourceStatus.() -> Unit) {
-  this as CustomResourceSubresources_apiextensions_k8s_io_v1Impl
-  CustomResourceSubresourceStatus_apiextensions_k8s_io_v1Impl(this)
+  this as CustomResourceSubresources_apiextensions_k8s_io_v1_k8s1_17Impl
+  CustomResourceSubresourceStatus_apiextensions_k8s_io_v1_k8s1_17Impl(this)
     .also { status = it }
     .apply(init)
 }
@@ -755,8 +755,8 @@ fun CustomResourceSubresources.status(init: CustomResourceSubresourceStatus.() -
 /** openAPIV3Schema is the OpenAPI v3 schema to use for validation and pruning. */
 @K8sDslMarker
 fun CustomResourceValidation.openAPIV3Schema(init: JSONSchemaProps.() -> Unit) {
-  this as CustomResourceValidation_apiextensions_k8s_io_v1Impl
-  JSONSchemaProps_apiextensions_k8s_io_v1Impl(this)
+  this as CustomResourceValidation_apiextensions_k8s_io_v1_k8s1_17Impl
+  JSONSchemaProps_apiextensions_k8s_io_v1_k8s1_17Impl(this)
     .also { openAPIV3Schema = it }
     .apply(init)
 }
@@ -764,8 +764,8 @@ fun CustomResourceValidation.openAPIV3Schema(init: JSONSchemaProps.() -> Unit) {
 /** Last time the condition transitioned from one status to another. */
 @K8sDslMarker
 fun DaemonSetCondition.lastTransitionTime(init: Time.() -> Unit) {
-  this as DaemonSetCondition_apps_v1Impl
-  Time_meta_v1Impl(this)
+  this as DaemonSetCondition_apps_v1_k8s1_17Impl
+  Time_meta_v1_k8s1_17Impl(this)
     .also { lastTransitionTime = it }
     .apply(init)
 }
@@ -773,8 +773,8 @@ fun DaemonSetCondition.lastTransitionTime(init: Time.() -> Unit) {
 /** Rolling update config params. Present only if type = "RollingUpdate". */
 @K8sDslMarker
 fun DaemonSetUpdateStrategy.rollingUpdate(init: Rollingupdatedaemonset.() -> Unit) {
-  this as DaemonSetUpdateStrategy_apps_v1Impl
-  Rollingupdatedaemonset_apps_v1Impl(this)
+  this as DaemonSetUpdateStrategy_apps_v1_k8s1_17Impl
+  Rollingupdatedaemonset_apps_v1_k8s1_17Impl(this)
     .also { rollingUpdate = it }
     .apply(init)
 }
@@ -783,8 +783,8 @@ fun DaemonSetUpdateStrategy.rollingUpdate(init: Rollingupdatedaemonset.() -> Uni
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata */
 @K8sDslMarker
 fun DaemonSet.metadata(init: ObjectMeta.() -> Unit) {
-  this as DaemonSet_apps_v1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as DaemonSet_apps_v1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -793,8 +793,8 @@ fun DaemonSet.metadata(init: ObjectMeta.() -> Unit) {
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status */
 @K8sDslMarker
 fun DaemonSet.spec(init: Daemonsetspec.() -> Unit) {
-  this as DaemonSet_apps_v1Impl
-  Daemonsetspec_apps_v1Impl(this)
+  this as DaemonSet_apps_v1_k8s1_17Impl
+  Daemonsetspec_apps_v1_k8s1_17Impl(this)
     .also { spec = it }
     .apply(init)
 }
@@ -804,8 +804,8 @@ Read-only. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status */
 @K8sDslMarker
 fun DaemonSet.status(init: Daemonsetstatus.() -> Unit) {
-  this as DaemonSet_apps_v1Impl
-  Daemonsetstatus_apps_v1Impl(this)
+  this as DaemonSet_apps_v1_k8s1_17Impl
+  Daemonsetstatus_apps_v1_k8s1_17Impl(this)
     .also { status = it }
     .apply(init)
 }
@@ -813,8 +813,8 @@ fun DaemonSet.status(init: Daemonsetstatus.() -> Unit) {
 /** Must be fulfilled before a deletion is carried out. If not possible, a 409 Conflict status will be returned. */
 @K8sDslMarker
 fun DeleteOptions.preconditions(init: Preconditions.() -> Unit) {
-  this as DeleteOptions_meta_v1Impl
-  Preconditions_meta_v1Impl(this)
+  this as DeleteOptions_meta_v1_k8s1_17Impl
+  Preconditions_meta_v1_k8s1_17Impl(this)
     .also { preconditions = it }
     .apply(init)
 }
@@ -822,8 +822,8 @@ fun DeleteOptions.preconditions(init: Preconditions.() -> Unit) {
 /** Last time the condition transitioned from one status to another. */
 @K8sDslMarker
 fun DeploymentCondition.lastTransitionTime(init: Time.() -> Unit) {
-  this as DeploymentCondition_apps_v1Impl
-  Time_meta_v1Impl(this)
+  this as DeploymentCondition_apps_v1_k8s1_17Impl
+  Time_meta_v1_k8s1_17Impl(this)
     .also { lastTransitionTime = it }
     .apply(init)
 }
@@ -831,8 +831,8 @@ fun DeploymentCondition.lastTransitionTime(init: Time.() -> Unit) {
 /** The last time this condition was updated. */
 @K8sDslMarker
 fun DeploymentCondition.lastUpdateTime(init: Time.() -> Unit) {
-  this as DeploymentCondition_apps_v1Impl
-  Time_meta_v1Impl(this)
+  this as DeploymentCondition_apps_v1_k8s1_17Impl
+  Time_meta_v1_k8s1_17Impl(this)
     .also { lastUpdateTime = it }
     .apply(init)
 }
@@ -840,8 +840,8 @@ fun DeploymentCondition.lastUpdateTime(init: Time.() -> Unit) {
 /** Standard object metadata. */
 @K8sDslMarker
 fun Deployment.metadata(init: ObjectMeta.() -> Unit) {
-  this as Deployment_apps_v1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as Deployment_apps_v1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -849,8 +849,8 @@ fun Deployment.metadata(init: ObjectMeta.() -> Unit) {
 /** Specification of the desired behavior of the Deployment. */
 @K8sDslMarker
 fun Deployment.spec(init: Deploymentspec.() -> Unit) {
-  this as Deployment_apps_v1Impl
-  Deploymentspec_apps_v1Impl(this)
+  this as Deployment_apps_v1_k8s1_17Impl
+  Deploymentspec_apps_v1_k8s1_17Impl(this)
     .also { spec = it }
     .apply(init)
 }
@@ -858,8 +858,8 @@ fun Deployment.spec(init: Deploymentspec.() -> Unit) {
 /** Most recently observed status of the Deployment. */
 @K8sDslMarker
 fun Deployment.status(init: Deploymentstatus.() -> Unit) {
-  this as Deployment_apps_v1Impl
-  Deploymentstatus_apps_v1Impl(this)
+  this as Deployment_apps_v1_k8s1_17Impl
+  Deploymentstatus_apps_v1_k8s1_17Impl(this)
     .also { status = it }
     .apply(init)
 }
@@ -867,8 +867,8 @@ fun Deployment.status(init: Deploymentstatus.() -> Unit) {
 /** Items is a list of DownwardAPIVolume file */
 @K8sDslMarker
 fun DownwardAPIProjection.items(init: DownwardAPIVolumeFile.() -> Unit) {
-  this as DownwardAPIProjection_core_v1Impl
-  DownwardAPIVolumeFile_core_v1Impl(this)
+  this as DownwardAPIProjection_core_v1_k8s1_17Impl
+  DownwardAPIVolumeFile_core_v1_k8s1_17Impl(this)
     .also { items = items?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -876,8 +876,8 @@ fun DownwardAPIProjection.items(init: DownwardAPIVolumeFile.() -> Unit) {
 /** Required: Selects a field of the pod: only annotations, labels, name and namespace are supported. */
 @K8sDslMarker
 fun DownwardAPIVolumeFile.fieldRef(init: ObjectFieldSelector.() -> Unit) {
-  this as DownwardAPIVolumeFile_core_v1Impl
-  ObjectFieldSelector_core_v1Impl(this)
+  this as DownwardAPIVolumeFile_core_v1_k8s1_17Impl
+  ObjectFieldSelector_core_v1_k8s1_17Impl(this)
     .also { fieldRef = it }
     .apply(init)
 }
@@ -886,8 +886,8 @@ fun DownwardAPIVolumeFile.fieldRef(init: ObjectFieldSelector.() -> Unit) {
 requests.memory) are currently supported. */
 @K8sDslMarker
 fun DownwardAPIVolumeFile.resourceFieldRef(init: ResourceFieldSelector.() -> Unit) {
-  this as DownwardAPIVolumeFile_core_v1Impl
-  ResourceFieldSelector_core_v1Impl(this)
+  this as DownwardAPIVolumeFile_core_v1_k8s1_17Impl
+  ResourceFieldSelector_core_v1_k8s1_17Impl(this)
     .also { resourceFieldRef = it }
     .apply(init)
 }
@@ -895,8 +895,8 @@ fun DownwardAPIVolumeFile.resourceFieldRef(init: ResourceFieldSelector.() -> Uni
 /** Items is a list of downward API volume file */
 @K8sDslMarker
 fun DownwardAPIVolumeSource.items(init: DownwardAPIVolumeFile.() -> Unit) {
-  this as DownwardAPIVolumeSource_core_v1Impl
-  DownwardAPIVolumeFile_core_v1Impl(this)
+  this as DownwardAPIVolumeSource_core_v1_k8s1_17Impl
+  DownwardAPIVolumeFile_core_v1_k8s1_17Impl(this)
     .also { items = items?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -907,8 +907,8 @@ of memory limits of all containers in a pod. The default is nil which means that
 http://kubernetes.io/docs/user-guide/volumes#emptydir */
 @K8sDslMarker
 fun EmptyDirVolumeSource.sizeLimit(init: Quantity.() -> Unit) {
-  this as EmptyDirVolumeSource_core_v1Impl
-  Quantity_core_resourceImpl(this)
+  this as EmptyDirVolumeSource_core_v1_k8s1_17Impl
+  Quantity_core_resource_k8s1_17Impl(this)
     .also { sizeLimit = it }
     .apply(init)
 }
@@ -916,8 +916,8 @@ fun EmptyDirVolumeSource.sizeLimit(init: Quantity.() -> Unit) {
 /** Reference to object providing the endpoint. */
 @K8sDslMarker
 fun EndpointAddress.targetRef(init: ObjectReference.() -> Unit) {
-  this as EndpointAddress_core_v1Impl
-  ObjectReference_core_v1Impl(this)
+  this as EndpointAddress_core_v1_k8s1_17Impl
+  ObjectReference_core_v1_k8s1_17Impl(this)
     .also { targetRef = it }
     .apply(init)
 }
@@ -925,8 +925,8 @@ fun EndpointAddress.targetRef(init: ObjectReference.() -> Unit) {
 /** endpoints is a list of unique endpoints in this slice. Each slice may include a maximum of 1000 endpoints. */
 @K8sDslMarker
 fun EndpointSlice.endpoints(init: Endpoint.() -> Unit) {
-  this as EndpointSlice_discovery_k8s_io_v1beta1Impl
-  Endpoint_discovery_k8s_io_v1beta1Impl(this)
+  this as EndpointSlice_discovery_k8s_io_v1beta1_k8s1_17Impl
+  Endpoint_discovery_k8s_io_v1beta1_k8s1_17Impl(this)
     .also { endpoints = endpoints?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -934,8 +934,8 @@ fun EndpointSlice.endpoints(init: Endpoint.() -> Unit) {
 /** Standard object's metadata. */
 @K8sDslMarker
 fun EndpointSlice.metadata(init: ObjectMeta.() -> Unit) {
-  this as EndpointSlice_discovery_k8s_io_v1beta1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as EndpointSlice_discovery_k8s_io_v1beta1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -944,9 +944,9 @@ fun EndpointSlice.metadata(init: ObjectMeta.() -> Unit) {
 When ports is empty, it indicates that there are no defined ports. When a port is defined with a nil port value, it
 indicates "all ports". Each slice may include a maximum of 100 ports. */
 @K8sDslMarker
-fun EndpointSlice.ports(init: EndpointPort_discovery_k8s_io_v1beta1.() -> Unit) {
-  this as EndpointSlice_discovery_k8s_io_v1beta1Impl
-  EndpointPort_discovery_k8s_io_v1beta1Impl(this)
+fun EndpointSlice.ports(init: EndpointPort_discovery_k8s_io_v1beta1_k8s1_17.() -> Unit) {
+  this as EndpointSlice_discovery_k8s_io_v1beta1_k8s1_17Impl
+  EndpointPort_discovery_k8s_io_v1beta1_k8s1_17Impl(this)
     .also { ports = ports?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -955,8 +955,8 @@ fun EndpointSlice.ports(init: EndpointPort_discovery_k8s_io_v1beta1.() -> Unit) 
 balancers and clients to utilize. */
 @K8sDslMarker
 fun EndpointSubset.addresses(init: EndpointAddress.() -> Unit) {
-  this as EndpointSubset_core_v1Impl
-  EndpointAddress_core_v1Impl(this)
+  this as EndpointSubset_core_v1_k8s1_17Impl
+  EndpointAddress_core_v1_k8s1_17Impl(this)
     .also { addresses = addresses?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -965,8 +965,8 @@ fun EndpointSubset.addresses(init: EndpointAddress.() -> Unit) {
 starting, have recently failed a readiness check, or have recently failed a liveness check. */
 @K8sDslMarker
 fun EndpointSubset.notReadyAddresses(init: EndpointAddress.() -> Unit) {
-  this as EndpointSubset_core_v1Impl
-  EndpointAddress_core_v1Impl(this)
+  this as EndpointSubset_core_v1_k8s1_17Impl
+  EndpointAddress_core_v1_k8s1_17Impl(this)
     .also { notReadyAddresses = notReadyAddresses?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -974,8 +974,8 @@ fun EndpointSubset.notReadyAddresses(init: EndpointAddress.() -> Unit) {
 /** Port numbers available on the related IP addresses. */
 @K8sDslMarker
 fun EndpointSubset.ports(init: EndpointPort.() -> Unit) {
-  this as EndpointSubset_core_v1Impl
-  EndpointPort_core_v1Impl(this)
+  this as EndpointSubset_core_v1_k8s1_17Impl
+  EndpointPort_core_v1_k8s1_17Impl(this)
     .also { ports = ports?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -983,8 +983,8 @@ fun EndpointSubset.ports(init: EndpointPort.() -> Unit) {
 /** conditions contains information about the current status of the endpoint. */
 @K8sDslMarker
 fun Endpoint.conditions(init: EndpointConditions.() -> Unit) {
-  this as Endpoint_discovery_k8s_io_v1beta1Impl
-  EndpointConditions_discovery_k8s_io_v1beta1Impl(this)
+  this as Endpoint_discovery_k8s_io_v1beta1_k8s1_17Impl
+  EndpointConditions_discovery_k8s_io_v1beta1_k8s1_17Impl(this)
     .also { conditions = it }
     .apply(init)
 }
@@ -992,8 +992,8 @@ fun Endpoint.conditions(init: EndpointConditions.() -> Unit) {
 /** targetRef is a reference to a Kubernetes object that represents this endpoint. */
 @K8sDslMarker
 fun Endpoint.targetRef(init: ObjectReference.() -> Unit) {
-  this as Endpoint_discovery_k8s_io_v1beta1Impl
-  ObjectReference_core_v1Impl(this)
+  this as Endpoint_discovery_k8s_io_v1beta1_k8s1_17Impl
+  ObjectReference_core_v1_k8s1_17Impl(this)
     .also { targetRef = it }
     .apply(init)
 }
@@ -1002,8 +1002,8 @@ fun Endpoint.targetRef(init: ObjectReference.() -> Unit) {
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata */
 @K8sDslMarker
 fun Endpoints.metadata(init: ObjectMeta.() -> Unit) {
-  this as Endpoints_core_v1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as Endpoints_core_v1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -1015,8 +1015,8 @@ address will appear in both Addresses and NotReadyAddresses in the same subset. 
 comprise a service. */
 @K8sDslMarker
 fun Endpoints.subsets(init: EndpointSubset.() -> Unit) {
-  this as Endpoints_core_v1Impl
-  EndpointSubset_core_v1Impl(this)
+  this as Endpoints_core_v1_k8s1_17Impl
+  EndpointSubset_core_v1_k8s1_17Impl(this)
     .also { subsets = subsets?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -1024,8 +1024,8 @@ fun Endpoints.subsets(init: EndpointSubset.() -> Unit) {
 /** The ConfigMap to select from */
 @K8sDslMarker
 fun EnvFromSource.configMapRef(init: ConfigMapEnvSource.() -> Unit) {
-  this as EnvFromSource_core_v1Impl
-  ConfigMapEnvSource_core_v1Impl(this)
+  this as EnvFromSource_core_v1_k8s1_17Impl
+  ConfigMapEnvSource_core_v1_k8s1_17Impl(this)
     .also { configMapRef = it }
     .apply(init)
 }
@@ -1033,8 +1033,8 @@ fun EnvFromSource.configMapRef(init: ConfigMapEnvSource.() -> Unit) {
 /** The Secret to select from */
 @K8sDslMarker
 fun EnvFromSource.secretRef(init: SecretEnvSource.() -> Unit) {
-  this as EnvFromSource_core_v1Impl
-  SecretEnvSource_core_v1Impl(this)
+  this as EnvFromSource_core_v1_k8s1_17Impl
+  SecretEnvSource_core_v1_k8s1_17Impl(this)
     .also { secretRef = it }
     .apply(init)
 }
@@ -1042,8 +1042,8 @@ fun EnvFromSource.secretRef(init: SecretEnvSource.() -> Unit) {
 /** Selects a key of a ConfigMap. */
 @K8sDslMarker
 fun EnvVarSource.configMapKeyRef(init: ConfigMapKeySelector.() -> Unit) {
-  this as EnvVarSource_core_v1Impl
-  ConfigMapKeySelector_core_v1Impl(this)
+  this as EnvVarSource_core_v1_k8s1_17Impl
+  ConfigMapKeySelector_core_v1_k8s1_17Impl(this)
     .also { configMapKeyRef = it }
     .apply(init)
 }
@@ -1052,8 +1052,8 @@ fun EnvVarSource.configMapKeyRef(init: ConfigMapKeySelector.() -> Unit) {
 spec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP, status.podIPs. */
 @K8sDslMarker
 fun EnvVarSource.fieldRef(init: ObjectFieldSelector.() -> Unit) {
-  this as EnvVarSource_core_v1Impl
-  ObjectFieldSelector_core_v1Impl(this)
+  this as EnvVarSource_core_v1_k8s1_17Impl
+  ObjectFieldSelector_core_v1_k8s1_17Impl(this)
     .also { fieldRef = it }
     .apply(init)
 }
@@ -1062,8 +1062,8 @@ fun EnvVarSource.fieldRef(init: ObjectFieldSelector.() -> Unit) {
 limits.ephemeral-storage, requests.cpu, requests.memory and requests.ephemeral-storage) are currently supported. */
 @K8sDslMarker
 fun EnvVarSource.resourceFieldRef(init: ResourceFieldSelector.() -> Unit) {
-  this as EnvVarSource_core_v1Impl
-  ResourceFieldSelector_core_v1Impl(this)
+  this as EnvVarSource_core_v1_k8s1_17Impl
+  ResourceFieldSelector_core_v1_k8s1_17Impl(this)
     .also { resourceFieldRef = it }
     .apply(init)
 }
@@ -1071,8 +1071,8 @@ fun EnvVarSource.resourceFieldRef(init: ResourceFieldSelector.() -> Unit) {
 /** Selects a key of a secret in the pod's namespace */
 @K8sDslMarker
 fun EnvVarSource.secretKeyRef(init: SecretKeySelector.() -> Unit) {
-  this as EnvVarSource_core_v1Impl
-  SecretKeySelector_core_v1Impl(this)
+  this as EnvVarSource_core_v1_k8s1_17Impl
+  SecretKeySelector_core_v1_k8s1_17Impl(this)
     .also { secretKeyRef = it }
     .apply(init)
 }
@@ -1080,8 +1080,8 @@ fun EnvVarSource.secretKeyRef(init: SecretKeySelector.() -> Unit) {
 /** Source for the environment variable's value. Cannot be used if value is not empty. */
 @K8sDslMarker
 fun EnvVar.valueFrom(init: EnvVarSource.() -> Unit) {
-  this as EnvVar_core_v1Impl
-  EnvVarSource_core_v1Impl(this)
+  this as EnvVar_core_v1_k8s1_17Impl
+  EnvVarSource_core_v1_k8s1_17Impl(this)
     .also { valueFrom = it }
     .apply(init)
 }
@@ -1089,8 +1089,8 @@ fun EnvVar.valueFrom(init: EnvVarSource.() -> Unit) {
 /** List of environment variables to set in the container. Cannot be updated. */
 @K8sDslMarker
 fun EphemeralContainer.env(init: EnvVar.() -> Unit) {
-  this as EphemeralContainer_core_v1Impl
-  EnvVar_core_v1Impl(this)
+  this as EphemeralContainer_core_v1_k8s1_17Impl
+  EnvVar_core_v1_k8s1_17Impl(this)
     .also { env = env?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -1101,8 +1101,8 @@ multiple sources, the value associated with the last source will take precedence
 duplicate key will take precedence. Cannot be updated. */
 @K8sDslMarker
 fun EphemeralContainer.envFrom(init: EnvFromSource.() -> Unit) {
-  this as EphemeralContainer_core_v1Impl
-  EnvFromSource_core_v1Impl(this)
+  this as EphemeralContainer_core_v1_k8s1_17Impl
+  EnvFromSource_core_v1_k8s1_17Impl(this)
     .also { envFrom = envFrom?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -1110,8 +1110,8 @@ fun EphemeralContainer.envFrom(init: EnvFromSource.() -> Unit) {
 /** Lifecycle is not allowed for ephemeral containers. */
 @K8sDslMarker
 fun EphemeralContainer.lifecycle(init: Lifecycle.() -> Unit) {
-  this as EphemeralContainer_core_v1Impl
-  Lifecycle_core_v1Impl(this)
+  this as EphemeralContainer_core_v1_k8s1_17Impl
+  Lifecycle_core_v1_k8s1_17Impl(this)
     .also { lifecycle = it }
     .apply(init)
 }
@@ -1119,8 +1119,8 @@ fun EphemeralContainer.lifecycle(init: Lifecycle.() -> Unit) {
 /** Probes are not allowed for ephemeral containers. */
 @K8sDslMarker
 fun EphemeralContainer.livenessProbe(init: Probe.() -> Unit) {
-  this as EphemeralContainer_core_v1Impl
-  Probe_core_v1Impl(this)
+  this as EphemeralContainer_core_v1_k8s1_17Impl
+  Probe_core_v1_k8s1_17Impl(this)
     .also { livenessProbe = it }
     .apply(init)
 }
@@ -1128,8 +1128,8 @@ fun EphemeralContainer.livenessProbe(init: Probe.() -> Unit) {
 /** Ports are not allowed for ephemeral containers. */
 @K8sDslMarker
 fun EphemeralContainer.ports(init: ContainerPort.() -> Unit) {
-  this as EphemeralContainer_core_v1Impl
-  ContainerPort_core_v1Impl(this)
+  this as EphemeralContainer_core_v1_k8s1_17Impl
+  ContainerPort_core_v1_k8s1_17Impl(this)
     .also { ports = ports?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -1137,8 +1137,8 @@ fun EphemeralContainer.ports(init: ContainerPort.() -> Unit) {
 /** Probes are not allowed for ephemeral containers. */
 @K8sDslMarker
 fun EphemeralContainer.readinessProbe(init: Probe.() -> Unit) {
-  this as EphemeralContainer_core_v1Impl
-  Probe_core_v1Impl(this)
+  this as EphemeralContainer_core_v1_k8s1_17Impl
+  Probe_core_v1_k8s1_17Impl(this)
     .also { readinessProbe = it }
     .apply(init)
 }
@@ -1147,8 +1147,8 @@ fun EphemeralContainer.readinessProbe(init: Probe.() -> Unit) {
 pod. */
 @K8sDslMarker
 fun EphemeralContainer.resources(init: ResourceRequirements.() -> Unit) {
-  this as EphemeralContainer_core_v1Impl
-  ResourceRequirements_core_v1Impl(this)
+  this as EphemeralContainer_core_v1_k8s1_17Impl
+  ResourceRequirements_core_v1_k8s1_17Impl(this)
     .also { resources = it }
     .apply(init)
 }
@@ -1156,8 +1156,8 @@ fun EphemeralContainer.resources(init: ResourceRequirements.() -> Unit) {
 /** SecurityContext is not allowed for ephemeral containers. */
 @K8sDslMarker
 fun EphemeralContainer.securityContext(init: SecurityContext.() -> Unit) {
-  this as EphemeralContainer_core_v1Impl
-  SecurityContext_core_v1Impl(this)
+  this as EphemeralContainer_core_v1_k8s1_17Impl
+  SecurityContext_core_v1_k8s1_17Impl(this)
     .also { securityContext = it }
     .apply(init)
 }
@@ -1165,8 +1165,8 @@ fun EphemeralContainer.securityContext(init: SecurityContext.() -> Unit) {
 /** Probes are not allowed for ephemeral containers. */
 @K8sDslMarker
 fun EphemeralContainer.startupProbe(init: Probe.() -> Unit) {
-  this as EphemeralContainer_core_v1Impl
-  Probe_core_v1Impl(this)
+  this as EphemeralContainer_core_v1_k8s1_17Impl
+  Probe_core_v1_k8s1_17Impl(this)
     .also { startupProbe = it }
     .apply(init)
 }
@@ -1174,8 +1174,8 @@ fun EphemeralContainer.startupProbe(init: Probe.() -> Unit) {
 /** volumeDevices is the list of block devices to be used by the container. This is a beta feature. */
 @K8sDslMarker
 fun EphemeralContainer.volumeDevices(init: VolumeDevice.() -> Unit) {
-  this as EphemeralContainer_core_v1Impl
-  VolumeDevice_core_v1Impl(this)
+  this as EphemeralContainer_core_v1_k8s1_17Impl
+  VolumeDevice_core_v1_k8s1_17Impl(this)
     .also { volumeDevices = volumeDevices?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -1183,8 +1183,8 @@ fun EphemeralContainer.volumeDevices(init: VolumeDevice.() -> Unit) {
 /** Pod volumes to mount into the container's filesystem. Cannot be updated. */
 @K8sDslMarker
 fun EphemeralContainer.volumeMounts(init: VolumeMount.() -> Unit) {
-  this as EphemeralContainer_core_v1Impl
-  VolumeMount_core_v1Impl(this)
+  this as EphemeralContainer_core_v1_k8s1_17Impl
+  VolumeMount_core_v1_k8s1_17Impl(this)
     .also { volumeMounts = volumeMounts?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -1192,8 +1192,8 @@ fun EphemeralContainer.volumeMounts(init: VolumeMount.() -> Unit) {
 /** Time of the last occurrence observed */
 @K8sDslMarker
 fun EventSeries.lastObservedTime(init: MicroTime.() -> Unit) {
-  this as EventSeries_core_v1Impl
-  MicroTime_meta_v1Impl(this)
+  this as EventSeries_core_v1_k8s1_17Impl
+  MicroTime_meta_v1_k8s1_17Impl(this)
     .also { lastObservedTime = it }
     .apply(init)
 }
@@ -1201,8 +1201,8 @@ fun EventSeries.lastObservedTime(init: MicroTime.() -> Unit) {
 /** Time when this Event was first observed. */
 @K8sDslMarker
 fun Event.eventTime(init: MicroTime.() -> Unit) {
-  this as Event_core_v1Impl
-  MicroTime_meta_v1Impl(this)
+  this as Event_core_v1_k8s1_17Impl
+  MicroTime_meta_v1_k8s1_17Impl(this)
     .also { eventTime = it }
     .apply(init)
 }
@@ -1210,8 +1210,8 @@ fun Event.eventTime(init: MicroTime.() -> Unit) {
 /** The time at which the event was first recorded. (Time of server receipt is in TypeMeta.) */
 @K8sDslMarker
 fun Event.firstTimestamp(init: Time.() -> Unit) {
-  this as Event_core_v1Impl
-  Time_meta_v1Impl(this)
+  this as Event_core_v1_k8s1_17Impl
+  Time_meta_v1_k8s1_17Impl(this)
     .also { firstTimestamp = it }
     .apply(init)
 }
@@ -1219,8 +1219,8 @@ fun Event.firstTimestamp(init: Time.() -> Unit) {
 /** The object that this event is about. */
 @K8sDslMarker
 fun Event.involvedObject(init: ObjectReference.() -> Unit) {
-  this as Event_core_v1Impl
-  ObjectReference_core_v1Impl(this)
+  this as Event_core_v1_k8s1_17Impl
+  ObjectReference_core_v1_k8s1_17Impl(this)
     .also { involvedObject = it }
     .apply(init)
 }
@@ -1228,8 +1228,8 @@ fun Event.involvedObject(init: ObjectReference.() -> Unit) {
 /** The time at which the most recent occurrence of this event was recorded. */
 @K8sDslMarker
 fun Event.lastTimestamp(init: Time.() -> Unit) {
-  this as Event_core_v1Impl
-  Time_meta_v1Impl(this)
+  this as Event_core_v1_k8s1_17Impl
+  Time_meta_v1_k8s1_17Impl(this)
     .also { lastTimestamp = it }
     .apply(init)
 }
@@ -1238,8 +1238,8 @@ fun Event.lastTimestamp(init: Time.() -> Unit) {
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata */
 @K8sDslMarker
 fun Event.metadata(init: ObjectMeta.() -> Unit) {
-  this as Event_core_v1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as Event_core_v1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -1247,8 +1247,8 @@ fun Event.metadata(init: ObjectMeta.() -> Unit) {
 /** Optional secondary object for more complex actions. */
 @K8sDslMarker
 fun Event.related(init: ObjectReference.() -> Unit) {
-  this as Event_core_v1Impl
-  ObjectReference_core_v1Impl(this)
+  this as Event_core_v1_k8s1_17Impl
+  ObjectReference_core_v1_k8s1_17Impl(this)
     .also { related = it }
     .apply(init)
 }
@@ -1256,8 +1256,8 @@ fun Event.related(init: ObjectReference.() -> Unit) {
 /** Data about the Event series this event represents or nil if it's a singleton Event. */
 @K8sDslMarker
 fun Event.series(init: EventSeries.() -> Unit) {
-  this as Event_core_v1Impl
-  EventSeries_core_v1Impl(this)
+  this as Event_core_v1_k8s1_17Impl
+  EventSeries_core_v1_k8s1_17Impl(this)
     .also { series = it }
     .apply(init)
 }
@@ -1265,8 +1265,8 @@ fun Event.series(init: EventSeries.() -> Unit) {
 /** The component reporting this event. Should be a short machine understandable string. */
 @K8sDslMarker
 fun Event.source(init: EventSource.() -> Unit) {
-  this as Event_core_v1Impl
-  EventSource_core_v1Impl(this)
+  this as Event_core_v1_k8s1_17Impl
+  EventSource_core_v1_k8s1_17Impl(this)
     .also { source = it }
     .apply(init)
 }
@@ -1274,8 +1274,8 @@ fun Event.source(init: EventSource.() -> Unit) {
 /** DeleteOptions may be provided */
 @K8sDslMarker
 fun Eviction.deleteOptions(init: DeleteOptions.() -> Unit) {
-  this as Eviction_policy_v1beta1Impl
-  DeleteOptions_meta_v1Impl(this)
+  this as Eviction_policy_v1beta1_k8s1_17Impl
+  DeleteOptions_meta_v1_k8s1_17Impl(this)
     .also { deleteOptions = it }
     .apply(init)
 }
@@ -1283,8 +1283,8 @@ fun Eviction.deleteOptions(init: DeleteOptions.() -> Unit) {
 /** ObjectMeta describes the pod that is being evicted. */
 @K8sDslMarker
 fun Eviction.metadata(init: ObjectMeta.() -> Unit) {
-  this as Eviction_policy_v1beta1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as Eviction_policy_v1beta1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -1292,8 +1292,8 @@ fun Eviction.metadata(init: ObjectMeta.() -> Unit) {
 /** metric identifies the target metric by name and selector */
 @K8sDslMarker
 fun ExternalMetricSource.metric(init: MetricIdentifier.() -> Unit) {
-  this as ExternalMetricSource_autoscaling_v2beta2Impl
-  MetricIdentifier_autoscaling_v2beta2Impl(this)
+  this as ExternalMetricSource_autoscaling_v2beta2_k8s1_17Impl
+  MetricIdentifier_autoscaling_v2beta2_k8s1_17Impl(this)
     .also { metric = it }
     .apply(init)
 }
@@ -1301,8 +1301,8 @@ fun ExternalMetricSource.metric(init: MetricIdentifier.() -> Unit) {
 /** target specifies the target value for the given metric */
 @K8sDslMarker
 fun ExternalMetricSource.target(init: MetricTarget.() -> Unit) {
-  this as ExternalMetricSource_autoscaling_v2beta2Impl
-  MetricTarget_autoscaling_v2beta2Impl(this)
+  this as ExternalMetricSource_autoscaling_v2beta2_k8s1_17Impl
+  MetricTarget_autoscaling_v2beta2_k8s1_17Impl(this)
     .also { target = it }
     .apply(init)
 }
@@ -1310,8 +1310,8 @@ fun ExternalMetricSource.target(init: MetricTarget.() -> Unit) {
 /** current contains the current value for the given metric */
 @K8sDslMarker
 fun ExternalMetricStatus.current(init: MetricValueStatus.() -> Unit) {
-  this as ExternalMetricStatus_autoscaling_v2beta2Impl
-  MetricValueStatus_autoscaling_v2beta2Impl(this)
+  this as ExternalMetricStatus_autoscaling_v2beta2_k8s1_17Impl
+  MetricValueStatus_autoscaling_v2beta2_k8s1_17Impl(this)
     .also { current = it }
     .apply(init)
 }
@@ -1319,8 +1319,8 @@ fun ExternalMetricStatus.current(init: MetricValueStatus.() -> Unit) {
 /** metric identifies the target metric by name and selector */
 @K8sDslMarker
 fun ExternalMetricStatus.metric(init: MetricIdentifier.() -> Unit) {
-  this as ExternalMetricStatus_autoscaling_v2beta2Impl
-  MetricIdentifier_autoscaling_v2beta2Impl(this)
+  this as ExternalMetricStatus_autoscaling_v2beta2_k8s1_17Impl
+  MetricIdentifier_autoscaling_v2beta2_k8s1_17Impl(this)
     .also { metric = it }
     .apply(init)
 }
@@ -1329,8 +1329,8 @@ fun ExternalMetricStatus.metric(init: MetricIdentifier.() -> Unit) {
 the same start and end. Required for MustRunAs. */
 @K8sDslMarker
 fun FSGroupStrategyOptions.ranges(init: IDRange.() -> Unit) {
-  this as FSGroupStrategyOptions_policy_v1beta1Impl
-  IDRange_policy_v1beta1Impl(this)
+  this as FSGroupStrategyOptions_policy_v1beta1_k8s1_17Impl
+  IDRange_policy_v1beta1_k8s1_17Impl(this)
     .also { ranges = ranges?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -1340,8 +1340,8 @@ This may be empty if no secret object is specified. If the secret object contain
 passed to the plugin scripts. */
 @K8sDslMarker
 fun FlexPersistentVolumeSource.secretRef(init: SecretReference.() -> Unit) {
-  this as FlexPersistentVolumeSource_core_v1Impl
-  SecretReference_core_v1Impl(this)
+  this as FlexPersistentVolumeSource_core_v1_k8s1_17Impl
+  SecretReference_core_v1_k8s1_17Impl(this)
     .also { secretRef = it }
     .apply(init)
 }
@@ -1351,8 +1351,8 @@ This may be empty if no secret object is specified. If the secret object contain
 passed to the plugin scripts. */
 @K8sDslMarker
 fun FlexVolumeSource.secretRef(init: LocalObjectReference.() -> Unit) {
-  this as FlexVolumeSource_core_v1Impl
-  LocalObjectReference_core_v1Impl(this)
+  this as FlexVolumeSource_core_v1_k8s1_17Impl
+  LocalObjectReference_core_v1_k8s1_17Impl(this)
     .also { secretRef = it }
     .apply(init)
 }
@@ -1360,8 +1360,8 @@ fun FlexVolumeSource.secretRef(init: LocalObjectReference.() -> Unit) {
 /** `lastTransitionTime` is the last time the condition transitioned from one status to another. */
 @K8sDslMarker
 fun FlowSchemaCondition.lastTransitionTime(init: Time.() -> Unit) {
-  this as FlowSchemaCondition_flowcontrol_apiserver_k8s_io_v1alpha1Impl
-  Time_meta_v1Impl(this)
+  this as FlowSchemaCondition_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17Impl
+  Time_meta_v1_k8s1_17Impl(this)
     .also { lastTransitionTime = it }
     .apply(init)
 }
@@ -1370,8 +1370,8 @@ fun FlowSchemaCondition.lastTransitionTime(init: Time.() -> Unit) {
 https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata */
 @K8sDslMarker
 fun FlowSchema.metadata(init: ObjectMeta.() -> Unit) {
-  this as FlowSchema_flowcontrol_apiserver_k8s_io_v1alpha1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as FlowSchema_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -1380,8 +1380,8 @@ fun FlowSchema.metadata(init: ObjectMeta.() -> Unit) {
 https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status */
 @K8sDslMarker
 fun FlowSchema.spec(init: Flowschemaspec.() -> Unit) {
-  this as FlowSchema_flowcontrol_apiserver_k8s_io_v1alpha1Impl
-  Flowschemaspec_flowcontrol_apiserver_k8s_io_v1alpha1Impl(this)
+  this as FlowSchema_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17Impl
+  Flowschemaspec_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17Impl(this)
     .also { spec = it }
     .apply(init)
 }
@@ -1390,8 +1390,8 @@ fun FlowSchema.spec(init: Flowschemaspec.() -> Unit) {
 https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status */
 @K8sDslMarker
 fun FlowSchema.status(init: Flowschemastatus.() -> Unit) {
-  this as FlowSchema_flowcontrol_apiserver_k8s_io_v1alpha1Impl
-  Flowschemastatus_flowcontrol_apiserver_k8s_io_v1alpha1Impl(this)
+  this as FlowSchema_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17Impl
+  Flowschemastatus_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17Impl(this)
     .also { status = it }
     .apply(init)
 }
@@ -1399,35 +1399,17 @@ fun FlowSchema.status(init: Flowschemastatus.() -> Unit) {
 /** Custom headers to set in the request. HTTP allows repeated headers. */
 @K8sDslMarker
 fun HTTPGetAction.httpHeaders(init: HTTPHeader.() -> Unit) {
-  this as HTTPGetAction_core_v1Impl
-  HTTPHeader_core_v1Impl(this)
+  this as HTTPGetAction_core_v1_k8s1_17Impl
+  HTTPHeader_core_v1_k8s1_17Impl(this)
     .also { httpHeaders = httpHeaders?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
-}
-
-/** Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an
-IANA_SVC_NAME. */
-@K8sDslMarker
-fun HTTPGetAction.port(string: String) {
-  this as HTTPGetAction_core_v1Impl
-  de.loosetie.k8s.dsl.types.IntOrString(string)
-    .also { port = it }
-}
-
-/** Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an
-IANA_SVC_NAME. */
-@K8sDslMarker
-fun HTTPGetAction.port(int: Int) {
-  this as HTTPGetAction_core_v1Impl
-  de.loosetie.k8s.dsl.types.IntOrString(int)
-    .also { port = it }
 }
 
 /** Backend defines the referenced service endpoint to which the traffic will be forwarded to. */
 @K8sDslMarker
 fun HTTPIngressPath.backend(init: IngressBackend.() -> Unit) {
-  this as HTTPIngressPath_networking_k8s_io_v1beta1Impl
-  IngressBackend_networking_k8s_io_v1beta1Impl(this)
+  this as HTTPIngressPath_networking_k8s_io_v1beta1_k8s1_17Impl
+  IngressBackend_networking_k8s_io_v1beta1_k8s1_17Impl(this)
     .also { backend = it }
     .apply(init)
 }
@@ -1435,8 +1417,8 @@ fun HTTPIngressPath.backend(init: IngressBackend.() -> Unit) {
 /** A collection of paths that map requests to backends. */
 @K8sDslMarker
 fun HTTPIngressRuleValue.paths(init: HTTPIngressPath.() -> Unit) {
-  this as HTTPIngressRuleValue_networking_k8s_io_v1beta1Impl
-  HTTPIngressPath_networking_k8s_io_v1beta1Impl(this)
+  this as HTTPIngressRuleValue_networking_k8s_io_v1beta1_k8s1_17Impl
+  HTTPIngressPath_networking_k8s_io_v1beta1_k8s1_17Impl(this)
     .also { paths = paths?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -1444,8 +1426,8 @@ fun HTTPIngressRuleValue.paths(init: HTTPIngressPath.() -> Unit) {
 /** One and only one of the following should be specified. Exec specifies the action to take. */
 @K8sDslMarker
 fun Handler.exec(init: ExecAction.() -> Unit) {
-  this as Handler_core_v1Impl
-  ExecAction_core_v1Impl(this)
+  this as Handler_core_v1_k8s1_17Impl
+  ExecAction_core_v1_k8s1_17Impl(this)
     .also { exec = it }
     .apply(init)
 }
@@ -1453,8 +1435,8 @@ fun Handler.exec(init: ExecAction.() -> Unit) {
 /** HTTPGet specifies the http request to perform. */
 @K8sDslMarker
 fun Handler.httpGet(init: HTTPGetAction.() -> Unit) {
-  this as Handler_core_v1Impl
-  HTTPGetAction_core_v1Impl(this)
+  this as Handler_core_v1_k8s1_17Impl
+  HTTPGetAction_core_v1_k8s1_17Impl(this)
     .also { httpGet = it }
     .apply(init)
 }
@@ -1462,8 +1444,8 @@ fun Handler.httpGet(init: HTTPGetAction.() -> Unit) {
 /** TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported */
 @K8sDslMarker
 fun Handler.tcpSocket(init: TCPSocketAction.() -> Unit) {
-  this as Handler_core_v1Impl
-  TCPSocketAction_core_v1Impl(this)
+  this as Handler_core_v1_k8s1_17Impl
+  TCPSocketAction_core_v1_k8s1_17Impl(this)
     .also { tcpSocket = it }
     .apply(init)
 }
@@ -1471,8 +1453,8 @@ fun Handler.tcpSocket(init: TCPSocketAction.() -> Unit) {
 /** lastTransitionTime is the last time the condition transitioned from one status to another */
 @K8sDslMarker
 fun HorizontalPodAutoscalerCondition.lastTransitionTime(init: Time.() -> Unit) {
-  this as HorizontalPodAutoscalerCondition_autoscaling_v2beta2Impl
-  Time_meta_v1Impl(this)
+  this as HorizontalPodAutoscalerCondition_autoscaling_v2beta2_k8s1_17Impl
+  Time_meta_v1_k8s1_17Impl(this)
     .also { lastTransitionTime = it }
     .apply(init)
 }
@@ -1481,8 +1463,8 @@ fun HorizontalPodAutoscalerCondition.lastTransitionTime(init: Time.() -> Unit) {
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata */
 @K8sDslMarker
 fun HorizontalPodAutoscaler.metadata(init: ObjectMeta.() -> Unit) {
-  this as HorizontalPodAutoscaler_autoscaling_v1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as HorizontalPodAutoscaler_autoscaling_v1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -1491,8 +1473,8 @@ fun HorizontalPodAutoscaler.metadata(init: ObjectMeta.() -> Unit) {
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status. */
 @K8sDslMarker
 fun HorizontalPodAutoscaler.spec(init: Horizontalpodautoscalerspec.() -> Unit) {
-  this as HorizontalPodAutoscaler_autoscaling_v1Impl
-  Horizontalpodautoscalerspec_autoscaling_v1Impl(this)
+  this as HorizontalPodAutoscaler_autoscaling_v1_k8s1_17Impl
+  Horizontalpodautoscalerspec_autoscaling_v1_k8s1_17Impl(this)
     .also { spec = it }
     .apply(init)
 }
@@ -1500,8 +1482,8 @@ fun HorizontalPodAutoscaler.spec(init: Horizontalpodautoscalerspec.() -> Unit) {
 /** current information about the autoscaler. */
 @K8sDslMarker
 fun HorizontalPodAutoscaler.status(init: Horizontalpodautoscalerstatus.() -> Unit) {
-  this as HorizontalPodAutoscaler_autoscaling_v1Impl
-  Horizontalpodautoscalerstatus_autoscaling_v1Impl(this)
+  this as HorizontalPodAutoscaler_autoscaling_v1_k8s1_17Impl
+  Horizontalpodautoscalerstatus_autoscaling_v1_k8s1_17Impl(this)
     .also { status = it }
     .apply(init)
 }
@@ -1509,8 +1491,8 @@ fun HorizontalPodAutoscaler.status(init: Horizontalpodautoscalerstatus.() -> Uni
 /** CHAP Secret for iSCSI target and initiator authentication */
 @K8sDslMarker
 fun ISCSIPersistentVolumeSource.secretRef(init: SecretReference.() -> Unit) {
-  this as ISCSIPersistentVolumeSource_core_v1Impl
-  SecretReference_core_v1Impl(this)
+  this as ISCSIPersistentVolumeSource_core_v1_k8s1_17Impl
+  SecretReference_core_v1_k8s1_17Impl(this)
     .also { secretRef = it }
     .apply(init)
 }
@@ -1518,33 +1500,17 @@ fun ISCSIPersistentVolumeSource.secretRef(init: SecretReference.() -> Unit) {
 /** CHAP Secret for iSCSI target and initiator authentication */
 @K8sDslMarker
 fun ISCSIVolumeSource.secretRef(init: LocalObjectReference.() -> Unit) {
-  this as ISCSIVolumeSource_core_v1Impl
-  LocalObjectReference_core_v1Impl(this)
+  this as ISCSIVolumeSource_core_v1_k8s1_17Impl
+  LocalObjectReference_core_v1_k8s1_17Impl(this)
     .also { secretRef = it }
     .apply(init)
-}
-
-/** Specifies the port of the referenced service. */
-@K8sDslMarker
-fun IngressBackend.servicePort(string: String) {
-  this as IngressBackend_networking_k8s_io_v1beta1Impl
-  de.loosetie.k8s.dsl.types.IntOrString(string)
-    .also { servicePort = it }
-}
-
-/** Specifies the port of the referenced service. */
-@K8sDslMarker
-fun IngressBackend.servicePort(int: Int) {
-  this as IngressBackend_networking_k8s_io_v1beta1Impl
-  de.loosetie.k8s.dsl.types.IntOrString(int)
-    .also { servicePort = it }
 }
 
 /**  */
 @K8sDslMarker
 fun IngressRule.http(init: HTTPIngressRuleValue.() -> Unit) {
-  this as IngressRule_networking_k8s_io_v1beta1Impl
-  HTTPIngressRuleValue_networking_k8s_io_v1beta1Impl(this)
+  this as IngressRule_networking_k8s_io_v1beta1_k8s1_17Impl
+  HTTPIngressRuleValue_networking_k8s_io_v1beta1_k8s1_17Impl(this)
     .also { http = it }
     .apply(init)
 }
@@ -1553,8 +1519,8 @@ fun IngressRule.http(init: HTTPIngressRuleValue.() -> Unit) {
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata */
 @K8sDslMarker
 fun Ingress.metadata(init: ObjectMeta.() -> Unit) {
-  this as Ingress_networking_k8s_io_v1beta1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as Ingress_networking_k8s_io_v1beta1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -1563,8 +1529,8 @@ fun Ingress.metadata(init: ObjectMeta.() -> Unit) {
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status */
 @K8sDslMarker
 fun Ingress.spec(init: Ingressspec.() -> Unit) {
-  this as Ingress_networking_k8s_io_v1beta1Impl
-  Ingressspec_networking_k8s_io_v1beta1Impl(this)
+  this as Ingress_networking_k8s_io_v1beta1_k8s1_17Impl
+  Ingressspec_networking_k8s_io_v1beta1_k8s1_17Impl(this)
     .also { spec = it }
     .apply(init)
 }
@@ -1573,8 +1539,8 @@ fun Ingress.spec(init: Ingressspec.() -> Unit) {
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status */
 @K8sDslMarker
 fun Ingress.status(init: Ingressstatus.() -> Unit) {
-  this as Ingress_networking_k8s_io_v1beta1Impl
-  Ingressstatus_networking_k8s_io_v1beta1Impl(this)
+  this as Ingress_networking_k8s_io_v1beta1_k8s1_17Impl
+  Ingressstatus_networking_k8s_io_v1beta1_k8s1_17Impl(this)
     .also { status = it }
     .apply(init)
 }
@@ -1582,8 +1548,8 @@ fun Ingress.status(init: Ingressstatus.() -> Unit) {
 /**  */
 @K8sDslMarker
 fun JSONSchemaProps.additionalItems(init: JSONSchemaPropsOrBool.() -> Unit) {
-  this as JSONSchemaProps_apiextensions_k8s_io_v1Impl
-  JSONSchemaPropsOrBool_apiextensions_k8s_io_v1Impl(this)
+  this as JSONSchemaProps_apiextensions_k8s_io_v1_k8s1_17Impl
+  JSONSchemaPropsOrBool_apiextensions_k8s_io_v1_k8s1_17Impl(this)
     .also { additionalItems = it }
     .apply(init)
 }
@@ -1591,8 +1557,8 @@ fun JSONSchemaProps.additionalItems(init: JSONSchemaPropsOrBool.() -> Unit) {
 /**  */
 @K8sDslMarker
 fun JSONSchemaProps.additionalProperties(init: JSONSchemaPropsOrBool.() -> Unit) {
-  this as JSONSchemaProps_apiextensions_k8s_io_v1Impl
-  JSONSchemaPropsOrBool_apiextensions_k8s_io_v1Impl(this)
+  this as JSONSchemaProps_apiextensions_k8s_io_v1_k8s1_17Impl
+  JSONSchemaPropsOrBool_apiextensions_k8s_io_v1_k8s1_17Impl(this)
     .also { additionalProperties = it }
     .apply(init)
 }
@@ -1600,8 +1566,8 @@ fun JSONSchemaProps.additionalProperties(init: JSONSchemaPropsOrBool.() -> Unit)
 /**  */
 @K8sDslMarker
 fun JSONSchemaProps.allOf(init: JSONSchemaProps.() -> Unit) {
-  this as JSONSchemaProps_apiextensions_k8s_io_v1Impl
-  JSONSchemaProps_apiextensions_k8s_io_v1Impl(this)
+  this as JSONSchemaProps_apiextensions_k8s_io_v1_k8s1_17Impl
+  JSONSchemaProps_apiextensions_k8s_io_v1_k8s1_17Impl(this)
     .also { allOf = allOf?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -1609,8 +1575,8 @@ fun JSONSchemaProps.allOf(init: JSONSchemaProps.() -> Unit) {
 /**  */
 @K8sDslMarker
 fun JSONSchemaProps.anyOf(init: JSONSchemaProps.() -> Unit) {
-  this as JSONSchemaProps_apiextensions_k8s_io_v1Impl
-  JSONSchemaProps_apiextensions_k8s_io_v1Impl(this)
+  this as JSONSchemaProps_apiextensions_k8s_io_v1_k8s1_17Impl
+  JSONSchemaProps_apiextensions_k8s_io_v1_k8s1_17Impl(this)
     .also { anyOf = anyOf?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -1619,8 +1585,8 @@ fun JSONSchemaProps.anyOf(init: JSONSchemaProps.() -> Unit) {
 feature gate. Defaulting requires spec.preserveUnknownFields to be false. */
 @K8sDslMarker
 fun JSONSchemaProps.default(init: JSON.() -> Unit) {
-  this as JSONSchemaProps_apiextensions_k8s_io_v1Impl
-  JSON_apiextensions_k8s_io_v1Impl(this)
+  this as JSONSchemaProps_apiextensions_k8s_io_v1_k8s1_17Impl
+  JSON_apiextensions_k8s_io_v1_k8s1_17Impl(this)
     .also { default = it }
     .apply(init)
 }
@@ -1628,8 +1594,8 @@ fun JSONSchemaProps.default(init: JSON.() -> Unit) {
 /**  */
 @K8sDslMarker
 fun JSONSchemaProps.enum(init: JSON.() -> Unit) {
-  this as JSONSchemaProps_apiextensions_k8s_io_v1Impl
-  JSON_apiextensions_k8s_io_v1Impl(this)
+  this as JSONSchemaProps_apiextensions_k8s_io_v1_k8s1_17Impl
+  JSON_apiextensions_k8s_io_v1_k8s1_17Impl(this)
     .also { enum = enum?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -1637,8 +1603,8 @@ fun JSONSchemaProps.enum(init: JSON.() -> Unit) {
 /**  */
 @K8sDslMarker
 fun JSONSchemaProps.example(init: JSON.() -> Unit) {
-  this as JSONSchemaProps_apiextensions_k8s_io_v1Impl
-  JSON_apiextensions_k8s_io_v1Impl(this)
+  this as JSONSchemaProps_apiextensions_k8s_io_v1_k8s1_17Impl
+  JSON_apiextensions_k8s_io_v1_k8s1_17Impl(this)
     .also { example = it }
     .apply(init)
 }
@@ -1646,8 +1612,8 @@ fun JSONSchemaProps.example(init: JSON.() -> Unit) {
 /**  */
 @K8sDslMarker
 fun JSONSchemaProps.externalDocs(init: ExternalDocumentation.() -> Unit) {
-  this as JSONSchemaProps_apiextensions_k8s_io_v1Impl
-  ExternalDocumentation_apiextensions_k8s_io_v1Impl(this)
+  this as JSONSchemaProps_apiextensions_k8s_io_v1_k8s1_17Impl
+  ExternalDocumentation_apiextensions_k8s_io_v1_k8s1_17Impl(this)
     .also { externalDocs = it }
     .apply(init)
 }
@@ -1655,8 +1621,8 @@ fun JSONSchemaProps.externalDocs(init: ExternalDocumentation.() -> Unit) {
 /**  */
 @K8sDslMarker
 fun JSONSchemaProps.items(init: JSONSchemaPropsOrArray.() -> Unit) {
-  this as JSONSchemaProps_apiextensions_k8s_io_v1Impl
-  JSONSchemaPropsOrArray_apiextensions_k8s_io_v1Impl(this)
+  this as JSONSchemaProps_apiextensions_k8s_io_v1_k8s1_17Impl
+  JSONSchemaPropsOrArray_apiextensions_k8s_io_v1_k8s1_17Impl(this)
     .also { items = it }
     .apply(init)
 }
@@ -1664,8 +1630,8 @@ fun JSONSchemaProps.items(init: JSONSchemaPropsOrArray.() -> Unit) {
 /**  */
 @K8sDslMarker
 fun JSONSchemaProps.not(init: JSONSchemaProps.() -> Unit) {
-  this as JSONSchemaProps_apiextensions_k8s_io_v1Impl
-  JSONSchemaProps_apiextensions_k8s_io_v1Impl(this)
+  this as JSONSchemaProps_apiextensions_k8s_io_v1_k8s1_17Impl
+  JSONSchemaProps_apiextensions_k8s_io_v1_k8s1_17Impl(this)
     .also { not = it }
     .apply(init)
 }
@@ -1673,8 +1639,8 @@ fun JSONSchemaProps.not(init: JSONSchemaProps.() -> Unit) {
 /**  */
 @K8sDslMarker
 fun JSONSchemaProps.oneOf(init: JSONSchemaProps.() -> Unit) {
-  this as JSONSchemaProps_apiextensions_k8s_io_v1Impl
-  JSONSchemaProps_apiextensions_k8s_io_v1Impl(this)
+  this as JSONSchemaProps_apiextensions_k8s_io_v1_k8s1_17Impl
+  JSONSchemaProps_apiextensions_k8s_io_v1_k8s1_17Impl(this)
     .also { oneOf = oneOf?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -1682,8 +1648,8 @@ fun JSONSchemaProps.oneOf(init: JSONSchemaProps.() -> Unit) {
 /** Last time the condition was checked. */
 @K8sDslMarker
 fun JobCondition.lastProbeTime(init: Time.() -> Unit) {
-  this as JobCondition_batch_v1Impl
-  Time_meta_v1Impl(this)
+  this as JobCondition_batch_v1_k8s1_17Impl
+  Time_meta_v1_k8s1_17Impl(this)
     .also { lastProbeTime = it }
     .apply(init)
 }
@@ -1691,8 +1657,8 @@ fun JobCondition.lastProbeTime(init: Time.() -> Unit) {
 /** Last time the condition transit from one status to another. */
 @K8sDslMarker
 fun JobCondition.lastTransitionTime(init: Time.() -> Unit) {
-  this as JobCondition_batch_v1Impl
-  Time_meta_v1Impl(this)
+  this as JobCondition_batch_v1_k8s1_17Impl
+  Time_meta_v1_k8s1_17Impl(this)
     .also { lastTransitionTime = it }
     .apply(init)
 }
@@ -1701,8 +1667,8 @@ fun JobCondition.lastTransitionTime(init: Time.() -> Unit) {
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata */
 @K8sDslMarker
 fun JobTemplateSpec.metadata(init: ObjectMeta.() -> Unit) {
-  this as JobTemplateSpec_batch_v1beta1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as JobTemplateSpec_batch_v1beta1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -1711,8 +1677,8 @@ fun JobTemplateSpec.metadata(init: ObjectMeta.() -> Unit) {
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status */
 @K8sDslMarker
 fun JobTemplateSpec.spec(init: Jobspec.() -> Unit) {
-  this as JobTemplateSpec_batch_v1beta1Impl
-  Jobspec_batch_v1Impl(this)
+  this as JobTemplateSpec_batch_v1beta1_k8s1_17Impl
+  Jobspec_batch_v1_k8s1_17Impl(this)
     .also { spec = it }
     .apply(init)
 }
@@ -1721,8 +1687,8 @@ fun JobTemplateSpec.spec(init: Jobspec.() -> Unit) {
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata */
 @K8sDslMarker
 fun Job.metadata(init: ObjectMeta.() -> Unit) {
-  this as Job_batch_v1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as Job_batch_v1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -1731,8 +1697,8 @@ fun Job.metadata(init: ObjectMeta.() -> Unit) {
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status */
 @K8sDslMarker
 fun Job.spec(init: Jobspec.() -> Unit) {
-  this as Job_batch_v1Impl
-  Jobspec_batch_v1Impl(this)
+  this as Job_batch_v1_k8s1_17Impl
+  Jobspec_batch_v1_k8s1_17Impl(this)
     .also { spec = it }
     .apply(init)
 }
@@ -1741,8 +1707,8 @@ fun Job.spec(init: Jobspec.() -> Unit) {
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status */
 @K8sDslMarker
 fun Job.status(init: Jobstatus.() -> Unit) {
-  this as Job_batch_v1Impl
-  Jobstatus_batch_v1Impl(this)
+  this as Job_batch_v1_k8s1_17Impl
+  Jobstatus_batch_v1_k8s1_17Impl(this)
     .also { status = it }
     .apply(init)
 }
@@ -1750,8 +1716,8 @@ fun Job.status(init: Jobstatus.() -> Unit) {
 /** matchExpressions is a list of label selector requirements. The requirements are ANDed. */
 @K8sDslMarker
 fun LabelSelector.matchExpressions(init: LabelSelectorRequirement.() -> Unit) {
-  this as LabelSelector_meta_v1Impl
-  LabelSelectorRequirement_meta_v1Impl(this)
+  this as LabelSelector_meta_v1_k8s1_17Impl
+  LabelSelectorRequirement_meta_v1_k8s1_17Impl(this)
     .also { matchExpressions = matchExpressions?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -1759,8 +1725,8 @@ fun LabelSelector.matchExpressions(init: LabelSelectorRequirement.() -> Unit) {
 /** More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata */
 @K8sDslMarker
 fun Lease.metadata(init: ObjectMeta.() -> Unit) {
-  this as Lease_coordination_k8s_io_v1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as Lease_coordination_k8s_io_v1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -1769,8 +1735,8 @@ fun Lease.metadata(init: ObjectMeta.() -> Unit) {
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status */
 @K8sDslMarker
 fun Lease.spec(init: Leasespec.() -> Unit) {
-  this as Lease_coordination_k8s_io_v1Impl
-  Leasespec_coordination_k8s_io_v1Impl(this)
+  this as Lease_coordination_k8s_io_v1_k8s1_17Impl
+  Leasespec_coordination_k8s_io_v1_k8s1_17Impl(this)
     .also { spec = it }
     .apply(init)
 }
@@ -1780,8 +1746,8 @@ restarted according to its restart policy. Other management of the container blo
 https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks */
 @K8sDslMarker
 fun Lifecycle.postStart(init: Handler.() -> Unit) {
-  this as Lifecycle_core_v1Impl
-  Handler_core_v1Impl(this)
+  this as Lifecycle_core_v1_k8s1_17Impl
+  Handler_core_v1_k8s1_17Impl(this)
     .also { postStart = it }
     .apply(init)
 }
@@ -1795,55 +1761,9 @@ the termination grace period is reached. More info:
 https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks */
 @K8sDslMarker
 fun Lifecycle.preStop(init: Handler.() -> Unit) {
-  this as Lifecycle_core_v1Impl
-  Handler_core_v1Impl(this)
+  this as Lifecycle_core_v1_k8s1_17Impl
+  Handler_core_v1_k8s1_17Impl(this)
     .also { preStop = it }
-    .apply(init)
-}
-
-/** Default resource requirement limit value by resource name if resource limit is omitted. */
-@K8sDslMarker
-fun LimitRangeItem.default(init: de.loosetie.k8s.dsl.types.CpuMem.() -> Unit) {
-  this as LimitRangeItem_core_v1Impl
-  de.loosetie.k8s.dsl.types.CpuMem(this)
-    .also { default = it }
-    .apply(init)
-}
-
-/** DefaultRequest is the default resource requirement request value by resource name if resource request is omitted. */
-@K8sDslMarker
-fun LimitRangeItem.defaultRequest(init: de.loosetie.k8s.dsl.types.CpuMem.() -> Unit) {
-  this as LimitRangeItem_core_v1Impl
-  de.loosetie.k8s.dsl.types.CpuMem(this)
-    .also { defaultRequest = it }
-    .apply(init)
-}
-
-/** Max usage constraints on this kind by resource name. */
-@K8sDslMarker
-fun LimitRangeItem.max(init: de.loosetie.k8s.dsl.types.CpuMem.() -> Unit) {
-  this as LimitRangeItem_core_v1Impl
-  de.loosetie.k8s.dsl.types.CpuMem(this)
-    .also { max = it }
-    .apply(init)
-}
-
-/** MaxLimitRequestRatio if specified, the named resource must have a request and limit that are both non-zero where limit
-divided by request is less than or equal to the enumerated value; this represents the max burst for the named resource. */
-@K8sDslMarker
-fun LimitRangeItem.maxLimitRequestRatio(init: de.loosetie.k8s.dsl.types.CpuMem.() -> Unit) {
-  this as LimitRangeItem_core_v1Impl
-  de.loosetie.k8s.dsl.types.CpuMem(this)
-    .also { maxLimitRequestRatio = it }
-    .apply(init)
-}
-
-/** Min usage constraints on this kind by resource name. */
-@K8sDslMarker
-fun LimitRangeItem.min(init: de.loosetie.k8s.dsl.types.CpuMem.() -> Unit) {
-  this as LimitRangeItem_core_v1Impl
-  de.loosetie.k8s.dsl.types.CpuMem(this)
-    .also { min = it }
     .apply(init)
 }
 
@@ -1851,8 +1771,8 @@ fun LimitRangeItem.min(init: de.loosetie.k8s.dsl.types.CpuMem.() -> Unit) {
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata */
 @K8sDslMarker
 fun LimitRange.metadata(init: ObjectMeta.() -> Unit) {
-  this as LimitRange_core_v1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as LimitRange_core_v1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -1861,8 +1781,8 @@ fun LimitRange.metadata(init: ObjectMeta.() -> Unit) {
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status */
 @K8sDslMarker
 fun LimitRange.spec(init: Limitrangespec.() -> Unit) {
-  this as LimitRange_core_v1Impl
-  Limitrangespec_core_v1Impl(this)
+  this as LimitRange_core_v1_k8s1_17Impl
+  Limitrangespec_core_v1_k8s1_17Impl(this)
     .also { spec = it }
     .apply(init)
 }
@@ -1870,8 +1790,8 @@ fun LimitRange.spec(init: Limitrangespec.() -> Unit) {
 /** `queuing` holds the configuration parameters for queuing. This field may be non-empty only if `type` is `"Queue"`. */
 @K8sDslMarker
 fun LimitResponse.queuing(init: QueuingConfiguration.() -> Unit) {
-  this as LimitResponse_flowcontrol_apiserver_k8s_io_v1alpha1Impl
-  QueuingConfiguration_flowcontrol_apiserver_k8s_io_v1alpha1Impl(this)
+  this as LimitResponse_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17Impl
+  QueuingConfiguration_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17Impl(this)
     .also { queuing = it }
     .apply(init)
 }
@@ -1879,8 +1799,8 @@ fun LimitResponse.queuing(init: QueuingConfiguration.() -> Unit) {
 /** `limitResponse` indicates what to do with requests that can not be executed right now */
 @K8sDslMarker
 fun LimitedPriorityLevelConfiguration.limitResponse(init: LimitResponse.() -> Unit) {
-  this as LimitedPriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1alpha1Impl
-  LimitResponse_flowcontrol_apiserver_k8s_io_v1alpha1Impl(this)
+  this as LimitedPriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17Impl
+  LimitResponse_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17Impl(this)
     .also { limitResponse = it }
     .apply(init)
 }
@@ -1889,8 +1809,8 @@ fun LimitedPriorityLevelConfiguration.limitResponse(init: LimitResponse.() -> Un
 these ingress points. */
 @K8sDslMarker
 fun LoadBalancerStatus.ingress(init: LoadBalancerIngress.() -> Unit) {
-  this as LoadBalancerStatus_core_v1Impl
-  LoadBalancerIngress_core_v1Impl(this)
+  this as LoadBalancerStatus_core_v1_k8s1_17Impl
+  LoadBalancerIngress_core_v1_k8s1_17Impl(this)
     .also { ingress = ingress?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -1898,8 +1818,8 @@ fun LoadBalancerStatus.ingress(init: LoadBalancerIngress.() -> Unit) {
 /**  */
 @K8sDslMarker
 fun LocalSubjectAccessReview.metadata(init: ObjectMeta.() -> Unit) {
-  this as LocalSubjectAccessReview_authorization_k8s_io_v1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as LocalSubjectAccessReview_authorization_k8s_io_v1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -1908,8 +1828,8 @@ fun LocalSubjectAccessReview.metadata(init: ObjectMeta.() -> Unit) {
 request against. If empty, it is defaulted. */
 @K8sDslMarker
 fun LocalSubjectAccessReview.spec(init: Subjectaccessreviewspec.() -> Unit) {
-  this as LocalSubjectAccessReview_authorization_k8s_io_v1Impl
-  Subjectaccessreviewspec_authorization_k8s_io_v1Impl(this)
+  this as LocalSubjectAccessReview_authorization_k8s_io_v1_k8s1_17Impl
+  Subjectaccessreviewspec_authorization_k8s_io_v1_k8s1_17Impl(this)
     .also { spec = it }
     .apply(init)
 }
@@ -1917,8 +1837,8 @@ fun LocalSubjectAccessReview.spec(init: Subjectaccessreviewspec.() -> Unit) {
 /** Status is filled in by the server and indicates whether the request is allowed or not */
 @K8sDslMarker
 fun LocalSubjectAccessReview.status(init: Subjectaccessreviewstatus.() -> Unit) {
-  this as LocalSubjectAccessReview_authorization_k8s_io_v1Impl
-  Subjectaccessreviewstatus_authorization_k8s_io_v1Impl(this)
+  this as LocalSubjectAccessReview_authorization_k8s_io_v1_k8s1_17Impl
+  Subjectaccessreviewstatus_authorization_k8s_io_v1_k8s1_17Impl(this)
     .also { status = it }
     .apply(init)
 }
@@ -1926,8 +1846,8 @@ fun LocalSubjectAccessReview.status(init: Subjectaccessreviewstatus.() -> Unit) 
 /** FieldsV1 holds the first JSON version format as described in the "FieldsV1" type. */
 @K8sDslMarker
 fun ManagedFieldsEntry.fieldsV1(init: FieldsV1.() -> Unit) {
-  this as ManagedFieldsEntry_meta_v1Impl
-  FieldsV1_meta_v1Impl(this)
+  this as ManagedFieldsEntry_meta_v1_k8s1_17Impl
+  FieldsV1_meta_v1_k8s1_17Impl(this)
     .also { fieldsV1 = it }
     .apply(init)
 }
@@ -1935,8 +1855,8 @@ fun ManagedFieldsEntry.fieldsV1(init: FieldsV1.() -> Unit) {
 /** Time is timestamp of when these fields were set. It should always be empty if Operation is 'Apply' */
 @K8sDslMarker
 fun ManagedFieldsEntry.time(init: Time.() -> Unit) {
-  this as ManagedFieldsEntry_meta_v1Impl
-  Time_meta_v1Impl(this)
+  this as ManagedFieldsEntry_meta_v1_k8s1_17Impl
+  Time_meta_v1_k8s1_17Impl(this)
     .also { time = it }
     .apply(init)
 }
@@ -1946,8 +1866,8 @@ as an additional parameter to the metrics server for more specific metrics scopi
 be used to gather metrics. */
 @K8sDslMarker
 fun MetricIdentifier.selector(init: LabelSelector.() -> Unit) {
-  this as MetricIdentifier_autoscaling_v2beta2Impl
-  LabelSelector_meta_v1Impl(this)
+  this as MetricIdentifier_autoscaling_v2beta2_k8s1_17Impl
+  LabelSelector_meta_v1_k8s1_17Impl(this)
     .also { selector = it }
     .apply(init)
 }
@@ -1957,8 +1877,8 @@ information coming from components running outside of cluster (for example lengt
 or QPS from loadbalancer running outside of cluster). */
 @K8sDslMarker
 fun MetricSpec.external(init: ExternalMetricSource.() -> Unit) {
-  this as MetricSpec_autoscaling_v2beta2Impl
-  ExternalMetricSource_autoscaling_v2beta2Impl(this)
+  this as MetricSpec_autoscaling_v2beta2_k8s1_17Impl
+  ExternalMetricSource_autoscaling_v2beta2_k8s1_17Impl(this)
     .also { external = it }
     .apply(init)
 }
@@ -1966,8 +1886,8 @@ fun MetricSpec.external(init: ExternalMetricSource.() -> Unit) {
 /** object refers to a metric describing a single kubernetes object (for example, hits-per-second on an Ingress object). */
 @K8sDslMarker
 fun MetricSpec.`object`(init: ObjectMetricSource.() -> Unit) {
-  this as MetricSpec_autoscaling_v2beta2Impl
-  ObjectMetricSource_autoscaling_v2beta2Impl(this)
+  this as MetricSpec_autoscaling_v2beta2_k8s1_17Impl
+  ObjectMetricSource_autoscaling_v2beta2_k8s1_17Impl(this)
     .also { `object` = it }
     .apply(init)
 }
@@ -1976,8 +1896,8 @@ fun MetricSpec.`object`(init: ObjectMetricSource.() -> Unit) {
 transactions-processed-per-second). The values will be averaged together before being compared to the target value. */
 @K8sDslMarker
 fun MetricSpec.pods(init: PodsMetricSource.() -> Unit) {
-  this as MetricSpec_autoscaling_v2beta2Impl
-  PodsMetricSource_autoscaling_v2beta2Impl(this)
+  this as MetricSpec_autoscaling_v2beta2_k8s1_17Impl
+  PodsMetricSource_autoscaling_v2beta2_k8s1_17Impl(this)
     .also { pods = it }
     .apply(init)
 }
@@ -1987,8 +1907,8 @@ each pod in the current scale target (e.g. CPU or memory). Such metrics are buil
 scaling options on top of those available to normal per-pod metrics using the "pods" source. */
 @K8sDslMarker
 fun MetricSpec.resource(init: ResourceMetricSource.() -> Unit) {
-  this as MetricSpec_autoscaling_v2beta2Impl
-  ResourceMetricSource_autoscaling_v2beta2Impl(this)
+  this as MetricSpec_autoscaling_v2beta2_k8s1_17Impl
+  ResourceMetricSource_autoscaling_v2beta2_k8s1_17Impl(this)
     .also { resource = it }
     .apply(init)
 }
@@ -1998,8 +1918,8 @@ information coming from components running outside of cluster (for example lengt
 or QPS from loadbalancer running outside of cluster). */
 @K8sDslMarker
 fun MetricStatus.external(init: ExternalMetricStatus.() -> Unit) {
-  this as MetricStatus_autoscaling_v2beta2Impl
-  ExternalMetricStatus_autoscaling_v2beta2Impl(this)
+  this as MetricStatus_autoscaling_v2beta2_k8s1_17Impl
+  ExternalMetricStatus_autoscaling_v2beta2_k8s1_17Impl(this)
     .also { external = it }
     .apply(init)
 }
@@ -2007,8 +1927,8 @@ fun MetricStatus.external(init: ExternalMetricStatus.() -> Unit) {
 /** object refers to a metric describing a single kubernetes object (for example, hits-per-second on an Ingress object). */
 @K8sDslMarker
 fun MetricStatus.`object`(init: ObjectMetricStatus.() -> Unit) {
-  this as MetricStatus_autoscaling_v2beta2Impl
-  ObjectMetricStatus_autoscaling_v2beta2Impl(this)
+  this as MetricStatus_autoscaling_v2beta2_k8s1_17Impl
+  ObjectMetricStatus_autoscaling_v2beta2_k8s1_17Impl(this)
     .also { `object` = it }
     .apply(init)
 }
@@ -2017,8 +1937,8 @@ fun MetricStatus.`object`(init: ObjectMetricStatus.() -> Unit) {
 transactions-processed-per-second). The values will be averaged together before being compared to the target value. */
 @K8sDslMarker
 fun MetricStatus.pods(init: PodsMetricStatus.() -> Unit) {
-  this as MetricStatus_autoscaling_v2beta2Impl
-  PodsMetricStatus_autoscaling_v2beta2Impl(this)
+  this as MetricStatus_autoscaling_v2beta2_k8s1_17Impl
+  PodsMetricStatus_autoscaling_v2beta2_k8s1_17Impl(this)
     .also { pods = it }
     .apply(init)
 }
@@ -2028,8 +1948,8 @@ each pod in the current scale target (e.g. CPU or memory). Such metrics are buil
 scaling options on top of those available to normal per-pod metrics using the "pods" source. */
 @K8sDslMarker
 fun MetricStatus.resource(init: ResourceMetricStatus.() -> Unit) {
-  this as MetricStatus_autoscaling_v2beta2Impl
-  ResourceMetricStatus_autoscaling_v2beta2Impl(this)
+  this as MetricStatus_autoscaling_v2beta2_k8s1_17Impl
+  ResourceMetricStatus_autoscaling_v2beta2_k8s1_17Impl(this)
     .also { resource = it }
     .apply(init)
 }
@@ -2037,8 +1957,8 @@ fun MetricStatus.resource(init: ResourceMetricStatus.() -> Unit) {
 /** averageValue is the target value of the average of the metric across all relevant pods (as a quantity) */
 @K8sDslMarker
 fun MetricTarget.averageValue(init: Quantity.() -> Unit) {
-  this as MetricTarget_autoscaling_v2beta2Impl
-  Quantity_core_resourceImpl(this)
+  this as MetricTarget_autoscaling_v2beta2_k8s1_17Impl
+  Quantity_core_resource_k8s1_17Impl(this)
     .also { averageValue = it }
     .apply(init)
 }
@@ -2046,8 +1966,8 @@ fun MetricTarget.averageValue(init: Quantity.() -> Unit) {
 /** value is the target value of the metric (as a quantity). */
 @K8sDslMarker
 fun MetricTarget.value(init: Quantity.() -> Unit) {
-  this as MetricTarget_autoscaling_v2beta2Impl
-  Quantity_core_resourceImpl(this)
+  this as MetricTarget_autoscaling_v2beta2_k8s1_17Impl
+  Quantity_core_resource_k8s1_17Impl(this)
     .also { value = it }
     .apply(init)
 }
@@ -2055,8 +1975,8 @@ fun MetricTarget.value(init: Quantity.() -> Unit) {
 /** averageValue is the current value of the average of the metric across all relevant pods (as a quantity) */
 @K8sDslMarker
 fun MetricValueStatus.averageValue(init: Quantity.() -> Unit) {
-  this as MetricValueStatus_autoscaling_v2beta2Impl
-  Quantity_core_resourceImpl(this)
+  this as MetricValueStatus_autoscaling_v2beta2_k8s1_17Impl
+  Quantity_core_resource_k8s1_17Impl(this)
     .also { averageValue = it }
     .apply(init)
 }
@@ -2064,8 +1984,8 @@ fun MetricValueStatus.averageValue(init: Quantity.() -> Unit) {
 /** value is the current value of the metric (as a quantity). */
 @K8sDslMarker
 fun MetricValueStatus.value(init: Quantity.() -> Unit) {
-  this as MetricValueStatus_autoscaling_v2beta2Impl
-  Quantity_core_resourceImpl(this)
+  this as MetricValueStatus_autoscaling_v2beta2_k8s1_17Impl
+  Quantity_core_resource_k8s1_17Impl(this)
     .also { value = it }
     .apply(init)
 }
@@ -2074,8 +1994,8 @@ fun MetricValueStatus.value(init: Quantity.() -> Unit) {
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata. */
 @K8sDslMarker
 fun MutatingWebhookConfiguration.metadata(init: ObjectMeta.() -> Unit) {
-  this as MutatingWebhookConfiguration_admissionregistration_k8s_io_v1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as MutatingWebhookConfiguration_admissionregistration_k8s_io_v1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -2083,8 +2003,8 @@ fun MutatingWebhookConfiguration.metadata(init: ObjectMeta.() -> Unit) {
 /** Webhooks is a list of webhooks and the affected resources and operations. */
 @K8sDslMarker
 fun MutatingWebhookConfiguration.webhooks(init: MutatingWebhook.() -> Unit) {
-  this as MutatingWebhookConfiguration_admissionregistration_k8s_io_v1Impl
-  MutatingWebhook_admissionregistration_k8s_io_v1Impl(this)
+  this as MutatingWebhookConfiguration_admissionregistration_k8s_io_v1_k8s1_17Impl
+  MutatingWebhook_admissionregistration_k8s_io_v1_k8s1_17Impl(this)
     .also { webhooks = webhooks?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -2092,8 +2012,8 @@ fun MutatingWebhookConfiguration.webhooks(init: MutatingWebhook.() -> Unit) {
 /** ClientConfig defines how to communicate with the hook. Required */
 @K8sDslMarker
 fun MutatingWebhook.clientConfig(init: WebhookClientConfig.() -> Unit) {
-  this as MutatingWebhook_admissionregistration_k8s_io_v1Impl
-  WebhookClientConfig_admissionregistration_k8s_io_v1Impl(this)
+  this as MutatingWebhook_admissionregistration_k8s_io_v1_k8s1_17Impl
+  WebhookClientConfig_admissionregistration_k8s_io_v1_k8s1_17Impl(this)
     .also { clientConfig = it }
     .apply(init)
 }
@@ -2109,8 +2029,8 @@ the selector as follows: "namespaceSelector": { "matchExpressions": [ { "key": "
 more examples of label selectors. Default to the empty LabelSelector, which matches everything. */
 @K8sDslMarker
 fun MutatingWebhook.namespaceSelector(init: LabelSelector.() -> Unit) {
-  this as MutatingWebhook_admissionregistration_k8s_io_v1Impl
-  LabelSelector_meta_v1Impl(this)
+  this as MutatingWebhook_admissionregistration_k8s_io_v1_k8s1_17Impl
+  LabelSelector_meta_v1_k8s1_17Impl(this)
     .also { namespaceSelector = it }
     .apply(init)
 }
@@ -2123,8 +2043,8 @@ Use the object selector only if the webhook is opt-in, because end users may ski
 labels. Default to the empty LabelSelector, which matches everything. */
 @K8sDslMarker
 fun MutatingWebhook.objectSelector(init: LabelSelector.() -> Unit) {
-  this as MutatingWebhook_admissionregistration_k8s_io_v1Impl
-  LabelSelector_meta_v1Impl(this)
+  this as MutatingWebhook_admissionregistration_k8s_io_v1_k8s1_17Impl
+  LabelSelector_meta_v1_k8s1_17Impl(this)
     .also { objectSelector = it }
     .apply(init)
 }
@@ -2136,8 +2056,8 @@ disabling the plugin, ValidatingAdmissionWebhooks and MutatingAdmissionWebhooks 
 for ValidatingWebhookConfiguration and MutatingWebhookConfiguration objects. */
 @K8sDslMarker
 fun MutatingWebhook.rules(init: RuleWithOperations.() -> Unit) {
-  this as MutatingWebhook_admissionregistration_k8s_io_v1Impl
-  RuleWithOperations_admissionregistration_k8s_io_v1Impl(this)
+  this as MutatingWebhook_admissionregistration_k8s_io_v1_k8s1_17Impl
+  RuleWithOperations_admissionregistration_k8s_io_v1_k8s1_17Impl(this)
     .also { rules = rules?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -2145,8 +2065,8 @@ fun MutatingWebhook.rules(init: RuleWithOperations.() -> Unit) {
 /**  */
 @K8sDslMarker
 fun NamespaceCondition.lastTransitionTime(init: Time.() -> Unit) {
-  this as NamespaceCondition_core_v1Impl
-  Time_meta_v1Impl(this)
+  this as NamespaceCondition_core_v1_k8s1_17Impl
+  Time_meta_v1_k8s1_17Impl(this)
     .also { lastTransitionTime = it }
     .apply(init)
 }
@@ -2155,8 +2075,8 @@ fun NamespaceCondition.lastTransitionTime(init: Time.() -> Unit) {
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata */
 @K8sDslMarker
 fun Namespace.metadata(init: ObjectMeta.() -> Unit) {
-  this as Namespace_core_v1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as Namespace_core_v1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -2165,8 +2085,8 @@ fun Namespace.metadata(init: ObjectMeta.() -> Unit) {
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status */
 @K8sDslMarker
 fun Namespace.spec(init: Namespacespec.() -> Unit) {
-  this as Namespace_core_v1Impl
-  Namespacespec_core_v1Impl(this)
+  this as Namespace_core_v1_k8s1_17Impl
+  Namespacespec_core_v1_k8s1_17Impl(this)
     .also { spec = it }
     .apply(init)
 }
@@ -2175,8 +2095,8 @@ fun Namespace.spec(init: Namespacespec.() -> Unit) {
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status */
 @K8sDslMarker
 fun Namespace.status(init: Namespacestatus.() -> Unit) {
-  this as Namespace_core_v1Impl
-  Namespacestatus_core_v1Impl(this)
+  this as Namespace_core_v1_k8s1_17Impl
+  Namespacestatus_core_v1_k8s1_17Impl(this)
     .also { status = it }
     .apply(init)
 }
@@ -2186,8 +2106,8 @@ empty or missing, this rule matches all ports (traffic not restricted by port). 
 least one item, then this rule allows traffic only if the traffic matches at least one port in the list. */
 @K8sDslMarker
 fun NetworkPolicyEgressRule.ports(init: NetworkPolicyPort.() -> Unit) {
-  this as NetworkPolicyEgressRule_networking_k8s_io_v1Impl
-  NetworkPolicyPort_networking_k8s_io_v1Impl(this)
+  this as NetworkPolicyEgressRule_networking_k8s_io_v1_k8s1_17Impl
+  NetworkPolicyPort_networking_k8s_io_v1_k8s1_17Impl(this)
     .also { ports = ports?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -2198,8 +2118,8 @@ destination). If this field is present and contains at least one item, this rule
 matches at least one item in the to list. */
 @K8sDslMarker
 fun NetworkPolicyEgressRule.to(init: NetworkPolicyPeer.() -> Unit) {
-  this as NetworkPolicyEgressRule_networking_k8s_io_v1Impl
-  NetworkPolicyPeer_networking_k8s_io_v1Impl(this)
+  this as NetworkPolicyEgressRule_networking_k8s_io_v1_k8s1_17Impl
+  NetworkPolicyPeer_networking_k8s_io_v1_k8s1_17Impl(this)
     .also { to = to?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -2210,8 +2130,8 @@ source). If this field is present and contains at least one item, this rule allo
 at least one item in the from list. */
 @K8sDslMarker
 fun NetworkPolicyIngressRule.from(init: NetworkPolicyPeer.() -> Unit) {
-  this as NetworkPolicyIngressRule_networking_k8s_io_v1Impl
-  NetworkPolicyPeer_networking_k8s_io_v1Impl(this)
+  this as NetworkPolicyIngressRule_networking_k8s_io_v1_k8s1_17Impl
+  NetworkPolicyPeer_networking_k8s_io_v1_k8s1_17Impl(this)
     .also { from = from?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -2222,8 +2142,8 @@ this field is present and contains at least one item, then this rule allows traf
 one port in the list. */
 @K8sDslMarker
 fun NetworkPolicyIngressRule.ports(init: NetworkPolicyPort.() -> Unit) {
-  this as NetworkPolicyIngressRule_networking_k8s_io_v1Impl
-  NetworkPolicyPort_networking_k8s_io_v1Impl(this)
+  this as NetworkPolicyIngressRule_networking_k8s_io_v1_k8s1_17Impl
+  NetworkPolicyPort_networking_k8s_io_v1_k8s1_17Impl(this)
     .also { ports = ports?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -2231,8 +2151,8 @@ fun NetworkPolicyIngressRule.ports(init: NetworkPolicyPort.() -> Unit) {
 /** IPBlock defines policy on a particular IPBlock. If this field is set then neither of the other fields can be. */
 @K8sDslMarker
 fun NetworkPolicyPeer.ipBlock(init: IPBlock.() -> Unit) {
-  this as NetworkPolicyPeer_networking_k8s_io_v1Impl
-  IPBlock_networking_k8s_io_v1Impl(this)
+  this as NetworkPolicyPeer_networking_k8s_io_v1_k8s1_17Impl
+  IPBlock_networking_k8s_io_v1_k8s1_17Impl(this)
     .also { ipBlock = it }
     .apply(init)
 }
@@ -2243,8 +2163,8 @@ matching PodSelector in the Namespaces selected by NamespaceSelector. Otherwise 
 selected by NamespaceSelector. */
 @K8sDslMarker
 fun NetworkPolicyPeer.namespaceSelector(init: LabelSelector.() -> Unit) {
-  this as NetworkPolicyPeer_networking_k8s_io_v1Impl
-  LabelSelector_meta_v1Impl(this)
+  this as NetworkPolicyPeer_networking_k8s_io_v1_k8s1_17Impl
+  LabelSelector_meta_v1_k8s1_17Impl(this)
     .also { namespaceSelector = it }
     .apply(init)
 }
@@ -2255,36 +2175,18 @@ PodSelector in the Namespaces selected by NamespaceSelector. Otherwise it select
 policy's own Namespace. */
 @K8sDslMarker
 fun NetworkPolicyPeer.podSelector(init: LabelSelector.() -> Unit) {
-  this as NetworkPolicyPeer_networking_k8s_io_v1Impl
-  LabelSelector_meta_v1Impl(this)
+  this as NetworkPolicyPeer_networking_k8s_io_v1_k8s1_17Impl
+  LabelSelector_meta_v1_k8s1_17Impl(this)
     .also { podSelector = it }
     .apply(init)
-}
-
-/** The port on the given protocol. This can either be a numerical or named port on a pod. If this field is not provided,
-this matches all port names and numbers. */
-@K8sDslMarker
-fun NetworkPolicyPort.port(string: String) {
-  this as NetworkPolicyPort_networking_k8s_io_v1Impl
-  de.loosetie.k8s.dsl.types.IntOrString(string)
-    .also { port = it }
-}
-
-/** The port on the given protocol. This can either be a numerical or named port on a pod. If this field is not provided,
-this matches all port names and numbers. */
-@K8sDslMarker
-fun NetworkPolicyPort.port(int: Int) {
-  this as NetworkPolicyPort_networking_k8s_io_v1Impl
-  de.loosetie.k8s.dsl.types.IntOrString(int)
-    .also { port = it }
 }
 
 /** Standard object's metadata. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata */
 @K8sDslMarker
 fun NetworkPolicy.metadata(init: ObjectMeta.() -> Unit) {
-  this as NetworkPolicy_networking_k8s_io_v1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as NetworkPolicy_networking_k8s_io_v1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -2292,8 +2194,8 @@ fun NetworkPolicy.metadata(init: ObjectMeta.() -> Unit) {
 /** Specification of the desired behavior for this NetworkPolicy. */
 @K8sDslMarker
 fun NetworkPolicy.spec(init: Networkpolicyspec.() -> Unit) {
-  this as NetworkPolicy_networking_k8s_io_v1Impl
-  Networkpolicyspec_networking_k8s_io_v1Impl(this)
+  this as NetworkPolicy_networking_k8s_io_v1_k8s1_17Impl
+  Networkpolicyspec_networking_k8s_io_v1_k8s1_17Impl(this)
     .also { spec = it }
     .apply(init)
 }
@@ -2306,8 +2208,8 @@ adding "weight" to the sum if the node matches the corresponding matchExpression
 the most preferred. */
 @K8sDslMarker
 fun NodeAffinity.preferredDuringSchedulingIgnoredDuringExecution(init: PreferredSchedulingTerm.() -> Unit) {
-  this as NodeAffinity_core_v1Impl
-  PreferredSchedulingTerm_core_v1Impl(this)
+  this as NodeAffinity_core_v1_k8s1_17Impl
+  PreferredSchedulingTerm_core_v1_k8s1_17Impl(this)
     .also { preferredDuringSchedulingIgnoredDuringExecution = preferredDuringSchedulingIgnoredDuringExecution?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -2317,8 +2219,8 @@ the node. If the affinity requirements specified by this field cease to be met a
 due to an update), the system may or may not try to eventually evict the pod from its node. */
 @K8sDslMarker
 fun NodeAffinity.requiredDuringSchedulingIgnoredDuringExecution(init: NodeSelector.() -> Unit) {
-  this as NodeAffinity_core_v1Impl
-  NodeSelector_core_v1Impl(this)
+  this as NodeAffinity_core_v1_k8s1_17Impl
+  NodeSelector_core_v1_k8s1_17Impl(this)
     .also { requiredDuringSchedulingIgnoredDuringExecution = it }
     .apply(init)
 }
@@ -2326,8 +2228,8 @@ fun NodeAffinity.requiredDuringSchedulingIgnoredDuringExecution(init: NodeSelect
 /** Last time we got an update on a given condition. */
 @K8sDslMarker
 fun NodeCondition.lastHeartbeatTime(init: Time.() -> Unit) {
-  this as NodeCondition_core_v1Impl
-  Time_meta_v1Impl(this)
+  this as NodeCondition_core_v1_k8s1_17Impl
+  Time_meta_v1_k8s1_17Impl(this)
     .also { lastHeartbeatTime = it }
     .apply(init)
 }
@@ -2335,8 +2237,8 @@ fun NodeCondition.lastHeartbeatTime(init: Time.() -> Unit) {
 /** Last time the condition transit from one status to another. */
 @K8sDslMarker
 fun NodeCondition.lastTransitionTime(init: Time.() -> Unit) {
-  this as NodeCondition_core_v1Impl
-  Time_meta_v1Impl(this)
+  this as NodeCondition_core_v1_k8s1_17Impl
+  Time_meta_v1_k8s1_17Impl(this)
     .also { lastTransitionTime = it }
     .apply(init)
 }
@@ -2344,8 +2246,8 @@ fun NodeCondition.lastTransitionTime(init: Time.() -> Unit) {
 /** ConfigMap is a reference to a Node's ConfigMap */
 @K8sDslMarker
 fun NodeConfigSource.configMap(init: ConfigMapNodeConfigSource.() -> Unit) {
-  this as NodeConfigSource_core_v1Impl
-  ConfigMapNodeConfigSource_core_v1Impl(this)
+  this as NodeConfigSource_core_v1_k8s1_17Impl
+  ConfigMapNodeConfigSource_core_v1_k8s1_17Impl(this)
     .also { configMap = it }
     .apply(init)
 }
@@ -2355,8 +2257,8 @@ the Assigned config, or the current LastKnownGood config, depending on whether a
 results in an error. */
 @K8sDslMarker
 fun NodeConfigStatus.active(init: NodeConfigSource.() -> Unit) {
-  this as NodeConfigStatus_core_v1Impl
-  NodeConfigSource_core_v1Impl(this)
+  this as NodeConfigStatus_core_v1_k8s1_17Impl
+  NodeConfigSource_core_v1_k8s1_17Impl(this)
     .also { active = it }
     .apply(init)
 }
@@ -2368,8 +2270,8 @@ after the record has been checkpointed to disk. When the Kubelet is restarted, i
 Active config by loading and validating the checkpointed payload identified by Assigned. */
 @K8sDslMarker
 fun NodeConfigStatus.assigned(init: NodeConfigSource.() -> Unit) {
-  this as NodeConfigStatus_core_v1Impl
-  NodeConfigSource_core_v1Impl(this)
+  this as NodeConfigStatus_core_v1_k8s1_17Impl
+  NodeConfigSource_core_v1_k8s1_17Impl(this)
     .also { assigned = it }
     .apply(init)
 }
@@ -2383,8 +2285,8 @@ because the local default config is always assumed good. You should not make ass
 determining config stability and correctness, as this may change or become configurable in the future. */
 @K8sDslMarker
 fun NodeConfigStatus.lastKnownGood(init: NodeConfigSource.() -> Unit) {
-  this as NodeConfigStatus_core_v1Impl
-  NodeConfigSource_core_v1Impl(this)
+  this as NodeConfigStatus_core_v1_k8s1_17Impl
+  NodeConfigSource_core_v1_k8s1_17Impl(this)
     .also { lastKnownGood = it }
     .apply(init)
 }
@@ -2392,8 +2294,8 @@ fun NodeConfigStatus.lastKnownGood(init: NodeConfigSource.() -> Unit) {
 /** Endpoint on which Kubelet is listening. */
 @K8sDslMarker
 fun NodeDaemonEndpoints.kubeletEndpoint(init: DaemonEndpoint.() -> Unit) {
-  this as NodeDaemonEndpoints_core_v1Impl
-  DaemonEndpoint_core_v1Impl(this)
+  this as NodeDaemonEndpoints_core_v1_k8s1_17Impl
+  DaemonEndpoint_core_v1_k8s1_17Impl(this)
     .also { kubeletEndpoint = it }
     .apply(init)
 }
@@ -2401,8 +2303,8 @@ fun NodeDaemonEndpoints.kubeletEndpoint(init: DaemonEndpoint.() -> Unit) {
 /** A list of node selector requirements by node's labels. */
 @K8sDslMarker
 fun NodeSelectorTerm.matchExpressions(init: NodeSelectorRequirement.() -> Unit) {
-  this as NodeSelectorTerm_core_v1Impl
-  NodeSelectorRequirement_core_v1Impl(this)
+  this as NodeSelectorTerm_core_v1_k8s1_17Impl
+  NodeSelectorRequirement_core_v1_k8s1_17Impl(this)
     .also { matchExpressions = matchExpressions?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -2410,8 +2312,8 @@ fun NodeSelectorTerm.matchExpressions(init: NodeSelectorRequirement.() -> Unit) 
 /** A list of node selector requirements by node's fields. */
 @K8sDslMarker
 fun NodeSelectorTerm.matchFields(init: NodeSelectorRequirement.() -> Unit) {
-  this as NodeSelectorTerm_core_v1Impl
-  NodeSelectorRequirement_core_v1Impl(this)
+  this as NodeSelectorTerm_core_v1_k8s1_17Impl
+  NodeSelectorRequirement_core_v1_k8s1_17Impl(this)
     .also { matchFields = matchFields?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -2419,8 +2321,8 @@ fun NodeSelectorTerm.matchFields(init: NodeSelectorRequirement.() -> Unit) {
 /** Required. A list of node selector terms. The terms are ORed. */
 @K8sDslMarker
 fun NodeSelector.nodeSelectorTerms(init: NodeSelectorTerm.() -> Unit) {
-  this as NodeSelector_core_v1Impl
-  NodeSelectorTerm_core_v1Impl(this)
+  this as NodeSelector_core_v1_k8s1_17Impl
+  NodeSelectorTerm_core_v1_k8s1_17Impl(this)
     .also { nodeSelectorTerms = nodeSelectorTerms?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -2429,8 +2331,8 @@ fun NodeSelector.nodeSelectorTerms(init: NodeSelectorTerm.() -> Unit) {
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata */
 @K8sDslMarker
 fun Node.metadata(init: ObjectMeta.() -> Unit) {
-  this as Node_core_v1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as Node_core_v1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -2439,8 +2341,8 @@ fun Node.metadata(init: ObjectMeta.() -> Unit) {
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status */
 @K8sDslMarker
 fun Node.spec(init: Nodespec.() -> Unit) {
-  this as Node_core_v1Impl
-  Nodespec_core_v1Impl(this)
+  this as Node_core_v1_k8s1_17Impl
+  Nodespec_core_v1_k8s1_17Impl(this)
     .also { spec = it }
     .apply(init)
 }
@@ -2449,8 +2351,8 @@ fun Node.spec(init: Nodespec.() -> Unit) {
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status */
 @K8sDslMarker
 fun Node.status(init: Nodestatus.() -> Unit) {
-  this as Node_core_v1Impl
-  Nodestatus_core_v1Impl(this)
+  this as Node_core_v1_k8s1_17Impl
+  Nodestatus_core_v1_k8s1_17Impl(this)
     .also { status = it }
     .apply(init)
 }
@@ -2461,8 +2363,8 @@ form and is in UTC. Populated by the system. Read-only. Null for lists. More inf
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata */
 @K8sDslMarker
 fun ObjectMeta.creationTimestamp(init: Time.() -> Unit) {
-  this as ObjectMeta_meta_v1Impl
-  Time_meta_v1Impl(this)
+  this as ObjectMeta_meta_v1_k8s1_17Impl
+  Time_meta_v1_k8s1_17Impl(this)
     .also { creationTimestamp = it }
     .apply(init)
 }
@@ -2481,8 +2383,8 @@ requested. Populated by the system when a graceful deletion is requested. Read-o
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata */
 @K8sDslMarker
 fun ObjectMeta.deletionTimestamp(init: Time.() -> Unit) {
-  this as ObjectMeta_meta_v1Impl
-  Time_meta_v1Impl(this)
+  this as ObjectMeta_meta_v1_k8s1_17Impl
+  Time_meta_v1_k8s1_17Impl(this)
     .also { deletionTimestamp = it }
     .apply(init)
 }
@@ -2493,8 +2395,8 @@ name, a controller's name, or the name of a specific apply path like "ci-cd". Th
 that the workflow used when modifying the object. */
 @K8sDslMarker
 fun ObjectMeta.managedFields(init: ManagedFieldsEntry.() -> Unit) {
-  this as ObjectMeta_meta_v1Impl
-  ManagedFieldsEntry_meta_v1Impl(this)
+  this as ObjectMeta_meta_v1_k8s1_17Impl
+  ManagedFieldsEntry_meta_v1_k8s1_17Impl(this)
     .also { managedFields = managedFields?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -2504,17 +2406,17 @@ collected. If this object is managed by a controller, then an entry in this list
 controller field set to true. There cannot be more than one managing controller. */
 @K8sDslMarker
 fun ObjectMeta.ownerReferences(init: OwnerReference.() -> Unit) {
-  this as ObjectMeta_meta_v1Impl
-  OwnerReference_meta_v1Impl(this)
+  this as ObjectMeta_meta_v1_k8s1_17Impl
+  OwnerReference_meta_v1_k8s1_17Impl(this)
     .also { ownerReferences = ownerReferences?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
 
 /**  */
 @K8sDslMarker
-fun ObjectMetricSource.describedObject(init: CrossVersionObjectReference_autoscaling_v2beta2.() -> Unit) {
-  this as ObjectMetricSource_autoscaling_v2beta2Impl
-  CrossVersionObjectReference_autoscaling_v2beta2Impl(this)
+fun ObjectMetricSource.describedObject(init: CrossVersionObjectReference_autoscaling_v2beta2_k8s1_17.() -> Unit) {
+  this as ObjectMetricSource_autoscaling_v2beta2_k8s1_17Impl
+  CrossVersionObjectReference_autoscaling_v2beta2_k8s1_17Impl(this)
     .also { describedObject = it }
     .apply(init)
 }
@@ -2522,8 +2424,8 @@ fun ObjectMetricSource.describedObject(init: CrossVersionObjectReference_autosca
 /** metric identifies the target metric by name and selector */
 @K8sDslMarker
 fun ObjectMetricSource.metric(init: MetricIdentifier.() -> Unit) {
-  this as ObjectMetricSource_autoscaling_v2beta2Impl
-  MetricIdentifier_autoscaling_v2beta2Impl(this)
+  this as ObjectMetricSource_autoscaling_v2beta2_k8s1_17Impl
+  MetricIdentifier_autoscaling_v2beta2_k8s1_17Impl(this)
     .also { metric = it }
     .apply(init)
 }
@@ -2531,8 +2433,8 @@ fun ObjectMetricSource.metric(init: MetricIdentifier.() -> Unit) {
 /** target specifies the target value for the given metric */
 @K8sDslMarker
 fun ObjectMetricSource.target(init: MetricTarget.() -> Unit) {
-  this as ObjectMetricSource_autoscaling_v2beta2Impl
-  MetricTarget_autoscaling_v2beta2Impl(this)
+  this as ObjectMetricSource_autoscaling_v2beta2_k8s1_17Impl
+  MetricTarget_autoscaling_v2beta2_k8s1_17Impl(this)
     .also { target = it }
     .apply(init)
 }
@@ -2540,17 +2442,17 @@ fun ObjectMetricSource.target(init: MetricTarget.() -> Unit) {
 /** current contains the current value for the given metric */
 @K8sDslMarker
 fun ObjectMetricStatus.current(init: MetricValueStatus.() -> Unit) {
-  this as ObjectMetricStatus_autoscaling_v2beta2Impl
-  MetricValueStatus_autoscaling_v2beta2Impl(this)
+  this as ObjectMetricStatus_autoscaling_v2beta2_k8s1_17Impl
+  MetricValueStatus_autoscaling_v2beta2_k8s1_17Impl(this)
     .also { current = it }
     .apply(init)
 }
 
 /**  */
 @K8sDslMarker
-fun ObjectMetricStatus.describedObject(init: CrossVersionObjectReference_autoscaling_v2beta2.() -> Unit) {
-  this as ObjectMetricStatus_autoscaling_v2beta2Impl
-  CrossVersionObjectReference_autoscaling_v2beta2Impl(this)
+fun ObjectMetricStatus.describedObject(init: CrossVersionObjectReference_autoscaling_v2beta2_k8s1_17.() -> Unit) {
+  this as ObjectMetricStatus_autoscaling_v2beta2_k8s1_17Impl
+  CrossVersionObjectReference_autoscaling_v2beta2_k8s1_17Impl(this)
     .also { describedObject = it }
     .apply(init)
 }
@@ -2558,26 +2460,17 @@ fun ObjectMetricStatus.describedObject(init: CrossVersionObjectReference_autosca
 /** metric identifies the target metric by name and selector */
 @K8sDslMarker
 fun ObjectMetricStatus.metric(init: MetricIdentifier.() -> Unit) {
-  this as ObjectMetricStatus_autoscaling_v2beta2Impl
-  MetricIdentifier_autoscaling_v2beta2Impl(this)
+  this as ObjectMetricStatus_autoscaling_v2beta2_k8s1_17Impl
+  MetricIdentifier_autoscaling_v2beta2_k8s1_17Impl(this)
     .also { metric = it }
-    .apply(init)
-}
-
-/** PodFixed represents the fixed resource overhead associated with running a pod. */
-@K8sDslMarker
-fun Overhead.podFixed(init: de.loosetie.k8s.dsl.types.LimitsAndRequests.() -> Unit) {
-  this as Overhead_node_k8s_io_v1beta1Impl
-  de.loosetie.k8s.dsl.types.LimitsAndRequests(this)
-    .also { podFixed = it }
     .apply(init)
 }
 
 /** Last time we probed the condition. */
 @K8sDslMarker
 fun PersistentVolumeClaimCondition.lastProbeTime(init: Time.() -> Unit) {
-  this as PersistentVolumeClaimCondition_core_v1Impl
-  Time_meta_v1Impl(this)
+  this as PersistentVolumeClaimCondition_core_v1_k8s1_17Impl
+  Time_meta_v1_k8s1_17Impl(this)
     .also { lastProbeTime = it }
     .apply(init)
 }
@@ -2585,8 +2478,8 @@ fun PersistentVolumeClaimCondition.lastProbeTime(init: Time.() -> Unit) {
 /** Last time the condition transitioned from one status to another. */
 @K8sDslMarker
 fun PersistentVolumeClaimCondition.lastTransitionTime(init: Time.() -> Unit) {
-  this as PersistentVolumeClaimCondition_core_v1Impl
-  Time_meta_v1Impl(this)
+  this as PersistentVolumeClaimCondition_core_v1_k8s1_17Impl
+  Time_meta_v1_k8s1_17Impl(this)
     .also { lastTransitionTime = it }
     .apply(init)
 }
@@ -2595,8 +2488,8 @@ fun PersistentVolumeClaimCondition.lastTransitionTime(init: Time.() -> Unit) {
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata */
 @K8sDslMarker
 fun PersistentVolumeClaim.metadata(init: ObjectMeta.() -> Unit) {
-  this as PersistentVolumeClaim_core_v1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as PersistentVolumeClaim_core_v1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -2605,8 +2498,8 @@ fun PersistentVolumeClaim.metadata(init: ObjectMeta.() -> Unit) {
 https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims */
 @K8sDslMarker
 fun PersistentVolumeClaim.spec(init: Persistentvolumeclaimspec.() -> Unit) {
-  this as PersistentVolumeClaim_core_v1Impl
-  Persistentvolumeclaimspec_core_v1Impl(this)
+  this as PersistentVolumeClaim_core_v1_k8s1_17Impl
+  Persistentvolumeclaimspec_core_v1_k8s1_17Impl(this)
     .also { spec = it }
     .apply(init)
 }
@@ -2615,8 +2508,8 @@ fun PersistentVolumeClaim.spec(init: Persistentvolumeclaimspec.() -> Unit) {
 https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims */
 @K8sDslMarker
 fun PersistentVolumeClaim.status(init: Persistentvolumeclaimstatus.() -> Unit) {
-  this as PersistentVolumeClaim_core_v1Impl
-  Persistentvolumeclaimstatus_core_v1Impl(this)
+  this as PersistentVolumeClaim_core_v1_k8s1_17Impl
+  Persistentvolumeclaimstatus_core_v1_k8s1_17Impl(this)
     .also { status = it }
     .apply(init)
 }
@@ -2625,8 +2518,8 @@ fun PersistentVolumeClaim.status(init: Persistentvolumeclaimstatus.() -> Unit) {
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata */
 @K8sDslMarker
 fun PersistentVolume.metadata(init: ObjectMeta.() -> Unit) {
-  this as PersistentVolume_core_v1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as PersistentVolume_core_v1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -2635,8 +2528,8 @@ fun PersistentVolume.metadata(init: ObjectMeta.() -> Unit) {
 https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistent-volumes */
 @K8sDslMarker
 fun PersistentVolume.spec(init: Persistentvolumespec.() -> Unit) {
-  this as PersistentVolume_core_v1Impl
-  Persistentvolumespec_core_v1Impl(this)
+  this as PersistentVolume_core_v1_k8s1_17Impl
+  Persistentvolumespec_core_v1_k8s1_17Impl(this)
     .also { spec = it }
     .apply(init)
 }
@@ -2645,8 +2538,8 @@ fun PersistentVolume.spec(init: Persistentvolumespec.() -> Unit) {
 info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistent-volumes */
 @K8sDslMarker
 fun PersistentVolume.status(init: Persistentvolumestatus.() -> Unit) {
-  this as PersistentVolume_core_v1Impl
-  Persistentvolumestatus_core_v1Impl(this)
+  this as PersistentVolume_core_v1_k8s1_17Impl
+  Persistentvolumestatus_core_v1_k8s1_17Impl(this)
     .also { status = it }
     .apply(init)
 }
@@ -2654,8 +2547,8 @@ fun PersistentVolume.status(init: Persistentvolumestatus.() -> Unit) {
 /** A label query over a set of resources, in this case pods. */
 @K8sDslMarker
 fun PodAffinityTerm.labelSelector(init: LabelSelector.() -> Unit) {
-  this as PodAffinityTerm_core_v1Impl
-  LabelSelector_meta_v1Impl(this)
+  this as PodAffinityTerm_core_v1_k8s1_17Impl
+  LabelSelector_meta_v1_k8s1_17Impl(this)
     .also { labelSelector = it }
     .apply(init)
 }
@@ -2668,8 +2561,8 @@ adding "weight" to the sum if the node has pods which matches the corresponding 
 highest sum are the most preferred. */
 @K8sDslMarker
 fun PodAffinity.preferredDuringSchedulingIgnoredDuringExecution(init: WeightedPodAffinityTerm.() -> Unit) {
-  this as PodAffinity_core_v1Impl
-  WeightedPodAffinityTerm_core_v1Impl(this)
+  this as PodAffinity_core_v1_k8s1_17Impl
+  WeightedPodAffinityTerm_core_v1_k8s1_17Impl(this)
     .also { preferredDuringSchedulingIgnoredDuringExecution = preferredDuringSchedulingIgnoredDuringExecution?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -2681,8 +2574,8 @@ multiple elements, the lists of nodes corresponding to each podAffinityTerm are 
 satisfied. */
 @K8sDslMarker
 fun PodAffinity.requiredDuringSchedulingIgnoredDuringExecution(init: PodAffinityTerm.() -> Unit) {
-  this as PodAffinity_core_v1Impl
-  PodAffinityTerm_core_v1Impl(this)
+  this as PodAffinity_core_v1_k8s1_17Impl
+  PodAffinityTerm_core_v1_k8s1_17Impl(this)
     .also { requiredDuringSchedulingIgnoredDuringExecution = requiredDuringSchedulingIgnoredDuringExecution?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -2695,8 +2588,8 @@ and adding "weight" to the sum if the node has pods which matches the correspond
 the highest sum are the most preferred. */
 @K8sDslMarker
 fun PodAntiAffinity.preferredDuringSchedulingIgnoredDuringExecution(init: WeightedPodAffinityTerm.() -> Unit) {
-  this as PodAntiAffinity_core_v1Impl
-  WeightedPodAffinityTerm_core_v1Impl(this)
+  this as PodAntiAffinity_core_v1_k8s1_17Impl
+  WeightedPodAffinityTerm_core_v1_k8s1_17Impl(this)
     .also { preferredDuringSchedulingIgnoredDuringExecution = preferredDuringSchedulingIgnoredDuringExecution?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -2708,8 +2601,8 @@ When there are multiple elements, the lists of nodes corresponding to each podAf
 terms must be satisfied. */
 @K8sDslMarker
 fun PodAntiAffinity.requiredDuringSchedulingIgnoredDuringExecution(init: PodAffinityTerm.() -> Unit) {
-  this as PodAntiAffinity_core_v1Impl
-  PodAffinityTerm_core_v1Impl(this)
+  this as PodAntiAffinity_core_v1_k8s1_17Impl
+  PodAffinityTerm_core_v1_k8s1_17Impl(this)
     .also { requiredDuringSchedulingIgnoredDuringExecution = requiredDuringSchedulingIgnoredDuringExecution?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -2717,8 +2610,8 @@ fun PodAntiAffinity.requiredDuringSchedulingIgnoredDuringExecution(init: PodAffi
 /** Last time we probed the condition. */
 @K8sDslMarker
 fun PodCondition.lastProbeTime(init: Time.() -> Unit) {
-  this as PodCondition_core_v1Impl
-  Time_meta_v1Impl(this)
+  this as PodCondition_core_v1_k8s1_17Impl
+  Time_meta_v1_k8s1_17Impl(this)
     .also { lastProbeTime = it }
     .apply(init)
 }
@@ -2726,8 +2619,8 @@ fun PodCondition.lastProbeTime(init: Time.() -> Unit) {
 /** Last time the condition transitioned from one status to another. */
 @K8sDslMarker
 fun PodCondition.lastTransitionTime(init: Time.() -> Unit) {
-  this as PodCondition_core_v1Impl
-  Time_meta_v1Impl(this)
+  this as PodCondition_core_v1_k8s1_17Impl
+  Time_meta_v1_k8s1_17Impl(this)
     .also { lastTransitionTime = it }
     .apply(init)
 }
@@ -2736,8 +2629,8 @@ fun PodCondition.lastTransitionTime(init: Time.() -> Unit) {
 will be removed. Resolution options given in Options will override those that appear in the base DNSPolicy. */
 @K8sDslMarker
 fun PodDNSConfig.options(init: PodDNSConfigOption.() -> Unit) {
-  this as PodDNSConfig_core_v1Impl
-  PodDNSConfigOption_core_v1Impl(this)
+  this as PodDNSConfig_core_v1_k8s1_17Impl
+  PodDNSConfigOption_core_v1_k8s1_17Impl(this)
     .also { options = options?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -2745,8 +2638,8 @@ fun PodDNSConfig.options(init: PodDNSConfigOption.() -> Unit) {
 /**  */
 @K8sDslMarker
 fun PodDisruptionBudget.metadata(init: ObjectMeta.() -> Unit) {
-  this as PodDisruptionBudget_policy_v1beta1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as PodDisruptionBudget_policy_v1beta1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -2754,8 +2647,8 @@ fun PodDisruptionBudget.metadata(init: ObjectMeta.() -> Unit) {
 /** Specification of the desired behavior of the PodDisruptionBudget. */
 @K8sDslMarker
 fun PodDisruptionBudget.spec(init: Poddisruptionbudgetspec.() -> Unit) {
-  this as PodDisruptionBudget_policy_v1beta1Impl
-  Poddisruptionbudgetspec_policy_v1beta1Impl(this)
+  this as PodDisruptionBudget_policy_v1beta1_k8s1_17Impl
+  Poddisruptionbudgetspec_policy_v1beta1_k8s1_17Impl(this)
     .also { spec = it }
     .apply(init)
 }
@@ -2763,8 +2656,8 @@ fun PodDisruptionBudget.spec(init: Poddisruptionbudgetspec.() -> Unit) {
 /** Most recently observed status of the PodDisruptionBudget. */
 @K8sDslMarker
 fun PodDisruptionBudget.status(init: Poddisruptionbudgetstatus.() -> Unit) {
-  this as PodDisruptionBudget_policy_v1beta1Impl
-  Poddisruptionbudgetstatus_policy_v1beta1Impl(this)
+  this as PodDisruptionBudget_policy_v1beta1_k8s1_17Impl
+  Poddisruptionbudgetstatus_policy_v1beta1_k8s1_17Impl(this)
     .also { status = it }
     .apply(init)
 }
@@ -2772,8 +2665,8 @@ fun PodDisruptionBudget.status(init: Poddisruptionbudgetstatus.() -> Unit) {
 /**  */
 @K8sDslMarker
 fun PodPreset.metadata(init: ObjectMeta.() -> Unit) {
-  this as PodPreset_settings_k8s_io_v1alpha1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as PodPreset_settings_k8s_io_v1alpha1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -2781,8 +2674,8 @@ fun PodPreset.metadata(init: ObjectMeta.() -> Unit) {
 /**  */
 @K8sDslMarker
 fun PodPreset.spec(init: Podpresetspec.() -> Unit) {
-  this as PodPreset_settings_k8s_io_v1alpha1Impl
-  Podpresetspec_settings_k8s_io_v1alpha1Impl(this)
+  this as PodPreset_settings_k8s_io_v1alpha1_k8s1_17Impl
+  Podpresetspec_settings_k8s_io_v1alpha1_k8s1_17Impl(this)
     .also { spec = it }
     .apply(init)
 }
@@ -2792,8 +2685,8 @@ SELinux context for each container. May also be set in SecurityContext. If set i
 PodSecurityContext, the value specified in SecurityContext takes precedence for that container. */
 @K8sDslMarker
 fun PodSecurityContext.seLinuxOptions(init: SELinuxOptions.() -> Unit) {
-  this as PodSecurityContext_core_v1Impl
-  SELinuxOptions_core_v1Impl(this)
+  this as PodSecurityContext_core_v1_k8s1_17Impl
+  SELinuxOptions_core_v1_k8s1_17Impl(this)
     .also { seLinuxOptions = it }
     .apply(init)
 }
@@ -2802,8 +2695,8 @@ fun PodSecurityContext.seLinuxOptions(init: SELinuxOptions.() -> Unit) {
 might fail to launch. */
 @K8sDslMarker
 fun PodSecurityContext.sysctls(init: Sysctl.() -> Unit) {
-  this as PodSecurityContext_core_v1Impl
-  Sysctl_core_v1Impl(this)
+  this as PodSecurityContext_core_v1_k8s1_17Impl
+  Sysctl_core_v1_k8s1_17Impl(this)
     .also { sysctls = sysctls?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -2813,8 +2706,8 @@ SecurityContext will be used. If set in both SecurityContext and PodSecurityCont
 SecurityContext takes precedence. */
 @K8sDslMarker
 fun PodSecurityContext.windowsOptions(init: WindowsSecurityContextOptions.() -> Unit) {
-  this as PodSecurityContext_core_v1Impl
-  WindowsSecurityContextOptions_core_v1Impl(this)
+  this as PodSecurityContext_core_v1_k8s1_17Impl
+  WindowsSecurityContextOptions_core_v1_k8s1_17Impl(this)
     .also { windowsOptions = it }
     .apply(init)
 }
@@ -2823,8 +2716,8 @@ fun PodSecurityContext.windowsOptions(init: WindowsSecurityContextOptions.() -> 
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata */
 @K8sDslMarker
 fun PodSecurityPolicy.metadata(init: ObjectMeta.() -> Unit) {
-  this as PodSecurityPolicy_policy_v1beta1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as PodSecurityPolicy_policy_v1beta1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -2832,8 +2725,8 @@ fun PodSecurityPolicy.metadata(init: ObjectMeta.() -> Unit) {
 /** spec defines the policy enforced. */
 @K8sDslMarker
 fun PodSecurityPolicy.spec(init: Podsecuritypolicyspec.() -> Unit) {
-  this as PodSecurityPolicy_policy_v1beta1Impl
-  Podsecuritypolicyspec_policy_v1beta1Impl(this)
+  this as PodSecurityPolicy_policy_v1beta1_k8s1_17Impl
+  Podsecuritypolicyspec_policy_v1beta1_k8s1_17Impl(this)
     .also { spec = it }
     .apply(init)
 }
@@ -2842,8 +2735,8 @@ fun PodSecurityPolicy.spec(init: Podsecuritypolicyspec.() -> Unit) {
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata */
 @K8sDslMarker
 fun PodTemplate.metadata(init: ObjectMeta.() -> Unit) {
-  this as PodTemplate_core_v1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as PodTemplate_core_v1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -2852,8 +2745,8 @@ fun PodTemplate.metadata(init: ObjectMeta.() -> Unit) {
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status */
 @K8sDslMarker
 fun PodTemplate.template(init: Podtemplatespec.() -> Unit) {
-  this as PodTemplate_core_v1Impl
-  Podtemplatespec_core_v1Impl(this)
+  this as PodTemplate_core_v1_k8s1_17Impl
+  Podtemplatespec_core_v1_k8s1_17Impl(this)
     .also { template = it }
     .apply(init)
 }
@@ -2862,8 +2755,8 @@ fun PodTemplate.template(init: Podtemplatespec.() -> Unit) {
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata */
 @K8sDslMarker
 fun Pod.metadata(init: ObjectMeta.() -> Unit) {
-  this as Pod_core_v1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as Pod_core_v1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -2872,8 +2765,8 @@ fun Pod.metadata(init: ObjectMeta.() -> Unit) {
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status */
 @K8sDslMarker
 fun Pod.spec(init: Podspec.() -> Unit) {
-  this as Pod_core_v1Impl
-  Podspec_core_v1Impl(this)
+  this as Pod_core_v1_k8s1_17Impl
+  Podspec_core_v1_k8s1_17Impl(this)
     .also { spec = it }
     .apply(init)
 }
@@ -2882,8 +2775,8 @@ fun Pod.spec(init: Podspec.() -> Unit) {
 info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status */
 @K8sDslMarker
 fun Pod.status(init: Podstatus.() -> Unit) {
-  this as Pod_core_v1Impl
-  Podstatus_core_v1Impl(this)
+  this as Pod_core_v1_k8s1_17Impl
+  Podstatus_core_v1_k8s1_17Impl(this)
     .also { status = it }
     .apply(init)
 }
@@ -2891,8 +2784,8 @@ fun Pod.status(init: Podstatus.() -> Unit) {
 /** metric identifies the target metric by name and selector */
 @K8sDslMarker
 fun PodsMetricSource.metric(init: MetricIdentifier.() -> Unit) {
-  this as PodsMetricSource_autoscaling_v2beta2Impl
-  MetricIdentifier_autoscaling_v2beta2Impl(this)
+  this as PodsMetricSource_autoscaling_v2beta2_k8s1_17Impl
+  MetricIdentifier_autoscaling_v2beta2_k8s1_17Impl(this)
     .also { metric = it }
     .apply(init)
 }
@@ -2900,8 +2793,8 @@ fun PodsMetricSource.metric(init: MetricIdentifier.() -> Unit) {
 /** target specifies the target value for the given metric */
 @K8sDslMarker
 fun PodsMetricSource.target(init: MetricTarget.() -> Unit) {
-  this as PodsMetricSource_autoscaling_v2beta2Impl
-  MetricTarget_autoscaling_v2beta2Impl(this)
+  this as PodsMetricSource_autoscaling_v2beta2_k8s1_17Impl
+  MetricTarget_autoscaling_v2beta2_k8s1_17Impl(this)
     .also { target = it }
     .apply(init)
 }
@@ -2909,8 +2802,8 @@ fun PodsMetricSource.target(init: MetricTarget.() -> Unit) {
 /** current contains the current value for the given metric */
 @K8sDslMarker
 fun PodsMetricStatus.current(init: MetricValueStatus.() -> Unit) {
-  this as PodsMetricStatus_autoscaling_v2beta2Impl
-  MetricValueStatus_autoscaling_v2beta2Impl(this)
+  this as PodsMetricStatus_autoscaling_v2beta2_k8s1_17Impl
+  MetricValueStatus_autoscaling_v2beta2_k8s1_17Impl(this)
     .also { current = it }
     .apply(init)
 }
@@ -2918,8 +2811,8 @@ fun PodsMetricStatus.current(init: MetricValueStatus.() -> Unit) {
 /** metric identifies the target metric by name and selector */
 @K8sDslMarker
 fun PodsMetricStatus.metric(init: MetricIdentifier.() -> Unit) {
-  this as PodsMetricStatus_autoscaling_v2beta2Impl
-  MetricIdentifier_autoscaling_v2beta2Impl(this)
+  this as PodsMetricStatus_autoscaling_v2beta2_k8s1_17Impl
+  MetricIdentifier_autoscaling_v2beta2_k8s1_17Impl(this)
     .also { metric = it }
     .apply(init)
 }
@@ -2928,8 +2821,8 @@ fun PodsMetricStatus.metric(init: MetricIdentifier.() -> Unit) {
 target non-resource URL. */
 @K8sDslMarker
 fun PolicyRulesWithSubjects.nonResourceRules(init: NonResourcePolicyRule.() -> Unit) {
-  this as PolicyRulesWithSubjects_flowcontrol_apiserver_k8s_io_v1alpha1Impl
-  NonResourcePolicyRule_flowcontrol_apiserver_k8s_io_v1alpha1Impl(this)
+  this as PolicyRulesWithSubjects_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17Impl
+  NonResourcePolicyRule_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17Impl(this)
     .also { nonResourceRules = nonResourceRules?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -2938,8 +2831,8 @@ fun PolicyRulesWithSubjects.nonResourceRules(init: NonResourcePolicyRule.() -> U
 resource. At least one of `resourceRules` and `nonResourceRules` has to be non-empty. */
 @K8sDslMarker
 fun PolicyRulesWithSubjects.resourceRules(init: ResourcePolicyRule.() -> Unit) {
-  this as PolicyRulesWithSubjects_flowcontrol_apiserver_k8s_io_v1alpha1Impl
-  ResourcePolicyRule_flowcontrol_apiserver_k8s_io_v1alpha1Impl(this)
+  this as PolicyRulesWithSubjects_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17Impl
+  ResourcePolicyRule_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17Impl(this)
     .also { resourceRules = resourceRules?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -2949,8 +2842,8 @@ member in this slice. A slice that includes both the system:authenticated and sy
 every request. Required. */
 @K8sDslMarker
 fun PolicyRulesWithSubjects.subjects(init: Subject.() -> Unit) {
-  this as PolicyRulesWithSubjects_flowcontrol_apiserver_k8s_io_v1alpha1Impl
-  Subject_flowcontrol_apiserver_k8s_io_v1alpha1Impl(this)
+  this as PolicyRulesWithSubjects_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17Impl
+  Subject_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17Impl(this)
     .also { subjects = subjects?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -2958,8 +2851,8 @@ fun PolicyRulesWithSubjects.subjects(init: Subject.() -> Unit) {
 /** A node selector term, associated with the corresponding weight. */
 @K8sDslMarker
 fun PreferredSchedulingTerm.preference(init: NodeSelectorTerm.() -> Unit) {
-  this as PreferredSchedulingTerm_core_v1Impl
-  NodeSelectorTerm_core_v1Impl(this)
+  this as PreferredSchedulingTerm_core_v1_k8s1_17Impl
+  NodeSelectorTerm_core_v1_k8s1_17Impl(this)
     .also { preference = it }
     .apply(init)
 }
@@ -2968,8 +2861,8 @@ fun PreferredSchedulingTerm.preference(init: NodeSelectorTerm.() -> Unit) {
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata */
 @K8sDslMarker
 fun PriorityClass.metadata(init: ObjectMeta.() -> Unit) {
-  this as PriorityClass_scheduling_k8s_io_v1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as PriorityClass_scheduling_k8s_io_v1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -2977,8 +2870,8 @@ fun PriorityClass.metadata(init: ObjectMeta.() -> Unit) {
 /** `lastTransitionTime` is the last time the condition transitioned from one status to another. */
 @K8sDslMarker
 fun PriorityLevelConfigurationCondition.lastTransitionTime(init: Time.() -> Unit) {
-  this as PriorityLevelConfigurationCondition_flowcontrol_apiserver_k8s_io_v1alpha1Impl
-  Time_meta_v1Impl(this)
+  this as PriorityLevelConfigurationCondition_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17Impl
+  Time_meta_v1_k8s1_17Impl(this)
     .also { lastTransitionTime = it }
     .apply(init)
 }
@@ -2987,8 +2880,8 @@ fun PriorityLevelConfigurationCondition.lastTransitionTime(init: Time.() -> Unit
 https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata */
 @K8sDslMarker
 fun PriorityLevelConfiguration.metadata(init: ObjectMeta.() -> Unit) {
-  this as PriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1alpha1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as PriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -2997,8 +2890,8 @@ fun PriorityLevelConfiguration.metadata(init: ObjectMeta.() -> Unit) {
 https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status */
 @K8sDslMarker
 fun PriorityLevelConfiguration.spec(init: Prioritylevelconfigurationspec.() -> Unit) {
-  this as PriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1alpha1Impl
-  Prioritylevelconfigurationspec_flowcontrol_apiserver_k8s_io_v1alpha1Impl(this)
+  this as PriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17Impl
+  Prioritylevelconfigurationspec_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17Impl(this)
     .also { spec = it }
     .apply(init)
 }
@@ -3007,8 +2900,8 @@ fun PriorityLevelConfiguration.spec(init: Prioritylevelconfigurationspec.() -> U
 https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status */
 @K8sDslMarker
 fun PriorityLevelConfiguration.status(init: Prioritylevelconfigurationstatus.() -> Unit) {
-  this as PriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1alpha1Impl
-  Prioritylevelconfigurationstatus_flowcontrol_apiserver_k8s_io_v1alpha1Impl(this)
+  this as PriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17Impl
+  Prioritylevelconfigurationstatus_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17Impl(this)
     .also { status = it }
     .apply(init)
 }
@@ -3016,8 +2909,8 @@ fun PriorityLevelConfiguration.status(init: Prioritylevelconfigurationstatus.() 
 /** One and only one of the following should be specified. Exec specifies the action to take. */
 @K8sDslMarker
 fun Probe.exec(init: ExecAction.() -> Unit) {
-  this as Probe_core_v1Impl
-  ExecAction_core_v1Impl(this)
+  this as Probe_core_v1_k8s1_17Impl
+  ExecAction_core_v1_k8s1_17Impl(this)
     .also { exec = it }
     .apply(init)
 }
@@ -3025,8 +2918,8 @@ fun Probe.exec(init: ExecAction.() -> Unit) {
 /** HTTPGet specifies the http request to perform. */
 @K8sDslMarker
 fun Probe.httpGet(init: HTTPGetAction.() -> Unit) {
-  this as Probe_core_v1Impl
-  HTTPGetAction_core_v1Impl(this)
+  this as Probe_core_v1_k8s1_17Impl
+  HTTPGetAction_core_v1_k8s1_17Impl(this)
     .also { httpGet = it }
     .apply(init)
 }
@@ -3034,8 +2927,8 @@ fun Probe.httpGet(init: HTTPGetAction.() -> Unit) {
 /** TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported */
 @K8sDslMarker
 fun Probe.tcpSocket(init: TCPSocketAction.() -> Unit) {
-  this as Probe_core_v1Impl
-  TCPSocketAction_core_v1Impl(this)
+  this as Probe_core_v1_k8s1_17Impl
+  TCPSocketAction_core_v1_k8s1_17Impl(this)
     .also { tcpSocket = it }
     .apply(init)
 }
@@ -3043,8 +2936,8 @@ fun Probe.tcpSocket(init: TCPSocketAction.() -> Unit) {
 /** list of volume projections */
 @K8sDslMarker
 fun ProjectedVolumeSource.sources(init: VolumeProjection.() -> Unit) {
-  this as ProjectedVolumeSource_core_v1Impl
-  VolumeProjection_core_v1Impl(this)
+  this as ProjectedVolumeSource_core_v1_k8s1_17Impl
+  VolumeProjection_core_v1_k8s1_17Impl(this)
     .also { sources = sources?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -3053,8 +2946,8 @@ fun ProjectedVolumeSource.sources(init: VolumeProjection.() -> Unit) {
 https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it */
 @K8sDslMarker
 fun RBDPersistentVolumeSource.secretRef(init: SecretReference.() -> Unit) {
-  this as RBDPersistentVolumeSource_core_v1Impl
-  SecretReference_core_v1Impl(this)
+  this as RBDPersistentVolumeSource_core_v1_k8s1_17Impl
+  SecretReference_core_v1_k8s1_17Impl(this)
     .also { secretRef = it }
     .apply(init)
 }
@@ -3063,8 +2956,8 @@ fun RBDPersistentVolumeSource.secretRef(init: SecretReference.() -> Unit) {
 https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it */
 @K8sDslMarker
 fun RBDVolumeSource.secretRef(init: LocalObjectReference.() -> Unit) {
-  this as RBDVolumeSource_core_v1Impl
-  LocalObjectReference_core_v1Impl(this)
+  this as RBDVolumeSource_core_v1_k8s1_17Impl
+  LocalObjectReference_core_v1_k8s1_17Impl(this)
     .also { secretRef = it }
     .apply(init)
 }
@@ -3072,8 +2965,8 @@ fun RBDVolumeSource.secretRef(init: LocalObjectReference.() -> Unit) {
 /** The last time the condition transitioned from one status to another. */
 @K8sDslMarker
 fun ReplicaSetCondition.lastTransitionTime(init: Time.() -> Unit) {
-  this as ReplicaSetCondition_apps_v1Impl
-  Time_meta_v1Impl(this)
+  this as ReplicaSetCondition_apps_v1_k8s1_17Impl
+  Time_meta_v1_k8s1_17Impl(this)
     .also { lastTransitionTime = it }
     .apply(init)
 }
@@ -3083,8 +2976,8 @@ Standard object's metadata. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata */
 @K8sDslMarker
 fun ReplicaSet.metadata(init: ObjectMeta.() -> Unit) {
-  this as ReplicaSet_apps_v1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as ReplicaSet_apps_v1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -3093,8 +2986,8 @@ fun ReplicaSet.metadata(init: ObjectMeta.() -> Unit) {
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status */
 @K8sDslMarker
 fun ReplicaSet.spec(init: Replicasetspec.() -> Unit) {
-  this as ReplicaSet_apps_v1Impl
-  Replicasetspec_apps_v1Impl(this)
+  this as ReplicaSet_apps_v1_k8s1_17Impl
+  Replicasetspec_apps_v1_k8s1_17Impl(this)
     .also { spec = it }
     .apply(init)
 }
@@ -3104,8 +2997,8 @@ Populated by the system. Read-only. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status */
 @K8sDslMarker
 fun ReplicaSet.status(init: Replicasetstatus.() -> Unit) {
-  this as ReplicaSet_apps_v1Impl
-  Replicasetstatus_apps_v1Impl(this)
+  this as ReplicaSet_apps_v1_k8s1_17Impl
+  Replicasetstatus_apps_v1_k8s1_17Impl(this)
     .also { status = it }
     .apply(init)
 }
@@ -3113,8 +3006,8 @@ fun ReplicaSet.status(init: Replicasetstatus.() -> Unit) {
 /** The last time the condition transitioned from one status to another. */
 @K8sDslMarker
 fun ReplicationControllerCondition.lastTransitionTime(init: Time.() -> Unit) {
-  this as ReplicationControllerCondition_core_v1Impl
-  Time_meta_v1Impl(this)
+  this as ReplicationControllerCondition_core_v1_k8s1_17Impl
+  Time_meta_v1_k8s1_17Impl(this)
     .also { lastTransitionTime = it }
     .apply(init)
 }
@@ -3124,8 +3017,8 @@ controller manages. Standard object's metadata. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata */
 @K8sDslMarker
 fun ReplicationController.metadata(init: ObjectMeta.() -> Unit) {
-  this as ReplicationController_core_v1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as ReplicationController_core_v1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -3134,8 +3027,8 @@ fun ReplicationController.metadata(init: ObjectMeta.() -> Unit) {
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status */
 @K8sDslMarker
 fun ReplicationController.spec(init: Replicationcontrollerspec.() -> Unit) {
-  this as ReplicationController_core_v1Impl
-  Replicationcontrollerspec_core_v1Impl(this)
+  this as ReplicationController_core_v1_k8s1_17Impl
+  Replicationcontrollerspec_core_v1_k8s1_17Impl(this)
     .also { spec = it }
     .apply(init)
 }
@@ -3145,8 +3038,8 @@ of time. Populated by the system. Read-only. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status */
 @K8sDslMarker
 fun ReplicationController.status(init: Replicationcontrollerstatus.() -> Unit) {
-  this as ReplicationController_core_v1Impl
-  Replicationcontrollerstatus_core_v1Impl(this)
+  this as ReplicationController_core_v1_k8s1_17Impl
+  Replicationcontrollerstatus_core_v1_k8s1_17Impl(this)
     .also { status = it }
     .apply(init)
 }
@@ -3154,8 +3047,8 @@ fun ReplicationController.status(init: Replicationcontrollerstatus.() -> Unit) {
 /** Specifies the output format of the exposed resources, defaults to "1" */
 @K8sDslMarker
 fun ResourceFieldSelector.divisor(init: Quantity.() -> Unit) {
-  this as ResourceFieldSelector_core_v1Impl
-  Quantity_core_resourceImpl(this)
+  this as ResourceFieldSelector_core_v1_k8s1_17Impl
+  Quantity_core_resource_k8s1_17Impl(this)
     .also { divisor = it }
     .apply(init)
 }
@@ -3163,8 +3056,8 @@ fun ResourceFieldSelector.divisor(init: Quantity.() -> Unit) {
 /** target specifies the target value for the given metric */
 @K8sDslMarker
 fun ResourceMetricSource.target(init: MetricTarget.() -> Unit) {
-  this as ResourceMetricSource_autoscaling_v2beta2Impl
-  MetricTarget_autoscaling_v2beta2Impl(this)
+  this as ResourceMetricSource_autoscaling_v2beta2_k8s1_17Impl
+  MetricTarget_autoscaling_v2beta2_k8s1_17Impl(this)
     .also { target = it }
     .apply(init)
 }
@@ -3172,8 +3065,8 @@ fun ResourceMetricSource.target(init: MetricTarget.() -> Unit) {
 /** current contains the current value for the given metric */
 @K8sDslMarker
 fun ResourceMetricStatus.current(init: MetricValueStatus.() -> Unit) {
-  this as ResourceMetricStatus_autoscaling_v2beta2Impl
-  MetricValueStatus_autoscaling_v2beta2Impl(this)
+  this as ResourceMetricStatus_autoscaling_v2beta2_k8s1_17Impl
+  MetricValueStatus_autoscaling_v2beta2_k8s1_17Impl(this)
     .also { current = it }
     .apply(init)
 }
@@ -3182,8 +3075,8 @@ fun ResourceMetricStatus.current(init: MetricValueStatus.() -> Unit) {
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata */
 @K8sDslMarker
 fun ResourceQuota.metadata(init: ObjectMeta.() -> Unit) {
-  this as ResourceQuota_core_v1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as ResourceQuota_core_v1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -3192,8 +3085,8 @@ fun ResourceQuota.metadata(init: ObjectMeta.() -> Unit) {
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status */
 @K8sDslMarker
 fun ResourceQuota.spec(init: Resourcequotaspec.() -> Unit) {
-  this as ResourceQuota_core_v1Impl
-  Resourcequotaspec_core_v1Impl(this)
+  this as ResourceQuota_core_v1_k8s1_17Impl
+  Resourcequotaspec_core_v1_k8s1_17Impl(this)
     .also { spec = it }
     .apply(init)
 }
@@ -3202,38 +3095,17 @@ fun ResourceQuota.spec(init: Resourcequotaspec.() -> Unit) {
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status */
 @K8sDslMarker
 fun ResourceQuota.status(init: Resourcequotastatus.() -> Unit) {
-  this as ResourceQuota_core_v1Impl
-  Resourcequotastatus_core_v1Impl(this)
+  this as ResourceQuota_core_v1_k8s1_17Impl
+  Resourcequotastatus_core_v1_k8s1_17Impl(this)
     .also { status = it }
-    .apply(init)
-}
-
-/** Limits describes the maximum amount of compute resources allowed. More info:
-https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/ */
-@K8sDslMarker
-fun ResourceRequirements.limits(init: de.loosetie.k8s.dsl.types.LimitsAndRequests.() -> Unit) {
-  this as ResourceRequirements_core_v1Impl
-  de.loosetie.k8s.dsl.types.LimitsAndRequests(this)
-    .also { limits = it }
-    .apply(init)
-}
-
-/** Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults
-to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info:
-https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/ */
-@K8sDslMarker
-fun ResourceRequirements.requests(init: de.loosetie.k8s.dsl.types.LimitsAndRequests.() -> Unit) {
-  this as ResourceRequirements_core_v1Impl
-  de.loosetie.k8s.dsl.types.LimitsAndRequests(this)
-    .also { requests = it }
     .apply(init)
 }
 
 /** Standard object's metadata. */
 @K8sDslMarker
 fun RoleBinding.metadata(init: ObjectMeta.() -> Unit) {
-  this as RoleBinding_rbac_authorization_k8s_io_v1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as RoleBinding_rbac_authorization_k8s_io_v1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -3242,17 +3114,17 @@ fun RoleBinding.metadata(init: ObjectMeta.() -> Unit) {
 resolved, the Authorizer must return an error. */
 @K8sDslMarker
 fun RoleBinding.roleRef(init: RoleRef.() -> Unit) {
-  this as RoleBinding_rbac_authorization_k8s_io_v1Impl
-  RoleRef_rbac_authorization_k8s_io_v1Impl(this)
+  this as RoleBinding_rbac_authorization_k8s_io_v1_k8s1_17Impl
+  RoleRef_rbac_authorization_k8s_io_v1_k8s1_17Impl(this)
     .also { roleRef = it }
     .apply(init)
 }
 
 /** Subjects holds references to the objects the role applies to. */
 @K8sDslMarker
-fun RoleBinding.subjects(init: Subject_rbac_authorization_k8s_io_v1.() -> Unit) {
-  this as RoleBinding_rbac_authorization_k8s_io_v1Impl
-  Subject_rbac_authorization_k8s_io_v1Impl(this)
+fun RoleBinding.subjects(init: Subject_rbac_authorization_k8s_io_v1_k8s1_17.() -> Unit) {
+  this as RoleBinding_rbac_authorization_k8s_io_v1_k8s1_17Impl
+  Subject_rbac_authorization_k8s_io_v1_k8s1_17Impl(this)
     .also { subjects = subjects?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -3260,8 +3132,8 @@ fun RoleBinding.subjects(init: Subject_rbac_authorization_k8s_io_v1.() -> Unit) 
 /** Standard object's metadata. */
 @K8sDslMarker
 fun Role.metadata(init: ObjectMeta.() -> Unit) {
-  this as Role_rbac_authorization_k8s_io_v1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as Role_rbac_authorization_k8s_io_v1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -3269,8 +3141,8 @@ fun Role.metadata(init: ObjectMeta.() -> Unit) {
 /** Rules holds all the PolicyRules for this Role */
 @K8sDslMarker
 fun Role.rules(init: PolicyRule.() -> Unit) {
-  this as Role_rbac_authorization_k8s_io_v1Impl
-  PolicyRule_rbac_authorization_k8s_io_v1Impl(this)
+  this as Role_rbac_authorization_k8s_io_v1_k8s1_17Impl
+  PolicyRule_rbac_authorization_k8s_io_v1_k8s1_17Impl(this)
     .also { rules = rules?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -3279,8 +3151,8 @@ fun Role.rules(init: PolicyRule.() -> Unit) {
 range with the same start and end. Required for MustRunAs. */
 @K8sDslMarker
 fun RunAsGroupStrategyOptions.ranges(init: IDRange.() -> Unit) {
-  this as RunAsGroupStrategyOptions_policy_v1beta1Impl
-  IDRange_policy_v1beta1Impl(this)
+  this as RunAsGroupStrategyOptions_policy_v1beta1_k8s1_17Impl
+  IDRange_policy_v1beta1_k8s1_17Impl(this)
     .also { ranges = ranges?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -3289,8 +3161,8 @@ fun RunAsGroupStrategyOptions.ranges(init: IDRange.() -> Unit) {
 range with the same start and end. Required for MustRunAs. */
 @K8sDslMarker
 fun RunAsUserStrategyOptions.ranges(init: IDRange.() -> Unit) {
-  this as RunAsUserStrategyOptions_policy_v1beta1Impl
-  IDRange_policy_v1beta1Impl(this)
+  this as RunAsUserStrategyOptions_policy_v1beta1_k8s1_17Impl
+  IDRange_policy_v1beta1_k8s1_17Impl(this)
     .also { ranges = ranges?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -3298,8 +3170,8 @@ fun RunAsUserStrategyOptions.ranges(init: IDRange.() -> Unit) {
 /** More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata */
 @K8sDslMarker
 fun RuntimeClass.metadata(init: ObjectMeta.() -> Unit) {
-  this as RuntimeClass_node_k8s_io_v1beta1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as RuntimeClass_node_k8s_io_v1beta1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -3309,8 +3181,8 @@ https://git.k8s.io/enhancements/keps/sig-node/20190226-pod-overhead.md This fiel
 and is only honored by servers that enable the PodOverhead feature. */
 @K8sDslMarker
 fun RuntimeClass.overhead(init: Overhead.() -> Unit) {
-  this as RuntimeClass_node_k8s_io_v1beta1Impl
-  Overhead_node_k8s_io_v1beta1Impl(this)
+  this as RuntimeClass_node_k8s_io_v1beta1_k8s1_17Impl
+  Overhead_node_k8s_io_v1beta1_k8s1_17Impl(this)
     .also { overhead = it }
     .apply(init)
 }
@@ -3319,8 +3191,8 @@ fun RuntimeClass.overhead(init: Overhead.() -> Unit) {
 that support it. If scheduling is nil, this RuntimeClass is assumed to be supported by all nodes. */
 @K8sDslMarker
 fun RuntimeClass.scheduling(init: Scheduling.() -> Unit) {
-  this as RuntimeClass_node_k8s_io_v1beta1Impl
-  Scheduling_node_k8s_io_v1beta1Impl(this)
+  this as RuntimeClass_node_k8s_io_v1beta1_k8s1_17Impl
+  Scheduling_node_k8s_io_v1beta1_k8s1_17Impl(this)
     .also { scheduling = it }
     .apply(init)
 }
@@ -3329,8 +3201,8 @@ fun RuntimeClass.scheduling(init: Scheduling.() -> Unit) {
 https://kubernetes.io/docs/tasks/configure-pod-container/security-context/ */
 @K8sDslMarker
 fun SELinuxStrategyOptions.seLinuxOptions(init: SELinuxOptions.() -> Unit) {
-  this as SELinuxStrategyOptions_policy_v1beta1Impl
-  SELinuxOptions_core_v1Impl(this)
+  this as SELinuxStrategyOptions_policy_v1beta1_k8s1_17Impl
+  SELinuxOptions_core_v1_k8s1_17Impl(this)
     .also { seLinuxOptions = it }
     .apply(init)
 }
@@ -3339,8 +3211,8 @@ fun SELinuxStrategyOptions.seLinuxOptions(init: SELinuxOptions.() -> Unit) {
 operation will fail. */
 @K8sDslMarker
 fun ScaleIOPersistentVolumeSource.secretRef(init: SecretReference.() -> Unit) {
-  this as ScaleIOPersistentVolumeSource_core_v1Impl
-  SecretReference_core_v1Impl(this)
+  this as ScaleIOPersistentVolumeSource_core_v1_k8s1_17Impl
+  SecretReference_core_v1_k8s1_17Impl(this)
     .also { secretRef = it }
     .apply(init)
 }
@@ -3349,8 +3221,8 @@ fun ScaleIOPersistentVolumeSource.secretRef(init: SecretReference.() -> Unit) {
 operation will fail. */
 @K8sDslMarker
 fun ScaleIOVolumeSource.secretRef(init: LocalObjectReference.() -> Unit) {
-  this as ScaleIOVolumeSource_core_v1Impl
-  LocalObjectReference_core_v1Impl(this)
+  this as ScaleIOVolumeSource_core_v1_k8s1_17Impl
+  LocalObjectReference_core_v1_k8s1_17Impl(this)
     .also { secretRef = it }
     .apply(init)
 }
@@ -3359,8 +3231,8 @@ fun ScaleIOVolumeSource.secretRef(init: LocalObjectReference.() -> Unit) {
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata. */
 @K8sDslMarker
 fun Scale.metadata(init: ObjectMeta.() -> Unit) {
-  this as Scale_apps_v1beta2Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as Scale_apps_v1beta2_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -3368,9 +3240,9 @@ fun Scale.metadata(init: ObjectMeta.() -> Unit) {
 /** defines the behavior of the scale. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status. */
 @K8sDslMarker
-fun Scale.spec(init: Scalespec_apps_v1beta1.() -> Unit) {
-  this as Scale_apps_v1beta2Impl
-  Scalespec_apps_v1beta1Impl(this)
+fun Scale.spec(init: Scalespec_apps_v1beta1_k8s1_17.() -> Unit) {
+  this as Scale_apps_v1beta2_k8s1_17Impl
+  Scalespec_apps_v1beta1_k8s1_17Impl(this)
     .also { spec = it }
     .apply(init)
 }
@@ -3378,9 +3250,9 @@ fun Scale.spec(init: Scalespec_apps_v1beta1.() -> Unit) {
 /** current status of the scale. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status. Read-only. */
 @K8sDslMarker
-fun Scale.status(init: Scalestatus_apps_v1beta1.() -> Unit) {
-  this as Scale_apps_v1beta2Impl
-  Scalestatus_apps_v1beta1Impl(this)
+fun Scale.status(init: Scalestatus_apps_v1beta1_k8s1_17.() -> Unit) {
+  this as Scale_apps_v1beta2_k8s1_17Impl
+  Scalestatus_apps_v1beta1_k8s1_17Impl(this)
     .also { status = it }
     .apply(init)
 }
@@ -3389,8 +3261,8 @@ fun Scale.status(init: Scalestatus_apps_v1beta1.() -> Unit) {
 unioning the set of nodes tolerated by the pod and the RuntimeClass. */
 @K8sDslMarker
 fun Scheduling.tolerations(init: Toleration.() -> Unit) {
-  this as Scheduling_node_k8s_io_v1beta1Impl
-  Toleration_core_v1Impl(this)
+  this as Scheduling_node_k8s_io_v1beta1_k8s1_17Impl
+  Toleration_core_v1_k8s1_17Impl(this)
     .also { tolerations = tolerations?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -3398,8 +3270,8 @@ fun Scheduling.tolerations(init: Toleration.() -> Unit) {
 /** A list of scope selector requirements by scope of the resources. */
 @K8sDslMarker
 fun ScopeSelector.matchExpressions(init: ScopedResourceSelectorRequirement.() -> Unit) {
-  this as ScopeSelector_core_v1Impl
-  ScopedResourceSelectorRequirement_core_v1Impl(this)
+  this as ScopeSelector_core_v1_k8s1_17Impl
+  ScopedResourceSelectorRequirement_core_v1_k8s1_17Impl(this)
     .also { matchExpressions = matchExpressions?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -3410,8 +3282,8 @@ paths, and unlisted keys will not be present. If a key is specified which is not
 will error unless it is marked optional. Paths must be relative and may not contain the '..' path or start with '..'. */
 @K8sDslMarker
 fun SecretProjection.items(init: KeyToPath.() -> Unit) {
-  this as SecretProjection_core_v1Impl
-  KeyToPath_core_v1Impl(this)
+  this as SecretProjection_core_v1_k8s1_17Impl
+  KeyToPath_core_v1_k8s1_17Impl(this)
     .also { items = items?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -3422,8 +3294,8 @@ paths, and unlisted keys will not be present. If a key is specified which is not
 will error unless it is marked optional. Paths must be relative and may not contain the '..' path or start with '..'. */
 @K8sDslMarker
 fun SecretVolumeSource.items(init: KeyToPath.() -> Unit) {
-  this as SecretVolumeSource_core_v1Impl
-  KeyToPath_core_v1Impl(this)
+  this as SecretVolumeSource_core_v1_k8s1_17Impl
+  KeyToPath_core_v1_k8s1_17Impl(this)
     .also { items = items?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -3432,8 +3304,8 @@ fun SecretVolumeSource.items(init: KeyToPath.() -> Unit) {
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata */
 @K8sDslMarker
 fun Secret.metadata(init: ObjectMeta.() -> Unit) {
-  this as Secret_core_v1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as Secret_core_v1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -3442,8 +3314,8 @@ fun Secret.metadata(init: ObjectMeta.() -> Unit) {
 container runtime. */
 @K8sDslMarker
 fun SecurityContext.capabilities(init: Capabilities.() -> Unit) {
-  this as SecurityContext_core_v1Impl
-  Capabilities_core_v1Impl(this)
+  this as SecurityContext_core_v1_k8s1_17Impl
+  Capabilities_core_v1_k8s1_17Impl(this)
     .also { capabilities = it }
     .apply(init)
 }
@@ -3453,8 +3325,8 @@ context for each container. May also be set in PodSecurityContext. If set in bot
 PodSecurityContext, the value specified in SecurityContext takes precedence. */
 @K8sDslMarker
 fun SecurityContext.seLinuxOptions(init: SELinuxOptions.() -> Unit) {
-  this as SecurityContext_core_v1Impl
-  SELinuxOptions_core_v1Impl(this)
+  this as SecurityContext_core_v1_k8s1_17Impl
+  SELinuxOptions_core_v1_k8s1_17Impl(this)
     .also { seLinuxOptions = it }
     .apply(init)
 }
@@ -3463,8 +3335,8 @@ fun SecurityContext.seLinuxOptions(init: SELinuxOptions.() -> Unit) {
 used. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. */
 @K8sDslMarker
 fun SecurityContext.windowsOptions(init: WindowsSecurityContextOptions.() -> Unit) {
-  this as SecurityContext_core_v1Impl
-  WindowsSecurityContextOptions_core_v1Impl(this)
+  this as SecurityContext_core_v1_k8s1_17Impl
+  WindowsSecurityContextOptions_core_v1_k8s1_17Impl(this)
     .also { windowsOptions = it }
     .apply(init)
 }
@@ -3472,8 +3344,8 @@ fun SecurityContext.windowsOptions(init: WindowsSecurityContextOptions.() -> Uni
 /**  */
 @K8sDslMarker
 fun SelfSubjectAccessReview.metadata(init: ObjectMeta.() -> Unit) {
-  this as SelfSubjectAccessReview_authorization_k8s_io_v1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as SelfSubjectAccessReview_authorization_k8s_io_v1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -3481,8 +3353,8 @@ fun SelfSubjectAccessReview.metadata(init: ObjectMeta.() -> Unit) {
 /** Spec holds information about the request being evaluated. user and groups must be empty */
 @K8sDslMarker
 fun SelfSubjectAccessReview.spec(init: Selfsubjectaccessreviewspec.() -> Unit) {
-  this as SelfSubjectAccessReview_authorization_k8s_io_v1Impl
-  Selfsubjectaccessreviewspec_authorization_k8s_io_v1Impl(this)
+  this as SelfSubjectAccessReview_authorization_k8s_io_v1_k8s1_17Impl
+  Selfsubjectaccessreviewspec_authorization_k8s_io_v1_k8s1_17Impl(this)
     .also { spec = it }
     .apply(init)
 }
@@ -3490,8 +3362,8 @@ fun SelfSubjectAccessReview.spec(init: Selfsubjectaccessreviewspec.() -> Unit) {
 /** Status is filled in by the server and indicates whether the request is allowed or not */
 @K8sDslMarker
 fun SelfSubjectAccessReview.status(init: Subjectaccessreviewstatus.() -> Unit) {
-  this as SelfSubjectAccessReview_authorization_k8s_io_v1Impl
-  Subjectaccessreviewstatus_authorization_k8s_io_v1Impl(this)
+  this as SelfSubjectAccessReview_authorization_k8s_io_v1_k8s1_17Impl
+  Subjectaccessreviewstatus_authorization_k8s_io_v1_k8s1_17Impl(this)
     .also { status = it }
     .apply(init)
 }
@@ -3499,8 +3371,8 @@ fun SelfSubjectAccessReview.status(init: Subjectaccessreviewstatus.() -> Unit) {
 /**  */
 @K8sDslMarker
 fun SelfSubjectRulesReview.metadata(init: ObjectMeta.() -> Unit) {
-  this as SelfSubjectRulesReview_authorization_k8s_io_v1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as SelfSubjectRulesReview_authorization_k8s_io_v1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -3508,8 +3380,8 @@ fun SelfSubjectRulesReview.metadata(init: ObjectMeta.() -> Unit) {
 /** Spec holds information about the request being evaluated. */
 @K8sDslMarker
 fun SelfSubjectRulesReview.spec(init: Selfsubjectrulesreviewspec.() -> Unit) {
-  this as SelfSubjectRulesReview_authorization_k8s_io_v1Impl
-  Selfsubjectrulesreviewspec_authorization_k8s_io_v1Impl(this)
+  this as SelfSubjectRulesReview_authorization_k8s_io_v1_k8s1_17Impl
+  Selfsubjectrulesreviewspec_authorization_k8s_io_v1_k8s1_17Impl(this)
     .also { spec = it }
     .apply(init)
 }
@@ -3517,8 +3389,8 @@ fun SelfSubjectRulesReview.spec(init: Selfsubjectrulesreviewspec.() -> Unit) {
 /** Status is filled in by the server and indicates the set of actions a user can perform. */
 @K8sDslMarker
 fun SelfSubjectRulesReview.status(init: SubjectRulesReviewStatus.() -> Unit) {
-  this as SelfSubjectRulesReview_authorization_k8s_io_v1Impl
-  SubjectRulesReviewStatus_authorization_k8s_io_v1Impl(this)
+  this as SelfSubjectRulesReview_authorization_k8s_io_v1_k8s1_17Impl
+  SubjectRulesReviewStatus_authorization_k8s_io_v1_k8s1_17Impl(this)
     .also { status = it }
     .apply(init)
 }
@@ -3529,8 +3401,8 @@ ImagePullSecrets are only accessed by the kubelet. More info:
 https://kubernetes.io/docs/concepts/containers/images/#specifying-imagepullsecrets-on-a-pod */
 @K8sDslMarker
 fun ServiceAccount.imagePullSecrets(init: LocalObjectReference.() -> Unit) {
-  this as ServiceAccount_core_v1Impl
-  LocalObjectReference_core_v1Impl(this)
+  this as ServiceAccount_core_v1_k8s1_17Impl
+  LocalObjectReference_core_v1_k8s1_17Impl(this)
     .also { imagePullSecrets = imagePullSecrets?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -3539,8 +3411,8 @@ fun ServiceAccount.imagePullSecrets(init: LocalObjectReference.() -> Unit) {
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata */
 @K8sDslMarker
 fun ServiceAccount.metadata(init: ObjectMeta.() -> Unit) {
-  this as ServiceAccount_core_v1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as ServiceAccount_core_v1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -3549,42 +3421,18 @@ fun ServiceAccount.metadata(init: ObjectMeta.() -> Unit) {
 https://kubernetes.io/docs/concepts/configuration/secret */
 @K8sDslMarker
 fun ServiceAccount.secrets(init: ObjectReference.() -> Unit) {
-  this as ServiceAccount_core_v1Impl
-  ObjectReference_core_v1Impl(this)
+  this as ServiceAccount_core_v1_k8s1_17Impl
+  ObjectReference_core_v1_k8s1_17Impl(this)
     .also { secrets = secrets?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
-}
-
-/** Number or name of the port to access on the pods targeted by the service. Number must be in the range 1 to 65535. Name
-must be an IANA_SVC_NAME. If this is a string, it will be looked up as a named port in the target Pod's container ports.
-If this is not specified, the value of the 'port' field is used (an identity map). This field is ignored for services
-with clusterIP=None, and should be omitted or set equal to the 'port' field. More info:
-https://kubernetes.io/docs/concepts/services-networking/service/#defining-a-service */
-@K8sDslMarker
-fun ServicePort.targetPort(string: String) {
-  this as ServicePort_core_v1Impl
-  de.loosetie.k8s.dsl.types.IntOrString(string)
-    .also { targetPort = it }
-}
-
-/** Number or name of the port to access on the pods targeted by the service. Number must be in the range 1 to 65535. Name
-must be an IANA_SVC_NAME. If this is a string, it will be looked up as a named port in the target Pod's container ports.
-If this is not specified, the value of the 'port' field is used (an identity map). This field is ignored for services
-with clusterIP=None, and should be omitted or set equal to the 'port' field. More info:
-https://kubernetes.io/docs/concepts/services-networking/service/#defining-a-service */
-@K8sDslMarker
-fun ServicePort.targetPort(int: Int) {
-  this as ServicePort_core_v1Impl
-  de.loosetie.k8s.dsl.types.IntOrString(int)
-    .also { targetPort = it }
 }
 
 /** Standard object's metadata. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata */
 @K8sDslMarker
 fun Service.metadata(init: ObjectMeta.() -> Unit) {
-  this as Service_core_v1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as Service_core_v1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -3593,8 +3441,8 @@ fun Service.metadata(init: ObjectMeta.() -> Unit) {
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status */
 @K8sDslMarker
 fun Service.spec(init: Servicespec.() -> Unit) {
-  this as Service_core_v1Impl
-  Servicespec_core_v1Impl(this)
+  this as Service_core_v1_k8s1_17Impl
+  Servicespec_core_v1_k8s1_17Impl(this)
     .also { spec = it }
     .apply(init)
 }
@@ -3603,8 +3451,8 @@ fun Service.spec(init: Servicespec.() -> Unit) {
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status */
 @K8sDslMarker
 fun Service.status(init: Servicestatus.() -> Unit) {
-  this as Service_core_v1Impl
-  Servicestatus_core_v1Impl(this)
+  this as Service_core_v1_k8s1_17Impl
+  Servicestatus_core_v1_k8s1_17Impl(this)
     .also { status = it }
     .apply(init)
 }
@@ -3612,8 +3460,8 @@ fun Service.status(init: Servicestatus.() -> Unit) {
 /** clientIP contains the configurations of Client IP based session affinity. */
 @K8sDslMarker
 fun SessionAffinityConfig.clientIP(init: ClientIPConfig.() -> Unit) {
-  this as SessionAffinityConfig_core_v1Impl
-  ClientIPConfig_core_v1Impl(this)
+  this as SessionAffinityConfig_core_v1_k8s1_17Impl
+  ClientIPConfig_core_v1_k8s1_17Impl(this)
     .also { clientIP = it }
     .apply(init)
 }
@@ -3621,8 +3469,8 @@ fun SessionAffinityConfig.clientIP(init: ClientIPConfig.() -> Unit) {
 /** Last time the condition transitioned from one status to another. */
 @K8sDslMarker
 fun StatefulSetCondition.lastTransitionTime(init: Time.() -> Unit) {
-  this as StatefulSetCondition_apps_v1Impl
-  Time_meta_v1Impl(this)
+  this as StatefulSetCondition_apps_v1_k8s1_17Impl
+  Time_meta_v1_k8s1_17Impl(this)
     .also { lastTransitionTime = it }
     .apply(init)
 }
@@ -3630,8 +3478,8 @@ fun StatefulSetCondition.lastTransitionTime(init: Time.() -> Unit) {
 /** RollingUpdate is used to communicate parameters when Type is RollingUpdateStatefulSetStrategyType. */
 @K8sDslMarker
 fun StatefulSetUpdateStrategy.rollingUpdate(init: RollingUpdateStatefulSetStrategy.() -> Unit) {
-  this as StatefulSetUpdateStrategy_apps_v1Impl
-  RollingUpdateStatefulSetStrategy_apps_v1Impl(this)
+  this as StatefulSetUpdateStrategy_apps_v1_k8s1_17Impl
+  RollingUpdateStatefulSetStrategy_apps_v1_k8s1_17Impl(this)
     .also { rollingUpdate = it }
     .apply(init)
 }
@@ -3639,8 +3487,8 @@ fun StatefulSetUpdateStrategy.rollingUpdate(init: RollingUpdateStatefulSetStrate
 /**  */
 @K8sDslMarker
 fun StatefulSet.metadata(init: ObjectMeta.() -> Unit) {
-  this as StatefulSet_apps_v1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as StatefulSet_apps_v1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -3648,8 +3496,8 @@ fun StatefulSet.metadata(init: ObjectMeta.() -> Unit) {
 /** Spec defines the desired identities of pods in this set. */
 @K8sDslMarker
 fun StatefulSet.spec(init: Statefulsetspec.() -> Unit) {
-  this as StatefulSet_apps_v1Impl
-  Statefulsetspec_apps_v1Impl(this)
+  this as StatefulSet_apps_v1_k8s1_17Impl
+  Statefulsetspec_apps_v1_k8s1_17Impl(this)
     .also { spec = it }
     .apply(init)
 }
@@ -3657,8 +3505,8 @@ fun StatefulSet.spec(init: Statefulsetspec.() -> Unit) {
 /** Status is the current status of Pods in this StatefulSet. This data may be out of date by some window of time. */
 @K8sDslMarker
 fun StatefulSet.status(init: Statefulsetstatus.() -> Unit) {
-  this as StatefulSet_apps_v1Impl
-  Statefulsetstatus_apps_v1Impl(this)
+  this as StatefulSet_apps_v1_k8s1_17Impl
+  Statefulsetstatus_apps_v1_k8s1_17Impl(this)
     .also { status = it }
     .apply(init)
 }
@@ -3667,8 +3515,8 @@ fun StatefulSet.status(init: Statefulsetstatus.() -> Unit) {
 detailed causes. */
 @K8sDslMarker
 fun StatusDetails.causes(init: StatusCause.() -> Unit) {
-  this as StatusDetails_meta_v1Impl
-  StatusCause_meta_v1Impl(this)
+  this as StatusDetails_meta_v1_k8s1_17Impl
+  StatusCause_meta_v1_k8s1_17Impl(this)
     .also { causes = causes?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -3677,8 +3525,8 @@ fun StatusDetails.causes(init: StatusCause.() -> Unit) {
 the data returned is not guaranteed to conform to any schema except that defined by the reason type. */
 @K8sDslMarker
 fun Status.details(init: StatusDetails.() -> Unit) {
-  this as Status_meta_v1Impl
-  StatusDetails_meta_v1Impl(this)
+  this as Status_meta_v1_k8s1_17Impl
+  StatusDetails_meta_v1_k8s1_17Impl(this)
     .also { details = it }
     .apply(init)
 }
@@ -3687,8 +3535,8 @@ fun Status.details(init: StatusDetails.() -> Unit) {
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds */
 @K8sDslMarker
 fun Status.metadata(init: ListMeta.() -> Unit) {
-  this as Status_meta_v1Impl
-  ListMeta_meta_v1Impl(this)
+  this as Status_meta_v1_k8s1_17Impl
+  ListMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -3698,8 +3546,8 @@ topology specifications. An empty TopologySelectorTerm list means there is no to
 honored by servers that enable the VolumeScheduling feature. */
 @K8sDslMarker
 fun StorageClass.allowedTopologies(init: TopologySelectorTerm.() -> Unit) {
-  this as StorageClass_storage_k8s_io_v1Impl
-  TopologySelectorTerm_core_v1Impl(this)
+  this as StorageClass_storage_k8s_io_v1_k8s1_17Impl
+  TopologySelectorTerm_core_v1_k8s1_17Impl(this)
     .also { allowedTopologies = allowedTopologies?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -3708,8 +3556,8 @@ fun StorageClass.allowedTopologies(init: TopologySelectorTerm.() -> Unit) {
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata */
 @K8sDslMarker
 fun StorageClass.metadata(init: ObjectMeta.() -> Unit) {
-  this as StorageClass_storage_k8s_io_v1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as StorageClass_storage_k8s_io_v1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -3718,8 +3566,8 @@ fun StorageClass.metadata(init: ObjectMeta.() -> Unit) {
 be attempted. */
 @K8sDslMarker
 fun StorageOSPersistentVolumeSource.secretRef(init: ObjectReference.() -> Unit) {
-  this as StorageOSPersistentVolumeSource_core_v1Impl
-  ObjectReference_core_v1Impl(this)
+  this as StorageOSPersistentVolumeSource_core_v1_k8s1_17Impl
+  ObjectReference_core_v1_k8s1_17Impl(this)
     .also { secretRef = it }
     .apply(init)
 }
@@ -3728,8 +3576,8 @@ fun StorageOSPersistentVolumeSource.secretRef(init: ObjectReference.() -> Unit) 
 be attempted. */
 @K8sDslMarker
 fun StorageOSVolumeSource.secretRef(init: LocalObjectReference.() -> Unit) {
-  this as StorageOSVolumeSource_core_v1Impl
-  LocalObjectReference_core_v1Impl(this)
+  this as StorageOSVolumeSource_core_v1_k8s1_17Impl
+  LocalObjectReference_core_v1_k8s1_17Impl(this)
     .also { secretRef = it }
     .apply(init)
 }
@@ -3737,8 +3585,8 @@ fun StorageOSVolumeSource.secretRef(init: LocalObjectReference.() -> Unit) {
 /**  */
 @K8sDslMarker
 fun SubjectAccessReview.metadata(init: ObjectMeta.() -> Unit) {
-  this as SubjectAccessReview_authorization_k8s_io_v1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as SubjectAccessReview_authorization_k8s_io_v1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -3746,8 +3594,8 @@ fun SubjectAccessReview.metadata(init: ObjectMeta.() -> Unit) {
 /** Spec holds information about the request being evaluated */
 @K8sDslMarker
 fun SubjectAccessReview.spec(init: Subjectaccessreviewspec.() -> Unit) {
-  this as SubjectAccessReview_authorization_k8s_io_v1Impl
-  Subjectaccessreviewspec_authorization_k8s_io_v1Impl(this)
+  this as SubjectAccessReview_authorization_k8s_io_v1_k8s1_17Impl
+  Subjectaccessreviewspec_authorization_k8s_io_v1_k8s1_17Impl(this)
     .also { spec = it }
     .apply(init)
 }
@@ -3755,8 +3603,8 @@ fun SubjectAccessReview.spec(init: Subjectaccessreviewspec.() -> Unit) {
 /** Status is filled in by the server and indicates whether the request is allowed or not */
 @K8sDslMarker
 fun SubjectAccessReview.status(init: Subjectaccessreviewstatus.() -> Unit) {
-  this as SubjectAccessReview_authorization_k8s_io_v1Impl
-  Subjectaccessreviewstatus_authorization_k8s_io_v1Impl(this)
+  this as SubjectAccessReview_authorization_k8s_io_v1_k8s1_17Impl
+  Subjectaccessreviewstatus_authorization_k8s_io_v1_k8s1_17Impl(this)
     .also { status = it }
     .apply(init)
 }
@@ -3765,8 +3613,8 @@ fun SubjectAccessReview.status(init: Subjectaccessreviewstatus.() -> Unit) {
 significant, may contain duplicates, and possibly be incomplete. */
 @K8sDslMarker
 fun SubjectRulesReviewStatus.nonResourceRules(init: NonResourceRule.() -> Unit) {
-  this as SubjectRulesReviewStatus_authorization_k8s_io_v1Impl
-  NonResourceRule_authorization_k8s_io_v1Impl(this)
+  this as SubjectRulesReviewStatus_authorization_k8s_io_v1_k8s1_17Impl
+  NonResourceRule_authorization_k8s_io_v1_k8s1_17Impl(this)
     .also { nonResourceRules = nonResourceRules?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -3775,8 +3623,8 @@ fun SubjectRulesReviewStatus.nonResourceRules(init: NonResourceRule.() -> Unit) 
 significant, may contain duplicates, and possibly be incomplete. */
 @K8sDslMarker
 fun SubjectRulesReviewStatus.resourceRules(init: ResourceRule.() -> Unit) {
-  this as SubjectRulesReviewStatus_authorization_k8s_io_v1Impl
-  ResourceRule_authorization_k8s_io_v1Impl(this)
+  this as SubjectRulesReviewStatus_authorization_k8s_io_v1_k8s1_17Impl
+  ResourceRule_authorization_k8s_io_v1_k8s1_17Impl(this)
     .also { resourceRules = resourceRules?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -3784,8 +3632,8 @@ fun SubjectRulesReviewStatus.resourceRules(init: ResourceRule.() -> Unit) {
 /**  */
 @K8sDslMarker
 fun Subject.group(init: GroupSubject.() -> Unit) {
-  this as Subject_flowcontrol_apiserver_k8s_io_v1alpha1Impl
-  GroupSubject_flowcontrol_apiserver_k8s_io_v1alpha1Impl(this)
+  this as Subject_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17Impl
+  GroupSubject_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17Impl(this)
     .also { group = it }
     .apply(init)
 }
@@ -3793,8 +3641,8 @@ fun Subject.group(init: GroupSubject.() -> Unit) {
 /**  */
 @K8sDslMarker
 fun Subject.serviceAccount(init: ServiceAccountSubject.() -> Unit) {
-  this as Subject_flowcontrol_apiserver_k8s_io_v1alpha1Impl
-  ServiceAccountSubject_flowcontrol_apiserver_k8s_io_v1alpha1Impl(this)
+  this as Subject_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17Impl
+  ServiceAccountSubject_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17Impl(this)
     .also { serviceAccount = it }
     .apply(init)
 }
@@ -3802,8 +3650,8 @@ fun Subject.serviceAccount(init: ServiceAccountSubject.() -> Unit) {
 /**  */
 @K8sDslMarker
 fun Subject.user(init: UserSubject.() -> Unit) {
-  this as Subject_flowcontrol_apiserver_k8s_io_v1alpha1Impl
-  UserSubject_flowcontrol_apiserver_k8s_io_v1alpha1Impl(this)
+  this as Subject_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17Impl
+  UserSubject_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17Impl(this)
     .also { user = it }
     .apply(init)
 }
@@ -3812,35 +3660,17 @@ fun Subject.user(init: UserSubject.() -> Unit) {
 a single range with the same start and end. Required for MustRunAs. */
 @K8sDslMarker
 fun SupplementalGroupsStrategyOptions.ranges(init: IDRange.() -> Unit) {
-  this as SupplementalGroupsStrategyOptions_policy_v1beta1Impl
-  IDRange_policy_v1beta1Impl(this)
+  this as SupplementalGroupsStrategyOptions_policy_v1beta1_k8s1_17Impl
+  IDRange_policy_v1beta1_k8s1_17Impl(this)
     .also { ranges = ranges?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
-}
-
-/** Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an
-IANA_SVC_NAME. */
-@K8sDslMarker
-fun TCPSocketAction.port(string: String) {
-  this as TCPSocketAction_core_v1Impl
-  de.loosetie.k8s.dsl.types.IntOrString(string)
-    .also { port = it }
-}
-
-/** Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an
-IANA_SVC_NAME. */
-@K8sDslMarker
-fun TCPSocketAction.port(int: Int) {
-  this as TCPSocketAction_core_v1Impl
-  de.loosetie.k8s.dsl.types.IntOrString(int)
-    .also { port = it }
 }
 
 /** TimeAdded represents the time at which the taint was added. It is only written for NoExecute taints. */
 @K8sDslMarker
 fun Taint.timeAdded(init: Time.() -> Unit) {
-  this as Taint_core_v1Impl
-  Time_meta_v1Impl(this)
+  this as Taint_core_v1_k8s1_17Impl
+  Time_meta_v1_k8s1_17Impl(this)
     .also { timeAdded = it }
     .apply(init)
 }
@@ -3848,8 +3678,8 @@ fun Taint.timeAdded(init: Time.() -> Unit) {
 /**  */
 @K8sDslMarker
 fun TokenRequest.metadata(init: ObjectMeta.() -> Unit) {
-  this as TokenRequest_authentication_k8s_io_v1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as TokenRequest_authentication_k8s_io_v1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -3857,8 +3687,8 @@ fun TokenRequest.metadata(init: ObjectMeta.() -> Unit) {
 /**  */
 @K8sDslMarker
 fun TokenRequest.spec(init: Tokenrequestspec.() -> Unit) {
-  this as TokenRequest_authentication_k8s_io_v1Impl
-  Tokenrequestspec_authentication_k8s_io_v1Impl(this)
+  this as TokenRequest_authentication_k8s_io_v1_k8s1_17Impl
+  Tokenrequestspec_authentication_k8s_io_v1_k8s1_17Impl(this)
     .also { spec = it }
     .apply(init)
 }
@@ -3866,8 +3696,8 @@ fun TokenRequest.spec(init: Tokenrequestspec.() -> Unit) {
 /**  */
 @K8sDslMarker
 fun TokenRequest.status(init: Tokenrequeststatus.() -> Unit) {
-  this as TokenRequest_authentication_k8s_io_v1Impl
-  Tokenrequeststatus_authentication_k8s_io_v1Impl(this)
+  this as TokenRequest_authentication_k8s_io_v1_k8s1_17Impl
+  Tokenrequeststatus_authentication_k8s_io_v1_k8s1_17Impl(this)
     .also { status = it }
     .apply(init)
 }
@@ -3875,8 +3705,8 @@ fun TokenRequest.status(init: Tokenrequeststatus.() -> Unit) {
 /**  */
 @K8sDslMarker
 fun TokenReview.metadata(init: ObjectMeta.() -> Unit) {
-  this as TokenReview_authentication_k8s_io_v1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as TokenReview_authentication_k8s_io_v1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -3884,8 +3714,8 @@ fun TokenReview.metadata(init: ObjectMeta.() -> Unit) {
 /** Spec holds information about the request being evaluated */
 @K8sDslMarker
 fun TokenReview.spec(init: Tokenreviewspec.() -> Unit) {
-  this as TokenReview_authentication_k8s_io_v1Impl
-  Tokenreviewspec_authentication_k8s_io_v1Impl(this)
+  this as TokenReview_authentication_k8s_io_v1_k8s1_17Impl
+  Tokenreviewspec_authentication_k8s_io_v1_k8s1_17Impl(this)
     .also { spec = it }
     .apply(init)
 }
@@ -3893,8 +3723,8 @@ fun TokenReview.spec(init: Tokenreviewspec.() -> Unit) {
 /** Status is filled in by the server and indicates whether the request can be authenticated. */
 @K8sDslMarker
 fun TokenReview.status(init: Tokenreviewstatus.() -> Unit) {
-  this as TokenReview_authentication_k8s_io_v1Impl
-  Tokenreviewstatus_authentication_k8s_io_v1Impl(this)
+  this as TokenReview_authentication_k8s_io_v1_k8s1_17Impl
+  Tokenreviewstatus_authentication_k8s_io_v1_k8s1_17Impl(this)
     .also { status = it }
     .apply(init)
 }
@@ -3902,8 +3732,8 @@ fun TokenReview.status(init: Tokenreviewstatus.() -> Unit) {
 /** A list of topology selector requirements by labels. */
 @K8sDslMarker
 fun TopologySelectorTerm.matchLabelExpressions(init: TopologySelectorLabelRequirement.() -> Unit) {
-  this as TopologySelectorTerm_core_v1Impl
-  TopologySelectorLabelRequirement_core_v1Impl(this)
+  this as TopologySelectorTerm_core_v1_k8s1_17Impl
+  TopologySelectorLabelRequirement_core_v1_k8s1_17Impl(this)
     .also { matchLabelExpressions = matchLabelExpressions?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -3912,8 +3742,8 @@ fun TopologySelectorTerm.matchLabelExpressions(init: TopologySelectorLabelRequir
 pods in their corresponding topology domain. */
 @K8sDslMarker
 fun TopologySpreadConstraint.labelSelector(init: LabelSelector.() -> Unit) {
-  this as TopologySpreadConstraint_core_v1Impl
-  LabelSelector_meta_v1Impl(this)
+  this as TopologySpreadConstraint_core_v1_k8s1_17Impl
+  LabelSelector_meta_v1_k8s1_17Impl(this)
     .also { labelSelector = it }
     .apply(init)
 }
@@ -3922,8 +3752,8 @@ fun TopologySpreadConstraint.labelSelector(init: LabelSelector.() -> Unit) {
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata. */
 @K8sDslMarker
 fun ValidatingWebhookConfiguration.metadata(init: ObjectMeta.() -> Unit) {
-  this as ValidatingWebhookConfiguration_admissionregistration_k8s_io_v1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as ValidatingWebhookConfiguration_admissionregistration_k8s_io_v1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -3931,8 +3761,8 @@ fun ValidatingWebhookConfiguration.metadata(init: ObjectMeta.() -> Unit) {
 /** Webhooks is a list of webhooks and the affected resources and operations. */
 @K8sDslMarker
 fun ValidatingWebhookConfiguration.webhooks(init: ValidatingWebhook.() -> Unit) {
-  this as ValidatingWebhookConfiguration_admissionregistration_k8s_io_v1Impl
-  ValidatingWebhook_admissionregistration_k8s_io_v1Impl(this)
+  this as ValidatingWebhookConfiguration_admissionregistration_k8s_io_v1_k8s1_17Impl
+  ValidatingWebhook_admissionregistration_k8s_io_v1_k8s1_17Impl(this)
     .also { webhooks = webhooks?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -3940,8 +3770,8 @@ fun ValidatingWebhookConfiguration.webhooks(init: ValidatingWebhook.() -> Unit) 
 /** ClientConfig defines how to communicate with the hook. Required */
 @K8sDslMarker
 fun ValidatingWebhook.clientConfig(init: WebhookClientConfig.() -> Unit) {
-  this as ValidatingWebhook_admissionregistration_k8s_io_v1Impl
-  WebhookClientConfig_admissionregistration_k8s_io_v1Impl(this)
+  this as ValidatingWebhook_admissionregistration_k8s_io_v1_k8s1_17Impl
+  WebhookClientConfig_admissionregistration_k8s_io_v1_k8s1_17Impl(this)
     .also { clientConfig = it }
     .apply(init)
 }
@@ -3957,8 +3787,8 @@ the selector as follows: "namespaceSelector": { "matchExpressions": [ { "key": "
 more examples of label selectors. Default to the empty LabelSelector, which matches everything. */
 @K8sDslMarker
 fun ValidatingWebhook.namespaceSelector(init: LabelSelector.() -> Unit) {
-  this as ValidatingWebhook_admissionregistration_k8s_io_v1Impl
-  LabelSelector_meta_v1Impl(this)
+  this as ValidatingWebhook_admissionregistration_k8s_io_v1_k8s1_17Impl
+  LabelSelector_meta_v1_k8s1_17Impl(this)
     .also { namespaceSelector = it }
     .apply(init)
 }
@@ -3971,8 +3801,8 @@ Use the object selector only if the webhook is opt-in, because end users may ski
 labels. Default to the empty LabelSelector, which matches everything. */
 @K8sDslMarker
 fun ValidatingWebhook.objectSelector(init: LabelSelector.() -> Unit) {
-  this as ValidatingWebhook_admissionregistration_k8s_io_v1Impl
-  LabelSelector_meta_v1Impl(this)
+  this as ValidatingWebhook_admissionregistration_k8s_io_v1_k8s1_17Impl
+  LabelSelector_meta_v1_k8s1_17Impl(this)
     .also { objectSelector = it }
     .apply(init)
 }
@@ -3984,8 +3814,8 @@ disabling the plugin, ValidatingAdmissionWebhooks and MutatingAdmissionWebhooks 
 for ValidatingWebhookConfiguration and MutatingWebhookConfiguration objects. */
 @K8sDslMarker
 fun ValidatingWebhook.rules(init: RuleWithOperations.() -> Unit) {
-  this as ValidatingWebhook_admissionregistration_k8s_io_v1Impl
-  RuleWithOperations_admissionregistration_k8s_io_v1Impl(this)
+  this as ValidatingWebhook_admissionregistration_k8s_io_v1_k8s1_17Impl
+  RuleWithOperations_admissionregistration_k8s_io_v1_k8s1_17Impl(this)
     .also { rules = rules?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -3996,8 +3826,8 @@ inline VolumeSource to a PersistentVolumeSpec. This field is alpha-level and is 
 CSIMigration feature. */
 @K8sDslMarker
 fun VolumeAttachmentSource.inlineVolumeSpec(init: Persistentvolumespec.() -> Unit) {
-  this as VolumeAttachmentSource_storage_k8s_io_v1Impl
-  Persistentvolumespec_core_v1Impl(this)
+  this as VolumeAttachmentSource_storage_k8s_io_v1_k8s1_17Impl
+  Persistentvolumespec_core_v1_k8s1_17Impl(this)
     .also { inlineVolumeSpec = it }
     .apply(init)
 }
@@ -4006,8 +3836,8 @@ fun VolumeAttachmentSource.inlineVolumeSpec(init: Persistentvolumespec.() -> Uni
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata */
 @K8sDslMarker
 fun VolumeAttachment.metadata(init: ObjectMeta.() -> Unit) {
-  this as VolumeAttachment_storage_k8s_io_v1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as VolumeAttachment_storage_k8s_io_v1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -4015,8 +3845,8 @@ fun VolumeAttachment.metadata(init: ObjectMeta.() -> Unit) {
 /** Specification of the desired attach/detach volume behavior. Populated by the Kubernetes system. */
 @K8sDslMarker
 fun VolumeAttachment.spec(init: Volumeattachmentspec.() -> Unit) {
-  this as VolumeAttachment_storage_k8s_io_v1Impl
-  Volumeattachmentspec_storage_k8s_io_v1Impl(this)
+  this as VolumeAttachment_storage_k8s_io_v1_k8s1_17Impl
+  Volumeattachmentspec_storage_k8s_io_v1_k8s1_17Impl(this)
     .also { spec = it }
     .apply(init)
 }
@@ -4025,8 +3855,8 @@ fun VolumeAttachment.spec(init: Volumeattachmentspec.() -> Unit) {
 external-attacher. */
 @K8sDslMarker
 fun VolumeAttachment.status(init: Volumeattachmentstatus.() -> Unit) {
-  this as VolumeAttachment_storage_k8s_io_v1Impl
-  Volumeattachmentstatus_storage_k8s_io_v1Impl(this)
+  this as VolumeAttachment_storage_k8s_io_v1_k8s1_17Impl
+  Volumeattachmentstatus_storage_k8s_io_v1_k8s1_17Impl(this)
     .also { status = it }
     .apply(init)
 }
@@ -4034,8 +3864,8 @@ fun VolumeAttachment.status(init: Volumeattachmentstatus.() -> Unit) {
 /** Time the error was encountered. */
 @K8sDslMarker
 fun VolumeError.time(init: Time.() -> Unit) {
-  this as VolumeError_storage_k8s_io_v1Impl
-  Time_meta_v1Impl(this)
+  this as VolumeError_storage_k8s_io_v1_k8s1_17Impl
+  Time_meta_v1_k8s1_17Impl(this)
     .also { time = it }
     .apply(init)
 }
@@ -4043,8 +3873,8 @@ fun VolumeError.time(init: Time.() -> Unit) {
 /** Required specifies hard node constraints that must be met. */
 @K8sDslMarker
 fun VolumeNodeAffinity.required(init: NodeSelector.() -> Unit) {
-  this as VolumeNodeAffinity_core_v1Impl
-  NodeSelector_core_v1Impl(this)
+  this as VolumeNodeAffinity_core_v1_k8s1_17Impl
+  NodeSelector_core_v1_k8s1_17Impl(this)
     .also { required = it }
     .apply(init)
 }
@@ -4052,8 +3882,8 @@ fun VolumeNodeAffinity.required(init: NodeSelector.() -> Unit) {
 /** information about the configMap data to project */
 @K8sDslMarker
 fun VolumeProjection.configMap(init: ConfigMapProjection.() -> Unit) {
-  this as VolumeProjection_core_v1Impl
-  ConfigMapProjection_core_v1Impl(this)
+  this as VolumeProjection_core_v1_k8s1_17Impl
+  ConfigMapProjection_core_v1_k8s1_17Impl(this)
     .also { configMap = it }
     .apply(init)
 }
@@ -4061,8 +3891,8 @@ fun VolumeProjection.configMap(init: ConfigMapProjection.() -> Unit) {
 /** information about the downwardAPI data to project */
 @K8sDslMarker
 fun VolumeProjection.downwardAPI(init: DownwardAPIProjection.() -> Unit) {
-  this as VolumeProjection_core_v1Impl
-  DownwardAPIProjection_core_v1Impl(this)
+  this as VolumeProjection_core_v1_k8s1_17Impl
+  DownwardAPIProjection_core_v1_k8s1_17Impl(this)
     .also { downwardAPI = it }
     .apply(init)
 }
@@ -4070,8 +3900,8 @@ fun VolumeProjection.downwardAPI(init: DownwardAPIProjection.() -> Unit) {
 /** information about the secret data to project */
 @K8sDslMarker
 fun VolumeProjection.secret(init: SecretProjection.() -> Unit) {
-  this as VolumeProjection_core_v1Impl
-  SecretProjection_core_v1Impl(this)
+  this as VolumeProjection_core_v1_k8s1_17Impl
+  SecretProjection_core_v1_k8s1_17Impl(this)
     .also { secret = it }
     .apply(init)
 }
@@ -4079,8 +3909,8 @@ fun VolumeProjection.secret(init: SecretProjection.() -> Unit) {
 /** information about the serviceAccountToken data to project */
 @K8sDslMarker
 fun VolumeProjection.serviceAccountToken(init: ServiceAccountTokenProjection.() -> Unit) {
-  this as VolumeProjection_core_v1Impl
-  ServiceAccountTokenProjection_core_v1Impl(this)
+  this as VolumeProjection_core_v1_k8s1_17Impl
+  ServiceAccountTokenProjection_core_v1_k8s1_17Impl(this)
     .also { serviceAccountToken = it }
     .apply(init)
 }
@@ -4089,8 +3919,8 @@ fun VolumeProjection.serviceAccountToken(init: ServiceAccountTokenProjection.() 
 the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore */
 @K8sDslMarker
 fun Volume.awsElasticBlockStore(init: AWSElasticBlockStoreVolumeSource.() -> Unit) {
-  this as Volume_core_v1Impl
-  AWSElasticBlockStoreVolumeSource_core_v1Impl(this)
+  this as Volume_core_v1_k8s1_17Impl
+  AWSElasticBlockStoreVolumeSource_core_v1_k8s1_17Impl(this)
     .also { awsElasticBlockStore = it }
     .apply(init)
 }
@@ -4098,8 +3928,8 @@ fun Volume.awsElasticBlockStore(init: AWSElasticBlockStoreVolumeSource.() -> Uni
 /** AzureDisk represents an Azure Data Disk mount on the host and bind mount to the pod. */
 @K8sDslMarker
 fun Volume.azureDisk(init: AzureDiskVolumeSource.() -> Unit) {
-  this as Volume_core_v1Impl
-  AzureDiskVolumeSource_core_v1Impl(this)
+  this as Volume_core_v1_k8s1_17Impl
+  AzureDiskVolumeSource_core_v1_k8s1_17Impl(this)
     .also { azureDisk = it }
     .apply(init)
 }
@@ -4107,8 +3937,8 @@ fun Volume.azureDisk(init: AzureDiskVolumeSource.() -> Unit) {
 /** AzureFile represents an Azure File Service mount on the host and bind mount to the pod. */
 @K8sDslMarker
 fun Volume.azureFile(init: AzureFileVolumeSource.() -> Unit) {
-  this as Volume_core_v1Impl
-  AzureFileVolumeSource_core_v1Impl(this)
+  this as Volume_core_v1_k8s1_17Impl
+  AzureFileVolumeSource_core_v1_k8s1_17Impl(this)
     .also { azureFile = it }
     .apply(init)
 }
@@ -4116,8 +3946,8 @@ fun Volume.azureFile(init: AzureFileVolumeSource.() -> Unit) {
 /** CephFS represents a Ceph FS mount on the host that shares a pod's lifetime */
 @K8sDslMarker
 fun Volume.cephfs(init: CephFSVolumeSource.() -> Unit) {
-  this as Volume_core_v1Impl
-  CephFSVolumeSource_core_v1Impl(this)
+  this as Volume_core_v1_k8s1_17Impl
+  CephFSVolumeSource_core_v1_k8s1_17Impl(this)
     .also { cephfs = it }
     .apply(init)
 }
@@ -4126,8 +3956,8 @@ fun Volume.cephfs(init: CephFSVolumeSource.() -> Unit) {
 https://examples.k8s.io/mysql-cinder-pd/README.md */
 @K8sDslMarker
 fun Volume.cinder(init: CinderVolumeSource.() -> Unit) {
-  this as Volume_core_v1Impl
-  CinderVolumeSource_core_v1Impl(this)
+  this as Volume_core_v1_k8s1_17Impl
+  CinderVolumeSource_core_v1_k8s1_17Impl(this)
     .also { cinder = it }
     .apply(init)
 }
@@ -4135,8 +3965,8 @@ fun Volume.cinder(init: CinderVolumeSource.() -> Unit) {
 /** ConfigMap represents a configMap that should populate this volume */
 @K8sDslMarker
 fun Volume.configMap(init: ConfigMapVolumeSource.() -> Unit) {
-  this as Volume_core_v1Impl
-  ConfigMapVolumeSource_core_v1Impl(this)
+  this as Volume_core_v1_k8s1_17Impl
+  ConfigMapVolumeSource_core_v1_k8s1_17Impl(this)
     .also { configMap = it }
     .apply(init)
 }
@@ -4144,8 +3974,8 @@ fun Volume.configMap(init: ConfigMapVolumeSource.() -> Unit) {
 /** CSI (Container Storage Interface) represents storage that is handled by an external CSI driver (Alpha feature). */
 @K8sDslMarker
 fun Volume.csi(init: CSIVolumeSource.() -> Unit) {
-  this as Volume_core_v1Impl
-  CSIVolumeSource_core_v1Impl(this)
+  this as Volume_core_v1_k8s1_17Impl
+  CSIVolumeSource_core_v1_k8s1_17Impl(this)
     .also { csi = it }
     .apply(init)
 }
@@ -4153,8 +3983,8 @@ fun Volume.csi(init: CSIVolumeSource.() -> Unit) {
 /** DownwardAPI represents downward API about the pod that should populate this volume */
 @K8sDslMarker
 fun Volume.downwardAPI(init: DownwardAPIVolumeSource.() -> Unit) {
-  this as Volume_core_v1Impl
-  DownwardAPIVolumeSource_core_v1Impl(this)
+  this as Volume_core_v1_k8s1_17Impl
+  DownwardAPIVolumeSource_core_v1_k8s1_17Impl(this)
     .also { downwardAPI = it }
     .apply(init)
 }
@@ -4163,8 +3993,8 @@ fun Volume.downwardAPI(init: DownwardAPIVolumeSource.() -> Unit) {
 https://kubernetes.io/docs/concepts/storage/volumes#emptydir */
 @K8sDslMarker
 fun Volume.emptyDir(init: EmptyDirVolumeSource.() -> Unit) {
-  this as Volume_core_v1Impl
-  EmptyDirVolumeSource_core_v1Impl(this)
+  this as Volume_core_v1_k8s1_17Impl
+  EmptyDirVolumeSource_core_v1_k8s1_17Impl(this)
     .also { emptyDir = it }
     .apply(init)
 }
@@ -4172,8 +4002,8 @@ fun Volume.emptyDir(init: EmptyDirVolumeSource.() -> Unit) {
 /** FC represents a Fibre Channel resource that is attached to a kubelet's host machine and then exposed to the pod. */
 @K8sDslMarker
 fun Volume.fc(init: FCVolumeSource.() -> Unit) {
-  this as Volume_core_v1Impl
-  FCVolumeSource_core_v1Impl(this)
+  this as Volume_core_v1_k8s1_17Impl
+  FCVolumeSource_core_v1_k8s1_17Impl(this)
     .also { fc = it }
     .apply(init)
 }
@@ -4181,8 +4011,8 @@ fun Volume.fc(init: FCVolumeSource.() -> Unit) {
 /** FlexVolume represents a generic volume resource that is provisioned/attached using an exec based plugin. */
 @K8sDslMarker
 fun Volume.flexVolume(init: FlexVolumeSource.() -> Unit) {
-  this as Volume_core_v1Impl
-  FlexVolumeSource_core_v1Impl(this)
+  this as Volume_core_v1_k8s1_17Impl
+  FlexVolumeSource_core_v1_k8s1_17Impl(this)
     .also { flexVolume = it }
     .apply(init)
 }
@@ -4191,8 +4021,8 @@ fun Volume.flexVolume(init: FlexVolumeSource.() -> Unit) {
 being running */
 @K8sDslMarker
 fun Volume.flocker(init: FlockerVolumeSource.() -> Unit) {
-  this as Volume_core_v1Impl
-  FlockerVolumeSource_core_v1Impl(this)
+  this as Volume_core_v1_k8s1_17Impl
+  FlockerVolumeSource_core_v1_k8s1_17Impl(this)
     .also { flocker = it }
     .apply(init)
 }
@@ -4201,8 +4031,8 @@ fun Volume.flocker(init: FlockerVolumeSource.() -> Unit) {
 pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk */
 @K8sDslMarker
 fun Volume.gcePersistentDisk(init: GCEPersistentDiskVolumeSource.() -> Unit) {
-  this as Volume_core_v1Impl
-  GCEPersistentDiskVolumeSource_core_v1Impl(this)
+  this as Volume_core_v1_k8s1_17Impl
+  GCEPersistentDiskVolumeSource_core_v1_k8s1_17Impl(this)
     .also { gcePersistentDisk = it }
     .apply(init)
 }
@@ -4212,8 +4042,8 @@ container with a git repo, mount an EmptyDir into an InitContainer that clones t
 EmptyDir into the Pod's container. */
 @K8sDslMarker
 fun Volume.gitRepo(init: GitRepoVolumeSource.() -> Unit) {
-  this as Volume_core_v1Impl
-  GitRepoVolumeSource_core_v1Impl(this)
+  this as Volume_core_v1_k8s1_17Impl
+  GitRepoVolumeSource_core_v1_k8s1_17Impl(this)
     .also { gitRepo = it }
     .apply(init)
 }
@@ -4222,8 +4052,8 @@ fun Volume.gitRepo(init: GitRepoVolumeSource.() -> Unit) {
 https://examples.k8s.io/volumes/glusterfs/README.md */
 @K8sDslMarker
 fun Volume.glusterfs(init: GlusterfsVolumeSource.() -> Unit) {
-  this as Volume_core_v1Impl
-  GlusterfsVolumeSource_core_v1Impl(this)
+  this as Volume_core_v1_k8s1_17Impl
+  GlusterfsVolumeSource_core_v1_k8s1_17Impl(this)
     .also { glusterfs = it }
     .apply(init)
 }
@@ -4233,8 +4063,8 @@ is generally used for system agents or other privileged things that are allowed 
 will NOT need this. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath */
 @K8sDslMarker
 fun Volume.hostPath(init: HostPathVolumeSource.() -> Unit) {
-  this as Volume_core_v1Impl
-  HostPathVolumeSource_core_v1Impl(this)
+  this as Volume_core_v1_k8s1_17Impl
+  HostPathVolumeSource_core_v1_k8s1_17Impl(this)
     .also { hostPath = it }
     .apply(init)
 }
@@ -4243,8 +4073,8 @@ fun Volume.hostPath(init: HostPathVolumeSource.() -> Unit) {
 info: https://examples.k8s.io/volumes/iscsi/README.md */
 @K8sDslMarker
 fun Volume.iscsi(init: ISCSIVolumeSource.() -> Unit) {
-  this as Volume_core_v1Impl
-  ISCSIVolumeSource_core_v1Impl(this)
+  this as Volume_core_v1_k8s1_17Impl
+  ISCSIVolumeSource_core_v1_k8s1_17Impl(this)
     .also { iscsi = it }
     .apply(init)
 }
@@ -4253,8 +4083,8 @@ fun Volume.iscsi(init: ISCSIVolumeSource.() -> Unit) {
 https://kubernetes.io/docs/concepts/storage/volumes#nfs */
 @K8sDslMarker
 fun Volume.nfs(init: NFSVolumeSource.() -> Unit) {
-  this as Volume_core_v1Impl
-  NFSVolumeSource_core_v1Impl(this)
+  this as Volume_core_v1_k8s1_17Impl
+  NFSVolumeSource_core_v1_k8s1_17Impl(this)
     .also { nfs = it }
     .apply(init)
 }
@@ -4263,8 +4093,8 @@ fun Volume.nfs(init: NFSVolumeSource.() -> Unit) {
 https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims */
 @K8sDslMarker
 fun Volume.persistentVolumeClaim(init: PersistentVolumeClaimVolumeSource.() -> Unit) {
-  this as Volume_core_v1Impl
-  PersistentVolumeClaimVolumeSource_core_v1Impl(this)
+  this as Volume_core_v1_k8s1_17Impl
+  PersistentVolumeClaimVolumeSource_core_v1_k8s1_17Impl(this)
     .also { persistentVolumeClaim = it }
     .apply(init)
 }
@@ -4272,8 +4102,8 @@ fun Volume.persistentVolumeClaim(init: PersistentVolumeClaimVolumeSource.() -> U
 /** PhotonPersistentDisk represents a PhotonController persistent disk attached and mounted on kubelets host machine */
 @K8sDslMarker
 fun Volume.photonPersistentDisk(init: PhotonPersistentDiskVolumeSource.() -> Unit) {
-  this as Volume_core_v1Impl
-  PhotonPersistentDiskVolumeSource_core_v1Impl(this)
+  this as Volume_core_v1_k8s1_17Impl
+  PhotonPersistentDiskVolumeSource_core_v1_k8s1_17Impl(this)
     .also { photonPersistentDisk = it }
     .apply(init)
 }
@@ -4281,8 +4111,8 @@ fun Volume.photonPersistentDisk(init: PhotonPersistentDiskVolumeSource.() -> Uni
 /** PortworxVolume represents a portworx volume attached and mounted on kubelets host machine */
 @K8sDslMarker
 fun Volume.portworxVolume(init: PortworxVolumeSource.() -> Unit) {
-  this as Volume_core_v1Impl
-  PortworxVolumeSource_core_v1Impl(this)
+  this as Volume_core_v1_k8s1_17Impl
+  PortworxVolumeSource_core_v1_k8s1_17Impl(this)
     .also { portworxVolume = it }
     .apply(init)
 }
@@ -4290,8 +4120,8 @@ fun Volume.portworxVolume(init: PortworxVolumeSource.() -> Unit) {
 /** Items for all in one resources secrets, configmaps, and downward API */
 @K8sDslMarker
 fun Volume.projected(init: ProjectedVolumeSource.() -> Unit) {
-  this as Volume_core_v1Impl
-  ProjectedVolumeSource_core_v1Impl(this)
+  this as Volume_core_v1_k8s1_17Impl
+  ProjectedVolumeSource_core_v1_k8s1_17Impl(this)
     .also { projected = it }
     .apply(init)
 }
@@ -4299,8 +4129,8 @@ fun Volume.projected(init: ProjectedVolumeSource.() -> Unit) {
 /** Quobyte represents a Quobyte mount on the host that shares a pod's lifetime */
 @K8sDslMarker
 fun Volume.quobyte(init: QuobyteVolumeSource.() -> Unit) {
-  this as Volume_core_v1Impl
-  QuobyteVolumeSource_core_v1Impl(this)
+  this as Volume_core_v1_k8s1_17Impl
+  QuobyteVolumeSource_core_v1_k8s1_17Impl(this)
     .also { quobyte = it }
     .apply(init)
 }
@@ -4309,8 +4139,8 @@ fun Volume.quobyte(init: QuobyteVolumeSource.() -> Unit) {
 https://examples.k8s.io/volumes/rbd/README.md */
 @K8sDslMarker
 fun Volume.rbd(init: RBDVolumeSource.() -> Unit) {
-  this as Volume_core_v1Impl
-  RBDVolumeSource_core_v1Impl(this)
+  this as Volume_core_v1_k8s1_17Impl
+  RBDVolumeSource_core_v1_k8s1_17Impl(this)
     .also { rbd = it }
     .apply(init)
 }
@@ -4318,8 +4148,8 @@ fun Volume.rbd(init: RBDVolumeSource.() -> Unit) {
 /** ScaleIO represents a ScaleIO persistent volume attached and mounted on Kubernetes nodes. */
 @K8sDslMarker
 fun Volume.scaleIO(init: ScaleIOVolumeSource.() -> Unit) {
-  this as Volume_core_v1Impl
-  ScaleIOVolumeSource_core_v1Impl(this)
+  this as Volume_core_v1_k8s1_17Impl
+  ScaleIOVolumeSource_core_v1_k8s1_17Impl(this)
     .also { scaleIO = it }
     .apply(init)
 }
@@ -4328,8 +4158,8 @@ fun Volume.scaleIO(init: ScaleIOVolumeSource.() -> Unit) {
 https://kubernetes.io/docs/concepts/storage/volumes#secret */
 @K8sDslMarker
 fun Volume.secret(init: SecretVolumeSource.() -> Unit) {
-  this as Volume_core_v1Impl
-  SecretVolumeSource_core_v1Impl(this)
+  this as Volume_core_v1_k8s1_17Impl
+  SecretVolumeSource_core_v1_k8s1_17Impl(this)
     .also { secret = it }
     .apply(init)
 }
@@ -4337,8 +4167,8 @@ fun Volume.secret(init: SecretVolumeSource.() -> Unit) {
 /** StorageOS represents a StorageOS volume attached and mounted on Kubernetes nodes. */
 @K8sDslMarker
 fun Volume.storageos(init: StorageOSVolumeSource.() -> Unit) {
-  this as Volume_core_v1Impl
-  StorageOSVolumeSource_core_v1Impl(this)
+  this as Volume_core_v1_k8s1_17Impl
+  StorageOSVolumeSource_core_v1_k8s1_17Impl(this)
     .also { storageos = it }
     .apply(init)
 }
@@ -4346,8 +4176,8 @@ fun Volume.storageos(init: StorageOSVolumeSource.() -> Unit) {
 /** VsphereVolume represents a vSphere volume attached and mounted on kubelets host machine */
 @K8sDslMarker
 fun Volume.vsphereVolume(init: VsphereVirtualDiskVolumeSource.() -> Unit) {
-  this as Volume_core_v1Impl
-  VsphereVirtualDiskVolumeSource_core_v1Impl(this)
+  this as Volume_core_v1_k8s1_17Impl
+  VsphereVirtualDiskVolumeSource_core_v1_k8s1_17Impl(this)
     .also { vsphereVolume = it }
     .apply(init)
 }
@@ -4356,8 +4186,8 @@ fun Volume.vsphereVolume(init: VsphereVirtualDiskVolumeSource.() -> Unit) {
 running within the cluster, then you should use `service`. */
 @K8sDslMarker
 fun WebhookClientConfig.service(init: ServiceReference.() -> Unit) {
-  this as WebhookClientConfig_admissionregistration_k8s_io_v1Impl
-  ServiceReference_admissionregistration_k8s_io_v1Impl(this)
+  this as WebhookClientConfig_admissionregistration_k8s_io_v1_k8s1_17Impl
+  ServiceReference_admissionregistration_k8s_io_v1_k8s1_17Impl(this)
     .also { service = it }
     .apply(init)
 }
@@ -4365,9 +4195,9 @@ fun WebhookClientConfig.service(init: ServiceReference.() -> Unit) {
 /** service is a reference to the service for this webhook. Either service or url must be specified. If the webhook is
 running within the cluster, then you should use `service`. */
 @K8sDslMarker
-fun WebhookClientConfig_apiextensions_k8s_io_v1.service(init: ServiceReference_apiextensions_k8s_io_v1.() -> Unit) {
-  this as WebhookClientConfig_apiextensions_k8s_io_v1Impl
-  ServiceReference_apiextensions_k8s_io_v1Impl(this)
+fun WebhookClientConfig_apiextensions_k8s_io_v1_k8s1_17.service(init: ServiceReference_apiextensions_k8s_io_v1_k8s1_17.() -> Unit) {
+  this as WebhookClientConfig_apiextensions_k8s_io_v1_k8s1_17Impl
+  ServiceReference_apiextensions_k8s_io_v1_k8s1_17Impl(this)
     .also { service = it }
     .apply(init)
 }
@@ -4375,27 +4205,27 @@ fun WebhookClientConfig_apiextensions_k8s_io_v1.service(init: ServiceReference_a
 /** `service` is a reference to the service for this webhook. Either `service` or `url` must be specified. If the webhook is
 running within the cluster, then you should use `service`. */
 @K8sDslMarker
-fun WebhookClientConfig_auditregistration_k8s_io_v1alpha1.service(init: ServiceReference_auditregistration_k8s_io_v1alpha1.() -> Unit) {
-  this as WebhookClientConfig_auditregistration_k8s_io_v1alpha1Impl
-  ServiceReference_auditregistration_k8s_io_v1alpha1Impl(this)
+fun WebhookClientConfig_auditregistration_k8s_io_v1alpha1_k8s1_17.service(init: ServiceReference_auditregistration_k8s_io_v1alpha1_k8s1_17.() -> Unit) {
+  this as WebhookClientConfig_auditregistration_k8s_io_v1alpha1_k8s1_17Impl
+  ServiceReference_auditregistration_k8s_io_v1alpha1_k8s1_17Impl(this)
     .also { service = it }
     .apply(init)
 }
 
 /** clientConfig is the instructions for how to call the webhook if strategy is `Webhook`. */
 @K8sDslMarker
-fun WebhookConversion.clientConfig(init: WebhookClientConfig_apiextensions_k8s_io_v1.() -> Unit) {
-  this as WebhookConversion_apiextensions_k8s_io_v1Impl
-  WebhookClientConfig_apiextensions_k8s_io_v1Impl(this)
+fun WebhookConversion.clientConfig(init: WebhookClientConfig_apiextensions_k8s_io_v1_k8s1_17.() -> Unit) {
+  this as WebhookConversion_apiextensions_k8s_io_v1_k8s1_17Impl
+  WebhookClientConfig_apiextensions_k8s_io_v1_k8s1_17Impl(this)
     .also { clientConfig = it }
     .apply(init)
 }
 
 /** ClientConfig holds the connection parameters for the webhook required */
 @K8sDslMarker
-fun Webhook.clientConfig(init: WebhookClientConfig_auditregistration_k8s_io_v1alpha1.() -> Unit) {
-  this as Webhook_auditregistration_k8s_io_v1alpha1Impl
-  WebhookClientConfig_auditregistration_k8s_io_v1alpha1Impl(this)
+fun Webhook.clientConfig(init: WebhookClientConfig_auditregistration_k8s_io_v1alpha1_k8s1_17.() -> Unit) {
+  this as Webhook_auditregistration_k8s_io_v1alpha1_k8s1_17Impl
+  WebhookClientConfig_auditregistration_k8s_io_v1alpha1_k8s1_17Impl(this)
     .also { clientConfig = it }
     .apply(init)
 }
@@ -4403,8 +4233,8 @@ fun Webhook.clientConfig(init: WebhookClientConfig_auditregistration_k8s_io_v1al
 /** Throttle holds the options for throttling the webhook */
 @K8sDslMarker
 fun Webhook.throttle(init: WebhookThrottleConfig.() -> Unit) {
-  this as Webhook_auditregistration_k8s_io_v1alpha1Impl
-  WebhookThrottleConfig_auditregistration_k8s_io_v1alpha1Impl(this)
+  this as Webhook_auditregistration_k8s_io_v1alpha1_k8s1_17Impl
+  WebhookThrottleConfig_auditregistration_k8s_io_v1alpha1_k8s1_17Impl(this)
     .also { throttle = it }
     .apply(init)
 }
@@ -4412,8 +4242,8 @@ fun Webhook.throttle(init: WebhookThrottleConfig.() -> Unit) {
 /** Required. A pod affinity term, associated with the corresponding weight. */
 @K8sDslMarker
 fun WeightedPodAffinityTerm.podAffinityTerm(init: PodAffinityTerm.() -> Unit) {
-  this as WeightedPodAffinityTerm_core_v1Impl
-  PodAffinityTerm_core_v1Impl(this)
+  this as WeightedPodAffinityTerm_core_v1_k8s1_17Impl
+  PodAffinityTerm_core_v1_k8s1_17Impl(this)
     .also { podAffinityTerm = it }
     .apply(init)
 }
@@ -4422,9 +4252,9 @@ fun WeightedPodAffinityTerm.podAffinityTerm(init: PodAffinityTerm.() -> Unit) {
 means the handling for the API groupversion is handled locally on this server. The call will simply delegate to the
 normal handler chain to be fulfilled. */
 @K8sDslMarker
-fun Apiservicespec.service(init: ServiceReference_apiregistration_k8s_io_v1.() -> Unit) {
-  this as Apiservicespec_apiregistration_k8s_io_v1Impl
-  ServiceReference_apiregistration_k8s_io_v1Impl(this)
+fun Apiservicespec.service(init: ServiceReference_apiregistration_k8s_io_v1_k8s1_17.() -> Unit) {
+  this as Apiservicespec_apiregistration_k8s_io_v1_k8s1_17Impl
+  ServiceReference_apiregistration_k8s_io_v1_k8s1_17Impl(this)
     .also { service = it }
     .apply(init)
 }
@@ -4432,8 +4262,8 @@ fun Apiservicespec.service(init: ServiceReference_apiregistration_k8s_io_v1.() -
 /** Current service state of apiService. */
 @K8sDslMarker
 fun Apiservicestatus.conditions(init: APIServiceCondition.() -> Unit) {
-  this as Apiservicestatus_apiregistration_k8s_io_v1Impl
-  APIServiceCondition_apiregistration_k8s_io_v1Impl(this)
+  this as Apiservicestatus_apiregistration_k8s_io_v1_k8s1_17Impl
+  APIServiceCondition_apiregistration_k8s_io_v1_k8s1_17Impl(this)
     .also { conditions = conditions?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -4441,8 +4271,8 @@ fun Apiservicestatus.conditions(init: APIServiceCondition.() -> Unit) {
 /** Policy defines the policy for selecting which events should be sent to the webhook required */
 @K8sDslMarker
 fun Auditsinkspec.policy(init: Policy.() -> Unit) {
-  this as Auditsinkspec_auditregistration_k8s_io_v1alpha1Impl
-  Policy_auditregistration_k8s_io_v1alpha1Impl(this)
+  this as Auditsinkspec_auditregistration_k8s_io_v1alpha1_k8s1_17Impl
+  Policy_auditregistration_k8s_io_v1alpha1_k8s1_17Impl(this)
     .also { policy = it }
     .apply(init)
 }
@@ -4450,8 +4280,8 @@ fun Auditsinkspec.policy(init: Policy.() -> Unit) {
 /** Webhook to send events required */
 @K8sDslMarker
 fun Auditsinkspec.webhook(init: Webhook.() -> Unit) {
-  this as Auditsinkspec_auditregistration_k8s_io_v1alpha1Impl
-  Webhook_auditregistration_k8s_io_v1alpha1Impl(this)
+  this as Auditsinkspec_auditregistration_k8s_io_v1alpha1_k8s1_17Impl
+  Webhook_auditregistration_k8s_io_v1alpha1_k8s1_17Impl(this)
     .also { webhook = it }
     .apply(init)
 }
@@ -4459,8 +4289,8 @@ fun Auditsinkspec.webhook(init: Webhook.() -> Unit) {
 /** Conditions applied to the request, such as approval or denial. */
 @K8sDslMarker
 fun Certificatesigningrequeststatus.conditions(init: CertificateSigningRequestCondition.() -> Unit) {
-  this as Certificatesigningrequeststatus_certificates_k8s_io_v1beta1Impl
-  CertificateSigningRequestCondition_certificates_k8s_io_v1beta1Impl(this)
+  this as Certificatesigningrequeststatus_certificates_k8s_io_v1beta1_k8s1_17Impl
+  CertificateSigningRequestCondition_certificates_k8s_io_v1beta1_k8s1_17Impl(this)
     .also { conditions = conditions?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -4468,8 +4298,8 @@ fun Certificatesigningrequeststatus.conditions(init: CertificateSigningRequestCo
 /** Details about the container's last termination condition. */
 @K8sDslMarker
 fun Containerstatus.lastState(init: ContainerState.() -> Unit) {
-  this as Containerstatus_core_v1Impl
-  ContainerState_core_v1Impl(this)
+  this as Containerstatus_core_v1_k8s1_17Impl
+  ContainerState_core_v1_k8s1_17Impl(this)
     .also { lastState = it }
     .apply(init)
 }
@@ -4477,8 +4307,8 @@ fun Containerstatus.lastState(init: ContainerState.() -> Unit) {
 /** Details about the container's current condition. */
 @K8sDslMarker
 fun Containerstatus.state(init: ContainerState.() -> Unit) {
-  this as Containerstatus_core_v1Impl
-  ContainerState_core_v1Impl(this)
+  this as Containerstatus_core_v1_k8s1_17Impl
+  ContainerState_core_v1_k8s1_17Impl(this)
     .also { state = it }
     .apply(init)
 }
@@ -4486,8 +4316,8 @@ fun Containerstatus.state(init: ContainerState.() -> Unit) {
 /** Specifies the job that will be created when executing a CronJob. */
 @K8sDslMarker
 fun Cronjobspec.jobTemplate(init: JobTemplateSpec.() -> Unit) {
-  this as Cronjobspec_batch_v1beta1Impl
-  JobTemplateSpec_batch_v1beta1Impl(this)
+  this as Cronjobspec_batch_v1beta1_k8s1_17Impl
+  JobTemplateSpec_batch_v1beta1_k8s1_17Impl(this)
     .also { jobTemplate = it }
     .apply(init)
 }
@@ -4495,8 +4325,8 @@ fun Cronjobspec.jobTemplate(init: JobTemplateSpec.() -> Unit) {
 /** A list of pointers to currently running jobs. */
 @K8sDslMarker
 fun Cronjobstatus.active(init: ObjectReference.() -> Unit) {
-  this as Cronjobstatus_batch_v1beta1Impl
-  ObjectReference_core_v1Impl(this)
+  this as Cronjobstatus_batch_v1beta1_k8s1_17Impl
+  ObjectReference_core_v1_k8s1_17Impl(this)
     .also { active = active?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -4504,8 +4334,8 @@ fun Cronjobstatus.active(init: ObjectReference.() -> Unit) {
 /** Information when was the last time the job was successfully scheduled. */
 @K8sDslMarker
 fun Cronjobstatus.lastScheduleTime(init: Time.() -> Unit) {
-  this as Cronjobstatus_batch_v1beta1Impl
-  Time_meta_v1Impl(this)
+  this as Cronjobstatus_batch_v1beta1_k8s1_17Impl
+  Time_meta_v1_k8s1_17Impl(this)
     .also { lastScheduleTime = it }
     .apply(init)
 }
@@ -4514,8 +4344,8 @@ fun Cronjobstatus.lastScheduleTime(init: Time.() -> Unit) {
 can become empty. */
 @K8sDslMarker
 fun Csinodespec.drivers(init: CSINodeDriver.() -> Unit) {
-  this as Csinodespec_storage_k8s_io_v1Impl
-  CSINodeDriver_storage_k8s_io_v1Impl(this)
+  this as Csinodespec_storage_k8s_io_v1_k8s1_17Impl
+  CSINodeDriver_storage_k8s_io_v1_k8s1_17Impl(this)
     .also { drivers = drivers?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -4523,8 +4353,8 @@ fun Csinodespec.drivers(init: CSINodeDriver.() -> Unit) {
 /** conversion defines conversion settings for the CRD. */
 @K8sDslMarker
 fun Customresourcedefinitionspec.conversion(init: CustomResourceConversion.() -> Unit) {
-  this as Customresourcedefinitionspec_apiextensions_k8s_io_v1Impl
-  CustomResourceConversion_apiextensions_k8s_io_v1Impl(this)
+  this as Customresourcedefinitionspec_apiextensions_k8s_io_v1_k8s1_17Impl
+  CustomResourceConversion_apiextensions_k8s_io_v1_k8s1_17Impl(this)
     .also { conversion = it }
     .apply(init)
 }
@@ -4532,8 +4362,8 @@ fun Customresourcedefinitionspec.conversion(init: CustomResourceConversion.() ->
 /** names specify the resource and kind names for the custom resource. */
 @K8sDslMarker
 fun Customresourcedefinitionspec.names(init: CustomResourceDefinitionNames.() -> Unit) {
-  this as Customresourcedefinitionspec_apiextensions_k8s_io_v1Impl
-  CustomResourceDefinitionNames_apiextensions_k8s_io_v1Impl(this)
+  this as Customresourcedefinitionspec_apiextensions_k8s_io_v1_k8s1_17Impl
+  CustomResourceDefinitionNames_apiextensions_k8s_io_v1_k8s1_17Impl(this)
     .also { names = it }
     .apply(init)
 }
@@ -4547,8 +4377,8 @@ then by comparing major version, then minor version. An example sorted list of v
 v10beta3, v3beta1, v12alpha1, v11alpha2, foo1, foo10. */
 @K8sDslMarker
 fun Customresourcedefinitionspec.versions(init: CustomResourceDefinitionVersion.() -> Unit) {
-  this as Customresourcedefinitionspec_apiextensions_k8s_io_v1Impl
-  CustomResourceDefinitionVersion_apiextensions_k8s_io_v1Impl(this)
+  this as Customresourcedefinitionspec_apiextensions_k8s_io_v1_k8s1_17Impl
+  CustomResourceDefinitionVersion_apiextensions_k8s_io_v1_k8s1_17Impl(this)
     .also { versions = versions?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -4557,8 +4387,8 @@ fun Customresourcedefinitionspec.versions(init: CustomResourceDefinitionVersion.
 spec. */
 @K8sDslMarker
 fun Customresourcedefinitionstatus.acceptedNames(init: CustomResourceDefinitionNames.() -> Unit) {
-  this as Customresourcedefinitionstatus_apiextensions_k8s_io_v1Impl
-  CustomResourceDefinitionNames_apiextensions_k8s_io_v1Impl(this)
+  this as Customresourcedefinitionstatus_apiextensions_k8s_io_v1_k8s1_17Impl
+  CustomResourceDefinitionNames_apiextensions_k8s_io_v1_k8s1_17Impl(this)
     .also { acceptedNames = it }
     .apply(init)
 }
@@ -4566,8 +4396,8 @@ fun Customresourcedefinitionstatus.acceptedNames(init: CustomResourceDefinitionN
 /** conditions indicate state for particular aspects of a CustomResourceDefinition */
 @K8sDslMarker
 fun Customresourcedefinitionstatus.conditions(init: CustomResourceDefinitionCondition.() -> Unit) {
-  this as Customresourcedefinitionstatus_apiextensions_k8s_io_v1Impl
-  CustomResourceDefinitionCondition_apiextensions_k8s_io_v1Impl(this)
+  this as Customresourcedefinitionstatus_apiextensions_k8s_io_v1_k8s1_17Impl
+  CustomResourceDefinitionCondition_apiextensions_k8s_io_v1_k8s1_17Impl(this)
     .also { conditions = conditions?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -4576,8 +4406,8 @@ fun Customresourcedefinitionstatus.conditions(init: CustomResourceDefinitionCond
 template's labels. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors */
 @K8sDslMarker
 fun Daemonsetspec.selector(init: LabelSelector.() -> Unit) {
-  this as Daemonsetspec_apps_v1Impl
-  LabelSelector_meta_v1Impl(this)
+  this as Daemonsetspec_apps_v1_k8s1_17Impl
+  LabelSelector_meta_v1_k8s1_17Impl(this)
     .also { selector = it }
     .apply(init)
 }
@@ -4587,8 +4417,8 @@ node that matches the template's node selector (or on every node if no node sele
 https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#pod-template */
 @K8sDslMarker
 fun Daemonsetspec.template(init: Podtemplatespec.() -> Unit) {
-  this as Daemonsetspec_apps_v1Impl
-  Podtemplatespec_core_v1Impl(this)
+  this as Daemonsetspec_apps_v1_k8s1_17Impl
+  Podtemplatespec_core_v1_k8s1_17Impl(this)
     .also { template = it }
     .apply(init)
 }
@@ -4596,8 +4426,8 @@ fun Daemonsetspec.template(init: Podtemplatespec.() -> Unit) {
 /** An update strategy to replace existing DaemonSet pods with new pods. */
 @K8sDslMarker
 fun Daemonsetspec.updateStrategy(init: DaemonSetUpdateStrategy.() -> Unit) {
-  this as Daemonsetspec_apps_v1Impl
-  DaemonSetUpdateStrategy_apps_v1Impl(this)
+  this as Daemonsetspec_apps_v1_k8s1_17Impl
+  DaemonSetUpdateStrategy_apps_v1_k8s1_17Impl(this)
     .also { updateStrategy = it }
     .apply(init)
 }
@@ -4605,8 +4435,8 @@ fun Daemonsetspec.updateStrategy(init: DaemonSetUpdateStrategy.() -> Unit) {
 /** Represents the latest available observations of a DaemonSet's current state. */
 @K8sDslMarker
 fun Daemonsetstatus.conditions(init: DaemonSetCondition.() -> Unit) {
-  this as Daemonsetstatus_apps_v1Impl
-  DaemonSetCondition_apps_v1Impl(this)
+  this as Daemonsetstatus_apps_v1_k8s1_17Impl
+  DaemonSetCondition_apps_v1_k8s1_17Impl(this)
     .also { conditions = conditions?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -4615,8 +4445,8 @@ fun Daemonsetstatus.conditions(init: DaemonSetCondition.() -> Unit) {
 deployment. It must match the pod template's labels. */
 @K8sDslMarker
 fun Deploymentspec.selector(init: LabelSelector.() -> Unit) {
-  this as Deploymentspec_apps_v1Impl
-  LabelSelector_meta_v1Impl(this)
+  this as Deploymentspec_apps_v1_k8s1_17Impl
+  LabelSelector_meta_v1_k8s1_17Impl(this)
     .also { selector = it }
     .apply(init)
 }
@@ -4624,8 +4454,8 @@ fun Deploymentspec.selector(init: LabelSelector.() -> Unit) {
 /** The deployment strategy to use to replace existing pods with new ones. */
 @K8sDslMarker
 fun Deploymentspec.strategy(init: Deploymentstrategy.() -> Unit) {
-  this as Deploymentspec_apps_v1Impl
-  Deploymentstrategy_apps_v1Impl(this)
+  this as Deploymentspec_apps_v1_k8s1_17Impl
+  Deploymentstrategy_apps_v1_k8s1_17Impl(this)
     .also { strategy = it }
     .apply(init)
 }
@@ -4633,8 +4463,8 @@ fun Deploymentspec.strategy(init: Deploymentstrategy.() -> Unit) {
 /** Template describes the pods that will be created. */
 @K8sDslMarker
 fun Deploymentspec.template(init: Podtemplatespec.() -> Unit) {
-  this as Deploymentspec_apps_v1Impl
-  Podtemplatespec_core_v1Impl(this)
+  this as Deploymentspec_apps_v1_k8s1_17Impl
+  Podtemplatespec_core_v1_k8s1_17Impl(this)
     .also { template = it }
     .apply(init)
 }
@@ -4642,8 +4472,8 @@ fun Deploymentspec.template(init: Podtemplatespec.() -> Unit) {
 /** Represents the latest available observations of a deployment's current state. */
 @K8sDslMarker
 fun Deploymentstatus.conditions(init: DeploymentCondition.() -> Unit) {
-  this as Deploymentstatus_apps_v1Impl
-  DeploymentCondition_apps_v1Impl(this)
+  this as Deploymentstatus_apps_v1_k8s1_17Impl
+  DeploymentCondition_apps_v1_k8s1_17Impl(this)
     .also { conditions = conditions?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -4651,8 +4481,8 @@ fun Deploymentstatus.conditions(init: DeploymentCondition.() -> Unit) {
 /** Rolling update config params. Present only if DeploymentStrategyType = RollingUpdate. */
 @K8sDslMarker
 fun Deploymentstrategy.rollingUpdate(init: Rollingupdatedeployment.() -> Unit) {
-  this as Deploymentstrategy_apps_v1Impl
-  Rollingupdatedeployment_apps_v1Impl(this)
+  this as Deploymentstrategy_apps_v1_k8s1_17Impl
+  Rollingupdatedeployment_apps_v1_k8s1_17Impl(this)
     .also { rollingUpdate = it }
     .apply(init)
 }
@@ -4661,8 +4491,8 @@ fun Deploymentstrategy.rollingUpdate(init: Rollingupdatedeployment.() -> Unit) {
 that the distinguisher is disabled and thus will always be the empty string. */
 @K8sDslMarker
 fun Flowschemaspec.distinguisherMethod(init: FlowDistinguisherMethod.() -> Unit) {
-  this as Flowschemaspec_flowcontrol_apiserver_k8s_io_v1alpha1Impl
-  FlowDistinguisherMethod_flowcontrol_apiserver_k8s_io_v1alpha1Impl(this)
+  this as Flowschemaspec_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17Impl
+  FlowDistinguisherMethod_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17Impl(this)
     .also { distinguisherMethod = it }
     .apply(init)
 }
@@ -4671,8 +4501,8 @@ fun Flowschemaspec.distinguisherMethod(init: FlowDistinguisherMethod.() -> Unit)
 resolved, the FlowSchema will be ignored and marked as invalid in its status. Required. */
 @K8sDslMarker
 fun Flowschemaspec.priorityLevelConfiguration(init: PriorityLevelConfigurationReference.() -> Unit) {
-  this as Flowschemaspec_flowcontrol_apiserver_k8s_io_v1alpha1Impl
-  PriorityLevelConfigurationReference_flowcontrol_apiserver_k8s_io_v1alpha1Impl(this)
+  this as Flowschemaspec_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17Impl
+  PriorityLevelConfigurationReference_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17Impl(this)
     .also { priorityLevelConfiguration = it }
     .apply(init)
 }
@@ -4681,8 +4511,8 @@ fun Flowschemaspec.priorityLevelConfiguration(init: PriorityLevelConfigurationRe
 one member of rules matches the request. if it is an empty slice, there will be no requests matching the FlowSchema. */
 @K8sDslMarker
 fun Flowschemaspec.rules(init: PolicyRulesWithSubjects.() -> Unit) {
-  this as Flowschemaspec_flowcontrol_apiserver_k8s_io_v1alpha1Impl
-  PolicyRulesWithSubjects_flowcontrol_apiserver_k8s_io_v1alpha1Impl(this)
+  this as Flowschemaspec_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17Impl
+  PolicyRulesWithSubjects_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17Impl(this)
     .also { rules = rules?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -4690,8 +4520,8 @@ fun Flowschemaspec.rules(init: PolicyRulesWithSubjects.() -> Unit) {
 /** `conditions` is a list of the current states of FlowSchema. */
 @K8sDslMarker
 fun Flowschemastatus.conditions(init: FlowSchemaCondition.() -> Unit) {
-  this as Flowschemastatus_flowcontrol_apiserver_k8s_io_v1alpha1Impl
-  FlowSchemaCondition_flowcontrol_apiserver_k8s_io_v1alpha1Impl(this)
+  this as Flowschemastatus_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17Impl
+  FlowSchemaCondition_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17Impl(this)
     .also { conditions = conditions?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -4700,8 +4530,8 @@ fun Flowschemastatus.conditions(init: FlowSchemaCondition.() -> Unit) {
 desired number of pods by using its Scale subresource. */
 @K8sDslMarker
 fun Horizontalpodautoscalerspec.scaleTargetRef(init: CrossVersionObjectReference.() -> Unit) {
-  this as Horizontalpodautoscalerspec_autoscaling_v1Impl
-  CrossVersionObjectReference_autoscaling_v1Impl(this)
+  this as Horizontalpodautoscalerspec_autoscaling_v1_k8s1_17Impl
+  CrossVersionObjectReference_autoscaling_v1_k8s1_17Impl(this)
     .also { scaleTargetRef = it }
     .apply(init)
 }
@@ -4710,8 +4540,8 @@ fun Horizontalpodautoscalerspec.scaleTargetRef(init: CrossVersionObjectReference
 of pods is changed. */
 @K8sDslMarker
 fun Horizontalpodautoscalerstatus.lastScaleTime(init: Time.() -> Unit) {
-  this as Horizontalpodautoscalerstatus_autoscaling_v1Impl
-  Time_meta_v1Impl(this)
+  this as Horizontalpodautoscalerstatus_autoscaling_v1_k8s1_17Impl
+  Time_meta_v1_k8s1_17Impl(this)
     .also { lastScaleTime = it }
     .apply(init)
 }
@@ -4720,8 +4550,8 @@ fun Horizontalpodautoscalerstatus.lastScaleTime(init: Time.() -> Unit) {
 specified. This field is optional to allow the loadbalancer controller or defaulting logic to specify a global default. */
 @K8sDslMarker
 fun Ingressspec.backend(init: IngressBackend.() -> Unit) {
-  this as Ingressspec_networking_k8s_io_v1beta1Impl
-  IngressBackend_networking_k8s_io_v1beta1Impl(this)
+  this as Ingressspec_networking_k8s_io_v1beta1_k8s1_17Impl
+  IngressBackend_networking_k8s_io_v1beta1_k8s1_17Impl(this)
     .also { backend = it }
     .apply(init)
 }
@@ -4730,8 +4560,8 @@ fun Ingressspec.backend(init: IngressBackend.() -> Unit) {
 default backend. */
 @K8sDslMarker
 fun Ingressspec.rules(init: IngressRule.() -> Unit) {
-  this as Ingressspec_networking_k8s_io_v1beta1Impl
-  IngressRule_networking_k8s_io_v1beta1Impl(this)
+  this as Ingressspec_networking_k8s_io_v1beta1_k8s1_17Impl
+  IngressRule_networking_k8s_io_v1beta1_k8s1_17Impl(this)
     .also { rules = rules?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -4741,8 +4571,8 @@ different hosts, they will be multiplexed on the same port according to the host
 extension, if the ingress controller fulfilling the ingress supports SNI. */
 @K8sDslMarker
 fun Ingressspec.tls(init: IngressTLS.() -> Unit) {
-  this as Ingressspec_networking_k8s_io_v1beta1Impl
-  IngressTLS_networking_k8s_io_v1beta1Impl(this)
+  this as Ingressspec_networking_k8s_io_v1beta1_k8s1_17Impl
+  IngressTLS_networking_k8s_io_v1beta1_k8s1_17Impl(this)
     .also { tls = tls?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -4750,8 +4580,8 @@ fun Ingressspec.tls(init: IngressTLS.() -> Unit) {
 /** LoadBalancer contains the current status of the load-balancer. */
 @K8sDslMarker
 fun Ingressstatus.loadBalancer(init: LoadBalancerStatus.() -> Unit) {
-  this as Ingressstatus_networking_k8s_io_v1beta1Impl
-  LoadBalancerStatus_core_v1Impl(this)
+  this as Ingressstatus_networking_k8s_io_v1beta1_k8s1_17Impl
+  LoadBalancerStatus_core_v1_k8s1_17Impl(this)
     .also { loadBalancer = it }
     .apply(init)
 }
@@ -4760,8 +4590,8 @@ fun Ingressstatus.loadBalancer(init: LoadBalancerStatus.() -> Unit) {
 https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors */
 @K8sDslMarker
 fun Jobspec.selector(init: LabelSelector.() -> Unit) {
-  this as Jobspec_batch_v1Impl
-  LabelSelector_meta_v1Impl(this)
+  this as Jobspec_batch_v1_k8s1_17Impl
+  LabelSelector_meta_v1_k8s1_17Impl(this)
     .also { selector = it }
     .apply(init)
 }
@@ -4770,8 +4600,8 @@ fun Jobspec.selector(init: LabelSelector.() -> Unit) {
 https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/ */
 @K8sDslMarker
 fun Jobspec.template(init: Podtemplatespec.() -> Unit) {
-  this as Jobspec_batch_v1Impl
-  Podtemplatespec_core_v1Impl(this)
+  this as Jobspec_batch_v1_k8s1_17Impl
+  Podtemplatespec_core_v1_k8s1_17Impl(this)
     .also { template = it }
     .apply(init)
 }
@@ -4780,8 +4610,8 @@ fun Jobspec.template(init: Podtemplatespec.() -> Unit) {
 operations. It is represented in RFC3339 form and is in UTC. */
 @K8sDslMarker
 fun Jobstatus.completionTime(init: Time.() -> Unit) {
-  this as Jobstatus_batch_v1Impl
-  Time_meta_v1Impl(this)
+  this as Jobstatus_batch_v1_k8s1_17Impl
+  Time_meta_v1_k8s1_17Impl(this)
     .also { completionTime = it }
     .apply(init)
 }
@@ -4790,8 +4620,8 @@ fun Jobstatus.completionTime(init: Time.() -> Unit) {
 https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/ */
 @K8sDslMarker
 fun Jobstatus.conditions(init: JobCondition.() -> Unit) {
-  this as Jobstatus_batch_v1Impl
-  JobCondition_batch_v1Impl(this)
+  this as Jobstatus_batch_v1_k8s1_17Impl
+  JobCondition_batch_v1_k8s1_17Impl(this)
     .also { conditions = conditions?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -4800,8 +4630,8 @@ fun Jobstatus.conditions(init: JobCondition.() -> Unit) {
 order across separate operations. It is represented in RFC3339 form and is in UTC. */
 @K8sDslMarker
 fun Jobstatus.startTime(init: Time.() -> Unit) {
-  this as Jobstatus_batch_v1Impl
-  Time_meta_v1Impl(this)
+  this as Jobstatus_batch_v1_k8s1_17Impl
+  Time_meta_v1_k8s1_17Impl(this)
     .also { startTime = it }
     .apply(init)
 }
@@ -4809,8 +4639,8 @@ fun Jobstatus.startTime(init: Time.() -> Unit) {
 /** acquireTime is a time when the current lease was acquired. */
 @K8sDslMarker
 fun Leasespec.acquireTime(init: MicroTime.() -> Unit) {
-  this as Leasespec_coordination_k8s_io_v1Impl
-  MicroTime_meta_v1Impl(this)
+  this as Leasespec_coordination_k8s_io_v1_k8s1_17Impl
+  MicroTime_meta_v1_k8s1_17Impl(this)
     .also { acquireTime = it }
     .apply(init)
 }
@@ -4818,8 +4648,8 @@ fun Leasespec.acquireTime(init: MicroTime.() -> Unit) {
 /** renewTime is a time when the current holder of a lease has last updated the lease. */
 @K8sDslMarker
 fun Leasespec.renewTime(init: MicroTime.() -> Unit) {
-  this as Leasespec_coordination_k8s_io_v1Impl
-  MicroTime_meta_v1Impl(this)
+  this as Leasespec_coordination_k8s_io_v1_k8s1_17Impl
+  MicroTime_meta_v1_k8s1_17Impl(this)
     .also { renewTime = it }
     .apply(init)
 }
@@ -4827,8 +4657,8 @@ fun Leasespec.renewTime(init: MicroTime.() -> Unit) {
 /** Limits is the list of LimitRangeItem objects that are enforced. */
 @K8sDslMarker
 fun Limitrangespec.limits(init: LimitRangeItem.() -> Unit) {
-  this as Limitrangespec_core_v1Impl
-  LimitRangeItem_core_v1Impl(this)
+  this as Limitrangespec_core_v1_k8s1_17Impl
+  LimitRangeItem_core_v1_k8s1_17Impl(this)
     .also { limits = limits?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -4836,8 +4666,8 @@ fun Limitrangespec.limits(init: LimitRangeItem.() -> Unit) {
 /** Represents the latest available observations of a namespace's current state. */
 @K8sDslMarker
 fun Namespacestatus.conditions(init: NamespaceCondition.() -> Unit) {
-  this as Namespacestatus_core_v1Impl
-  NamespaceCondition_core_v1Impl(this)
+  this as Namespacestatus_core_v1_k8s1_17Impl
+  NamespaceCondition_core_v1_k8s1_17Impl(this)
     .also { conditions = conditions?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -4849,8 +4679,8 @@ NetworkPolicy limits all outgoing traffic (and serves solely to ensure that the 
 default). This field is beta-level in 1.8 */
 @K8sDslMarker
 fun Networkpolicyspec.egress(init: NetworkPolicyEgressRule.() -> Unit) {
-  this as Networkpolicyspec_networking_k8s_io_v1Impl
-  NetworkPolicyEgressRule_networking_k8s_io_v1Impl(this)
+  this as Networkpolicyspec_networking_k8s_io_v1_k8s1_17Impl
+  NetworkPolicyEgressRule_networking_k8s_io_v1_k8s1_17Impl(this)
     .also { egress = egress?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -4862,8 +4692,8 @@ the pod. If this field is empty then this NetworkPolicy does not allow any traff
 pods it selects are isolated by default) */
 @K8sDslMarker
 fun Networkpolicyspec.ingress(init: NetworkPolicyIngressRule.() -> Unit) {
-  this as Networkpolicyspec_networking_k8s_io_v1Impl
-  NetworkPolicyIngressRule_networking_k8s_io_v1Impl(this)
+  this as Networkpolicyspec_networking_k8s_io_v1_k8s1_17Impl
+  NetworkPolicyIngressRule_networking_k8s_io_v1_k8s1_17Impl(this)
     .also { ingress = ingress?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -4874,8 +4704,8 @@ combined additively. This field is NOT optional and follows standard label selec
 matches all pods in this namespace. */
 @K8sDslMarker
 fun Networkpolicyspec.podSelector(init: LabelSelector.() -> Unit) {
-  this as Networkpolicyspec_networking_k8s_io_v1Impl
-  LabelSelector_meta_v1Impl(this)
+  this as Networkpolicyspec_networking_k8s_io_v1_k8s1_17Impl
+  LabelSelector_meta_v1_k8s1_17Impl(this)
     .also { podSelector = it }
     .apply(init)
 }
@@ -4884,8 +4714,8 @@ fun Networkpolicyspec.podSelector(init: LabelSelector.() -> Unit) {
 Kubelet to use this field */
 @K8sDslMarker
 fun Nodespec.configSource(init: NodeConfigSource.() -> Unit) {
-  this as Nodespec_core_v1Impl
-  NodeConfigSource_core_v1Impl(this)
+  this as Nodespec_core_v1_k8s1_17Impl
+  NodeConfigSource_core_v1_k8s1_17Impl(this)
     .also { configSource = it }
     .apply(init)
 }
@@ -4893,8 +4723,8 @@ fun Nodespec.configSource(init: NodeConfigSource.() -> Unit) {
 /** If specified, the node's taints. */
 @K8sDslMarker
 fun Nodespec.taints(init: Taint.() -> Unit) {
-  this as Nodespec_core_v1Impl
-  Taint_core_v1Impl(this)
+  this as Nodespec_core_v1_k8s1_17Impl
+  Taint_core_v1_k8s1_17Impl(this)
     .also { taints = taints?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -4905,8 +4735,8 @@ is not sufficiently unique, which can cause data corruption when it is merged. C
 full-replacement patch. See http://pr.k8s.io/79391 for an example. */
 @K8sDslMarker
 fun Nodestatus.addresses(init: NodeAddress.() -> Unit) {
-  this as Nodestatus_core_v1Impl
-  NodeAddress_core_v1Impl(this)
+  this as Nodestatus_core_v1_k8s1_17Impl
+  NodeAddress_core_v1_k8s1_17Impl(this)
     .also { addresses = addresses?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -4915,8 +4745,8 @@ fun Nodestatus.addresses(init: NodeAddress.() -> Unit) {
 https://kubernetes.io/docs/concepts/nodes/node/#condition */
 @K8sDslMarker
 fun Nodestatus.conditions(init: NodeCondition.() -> Unit) {
-  this as Nodestatus_core_v1Impl
-  NodeCondition_core_v1Impl(this)
+  this as Nodestatus_core_v1_k8s1_17Impl
+  NodeCondition_core_v1_k8s1_17Impl(this)
     .also { conditions = conditions?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -4924,8 +4754,8 @@ fun Nodestatus.conditions(init: NodeCondition.() -> Unit) {
 /** Status of the config assigned to the node via the dynamic Kubelet config feature. */
 @K8sDslMarker
 fun Nodestatus.config(init: NodeConfigStatus.() -> Unit) {
-  this as Nodestatus_core_v1Impl
-  NodeConfigStatus_core_v1Impl(this)
+  this as Nodestatus_core_v1_k8s1_17Impl
+  NodeConfigStatus_core_v1_k8s1_17Impl(this)
     .also { config = it }
     .apply(init)
 }
@@ -4933,8 +4763,8 @@ fun Nodestatus.config(init: NodeConfigStatus.() -> Unit) {
 /** Endpoints of daemons running on the Node. */
 @K8sDslMarker
 fun Nodestatus.daemonEndpoints(init: NodeDaemonEndpoints.() -> Unit) {
-  this as Nodestatus_core_v1Impl
-  NodeDaemonEndpoints_core_v1Impl(this)
+  this as Nodestatus_core_v1_k8s1_17Impl
+  NodeDaemonEndpoints_core_v1_k8s1_17Impl(this)
     .also { daemonEndpoints = it }
     .apply(init)
 }
@@ -4942,8 +4772,8 @@ fun Nodestatus.daemonEndpoints(init: NodeDaemonEndpoints.() -> Unit) {
 /** List of container images on this node */
 @K8sDslMarker
 fun Nodestatus.images(init: ContainerImage.() -> Unit) {
-  this as Nodestatus_core_v1Impl
-  ContainerImage_core_v1Impl(this)
+  this as Nodestatus_core_v1_k8s1_17Impl
+  ContainerImage_core_v1_k8s1_17Impl(this)
     .also { images = images?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -4951,8 +4781,8 @@ fun Nodestatus.images(init: ContainerImage.() -> Unit) {
 /** Set of ids/uuids to uniquely identify the node. More info: https://kubernetes.io/docs/concepts/nodes/node/#info */
 @K8sDslMarker
 fun Nodestatus.nodeInfo(init: NodeSystemInfo.() -> Unit) {
-  this as Nodestatus_core_v1Impl
-  NodeSystemInfo_core_v1Impl(this)
+  this as Nodestatus_core_v1_k8s1_17Impl
+  NodeSystemInfo_core_v1_k8s1_17Impl(this)
     .also { nodeInfo = it }
     .apply(init)
 }
@@ -4960,8 +4790,8 @@ fun Nodestatus.nodeInfo(init: NodeSystemInfo.() -> Unit) {
 /** List of volumes that are attached to the node. */
 @K8sDslMarker
 fun Nodestatus.volumesAttached(init: AttachedVolume.() -> Unit) {
-  this as Nodestatus_core_v1Impl
-  AttachedVolume_core_v1Impl(this)
+  this as Nodestatus_core_v1_k8s1_17Impl
+  AttachedVolume_core_v1_k8s1_17Impl(this)
     .also { volumesAttached = volumesAttached?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -4973,8 +4803,8 @@ volume will not be created and the failure will be reported as an event. In the 
 source types and the behavior of the provisioner may change. */
 @K8sDslMarker
 fun Persistentvolumeclaimspec.dataSource(init: TypedLocalObjectReference.() -> Unit) {
-  this as Persistentvolumeclaimspec_core_v1Impl
-  TypedLocalObjectReference_core_v1Impl(this)
+  this as Persistentvolumeclaimspec_core_v1_k8s1_17Impl
+  TypedLocalObjectReference_core_v1_k8s1_17Impl(this)
     .also { dataSource = it }
     .apply(init)
 }
@@ -4983,8 +4813,8 @@ fun Persistentvolumeclaimspec.dataSource(init: TypedLocalObjectReference.() -> U
 https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources */
 @K8sDslMarker
 fun Persistentvolumeclaimspec.resources(init: ResourceRequirements.() -> Unit) {
-  this as Persistentvolumeclaimspec_core_v1Impl
-  ResourceRequirements_core_v1Impl(this)
+  this as Persistentvolumeclaimspec_core_v1_k8s1_17Impl
+  ResourceRequirements_core_v1_k8s1_17Impl(this)
     .also { resources = it }
     .apply(init)
 }
@@ -4992,8 +4822,8 @@ fun Persistentvolumeclaimspec.resources(init: ResourceRequirements.() -> Unit) {
 /** A label query over volumes to consider for binding. */
 @K8sDslMarker
 fun Persistentvolumeclaimspec.selector(init: LabelSelector.() -> Unit) {
-  this as Persistentvolumeclaimspec_core_v1Impl
-  LabelSelector_meta_v1Impl(this)
+  this as Persistentvolumeclaimspec_core_v1_k8s1_17Impl
+  LabelSelector_meta_v1_k8s1_17Impl(this)
     .also { selector = it }
     .apply(init)
 }
@@ -5002,8 +4832,8 @@ fun Persistentvolumeclaimspec.selector(init: LabelSelector.() -> Unit) {
 be set to 'ResizeStarted'. */
 @K8sDslMarker
 fun Persistentvolumeclaimstatus.conditions(init: PersistentVolumeClaimCondition.() -> Unit) {
-  this as Persistentvolumeclaimstatus_core_v1Impl
-  PersistentVolumeClaimCondition_core_v1Impl(this)
+  this as Persistentvolumeclaimstatus_core_v1_k8s1_17Impl
+  PersistentVolumeClaimCondition_core_v1_k8s1_17Impl(this)
     .also { conditions = conditions?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -5012,8 +4842,8 @@ fun Persistentvolumeclaimstatus.conditions(init: PersistentVolumeClaimCondition.
 the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore */
 @K8sDslMarker
 fun Persistentvolumespec.awsElasticBlockStore(init: AWSElasticBlockStoreVolumeSource.() -> Unit) {
-  this as Persistentvolumespec_core_v1Impl
-  AWSElasticBlockStoreVolumeSource_core_v1Impl(this)
+  this as Persistentvolumespec_core_v1_k8s1_17Impl
+  AWSElasticBlockStoreVolumeSource_core_v1_k8s1_17Impl(this)
     .also { awsElasticBlockStore = it }
     .apply(init)
 }
@@ -5021,8 +4851,8 @@ fun Persistentvolumespec.awsElasticBlockStore(init: AWSElasticBlockStoreVolumeSo
 /** AzureDisk represents an Azure Data Disk mount on the host and bind mount to the pod. */
 @K8sDslMarker
 fun Persistentvolumespec.azureDisk(init: AzureDiskVolumeSource.() -> Unit) {
-  this as Persistentvolumespec_core_v1Impl
-  AzureDiskVolumeSource_core_v1Impl(this)
+  this as Persistentvolumespec_core_v1_k8s1_17Impl
+  AzureDiskVolumeSource_core_v1_k8s1_17Impl(this)
     .also { azureDisk = it }
     .apply(init)
 }
@@ -5030,27 +4860,17 @@ fun Persistentvolumespec.azureDisk(init: AzureDiskVolumeSource.() -> Unit) {
 /** AzureFile represents an Azure File Service mount on the host and bind mount to the pod. */
 @K8sDslMarker
 fun Persistentvolumespec.azureFile(init: AzureFilePersistentVolumeSource.() -> Unit) {
-  this as Persistentvolumespec_core_v1Impl
-  AzureFilePersistentVolumeSource_core_v1Impl(this)
+  this as Persistentvolumespec_core_v1_k8s1_17Impl
+  AzureFilePersistentVolumeSource_core_v1_k8s1_17Impl(this)
     .also { azureFile = it }
-    .apply(init)
-}
-
-/** A description of the persistent volume's resources and capacity. More info:
-https://kubernetes.io/docs/concepts/storage/persistent-volumes#capacity */
-@K8sDslMarker
-fun Persistentvolumespec.capacity(init: de.loosetie.k8s.dsl.types.Capacity.() -> Unit) {
-  this as Persistentvolumespec_core_v1Impl
-  de.loosetie.k8s.dsl.types.Capacity(this)
-    .also { capacity = it }
     .apply(init)
 }
 
 /** CephFS represents a Ceph FS mount on the host that shares a pod's lifetime */
 @K8sDslMarker
 fun Persistentvolumespec.cephfs(init: CephFSPersistentVolumeSource.() -> Unit) {
-  this as Persistentvolumespec_core_v1Impl
-  CephFSPersistentVolumeSource_core_v1Impl(this)
+  this as Persistentvolumespec_core_v1_k8s1_17Impl
+  CephFSPersistentVolumeSource_core_v1_k8s1_17Impl(this)
     .also { cephfs = it }
     .apply(init)
 }
@@ -5059,8 +4879,8 @@ fun Persistentvolumespec.cephfs(init: CephFSPersistentVolumeSource.() -> Unit) {
 https://examples.k8s.io/mysql-cinder-pd/README.md */
 @K8sDslMarker
 fun Persistentvolumespec.cinder(init: CinderPersistentVolumeSource.() -> Unit) {
-  this as Persistentvolumespec_core_v1Impl
-  CinderPersistentVolumeSource_core_v1Impl(this)
+  this as Persistentvolumespec_core_v1_k8s1_17Impl
+  CinderPersistentVolumeSource_core_v1_k8s1_17Impl(this)
     .also { cinder = it }
     .apply(init)
 }
@@ -5070,8 +4890,8 @@ when bound. claim.VolumeName is the authoritative bind between PV and PVC. More 
 https://kubernetes.io/docs/concepts/storage/persistent-volumes#binding */
 @K8sDslMarker
 fun Persistentvolumespec.claimRef(init: ObjectReference.() -> Unit) {
-  this as Persistentvolumespec_core_v1Impl
-  ObjectReference_core_v1Impl(this)
+  this as Persistentvolumespec_core_v1_k8s1_17Impl
+  ObjectReference_core_v1_k8s1_17Impl(this)
     .also { claimRef = it }
     .apply(init)
 }
@@ -5079,8 +4899,8 @@ fun Persistentvolumespec.claimRef(init: ObjectReference.() -> Unit) {
 /** CSI represents storage that is handled by an external CSI driver (Beta feature). */
 @K8sDslMarker
 fun Persistentvolumespec.csi(init: CSIPersistentVolumeSource.() -> Unit) {
-  this as Persistentvolumespec_core_v1Impl
-  CSIPersistentVolumeSource_core_v1Impl(this)
+  this as Persistentvolumespec_core_v1_k8s1_17Impl
+  CSIPersistentVolumeSource_core_v1_k8s1_17Impl(this)
     .also { csi = it }
     .apply(init)
 }
@@ -5088,8 +4908,8 @@ fun Persistentvolumespec.csi(init: CSIPersistentVolumeSource.() -> Unit) {
 /** FC represents a Fibre Channel resource that is attached to a kubelet's host machine and then exposed to the pod. */
 @K8sDslMarker
 fun Persistentvolumespec.fc(init: FCVolumeSource.() -> Unit) {
-  this as Persistentvolumespec_core_v1Impl
-  FCVolumeSource_core_v1Impl(this)
+  this as Persistentvolumespec_core_v1_k8s1_17Impl
+  FCVolumeSource_core_v1_k8s1_17Impl(this)
     .also { fc = it }
     .apply(init)
 }
@@ -5097,8 +4917,8 @@ fun Persistentvolumespec.fc(init: FCVolumeSource.() -> Unit) {
 /** FlexVolume represents a generic volume resource that is provisioned/attached using an exec based plugin. */
 @K8sDslMarker
 fun Persistentvolumespec.flexVolume(init: FlexPersistentVolumeSource.() -> Unit) {
-  this as Persistentvolumespec_core_v1Impl
-  FlexPersistentVolumeSource_core_v1Impl(this)
+  this as Persistentvolumespec_core_v1_k8s1_17Impl
+  FlexPersistentVolumeSource_core_v1_k8s1_17Impl(this)
     .also { flexVolume = it }
     .apply(init)
 }
@@ -5107,8 +4927,8 @@ fun Persistentvolumespec.flexVolume(init: FlexPersistentVolumeSource.() -> Unit)
 depends on the Flocker control service being running */
 @K8sDslMarker
 fun Persistentvolumespec.flocker(init: FlockerVolumeSource.() -> Unit) {
-  this as Persistentvolumespec_core_v1Impl
-  FlockerVolumeSource_core_v1Impl(this)
+  this as Persistentvolumespec_core_v1_k8s1_17Impl
+  FlockerVolumeSource_core_v1_k8s1_17Impl(this)
     .also { flocker = it }
     .apply(init)
 }
@@ -5117,8 +4937,8 @@ fun Persistentvolumespec.flocker(init: FlockerVolumeSource.() -> Unit) {
 pod. Provisioned by an admin. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk */
 @K8sDslMarker
 fun Persistentvolumespec.gcePersistentDisk(init: GCEPersistentDiskVolumeSource.() -> Unit) {
-  this as Persistentvolumespec_core_v1Impl
-  GCEPersistentDiskVolumeSource_core_v1Impl(this)
+  this as Persistentvolumespec_core_v1_k8s1_17Impl
+  GCEPersistentDiskVolumeSource_core_v1_k8s1_17Impl(this)
     .also { gcePersistentDisk = it }
     .apply(init)
 }
@@ -5127,8 +4947,8 @@ fun Persistentvolumespec.gcePersistentDisk(init: GCEPersistentDiskVolumeSource.(
 info: https://examples.k8s.io/volumes/glusterfs/README.md */
 @K8sDslMarker
 fun Persistentvolumespec.glusterfs(init: GlusterfsPersistentVolumeSource.() -> Unit) {
-  this as Persistentvolumespec_core_v1Impl
-  GlusterfsPersistentVolumeSource_core_v1Impl(this)
+  this as Persistentvolumespec_core_v1_k8s1_17Impl
+  GlusterfsPersistentVolumeSource_core_v1_k8s1_17Impl(this)
     .also { glusterfs = it }
     .apply(init)
 }
@@ -5138,8 +4958,8 @@ development and testing only! On-host storage is not supported in any way and WI
 More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath */
 @K8sDslMarker
 fun Persistentvolumespec.hostPath(init: HostPathVolumeSource.() -> Unit) {
-  this as Persistentvolumespec_core_v1Impl
-  HostPathVolumeSource_core_v1Impl(this)
+  this as Persistentvolumespec_core_v1_k8s1_17Impl
+  HostPathVolumeSource_core_v1_k8s1_17Impl(this)
     .also { hostPath = it }
     .apply(init)
 }
@@ -5148,8 +4968,8 @@ fun Persistentvolumespec.hostPath(init: HostPathVolumeSource.() -> Unit) {
 Provisioned by an admin. */
 @K8sDslMarker
 fun Persistentvolumespec.iscsi(init: ISCSIPersistentVolumeSource.() -> Unit) {
-  this as Persistentvolumespec_core_v1Impl
-  ISCSIPersistentVolumeSource_core_v1Impl(this)
+  this as Persistentvolumespec_core_v1_k8s1_17Impl
+  ISCSIPersistentVolumeSource_core_v1_k8s1_17Impl(this)
     .also { iscsi = it }
     .apply(init)
 }
@@ -5157,8 +4977,8 @@ fun Persistentvolumespec.iscsi(init: ISCSIPersistentVolumeSource.() -> Unit) {
 /** Local represents directly-attached storage with node affinity */
 @K8sDslMarker
 fun Persistentvolumespec.local(init: LocalVolumeSource.() -> Unit) {
-  this as Persistentvolumespec_core_v1Impl
-  LocalVolumeSource_core_v1Impl(this)
+  this as Persistentvolumespec_core_v1_k8s1_17Impl
+  LocalVolumeSource_core_v1_k8s1_17Impl(this)
     .also { local = it }
     .apply(init)
 }
@@ -5167,8 +4987,8 @@ fun Persistentvolumespec.local(init: LocalVolumeSource.() -> Unit) {
 https://kubernetes.io/docs/concepts/storage/volumes#nfs */
 @K8sDslMarker
 fun Persistentvolumespec.nfs(init: NFSVolumeSource.() -> Unit) {
-  this as Persistentvolumespec_core_v1Impl
-  NFSVolumeSource_core_v1Impl(this)
+  this as Persistentvolumespec_core_v1_k8s1_17Impl
+  NFSVolumeSource_core_v1_k8s1_17Impl(this)
     .also { nfs = it }
     .apply(init)
 }
@@ -5177,8 +4997,8 @@ fun Persistentvolumespec.nfs(init: NFSVolumeSource.() -> Unit) {
 scheduling of pods that use this volume. */
 @K8sDslMarker
 fun Persistentvolumespec.nodeAffinity(init: VolumeNodeAffinity.() -> Unit) {
-  this as Persistentvolumespec_core_v1Impl
-  VolumeNodeAffinity_core_v1Impl(this)
+  this as Persistentvolumespec_core_v1_k8s1_17Impl
+  VolumeNodeAffinity_core_v1_k8s1_17Impl(this)
     .also { nodeAffinity = it }
     .apply(init)
 }
@@ -5186,8 +5006,8 @@ fun Persistentvolumespec.nodeAffinity(init: VolumeNodeAffinity.() -> Unit) {
 /** PhotonPersistentDisk represents a PhotonController persistent disk attached and mounted on kubelets host machine */
 @K8sDslMarker
 fun Persistentvolumespec.photonPersistentDisk(init: PhotonPersistentDiskVolumeSource.() -> Unit) {
-  this as Persistentvolumespec_core_v1Impl
-  PhotonPersistentDiskVolumeSource_core_v1Impl(this)
+  this as Persistentvolumespec_core_v1_k8s1_17Impl
+  PhotonPersistentDiskVolumeSource_core_v1_k8s1_17Impl(this)
     .also { photonPersistentDisk = it }
     .apply(init)
 }
@@ -5195,8 +5015,8 @@ fun Persistentvolumespec.photonPersistentDisk(init: PhotonPersistentDiskVolumeSo
 /** PortworxVolume represents a portworx volume attached and mounted on kubelets host machine */
 @K8sDslMarker
 fun Persistentvolumespec.portworxVolume(init: PortworxVolumeSource.() -> Unit) {
-  this as Persistentvolumespec_core_v1Impl
-  PortworxVolumeSource_core_v1Impl(this)
+  this as Persistentvolumespec_core_v1_k8s1_17Impl
+  PortworxVolumeSource_core_v1_k8s1_17Impl(this)
     .also { portworxVolume = it }
     .apply(init)
 }
@@ -5204,8 +5024,8 @@ fun Persistentvolumespec.portworxVolume(init: PortworxVolumeSource.() -> Unit) {
 /** Quobyte represents a Quobyte mount on the host that shares a pod's lifetime */
 @K8sDslMarker
 fun Persistentvolumespec.quobyte(init: QuobyteVolumeSource.() -> Unit) {
-  this as Persistentvolumespec_core_v1Impl
-  QuobyteVolumeSource_core_v1Impl(this)
+  this as Persistentvolumespec_core_v1_k8s1_17Impl
+  QuobyteVolumeSource_core_v1_k8s1_17Impl(this)
     .also { quobyte = it }
     .apply(init)
 }
@@ -5214,8 +5034,8 @@ fun Persistentvolumespec.quobyte(init: QuobyteVolumeSource.() -> Unit) {
 https://examples.k8s.io/volumes/rbd/README.md */
 @K8sDslMarker
 fun Persistentvolumespec.rbd(init: RBDPersistentVolumeSource.() -> Unit) {
-  this as Persistentvolumespec_core_v1Impl
-  RBDPersistentVolumeSource_core_v1Impl(this)
+  this as Persistentvolumespec_core_v1_k8s1_17Impl
+  RBDPersistentVolumeSource_core_v1_k8s1_17Impl(this)
     .also { rbd = it }
     .apply(init)
 }
@@ -5223,8 +5043,8 @@ fun Persistentvolumespec.rbd(init: RBDPersistentVolumeSource.() -> Unit) {
 /** ScaleIO represents a ScaleIO persistent volume attached and mounted on Kubernetes nodes. */
 @K8sDslMarker
 fun Persistentvolumespec.scaleIO(init: ScaleIOPersistentVolumeSource.() -> Unit) {
-  this as Persistentvolumespec_core_v1Impl
-  ScaleIOPersistentVolumeSource_core_v1Impl(this)
+  this as Persistentvolumespec_core_v1_k8s1_17Impl
+  ScaleIOPersistentVolumeSource_core_v1_k8s1_17Impl(this)
     .also { scaleIO = it }
     .apply(init)
 }
@@ -5233,8 +5053,8 @@ fun Persistentvolumespec.scaleIO(init: ScaleIOPersistentVolumeSource.() -> Unit)
 info: https://examples.k8s.io/volumes/storageos/README.md */
 @K8sDslMarker
 fun Persistentvolumespec.storageos(init: StorageOSPersistentVolumeSource.() -> Unit) {
-  this as Persistentvolumespec_core_v1Impl
-  StorageOSPersistentVolumeSource_core_v1Impl(this)
+  this as Persistentvolumespec_core_v1_k8s1_17Impl
+  StorageOSPersistentVolumeSource_core_v1_k8s1_17Impl(this)
     .also { storageos = it }
     .apply(init)
 }
@@ -5242,8 +5062,8 @@ fun Persistentvolumespec.storageos(init: StorageOSPersistentVolumeSource.() -> U
 /** VsphereVolume represents a vSphere volume attached and mounted on kubelets host machine */
 @K8sDslMarker
 fun Persistentvolumespec.vsphereVolume(init: VsphereVirtualDiskVolumeSource.() -> Unit) {
-  this as Persistentvolumespec_core_v1Impl
-  VsphereVirtualDiskVolumeSource_core_v1Impl(this)
+  this as Persistentvolumespec_core_v1_k8s1_17Impl
+  VsphereVirtualDiskVolumeSource_core_v1_k8s1_17Impl(this)
     .also { vsphereVolume = it }
     .apply(init)
 }
@@ -5251,71 +5071,17 @@ fun Persistentvolumespec.vsphereVolume(init: VsphereVirtualDiskVolumeSource.() -
 /** Label query over pods whose evictions are managed by the disruption budget. */
 @K8sDslMarker
 fun Poddisruptionbudgetspec.selector(init: LabelSelector.() -> Unit) {
-  this as Poddisruptionbudgetspec_policy_v1beta1Impl
-  LabelSelector_meta_v1Impl(this)
+  this as Poddisruptionbudgetspec_policy_v1beta1_k8s1_17Impl
+  LabelSelector_meta_v1_k8s1_17Impl(this)
     .also { selector = it }
     .apply(init)
-}
-
-/** An eviction is allowed if at most "maxUnavailable" pods selected by "selector" are unavailable after the eviction, i.e.
-even in absence of the evicted pod. For example, one can prevent all voluntary evictions by specifying 0. This is a
-mutually exclusive setting with "minAvailable".
-
-			When you specify an integer, it represents a number of Pods. When
-you specify a percentage by setting the value to a string representation of a percentage (eg. "50%"), it represents a
-percentage of total Pods. */
-@K8sDslMarker
-fun Poddisruptionbudgetspec.maxUnavailable(percentage: String) {
-  this as Poddisruptionbudgetspec_policy_v1beta1Impl
-  de.loosetie.k8s.dsl.types.IntOrPercentage(percentage)
-    .also { maxUnavailable = it }
-}
-
-/** An eviction is allowed if at most "maxUnavailable" pods selected by "selector" are unavailable after the eviction, i.e.
-even in absence of the evicted pod. For example, one can prevent all voluntary evictions by specifying 0. This is a
-mutually exclusive setting with "minAvailable".
-
-			When you specify an integer, it represents a number of Pods. When
-you specify a percentage by setting the value to a string representation of a percentage (eg. "50%"), it represents a
-percentage of total Pods. */
-@K8sDslMarker
-fun Poddisruptionbudgetspec.maxUnavailable(int: Int) {
-  this as Poddisruptionbudgetspec_policy_v1beta1Impl
-  de.loosetie.k8s.dsl.types.IntOrPercentage(int)
-    .also { maxUnavailable = it }
-}
-
-/** An eviction is allowed if at least "minAvailable" pods selected by "selector" will still be available after the
-eviction, i.e. even in the absence of the evicted pod. So for example you can prevent all voluntary evictions by
-specifying "100%".
-
-			When you specify an integer, it represents a number of Pods. When you specify a percentage by
-setting the value to a string representation of a percentage (eg. "50%"), it represents a percentage of total Pods. */
-@K8sDslMarker
-fun Poddisruptionbudgetspec.minAvailable(percentage: String) {
-  this as Poddisruptionbudgetspec_policy_v1beta1Impl
-  de.loosetie.k8s.dsl.types.IntOrPercentage(percentage)
-    .also { minAvailable = it }
-}
-
-/** An eviction is allowed if at least "minAvailable" pods selected by "selector" will still be available after the
-eviction, i.e. even in the absence of the evicted pod. So for example you can prevent all voluntary evictions by
-specifying "100%".
-
-			When you specify an integer, it represents a number of Pods. When you specify a percentage by
-setting the value to a string representation of a percentage (eg. "50%"), it represents a percentage of total Pods. */
-@K8sDslMarker
-fun Poddisruptionbudgetspec.minAvailable(int: Int) {
-  this as Poddisruptionbudgetspec_policy_v1beta1Impl
-  de.loosetie.k8s.dsl.types.IntOrPercentage(int)
-    .also { minAvailable = it }
 }
 
 /** Env defines the collection of EnvVar to inject into containers. */
 @K8sDslMarker
 fun Podpresetspec.env(init: EnvVar.() -> Unit) {
-  this as Podpresetspec_settings_k8s_io_v1alpha1Impl
-  EnvVar_core_v1Impl(this)
+  this as Podpresetspec_settings_k8s_io_v1alpha1_k8s1_17Impl
+  EnvVar_core_v1_k8s1_17Impl(this)
     .also { env = env?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -5323,8 +5089,8 @@ fun Podpresetspec.env(init: EnvVar.() -> Unit) {
 /** EnvFrom defines the collection of EnvFromSource to inject into containers. */
 @K8sDslMarker
 fun Podpresetspec.envFrom(init: EnvFromSource.() -> Unit) {
-  this as Podpresetspec_settings_k8s_io_v1alpha1Impl
-  EnvFromSource_core_v1Impl(this)
+  this as Podpresetspec_settings_k8s_io_v1alpha1_k8s1_17Impl
+  EnvFromSource_core_v1_k8s1_17Impl(this)
     .also { envFrom = envFrom?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -5332,8 +5098,8 @@ fun Podpresetspec.envFrom(init: EnvFromSource.() -> Unit) {
 /** Selector is a label query over a set of resources, in this case pods. Required. */
 @K8sDslMarker
 fun Podpresetspec.selector(init: LabelSelector.() -> Unit) {
-  this as Podpresetspec_settings_k8s_io_v1alpha1Impl
-  LabelSelector_meta_v1Impl(this)
+  this as Podpresetspec_settings_k8s_io_v1alpha1_k8s1_17Impl
+  LabelSelector_meta_v1_k8s1_17Impl(this)
     .also { selector = it }
     .apply(init)
 }
@@ -5341,8 +5107,8 @@ fun Podpresetspec.selector(init: LabelSelector.() -> Unit) {
 /** VolumeMounts defines the collection of VolumeMount to inject into containers. */
 @K8sDslMarker
 fun Podpresetspec.volumeMounts(init: VolumeMount.() -> Unit) {
-  this as Podpresetspec_settings_k8s_io_v1alpha1Impl
-  VolumeMount_core_v1Impl(this)
+  this as Podpresetspec_settings_k8s_io_v1alpha1_k8s1_17Impl
+  VolumeMount_core_v1_k8s1_17Impl(this)
     .also { volumeMounts = volumeMounts?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -5350,8 +5116,8 @@ fun Podpresetspec.volumeMounts(init: VolumeMount.() -> Unit) {
 /** Volumes defines the collection of Volume to inject into the pod. */
 @K8sDslMarker
 fun Podpresetspec.volumes(init: Volume.() -> Unit) {
-  this as Podpresetspec_settings_k8s_io_v1alpha1Impl
-  Volume_core_v1Impl(this)
+  this as Podpresetspec_settings_k8s_io_v1alpha1_k8s1_17Impl
+  Volume_core_v1_k8s1_17Impl(this)
     .also { volumes = volumes?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -5361,8 +5127,8 @@ empty value indicates that any CSI driver can be used for inline ephemeral volum
 honored if the API server enables the CSIInlineVolume feature gate. */
 @K8sDslMarker
 fun Podsecuritypolicyspec.allowedCSIDrivers(init: AllowedCSIDriver.() -> Unit) {
-  this as Podsecuritypolicyspec_policy_v1beta1Impl
-  AllowedCSIDriver_policy_v1beta1Impl(this)
+  this as Podsecuritypolicyspec_policy_v1beta1_k8s1_17Impl
+  AllowedCSIDriver_policy_v1beta1_k8s1_17Impl(this)
     .also { allowedCSIDrivers = allowedCSIDrivers?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -5371,8 +5137,8 @@ fun Podsecuritypolicyspec.allowedCSIDrivers(init: AllowedCSIDriver.() -> Unit) {
 parameter is effective only when the usage of the Flexvolumes is allowed in the "volumes" field. */
 @K8sDslMarker
 fun Podsecuritypolicyspec.allowedFlexVolumes(init: AllowedFlexVolume.() -> Unit) {
-  this as Podsecuritypolicyspec_policy_v1beta1Impl
-  AllowedFlexVolume_policy_v1beta1Impl(this)
+  this as Podsecuritypolicyspec_policy_v1beta1_k8s1_17Impl
+  AllowedFlexVolume_policy_v1beta1_k8s1_17Impl(this)
     .also { allowedFlexVolumes = allowedFlexVolumes?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -5380,8 +5146,8 @@ fun Podsecuritypolicyspec.allowedFlexVolumes(init: AllowedFlexVolume.() -> Unit)
 /** allowedHostPaths is a white list of allowed host paths. Empty indicates that all host paths may be used. */
 @K8sDslMarker
 fun Podsecuritypolicyspec.allowedHostPaths(init: AllowedHostPath.() -> Unit) {
-  this as Podsecuritypolicyspec_policy_v1beta1Impl
-  AllowedHostPath_policy_v1beta1Impl(this)
+  this as Podsecuritypolicyspec_policy_v1beta1_k8s1_17Impl
+  AllowedHostPath_policy_v1beta1_k8s1_17Impl(this)
     .also { allowedHostPaths = allowedHostPaths?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -5389,8 +5155,8 @@ fun Podsecuritypolicyspec.allowedHostPaths(init: AllowedHostPath.() -> Unit) {
 /** fsGroup is the strategy that will dictate what fs group is used by the SecurityContext. */
 @K8sDslMarker
 fun Podsecuritypolicyspec.fsGroup(init: FSGroupStrategyOptions.() -> Unit) {
-  this as Podsecuritypolicyspec_policy_v1beta1Impl
-  FSGroupStrategyOptions_policy_v1beta1Impl(this)
+  this as Podsecuritypolicyspec_policy_v1beta1_k8s1_17Impl
+  FSGroupStrategyOptions_policy_v1beta1_k8s1_17Impl(this)
     .also { fsGroup = it }
     .apply(init)
 }
@@ -5398,8 +5164,8 @@ fun Podsecuritypolicyspec.fsGroup(init: FSGroupStrategyOptions.() -> Unit) {
 /** hostPorts determines which host port ranges are allowed to be exposed. */
 @K8sDslMarker
 fun Podsecuritypolicyspec.hostPorts(init: HostPortRange.() -> Unit) {
-  this as Podsecuritypolicyspec_policy_v1beta1Impl
-  HostPortRange_policy_v1beta1Impl(this)
+  this as Podsecuritypolicyspec_policy_v1beta1_k8s1_17Impl
+  HostPortRange_policy_v1beta1_k8s1_17Impl(this)
     .also { hostPorts = hostPorts?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -5408,8 +5174,8 @@ fun Podsecuritypolicyspec.hostPorts(init: HostPortRange.() -> Unit) {
 the pod's RunAsGroup can take any value. This field requires the RunAsGroup feature gate to be enabled. */
 @K8sDslMarker
 fun Podsecuritypolicyspec.runAsGroup(init: RunAsGroupStrategyOptions.() -> Unit) {
-  this as Podsecuritypolicyspec_policy_v1beta1Impl
-  RunAsGroupStrategyOptions_policy_v1beta1Impl(this)
+  this as Podsecuritypolicyspec_policy_v1beta1_k8s1_17Impl
+  RunAsGroupStrategyOptions_policy_v1beta1_k8s1_17Impl(this)
     .also { runAsGroup = it }
     .apply(init)
 }
@@ -5417,8 +5183,8 @@ fun Podsecuritypolicyspec.runAsGroup(init: RunAsGroupStrategyOptions.() -> Unit)
 /** runAsUser is the strategy that will dictate the allowable RunAsUser values that may be set. */
 @K8sDslMarker
 fun Podsecuritypolicyspec.runAsUser(init: RunAsUserStrategyOptions.() -> Unit) {
-  this as Podsecuritypolicyspec_policy_v1beta1Impl
-  RunAsUserStrategyOptions_policy_v1beta1Impl(this)
+  this as Podsecuritypolicyspec_policy_v1beta1_k8s1_17Impl
+  RunAsUserStrategyOptions_policy_v1beta1_k8s1_17Impl(this)
     .also { runAsUser = it }
     .apply(init)
 }
@@ -5428,8 +5194,8 @@ pod's runtimeClassName field is unrestricted. Enforcement of this field depends 
 enabled. */
 @K8sDslMarker
 fun Podsecuritypolicyspec.runtimeClass(init: RuntimeClassStrategyOptions.() -> Unit) {
-  this as Podsecuritypolicyspec_policy_v1beta1Impl
-  RuntimeClassStrategyOptions_policy_v1beta1Impl(this)
+  this as Podsecuritypolicyspec_policy_v1beta1_k8s1_17Impl
+  RuntimeClassStrategyOptions_policy_v1beta1_k8s1_17Impl(this)
     .also { runtimeClass = it }
     .apply(init)
 }
@@ -5437,8 +5203,8 @@ fun Podsecuritypolicyspec.runtimeClass(init: RuntimeClassStrategyOptions.() -> U
 /** seLinux is the strategy that will dictate the allowable labels that may be set. */
 @K8sDslMarker
 fun Podsecuritypolicyspec.seLinux(init: SELinuxStrategyOptions.() -> Unit) {
-  this as Podsecuritypolicyspec_policy_v1beta1Impl
-  SELinuxStrategyOptions_policy_v1beta1Impl(this)
+  this as Podsecuritypolicyspec_policy_v1beta1_k8s1_17Impl
+  SELinuxStrategyOptions_policy_v1beta1_k8s1_17Impl(this)
     .also { seLinux = it }
     .apply(init)
 }
@@ -5446,8 +5212,8 @@ fun Podsecuritypolicyspec.seLinux(init: SELinuxStrategyOptions.() -> Unit) {
 /** supplementalGroups is the strategy that will dictate what supplemental groups are used by the SecurityContext. */
 @K8sDslMarker
 fun Podsecuritypolicyspec.supplementalGroups(init: SupplementalGroupsStrategyOptions.() -> Unit) {
-  this as Podsecuritypolicyspec_policy_v1beta1Impl
-  SupplementalGroupsStrategyOptions_policy_v1beta1Impl(this)
+  this as Podsecuritypolicyspec_policy_v1beta1_k8s1_17Impl
+  SupplementalGroupsStrategyOptions_policy_v1beta1_k8s1_17Impl(this)
     .also { supplementalGroups = it }
     .apply(init)
 }
@@ -5455,8 +5221,8 @@ fun Podsecuritypolicyspec.supplementalGroups(init: SupplementalGroupsStrategyOpt
 /** If specified, the pod's scheduling constraints */
 @K8sDslMarker
 fun Podspec.affinity(init: Affinity.() -> Unit) {
-  this as Podspec_core_v1Impl
-  Affinity_core_v1Impl(this)
+  this as Podspec_core_v1_k8s1_17Impl
+  Affinity_core_v1_k8s1_17Impl(this)
     .also { affinity = it }
     .apply(init)
 }
@@ -5465,8 +5231,8 @@ fun Podspec.affinity(init: Affinity.() -> Unit) {
 container in a Pod. Cannot be updated. */
 @K8sDslMarker
 fun Podspec.containers(init: Container.() -> Unit) {
-  this as Podspec_core_v1Impl
-  Container_core_v1Impl(this)
+  this as Podspec_core_v1_k8s1_17Impl
+  Container_core_v1_k8s1_17Impl(this)
     .also { containers = containers?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -5475,8 +5241,8 @@ fun Podspec.containers(init: Container.() -> Unit) {
 on DNSPolicy. */
 @K8sDslMarker
 fun Podspec.dnsConfig(init: PodDNSConfig.() -> Unit) {
-  this as Podspec_core_v1Impl
-  PodDNSConfig_core_v1Impl(this)
+  this as Podspec_core_v1_k8s1_17Impl
+  PodDNSConfig_core_v1_k8s1_17Impl(this)
     .also { dnsConfig = it }
     .apply(init)
 }
@@ -5487,8 +5253,8 @@ by updating the pod spec. In order to add an ephemeral container to an existing 
 subresource. This field is alpha-level and is only honored by servers that enable the EphemeralContainers feature. */
 @K8sDslMarker
 fun Podspec.ephemeralContainers(init: EphemeralContainer.() -> Unit) {
-  this as Podspec_core_v1Impl
-  EphemeralContainer_core_v1Impl(this)
+  this as Podspec_core_v1_k8s1_17Impl
+  EphemeralContainer_core_v1_k8s1_17Impl(this)
     .also { ephemeralContainers = ephemeralContainers?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -5497,8 +5263,8 @@ fun Podspec.ephemeralContainers(init: EphemeralContainer.() -> Unit) {
 only valid for non-hostNetwork pods. */
 @K8sDslMarker
 fun Podspec.hostAliases(init: HostAlias.() -> Unit) {
-  this as Podspec_core_v1Impl
-  HostAlias_core_v1Impl(this)
+  this as Podspec_core_v1_k8s1_17Impl
+  HostAlias_core_v1_k8s1_17Impl(this)
     .also { hostAliases = hostAliases?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -5509,8 +5275,8 @@ For example, in the case of docker, only DockerConfig type secrets are honored. 
 https://kubernetes.io/docs/concepts/containers/images#specifying-imagepullsecrets-on-a-pod */
 @K8sDslMarker
 fun Podspec.imagePullSecrets(init: LocalObjectReference.() -> Unit) {
-  this as Podspec_core_v1Impl
-  LocalObjectReference_core_v1Impl(this)
+  this as Podspec_core_v1_k8s1_17Impl
+  LocalObjectReference_core_v1_k8s1_17Impl(this)
     .also { imagePullSecrets = imagePullSecrets?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -5525,24 +5291,9 @@ similar fashion. Init containers cannot currently be added or removed. Cannot be
 https://kubernetes.io/docs/concepts/workloads/pods/init-containers/ */
 @K8sDslMarker
 fun Podspec.initContainers(init: Container.() -> Unit) {
-  this as Podspec_core_v1Impl
-  Container_core_v1Impl(this)
+  this as Podspec_core_v1_k8s1_17Impl
+  Container_core_v1_k8s1_17Impl(this)
     .also { initContainers = initContainers?.let { p -> p + it } ?: listOf(it) }
-    .apply(init)
-}
-
-/** Overhead represents the resource overhead associated with running a pod for a given RuntimeClass. This field will be
-autopopulated at admission time by the RuntimeClass admission controller. If the RuntimeClass admission controller is
-enabled, overhead must not be set in Pod create requests. The RuntimeClass admission controller will reject Pod create
-requests which have the overhead already set. If RuntimeClass is configured and selected in the PodSpec, Overhead will
-be set to the value defined in the corresponding RuntimeClass, otherwise it will remain unset and treated as zero. More
-info: https://git.k8s.io/enhancements/keps/sig-node/20190226-pod-overhead.md This field is alpha-level as of Kubernetes
-v1.16, and is only honored by servers that enable the PodOverhead feature. */
-@K8sDslMarker
-fun Podspec.overhead(init: de.loosetie.k8s.dsl.types.LimitsAndRequests.() -> Unit) {
-  this as Podspec_core_v1Impl
-  de.loosetie.k8s.dsl.types.LimitsAndRequests(this)
-    .also { overhead = it }
     .apply(init)
 }
 
@@ -5551,8 +5302,8 @@ AND all conditions specified in the readiness gates have status equal to "True" 
 https://git.k8s.io/enhancements/keps/sig-network/0007-pod-ready%2B%2B.md */
 @K8sDslMarker
 fun Podspec.readinessGates(init: PodReadinessGate.() -> Unit) {
-  this as Podspec_core_v1Impl
-  PodReadinessGate_core_v1Impl(this)
+  this as Podspec_core_v1_k8s1_17Impl
+  PodReadinessGate_core_v1_k8s1_17Impl(this)
     .also { readinessGates = readinessGates?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -5561,8 +5312,8 @@ fun Podspec.readinessGates(init: PodReadinessGate.() -> Unit) {
 description for default values of each field. */
 @K8sDslMarker
 fun Podspec.securityContext(init: PodSecurityContext.() -> Unit) {
-  this as Podspec_core_v1Impl
-  PodSecurityContext_core_v1Impl(this)
+  this as Podspec_core_v1_k8s1_17Impl
+  PodSecurityContext_core_v1_k8s1_17Impl(this)
     .also { securityContext = it }
     .apply(init)
 }
@@ -5570,8 +5321,8 @@ fun Podspec.securityContext(init: PodSecurityContext.() -> Unit) {
 /** If specified, the pod's tolerations. */
 @K8sDslMarker
 fun Podspec.tolerations(init: Toleration.() -> Unit) {
-  this as Podspec_core_v1Impl
-  Toleration_core_v1Impl(this)
+  this as Podspec_core_v1_k8s1_17Impl
+  Toleration_core_v1_k8s1_17Impl(this)
     .also { tolerations = tolerations?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -5581,8 +5332,8 @@ pods in a way which abides by the constraints. This field is alpha-level and is 
 the EvenPodsSpread feature. All topologySpreadConstraints are ANDed. */
 @K8sDslMarker
 fun Podspec.topologySpreadConstraints(init: TopologySpreadConstraint.() -> Unit) {
-  this as Podspec_core_v1Impl
-  TopologySpreadConstraint_core_v1Impl(this)
+  this as Podspec_core_v1_k8s1_17Impl
+  TopologySpreadConstraint_core_v1_k8s1_17Impl(this)
     .also { topologySpreadConstraints = topologySpreadConstraints?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -5591,8 +5342,8 @@ fun Podspec.topologySpreadConstraints(init: TopologySpreadConstraint.() -> Unit)
 https://kubernetes.io/docs/concepts/storage/volumes */
 @K8sDslMarker
 fun Podspec.volumes(init: Volume.() -> Unit) {
-  this as Podspec_core_v1Impl
-  Volume_core_v1Impl(this)
+  this as Podspec_core_v1_k8s1_17Impl
+  Volume_core_v1_k8s1_17Impl(this)
     .also { volumes = volumes?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -5600,8 +5351,8 @@ fun Podspec.volumes(init: Volume.() -> Unit) {
 /** Current service state of pod. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-conditions */
 @K8sDslMarker
 fun Podstatus.conditions(init: PodCondition.() -> Unit) {
-  this as Podstatus_core_v1Impl
-  PodCondition_core_v1Impl(this)
+  this as Podstatus_core_v1_k8s1_17Impl
+  PodCondition_core_v1_k8s1_17Impl(this)
     .also { conditions = conditions?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -5610,8 +5361,8 @@ fun Podstatus.conditions(init: PodCondition.() -> Unit) {
 https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-and-container-status */
 @K8sDslMarker
 fun Podstatus.containerStatuses(init: Containerstatus.() -> Unit) {
-  this as Podstatus_core_v1Impl
-  Containerstatus_core_v1Impl(this)
+  this as Podstatus_core_v1_k8s1_17Impl
+  Containerstatus_core_v1_k8s1_17Impl(this)
     .also { containerStatuses = containerStatuses?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -5620,8 +5371,8 @@ fun Podstatus.containerStatuses(init: Containerstatus.() -> Unit) {
 servers that enable the EphemeralContainers feature. */
 @K8sDslMarker
 fun Podstatus.ephemeralContainerStatuses(init: Containerstatus.() -> Unit) {
-  this as Podstatus_core_v1Impl
-  Containerstatus_core_v1Impl(this)
+  this as Podstatus_core_v1_k8s1_17Impl
+  Containerstatus_core_v1_k8s1_17Impl(this)
     .also { ephemeralContainerStatuses = ephemeralContainerStatuses?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -5631,8 +5382,8 @@ true, the most recently started container will have startTime set. More info:
 https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-and-container-status */
 @K8sDslMarker
 fun Podstatus.initContainerStatuses(init: Containerstatus.() -> Unit) {
-  this as Podstatus_core_v1Impl
-  Containerstatus_core_v1Impl(this)
+  this as Podstatus_core_v1_k8s1_17Impl
+  Containerstatus_core_v1_k8s1_17Impl(this)
     .also { initContainerStatuses = initContainerStatuses?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -5642,8 +5393,8 @@ field. Pods may be allocated at most 1 value for each of IPv4 and IPv6. This lis
 yet. */
 @K8sDslMarker
 fun Podstatus.podIPs(init: PodIP.() -> Unit) {
-  this as Podstatus_core_v1Impl
-  PodIP_core_v1Impl(this)
+  this as Podstatus_core_v1_k8s1_17Impl
+  PodIP_core_v1_k8s1_17Impl(this)
     .also { podIPs = podIPs?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -5652,8 +5403,8 @@ fun Podstatus.podIPs(init: PodIP.() -> Unit) {
 container image(s) for the pod. */
 @K8sDslMarker
 fun Podstatus.startTime(init: Time.() -> Unit) {
-  this as Podstatus_core_v1Impl
-  Time_meta_v1Impl(this)
+  this as Podstatus_core_v1_k8s1_17Impl
+  Time_meta_v1_k8s1_17Impl(this)
     .also { startTime = it }
     .apply(init)
 }
@@ -5662,8 +5413,8 @@ fun Podstatus.startTime(init: Time.() -> Unit) {
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata */
 @K8sDslMarker
 fun Podtemplatespec.metadata(init: ObjectMeta.() -> Unit) {
-  this as Podtemplatespec_core_v1Impl
-  ObjectMeta_meta_v1Impl(this)
+  this as Podtemplatespec_core_v1_k8s1_17Impl
+  ObjectMeta_meta_v1_k8s1_17Impl(this)
     .also { metadata = it }
     .apply(init)
 }
@@ -5672,8 +5423,8 @@ fun Podtemplatespec.metadata(init: ObjectMeta.() -> Unit) {
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status */
 @K8sDslMarker
 fun Podtemplatespec.spec(init: Podspec.() -> Unit) {
-  this as Podtemplatespec_core_v1Impl
-  Podspec_core_v1Impl(this)
+  this as Podtemplatespec_core_v1_k8s1_17Impl
+  Podspec_core_v1_k8s1_17Impl(this)
     .also { spec = it }
     .apply(init)
 }
@@ -5682,8 +5433,8 @@ fun Podtemplatespec.spec(init: Podspec.() -> Unit) {
 `type` is `"Limited"`. */
 @K8sDslMarker
 fun Prioritylevelconfigurationspec.limited(init: LimitedPriorityLevelConfiguration.() -> Unit) {
-  this as Prioritylevelconfigurationspec_flowcontrol_apiserver_k8s_io_v1alpha1Impl
-  LimitedPriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1alpha1Impl(this)
+  this as Prioritylevelconfigurationspec_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17Impl
+  LimitedPriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17Impl(this)
     .also { limited = it }
     .apply(init)
 }
@@ -5691,8 +5442,8 @@ fun Prioritylevelconfigurationspec.limited(init: LimitedPriorityLevelConfigurati
 /** `conditions` is the current state of "request-priority". */
 @K8sDslMarker
 fun Prioritylevelconfigurationstatus.conditions(init: PriorityLevelConfigurationCondition.() -> Unit) {
-  this as Prioritylevelconfigurationstatus_flowcontrol_apiserver_k8s_io_v1alpha1Impl
-  PriorityLevelConfigurationCondition_flowcontrol_apiserver_k8s_io_v1alpha1Impl(this)
+  this as Prioritylevelconfigurationstatus_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17Impl
+  PriorityLevelConfigurationCondition_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17Impl(this)
     .also { conditions = conditions?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -5702,8 +5453,8 @@ to be controlled by this replica set. It must match the pod template's labels. M
 https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors */
 @K8sDslMarker
 fun Replicasetspec.selector(init: LabelSelector.() -> Unit) {
-  this as Replicasetspec_apps_v1Impl
-  LabelSelector_meta_v1Impl(this)
+  this as Replicasetspec_apps_v1_k8s1_17Impl
+  LabelSelector_meta_v1_k8s1_17Impl(this)
     .also { selector = it }
     .apply(init)
 }
@@ -5712,8 +5463,8 @@ fun Replicasetspec.selector(init: LabelSelector.() -> Unit) {
 https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#pod-template */
 @K8sDslMarker
 fun Replicasetspec.template(init: Podtemplatespec.() -> Unit) {
-  this as Replicasetspec_apps_v1Impl
-  Podtemplatespec_core_v1Impl(this)
+  this as Replicasetspec_apps_v1_k8s1_17Impl
+  Podtemplatespec_core_v1_k8s1_17Impl(this)
     .also { template = it }
     .apply(init)
 }
@@ -5721,8 +5472,8 @@ fun Replicasetspec.template(init: Podtemplatespec.() -> Unit) {
 /** Represents the latest available observations of a replica set's current state. */
 @K8sDslMarker
 fun Replicasetstatus.conditions(init: ReplicaSetCondition.() -> Unit) {
-  this as Replicasetstatus_apps_v1Impl
-  ReplicaSetCondition_apps_v1Impl(this)
+  this as Replicasetstatus_apps_v1_k8s1_17Impl
+  ReplicaSetCondition_apps_v1_k8s1_17Impl(this)
     .also { conditions = conditions?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -5732,8 +5483,8 @@ precedence over a TemplateRef. More info:
 https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#pod-template */
 @K8sDslMarker
 fun Replicationcontrollerspec.template(init: Podtemplatespec.() -> Unit) {
-  this as Replicationcontrollerspec_core_v1Impl
-  Podtemplatespec_core_v1Impl(this)
+  this as Replicationcontrollerspec_core_v1_k8s1_17Impl
+  Podtemplatespec_core_v1_k8s1_17Impl(this)
     .also { template = it }
     .apply(init)
 }
@@ -5741,8 +5492,8 @@ fun Replicationcontrollerspec.template(init: Podtemplatespec.() -> Unit) {
 /** Represents the latest available observations of a replication controller's current state. */
 @K8sDslMarker
 fun Replicationcontrollerstatus.conditions(init: ReplicationControllerCondition.() -> Unit) {
-  this as Replicationcontrollerstatus_core_v1Impl
-  ReplicationControllerCondition_core_v1Impl(this)
+  this as Replicationcontrollerstatus_core_v1_k8s1_17Impl
+  ReplicationControllerCondition_core_v1_k8s1_17Impl(this)
     .also { conditions = conditions?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -5752,97 +5503,17 @@ using ScopeSelectorOperator in combination with possible values. For a resource 
 (if specified in spec), must be matched. */
 @K8sDslMarker
 fun Resourcequotaspec.scopeSelector(init: ScopeSelector.() -> Unit) {
-  this as Resourcequotaspec_core_v1Impl
-  ScopeSelector_core_v1Impl(this)
+  this as Resourcequotaspec_core_v1_k8s1_17Impl
+  ScopeSelector_core_v1_k8s1_17Impl(this)
     .also { scopeSelector = it }
     .apply(init)
-}
-
-/** The maximum number of DaemonSet pods that can be unavailable during the update. Value can be an absolute number (ex: 5)
-or a percentage of total number of DaemonSet pods at the start of the update (ex: 10%). Absolute number is calculated
-from percentage by rounding up. This cannot be 0. Default value is 1. Example: when this is set to 30%, at most 30% of
-the total number of nodes that should be running the daemon pod (i.e. status.desiredNumberScheduled) can have their pods
-stopped for an update at any given time. The update starts by stopping at most 30% of those DaemonSet pods and then
-brings up new DaemonSet pods in their place. Once the new pods are available, it then proceeds onto other DaemonSet
-pods, thus ensuring that at least 70% of original number of DaemonSet pods are available at all times during the update. */
-@K8sDslMarker
-fun Rollingupdatedaemonset.maxUnavailable(percentage: String) {
-  this as Rollingupdatedaemonset_apps_v1Impl
-  de.loosetie.k8s.dsl.types.IntOrPercentage(percentage)
-    .also { maxUnavailable = it }
-}
-
-/** The maximum number of DaemonSet pods that can be unavailable during the update. Value can be an absolute number (ex: 5)
-or a percentage of total number of DaemonSet pods at the start of the update (ex: 10%). Absolute number is calculated
-from percentage by rounding up. This cannot be 0. Default value is 1. Example: when this is set to 30%, at most 30% of
-the total number of nodes that should be running the daemon pod (i.e. status.desiredNumberScheduled) can have their pods
-stopped for an update at any given time. The update starts by stopping at most 30% of those DaemonSet pods and then
-brings up new DaemonSet pods in their place. Once the new pods are available, it then proceeds onto other DaemonSet
-pods, thus ensuring that at least 70% of original number of DaemonSet pods are available at all times during the update. */
-@K8sDslMarker
-fun Rollingupdatedaemonset.maxUnavailable(int: Int) {
-  this as Rollingupdatedaemonset_apps_v1Impl
-  de.loosetie.k8s.dsl.types.IntOrPercentage(int)
-    .also { maxUnavailable = it }
-}
-
-/** The maximum number of pods that can be scheduled above the desired number of pods. Value can be an absolute number (ex:
-5) or a percentage of desired pods (ex: 10%). This can not be 0 if MaxUnavailable is 0. Absolute number is calculated
-from percentage by rounding up. Defaults to 25%. Example: when this is set to 30%, the new ReplicaSet can be scaled up
-immediately when the rolling update starts, such that the total number of old and new pods do not exceed 130% of desired
-pods. Once old pods have been killed, new ReplicaSet can be scaled up further, ensuring that total number of pods
-running at any time during the update is at most 130% of desired pods. */
-@K8sDslMarker
-fun Rollingupdatedeployment.maxSurge(percentage: String) {
-  this as Rollingupdatedeployment_apps_v1Impl
-  de.loosetie.k8s.dsl.types.IntOrPercentage(percentage)
-    .also { maxSurge = it }
-}
-
-/** The maximum number of pods that can be scheduled above the desired number of pods. Value can be an absolute number (ex:
-5) or a percentage of desired pods (ex: 10%). This can not be 0 if MaxUnavailable is 0. Absolute number is calculated
-from percentage by rounding up. Defaults to 25%. Example: when this is set to 30%, the new ReplicaSet can be scaled up
-immediately when the rolling update starts, such that the total number of old and new pods do not exceed 130% of desired
-pods. Once old pods have been killed, new ReplicaSet can be scaled up further, ensuring that total number of pods
-running at any time during the update is at most 130% of desired pods. */
-@K8sDslMarker
-fun Rollingupdatedeployment.maxSurge(int: Int) {
-  this as Rollingupdatedeployment_apps_v1Impl
-  de.loosetie.k8s.dsl.types.IntOrPercentage(int)
-    .also { maxSurge = it }
-}
-
-/** The maximum number of pods that can be unavailable during the update. Value can be an absolute number (ex: 5) or a
-percentage of desired pods (ex: 10%). Absolute number is calculated from percentage by rounding down. This can not be 0
-if MaxSurge is 0. Defaults to 25%. Example: when this is set to 30%, the old ReplicaSet can be scaled down to 70% of
-desired pods immediately when the rolling update starts. Once new pods are ready, old ReplicaSet can be scaled down
-further, followed by scaling up the new ReplicaSet, ensuring that the total number of pods available at all times during
-the update is at least 70% of desired pods. */
-@K8sDslMarker
-fun Rollingupdatedeployment.maxUnavailable(percentage: String) {
-  this as Rollingupdatedeployment_apps_v1Impl
-  de.loosetie.k8s.dsl.types.IntOrPercentage(percentage)
-    .also { maxUnavailable = it }
-}
-
-/** The maximum number of pods that can be unavailable during the update. Value can be an absolute number (ex: 5) or a
-percentage of desired pods (ex: 10%). Absolute number is calculated from percentage by rounding down. This can not be 0
-if MaxSurge is 0. Defaults to 25%. Example: when this is set to 30%, the old ReplicaSet can be scaled down to 70% of
-desired pods immediately when the rolling update starts. Once new pods are ready, old ReplicaSet can be scaled down
-further, followed by scaling up the new ReplicaSet, ensuring that the total number of pods available at all times during
-the update is at least 70% of desired pods. */
-@K8sDslMarker
-fun Rollingupdatedeployment.maxUnavailable(int: Int) {
-  this as Rollingupdatedeployment_apps_v1Impl
-  de.loosetie.k8s.dsl.types.IntOrPercentage(int)
-    .also { maxUnavailable = it }
 }
 
 /** NonResourceAttributes describes information for a non-resource access request */
 @K8sDslMarker
 fun Selfsubjectaccessreviewspec.nonResourceAttributes(init: NonResourceAttributes.() -> Unit) {
-  this as Selfsubjectaccessreviewspec_authorization_k8s_io_v1Impl
-  NonResourceAttributes_authorization_k8s_io_v1Impl(this)
+  this as Selfsubjectaccessreviewspec_authorization_k8s_io_v1_k8s1_17Impl
+  NonResourceAttributes_authorization_k8s_io_v1_k8s1_17Impl(this)
     .also { nonResourceAttributes = it }
     .apply(init)
 }
@@ -5850,8 +5521,8 @@ fun Selfsubjectaccessreviewspec.nonResourceAttributes(init: NonResourceAttribute
 /** ResourceAuthorizationAttributes describes information for a resource access request */
 @K8sDslMarker
 fun Selfsubjectaccessreviewspec.resourceAttributes(init: ResourceAttributes.() -> Unit) {
-  this as Selfsubjectaccessreviewspec_authorization_k8s_io_v1Impl
-  ResourceAttributes_authorization_k8s_io_v1Impl(this)
+  this as Selfsubjectaccessreviewspec_authorization_k8s_io_v1_k8s1_17Impl
+  ResourceAttributes_authorization_k8s_io_v1_k8s1_17Impl(this)
     .also { resourceAttributes = it }
     .apply(init)
 }
@@ -5860,8 +5531,8 @@ fun Selfsubjectaccessreviewspec.resourceAttributes(init: ResourceAttributes.() -
 https://kubernetes.io/docs/concepts/services-networking/service/#virtual-ips-and-service-proxies */
 @K8sDslMarker
 fun Servicespec.ports(init: ServicePort.() -> Unit) {
-  this as Servicespec_core_v1Impl
-  ServicePort_core_v1Impl(this)
+  this as Servicespec_core_v1_k8s1_17Impl
+  ServicePort_core_v1_k8s1_17Impl(this)
     .also { ports = ports?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -5869,8 +5540,8 @@ fun Servicespec.ports(init: ServicePort.() -> Unit) {
 /** sessionAffinityConfig contains the configurations of session affinity. */
 @K8sDslMarker
 fun Servicespec.sessionAffinityConfig(init: SessionAffinityConfig.() -> Unit) {
-  this as Servicespec_core_v1Impl
-  SessionAffinityConfig_core_v1Impl(this)
+  this as Servicespec_core_v1_k8s1_17Impl
+  SessionAffinityConfig_core_v1_k8s1_17Impl(this)
     .also { sessionAffinityConfig = it }
     .apply(init)
 }
@@ -5878,8 +5549,8 @@ fun Servicespec.sessionAffinityConfig(init: SessionAffinityConfig.() -> Unit) {
 /** LoadBalancer contains the current status of the load-balancer, if one is present. */
 @K8sDslMarker
 fun Servicestatus.loadBalancer(init: LoadBalancerStatus.() -> Unit) {
-  this as Servicestatus_core_v1Impl
-  LoadBalancerStatus_core_v1Impl(this)
+  this as Servicestatus_core_v1_k8s1_17Impl
+  LoadBalancerStatus_core_v1_k8s1_17Impl(this)
     .also { loadBalancer = it }
     .apply(init)
 }
@@ -5888,8 +5559,8 @@ fun Servicestatus.loadBalancer(init: LoadBalancerStatus.() -> Unit) {
 info: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors */
 @K8sDslMarker
 fun Statefulsetspec.selector(init: LabelSelector.() -> Unit) {
-  this as Statefulsetspec_apps_v1Impl
-  LabelSelector_meta_v1Impl(this)
+  this as Statefulsetspec_apps_v1_k8s1_17Impl
+  LabelSelector_meta_v1_k8s1_17Impl(this)
     .also { selector = it }
     .apply(init)
 }
@@ -5898,8 +5569,8 @@ fun Statefulsetspec.selector(init: LabelSelector.() -> Unit) {
 stamped out by the StatefulSet will fulfill this Template, but have a unique identity from the rest of the StatefulSet. */
 @K8sDslMarker
 fun Statefulsetspec.template(init: Podtemplatespec.() -> Unit) {
-  this as Statefulsetspec_apps_v1Impl
-  Podtemplatespec_core_v1Impl(this)
+  this as Statefulsetspec_apps_v1_k8s1_17Impl
+  Podtemplatespec_core_v1_k8s1_17Impl(this)
     .also { template = it }
     .apply(init)
 }
@@ -5908,8 +5579,8 @@ fun Statefulsetspec.template(init: Podtemplatespec.() -> Unit) {
 revision is made to Template. */
 @K8sDslMarker
 fun Statefulsetspec.updateStrategy(init: StatefulSetUpdateStrategy.() -> Unit) {
-  this as Statefulsetspec_apps_v1Impl
-  StatefulSetUpdateStrategy_apps_v1Impl(this)
+  this as Statefulsetspec_apps_v1_k8s1_17Impl
+  StatefulSetUpdateStrategy_apps_v1_k8s1_17Impl(this)
     .also { updateStrategy = it }
     .apply(init)
 }
@@ -5920,8 +5591,8 @@ have at least one matching (by name) volumeMount in one container in the templat
 over any volumes in the template, with the same name. */
 @K8sDslMarker
 fun Statefulsetspec.volumeClaimTemplates(init: PersistentVolumeClaim.() -> Unit) {
-  this as Statefulsetspec_apps_v1Impl
-  PersistentVolumeClaim_core_v1Impl(this)
+  this as Statefulsetspec_apps_v1_k8s1_17Impl
+  PersistentVolumeClaim_core_v1_k8s1_17Impl(this)
     .also { volumeClaimTemplates = volumeClaimTemplates?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -5929,8 +5600,8 @@ fun Statefulsetspec.volumeClaimTemplates(init: PersistentVolumeClaim.() -> Unit)
 /** Represents the latest available observations of a statefulset's current state. */
 @K8sDslMarker
 fun Statefulsetstatus.conditions(init: StatefulSetCondition.() -> Unit) {
-  this as Statefulsetstatus_apps_v1Impl
-  StatefulSetCondition_apps_v1Impl(this)
+  this as Statefulsetstatus_apps_v1_k8s1_17Impl
+  StatefulSetCondition_apps_v1_k8s1_17Impl(this)
     .also { conditions = conditions?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
 }
@@ -5938,8 +5609,8 @@ fun Statefulsetstatus.conditions(init: StatefulSetCondition.() -> Unit) {
 /** NonResourceAttributes describes information for a non-resource access request */
 @K8sDslMarker
 fun Subjectaccessreviewspec.nonResourceAttributes(init: NonResourceAttributes.() -> Unit) {
-  this as Subjectaccessreviewspec_authorization_k8s_io_v1Impl
-  NonResourceAttributes_authorization_k8s_io_v1Impl(this)
+  this as Subjectaccessreviewspec_authorization_k8s_io_v1_k8s1_17Impl
+  NonResourceAttributes_authorization_k8s_io_v1_k8s1_17Impl(this)
     .also { nonResourceAttributes = it }
     .apply(init)
 }
@@ -5947,8 +5618,8 @@ fun Subjectaccessreviewspec.nonResourceAttributes(init: NonResourceAttributes.()
 /** ResourceAuthorizationAttributes describes information for a resource access request */
 @K8sDslMarker
 fun Subjectaccessreviewspec.resourceAttributes(init: ResourceAttributes.() -> Unit) {
-  this as Subjectaccessreviewspec_authorization_k8s_io_v1Impl
-  ResourceAttributes_authorization_k8s_io_v1Impl(this)
+  this as Subjectaccessreviewspec_authorization_k8s_io_v1_k8s1_17Impl
+  ResourceAttributes_authorization_k8s_io_v1_k8s1_17Impl(this)
     .also { resourceAttributes = it }
     .apply(init)
 }
@@ -5958,8 +5629,8 @@ the bound object exists. NOTE: The API server's TokenReview endpoint will valida
 audiences may not. Keep ExpirationSeconds small if you want prompt revocation. */
 @K8sDslMarker
 fun Tokenrequestspec.boundObjectRef(init: BoundObjectReference.() -> Unit) {
-  this as Tokenrequestspec_authentication_k8s_io_v1Impl
-  BoundObjectReference_authentication_k8s_io_v1Impl(this)
+  this as Tokenrequestspec_authentication_k8s_io_v1_k8s1_17Impl
+  BoundObjectReference_authentication_k8s_io_v1_k8s1_17Impl(this)
     .also { boundObjectRef = it }
     .apply(init)
 }
@@ -5967,8 +5638,8 @@ fun Tokenrequestspec.boundObjectRef(init: BoundObjectReference.() -> Unit) {
 /** ExpirationTimestamp is the time of expiration of the returned token. */
 @K8sDslMarker
 fun Tokenrequeststatus.expirationTimestamp(init: Time.() -> Unit) {
-  this as Tokenrequeststatus_authentication_k8s_io_v1Impl
-  Time_meta_v1Impl(this)
+  this as Tokenrequeststatus_authentication_k8s_io_v1_k8s1_17Impl
+  Time_meta_v1_k8s1_17Impl(this)
     .also { expirationTimestamp = it }
     .apply(init)
 }
@@ -5976,8 +5647,8 @@ fun Tokenrequeststatus.expirationTimestamp(init: Time.() -> Unit) {
 /** User is the UserInfo associated with the provided token. */
 @K8sDslMarker
 fun Tokenreviewstatus.user(init: UserInfo.() -> Unit) {
-  this as Tokenreviewstatus_authentication_k8s_io_v1Impl
-  UserInfo_authentication_k8s_io_v1Impl(this)
+  this as Tokenreviewstatus_authentication_k8s_io_v1_k8s1_17Impl
+  UserInfo_authentication_k8s_io_v1_k8s1_17Impl(this)
     .also { user = it }
     .apply(init)
 }
@@ -5985,8 +5656,8 @@ fun Tokenreviewstatus.user(init: UserInfo.() -> Unit) {
 /** Source represents the volume that should be attached. */
 @K8sDslMarker
 fun Volumeattachmentspec.source(init: VolumeAttachmentSource.() -> Unit) {
-  this as Volumeattachmentspec_storage_k8s_io_v1Impl
-  VolumeAttachmentSource_storage_k8s_io_v1Impl(this)
+  this as Volumeattachmentspec_storage_k8s_io_v1_k8s1_17Impl
+  VolumeAttachmentSource_storage_k8s_io_v1_k8s1_17Impl(this)
     .also { source = it }
     .apply(init)
 }
@@ -5995,8 +5666,8 @@ fun Volumeattachmentspec.source(init: VolumeAttachmentSource.() -> Unit) {
 attach operation, i.e. the external-attacher. */
 @K8sDslMarker
 fun Volumeattachmentstatus.attachError(init: VolumeError.() -> Unit) {
-  this as Volumeattachmentstatus_storage_k8s_io_v1Impl
-  VolumeError_storage_k8s_io_v1Impl(this)
+  this as Volumeattachmentstatus_storage_k8s_io_v1_k8s1_17Impl
+  VolumeError_storage_k8s_io_v1_k8s1_17Impl(this)
     .also { attachError = it }
     .apply(init)
 }
@@ -6005,8 +5676,8 @@ fun Volumeattachmentstatus.attachError(init: VolumeError.() -> Unit) {
 detach operation, i.e. the external-attacher. */
 @K8sDslMarker
 fun Volumeattachmentstatus.detachError(init: VolumeError.() -> Unit) {
-  this as Volumeattachmentstatus_storage_k8s_io_v1Impl
-  VolumeError_storage_k8s_io_v1Impl(this)
+  this as Volumeattachmentstatus_storage_k8s_io_v1_k8s1_17Impl
+  VolumeError_storage_k8s_io_v1_k8s1_17Impl(this)
     .also { detachError = it }
     .apply(init)
 }

@@ -17,8 +17,11 @@ interface EventSeries_core_v1_k8s1_16: K8sManifest {
 typealias EventSeries_core_v1_k8s1_17 = EventSeries_core_v1_k8s1_16       
 typealias EventSeries_core_v1_k8s1_18 = EventSeries_core_v1_k8s1_17       
 @K8sDslMarker
-interface EventSeries_core_v1_k8s1_19: EventSeries_core_v1_k8s1_18 {
-  
+interface EventSeries_core_v1_k8s1_19: K8sManifest {
+  /** Number of occurrences in this series up to the last heartbeat time */
+  @K8sDslMarker var count: Int?
+  /** Time of the last occurrence observed */
+  val lastObservedTime: MicroTime_meta_v1_k8s1_19?
 }      
 typealias EventSeries_core_v1_k8s1_20 = EventSeries_core_v1_k8s1_19       
 typealias EventSeries_core_v1_k8s1_21 = EventSeries_core_v1_k8s1_20 
