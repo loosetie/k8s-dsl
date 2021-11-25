@@ -16,7 +16,7 @@ class CSIVolumeSource_core_v1_k8s1_16Impl(
   override var fsType: String? = null
   override var nodePublishSecretRef: LocalObjectReference_core_v1_k8s1_16? = null
   override var readOnly: Boolean? = null
-  override var volumeAttributes: Any? = null
+  override var volumeAttributes: Map<String, String>? = null
 }
 typealias CSIVolumeSource_core_v1_k8s1_17Impl = CSIVolumeSource_core_v1_k8s1_16Impl
 typealias CSIVolumeSource_core_v1_k8s1_18Impl = CSIVolumeSource_core_v1_k8s1_17Impl

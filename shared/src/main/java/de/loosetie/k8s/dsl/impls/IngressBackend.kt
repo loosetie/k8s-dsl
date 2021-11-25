@@ -13,6 +13,7 @@ class IngressBackend_networking_k8s_io_v1beta1_k8s1_16Impl(
 )
 : IngressBackend_networking_k8s_io_v1beta1_k8s1_16, HasParent {
   override var serviceName: String? = null
+  override var servicePort: de.loosetie.k8s.dsl.types.IntOrString? = null
 }
 typealias IngressBackend_networking_k8s_io_v1beta1_k8s1_17Impl = IngressBackend_networking_k8s_io_v1beta1_k8s1_16Impl
 @JsonPropertyOrder("resource", "serviceName", "servicePort")
@@ -23,6 +24,7 @@ class IngressBackend_networking_k8s_io_v1beta1_k8s1_18Impl(
 : IngressBackend_networking_k8s_io_v1beta1_k8s1_18, HasParent {
   override var resource: TypedLocalObjectReference_core_v1_k8s1_18? = null
   override var serviceName: String? = null
+  override var servicePort: de.loosetie.k8s.dsl.types.IntOrString? = null
 }
 @JsonPropertyOrder("resource", "service")
 class IngressBackend_networking_k8s_io_v1_k8s1_19Impl(

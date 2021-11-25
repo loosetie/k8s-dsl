@@ -27,7 +27,7 @@ kubernetes.io/hostname: the value indicates the hostname of the node where the e
 the corresponding node label. `*` topology.kubernetes.io/zone: the value indicates the zone where the endpoint is
 located. This should match the corresponding node label. `*` topology.kubernetes.io/region: the value indicates the
 region where the endpoint is located. This should match the corresponding node label. */
-  @K8sDslMarker var topology: Any?
+  @K8sDslMarker var topology: Map<String, String>?
 }      
 
 
@@ -52,7 +52,7 @@ kubernetes.io/hostname: the value indicates the hostname of the node where the e
 the corresponding node label. `*` topology.kubernetes.io/zone: the value indicates the zone where the endpoint is
 located. This should match the corresponding node label. `*` topology.kubernetes.io/region: the value indicates the
 region where the endpoint is located. This should match the corresponding node label. */
-  @K8sDslMarker var topology: Any?
+  @K8sDslMarker var topology: Map<String, String>?
 }      
 
 
@@ -79,7 +79,7 @@ the corresponding node label. `*` topology.kubernetes.io/zone: the value indicat
 located. This should match the corresponding node label. `*` topology.kubernetes.io/region: the value indicates the
 region where the endpoint is located. This should match the corresponding node label. This field is deprecated and will
 be removed in future api versions. */
-  override var topology: Any?
+  override var topology: Map<String, String>?
 }      
 @K8sDslMarker
 interface Endpoint_discovery_k8s_io_v1_k8s1_21: K8sManifest {
@@ -93,7 +93,7 @@ must contain at least one address but no more than 100. */
 when the v1beta1 API is removed (no sooner than kubernetes v1.24). While this field can hold values, it is not writable
 through the v1 API, and any attempts to write to it will be silently ignored. Topology information can be found in the
 zone and nodeName fields instead. */
-  @K8sDslMarker var deprecatedTopology: Any?
+  @K8sDslMarker var deprecatedTopology: Map<String, String>?
   /** hints contains information associated with how an endpoint should be consumed. */
   val hints: EndpointHints_discovery_k8s_io_v1_k8s1_21?
   /** hostname of this endpoint. This field may be used by consumers of endpoints to distinguish endpoints from each other

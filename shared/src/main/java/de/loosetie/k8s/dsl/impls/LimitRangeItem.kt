@@ -12,11 +12,11 @@ class LimitRangeItem_core_v1_k8s1_16Impl(
   override val parent: K8sManifest? = null
 )
 : LimitRangeItem_core_v1_k8s1_16, HasParent {
-  override var default: Any? = null
-  override var defaultRequest: Any? = null
-  override var max: Any? = null
-  override var maxLimitRequestRatio: Any? = null
-  override var min: Any? = null
+  override var default: de.loosetie.k8s.dsl.types.CpuMem? = null
+  override var defaultRequest: de.loosetie.k8s.dsl.types.CpuMem? = null
+  override var max: de.loosetie.k8s.dsl.types.CpuMem? = null
+  override var maxLimitRequestRatio: de.loosetie.k8s.dsl.types.CpuMem? = null
+  override var min: de.loosetie.k8s.dsl.types.CpuMem? = null
   override var type: String? = null
 }
 typealias LimitRangeItem_core_v1_k8s1_17Impl = LimitRangeItem_core_v1_k8s1_16Impl

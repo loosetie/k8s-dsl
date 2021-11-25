@@ -12,6 +12,8 @@ class Poddisruptionbudgetspec_policy_v1beta1_k8s1_16Impl(
   override val parent: K8sManifest? = null
 )
 : Poddisruptionbudgetspec_policy_v1beta1_k8s1_16, HasParent {
+  override var maxUnavailable: de.loosetie.k8s.dsl.types.IntOrPercentage? = null
+  override var minAvailable: de.loosetie.k8s.dsl.types.IntOrPercentage? = null
   override var selector: LabelSelector_meta_v1_k8s1_16? = null
 }
 typealias Poddisruptionbudgetspec_policy_v1beta1_k8s1_17Impl = Poddisruptionbudgetspec_policy_v1beta1_k8s1_16Impl

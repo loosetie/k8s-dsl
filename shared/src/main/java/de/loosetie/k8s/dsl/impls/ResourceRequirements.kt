@@ -12,8 +12,8 @@ class ResourceRequirements_core_v1_k8s1_16Impl(
   override val parent: K8sManifest? = null
 )
 : ResourceRequirements_core_v1_k8s1_16, HasParent {
-  override var limits: Any? = null
-  override var requests: Any? = null
+  override var limits: de.loosetie.k8s.dsl.types.LimitsAndRequests? = null
+  override var requests: de.loosetie.k8s.dsl.types.LimitsAndRequests? = null
 }
 typealias ResourceRequirements_core_v1_k8s1_17Impl = ResourceRequirements_core_v1_k8s1_16Impl
 typealias ResourceRequirements_core_v1_k8s1_18Impl = ResourceRequirements_core_v1_k8s1_17Impl
@@ -25,6 +25,6 @@ class ResourceRequirements_core_v1_k8s1_21Impl(
   override val parent: K8sManifest? = null
 )
 : ResourceRequirements_core_v1_k8s1_21, HasParent {
-  override var limits: Any? = null
-  override var requests: Any? = null
+  override var limits: de.loosetie.k8s.dsl.types.LimitsAndRequests? = null
+  override var requests: de.loosetie.k8s.dsl.types.LimitsAndRequests? = null
 }

@@ -12,6 +12,7 @@ class NetworkPolicyPort_networking_k8s_io_v1_k8s1_16Impl(
   override val parent: K8sManifest? = null
 )
 : NetworkPolicyPort_networking_k8s_io_v1_k8s1_16, HasParent {
+  override var port: de.loosetie.k8s.dsl.types.IntOrString? = null
   override var protocol: String? = null
 }
 typealias NetworkPolicyPort_networking_k8s_io_v1_k8s1_17Impl = NetworkPolicyPort_networking_k8s_io_v1_k8s1_16Impl
@@ -25,5 +26,6 @@ class NetworkPolicyPort_networking_k8s_io_v1_k8s1_21Impl(
 )
 : NetworkPolicyPort_networking_k8s_io_v1_k8s1_21, HasParent {
   override var endPort: Int? = null
+  override var port: de.loosetie.k8s.dsl.types.IntOrString? = null
   override var protocol: String? = null
 }

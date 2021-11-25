@@ -16,6 +16,7 @@ class ServicePort_core_v1_k8s1_16Impl(
   override var nodePort: Int? = null
   override var port: Int? = null
   override var protocol: String? = null
+  override var targetPort: de.loosetie.k8s.dsl.types.IntOrString? = null
 }
 typealias ServicePort_core_v1_k8s1_17Impl = ServicePort_core_v1_k8s1_16Impl
 @JsonPropertyOrder("name", "appProtocol", "nodePort", "port", "protocol", "targetPort")
@@ -29,6 +30,7 @@ class ServicePort_core_v1_k8s1_18Impl(
   override var nodePort: Int? = null
   override var port: Int? = null
   override var protocol: String? = null
+  override var targetPort: de.loosetie.k8s.dsl.types.IntOrString? = null
 }
 @JsonPropertyOrder("name", "appProtocol", "nodePort", "port", "protocol", "targetPort")
 class ServicePort_core_v1_k8s1_19Impl(
@@ -41,6 +43,7 @@ class ServicePort_core_v1_k8s1_19Impl(
   override var nodePort: Int? = null
   override var port: Int? = null
   override var protocol: String? = null
+  override var targetPort: de.loosetie.k8s.dsl.types.IntOrString? = null
 }
 @JsonPropertyOrder("name", "appProtocol", "nodePort", "port", "protocol", "targetPort")
 class ServicePort_core_v1_k8s1_20Impl(
@@ -53,5 +56,6 @@ class ServicePort_core_v1_k8s1_20Impl(
   override var nodePort: Int? = null
   override var port: Int? = null
   override var protocol: String? = null
+  override var targetPort: de.loosetie.k8s.dsl.types.IntOrString? = null
 }
 typealias ServicePort_core_v1_k8s1_21Impl = ServicePort_core_v1_k8s1_20Impl

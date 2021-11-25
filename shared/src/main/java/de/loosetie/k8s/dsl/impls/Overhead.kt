@@ -12,7 +12,7 @@ class Overhead_node_k8s_io_v1beta1_k8s1_16Impl(
   override val parent: K8sManifest? = null
 )
 : Overhead_node_k8s_io_v1beta1_k8s1_16, HasParent {
-  override var podFixed: Any? = null
+  override var podFixed: de.loosetie.k8s.dsl.types.LimitsAndRequests? = null
 }
 typealias Overhead_node_k8s_io_v1beta1_k8s1_17Impl = Overhead_node_k8s_io_v1beta1_k8s1_16Impl
 typealias Overhead_node_k8s_io_v1beta1_k8s1_18Impl = Overhead_node_k8s_io_v1beta1_k8s1_17Impl
@@ -23,7 +23,7 @@ class Overhead_node_k8s_io_v1_k8s1_20Impl(
   override val parent: K8sManifest? = null
 )
 : Overhead_node_k8s_io_v1_k8s1_20, HasParent {
-  override var podFixed: Any? = null
+  override var podFixed: de.loosetie.k8s.dsl.types.LimitsAndRequests? = null
 }
 
 

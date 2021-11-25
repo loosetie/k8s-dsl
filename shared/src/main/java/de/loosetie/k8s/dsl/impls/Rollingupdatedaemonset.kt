@@ -12,7 +12,7 @@ class Rollingupdatedaemonset_apps_v1_k8s1_16Impl(
   override val parent: K8sManifest? = null
 )
 : Rollingupdatedaemonset_apps_v1_k8s1_16, HasParent {
-  
+  override var maxUnavailable: de.loosetie.k8s.dsl.types.IntOrPercentage? = null
 }
 typealias Rollingupdatedaemonset_apps_v1_k8s1_17Impl = Rollingupdatedaemonset_apps_v1_k8s1_16Impl
 typealias Rollingupdatedaemonset_apps_v1_k8s1_18Impl = Rollingupdatedaemonset_apps_v1_k8s1_17Impl
@@ -24,5 +24,5 @@ class Rollingupdatedaemonset_apps_v1_k8s1_21Impl(
   override val parent: K8sManifest? = null
 )
 : Rollingupdatedaemonset_apps_v1_k8s1_21, HasParent {
-  
+  override var maxUnavailable: de.loosetie.k8s.dsl.types.IntOrPercentage? = null
 }

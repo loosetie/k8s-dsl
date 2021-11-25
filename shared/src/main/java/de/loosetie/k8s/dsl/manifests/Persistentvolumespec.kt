@@ -19,7 +19,7 @@ the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselast
   val azureFile: AzureFilePersistentVolumeSource_core_v1_k8s1_16?
   /** A description of the persistent volume's resources and capacity. More info:
 https://kubernetes.io/docs/concepts/storage/persistent-volumes#capacity */
-  @K8sDslMarker var capacity: Any?
+  var capacity: de.loosetie.k8s.dsl.types.Capacity?
   /** CephFS represents a Ceph FS mount on the host that shares a pod's lifetime */
   val cephfs: CephFSPersistentVolumeSource_core_v1_k8s1_16?
   /** Cinder represents a cinder volume attached and mounted on kubelets host machine. More info:

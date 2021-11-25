@@ -12,7 +12,7 @@ interface Scalestatus_apps_v1beta1_k8s1_17: K8sManifest {
   @K8sDslMarker var replicas: Int?
   /** label query over pods that should match the replicas count. More info:
 http://kubernetes.io/docs/user-guide/labels#label-selectors */
-  @K8sDslMarker var selector: Any?
+  @K8sDslMarker var selector: Map<String, String>?
   /** label selector for pods that should match the replicas count. This is a serializated version of both map-based and more
 expressive set-based selectors. This is done to avoid introspection in the clients. The string will be in the same
 format as the query-param syntax. If the target type only supports map-based selectors, both this field and map-based

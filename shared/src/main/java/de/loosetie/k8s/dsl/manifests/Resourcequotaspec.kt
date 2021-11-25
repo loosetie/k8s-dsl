@@ -9,7 +9,7 @@ import de.loosetie.k8s.dsl.HasMetadata
 interface Resourcequotaspec_core_v1_k8s1_16: K8sManifest {
   /** hard is the set of desired hard limits for each named resource. More info:
 https://kubernetes.io/docs/concepts/policy/resource-quotas/ */
-  @K8sDslMarker var hard: Any?
+  @K8sDslMarker var hard: Map<String, de.loosetie.k8s.dsl.types.DoubleOrString>?
   /** scopeSelector is also a collection of filters like scopes that must match each object tracked by a quota but expressed
 using ScopeSelectorOperator in combination with possible values. For a resource to match, both scopes AND scopeSelector
 (if specified in spec), must be matched. */

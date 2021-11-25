@@ -10,7 +10,7 @@ interface IngressBackend_networking_k8s_io_v1beta1_k8s1_16: K8sManifest {
   /** Specifies the name of the referenced service. */
   @K8sDslMarker var serviceName: String?
   /** Specifies the port of the referenced service. */
-  // val servicePort: None
+  var servicePort: de.loosetie.k8s.dsl.types.IntOrString?
 }      
 typealias IngressBackend_networking_k8s_io_v1beta1_k8s1_17 = IngressBackend_networking_k8s_io_v1beta1_k8s1_16       
 @K8sDslMarker

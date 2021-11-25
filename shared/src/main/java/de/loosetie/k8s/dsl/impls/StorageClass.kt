@@ -16,7 +16,7 @@ class StorageClass_storage_k8s_io_v1_k8s1_16Impl(
   override var allowVolumeExpansion: Boolean? = null
   override var allowedTopologies: List<TopologySelectorTerm_core_v1_k8s1_16>? = null
   override var mountOptions: List<String>? = null
-  override var parameters: Any? = null
+  override var parameters: Map<String, String>? = null
   override var provisioner: String? = null
   override var reclaimPolicy: String? = null
   override var volumeBindingMode: String? = null
@@ -31,7 +31,7 @@ class StorageClass_storage_k8s_io_v1_k8s1_17Impl(
   override var allowVolumeExpansion: Boolean? = null
   override var allowedTopologies: List<TopologySelectorTerm_core_v1_k8s1_17>? = null
   override var mountOptions: List<String>? = null
-  override var parameters: Any? = null
+  override var parameters: Map<String, String>? = null
   override var provisioner: String? = null
   override var reclaimPolicy: String? = null
   override var volumeBindingMode: String? = null

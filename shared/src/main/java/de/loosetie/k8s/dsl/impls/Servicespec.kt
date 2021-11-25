@@ -22,7 +22,7 @@ class Servicespec_core_v1_k8s1_16Impl(
   override var loadBalancerSourceRanges: List<String>? = null
   override var ports: List<ServicePort_core_v1_k8s1_16>? = null
   override var publishNotReadyAddresses: Boolean? = null
-  override var selector: Any? = null
+  override var selector: Map<String, String>? = null
   override var sessionAffinity: String? = null
   override var sessionAffinityConfig: SessionAffinityConfig_core_v1_k8s1_16? = null
   override var type: String? = null
@@ -43,7 +43,7 @@ class Servicespec_core_v1_k8s1_17Impl(
   override var loadBalancerSourceRanges: List<String>? = null
   override var ports: List<ServicePort_core_v1_k8s1_17>? = null
   override var publishNotReadyAddresses: Boolean? = null
-  override var selector: Any? = null
+  override var selector: Map<String, String>? = null
   override var sessionAffinity: String? = null
   override var sessionAffinityConfig: SessionAffinityConfig_core_v1_k8s1_17? = null
   override var topologyKeys: List<String>? = null
@@ -66,7 +66,7 @@ class Servicespec_core_v1_k8s1_19Impl(
   override var loadBalancerSourceRanges: List<String>? = null
   override var ports: List<ServicePort_core_v1_k8s1_19>? = null
   override var publishNotReadyAddresses: Boolean? = null
-  override var selector: Any? = null
+  override var selector: Map<String, String>? = null
   override var sessionAffinity: String? = null
   override var sessionAffinityConfig: SessionAffinityConfig_core_v1_k8s1_19? = null
   override var topologyKeys: List<String>? = null
@@ -91,7 +91,7 @@ class Servicespec_core_v1_k8s1_20Impl(
   override var loadBalancerSourceRanges: List<String>? = null
   override var ports: List<ServicePort_core_v1_k8s1_20>? = null
   override var publishNotReadyAddresses: Boolean? = null
-  override var selector: Any? = null
+  override var selector: Map<String, String>? = null
   override var sessionAffinity: String? = null
   override var sessionAffinityConfig: SessionAffinityConfig_core_v1_k8s1_20? = null
   override var topologyKeys: List<String>? = null
@@ -118,7 +118,7 @@ class Servicespec_core_v1_k8s1_21Impl(
   override var loadBalancerSourceRanges: List<String>? = null
   override var ports: List<ServicePort_core_v1_k8s1_21>? = null
   override var publishNotReadyAddresses: Boolean? = null
-  override var selector: Any? = null
+  override var selector: Map<String, String>? = null
   override var sessionAffinity: String? = null
   override var sessionAffinityConfig: SessionAffinityConfig_core_v1_k8s1_21? = null
   override var topologyKeys: List<String>? = null

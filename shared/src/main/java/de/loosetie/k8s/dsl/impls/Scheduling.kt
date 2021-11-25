@@ -12,7 +12,7 @@ class Scheduling_node_k8s_io_v1beta1_k8s1_16Impl(
   override val parent: K8sManifest? = null
 )
 : Scheduling_node_k8s_io_v1beta1_k8s1_16, HasParent {
-  override var nodeSelector: Any? = null
+  override var nodeSelector: Map<String, String>? = null
   override var tolerations: List<Toleration_core_v1_k8s1_16>? = null
 }
 typealias Scheduling_node_k8s_io_v1beta1_k8s1_17Impl = Scheduling_node_k8s_io_v1beta1_k8s1_16Impl
@@ -24,7 +24,7 @@ class Scheduling_node_k8s_io_v1_k8s1_20Impl(
   override val parent: K8sManifest? = null
 )
 : Scheduling_node_k8s_io_v1_k8s1_20, HasParent {
-  override var nodeSelector: Any? = null
+  override var nodeSelector: Map<String, String>? = null
   override var tolerations: List<Toleration_core_v1_k8s1_20>? = null
 }
 

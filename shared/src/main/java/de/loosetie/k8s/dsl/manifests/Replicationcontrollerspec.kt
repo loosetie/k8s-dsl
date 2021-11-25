@@ -18,7 +18,7 @@ https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#
 labels present on the Pod template. Label keys and values that must match in order to be controlled by this replication
 controller, if empty defaulted to labels on Pod template. More info:
 https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors */
-  @K8sDslMarker var selector: Any?
+  @K8sDslMarker var selector: Map<String, String>?
   /** Template is the object that describes the pod that will be created if insufficient replicas are detected. This takes
 precedence over a TemplateRef. More info:
 https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#pod-template */
@@ -37,7 +37,7 @@ https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#
 labels present on the Pod template. Label keys and values that must match in order to be controlled by this replication
 controller, if empty defaulted to labels on Pod template. More info:
 https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors */
-  @K8sDslMarker var selector: Any?
+  @K8sDslMarker var selector: Map<String, String>?
   /** Template is the object that describes the pod that will be created if insufficient replicas are detected. This takes
 precedence over a TemplateRef. More info:
 https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#pod-template */
@@ -56,7 +56,7 @@ https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#
 labels present on the Pod template. Label keys and values that must match in order to be controlled by this replication
 controller, if empty defaulted to labels on Pod template. More info:
 https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors */
-  @K8sDslMarker var selector: Any?
+  @K8sDslMarker var selector: Map<String, String>?
   /** Template is the object that describes the pod that will be created if insufficient replicas are detected. This takes
 precedence over a TemplateRef. More info:
 https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#pod-template */
@@ -75,7 +75,7 @@ https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#
 labels present on the Pod template. Label keys and values that must match in order to be controlled by this replication
 controller, if empty defaulted to labels on Pod template. More info:
 https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors */
-  @K8sDslMarker var selector: Any?
+  @K8sDslMarker var selector: Map<String, String>?
   /** Template is the object that describes the pod that will be created if insufficient replicas are detected. This takes
 precedence over a TemplateRef. More info:
 https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#pod-template */
@@ -94,7 +94,7 @@ https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#
 labels present on the Pod template. Label keys and values that must match in order to be controlled by this replication
 controller, if empty defaulted to labels on Pod template. More info:
 https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors */
-  @K8sDslMarker var selector: Any?
+  @K8sDslMarker var selector: Map<String, String>?
   /** Template is the object that describes the pod that will be created if insufficient replicas are detected. This takes
 precedence over a TemplateRef. More info:
 https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#pod-template */
@@ -113,7 +113,7 @@ https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#
 labels present on the Pod template. Label keys and values that must match in order to be controlled by this replication
 controller, if empty defaulted to labels on Pod template. More info:
 https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors */
-  @K8sDslMarker var selector: Any?
+  @K8sDslMarker var selector: Map<String, String>?
   /** Template is the object that describes the pod that will be created if insufficient replicas are detected. This takes
 precedence over a TemplateRef. More info:
 https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#pod-template */

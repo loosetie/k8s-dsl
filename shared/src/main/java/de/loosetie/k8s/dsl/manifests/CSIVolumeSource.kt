@@ -21,7 +21,7 @@ is required. If the secret object contains more than one secret, all secret refe
   @K8sDslMarker var readOnly: Boolean?
   /** VolumeAttributes stores driver-specific properties that are passed to the CSI driver. Consult your driver's
 documentation for supported values. */
-  @K8sDslMarker var volumeAttributes: Any?
+  @K8sDslMarker var volumeAttributes: Map<String, String>?
 }      
 typealias CSIVolumeSource_core_v1_k8s1_17 = CSIVolumeSource_core_v1_k8s1_16       
 typealias CSIVolumeSource_core_v1_k8s1_18 = CSIVolumeSource_core_v1_k8s1_17       

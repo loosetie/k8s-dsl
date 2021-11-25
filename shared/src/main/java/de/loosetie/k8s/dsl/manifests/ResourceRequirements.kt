@@ -9,11 +9,11 @@ import de.loosetie.k8s.dsl.HasMetadata
 interface ResourceRequirements_core_v1_k8s1_16: K8sManifest {
   /** Limits describes the maximum amount of compute resources allowed. More info:
 https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/ */
-  @K8sDslMarker var limits: Any?
+  var limits: de.loosetie.k8s.dsl.types.LimitsAndRequests?
   /** Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults
 to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info:
 https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/ */
-  @K8sDslMarker var requests: Any?
+  var requests: de.loosetie.k8s.dsl.types.LimitsAndRequests?
 }      
 typealias ResourceRequirements_core_v1_k8s1_17 = ResourceRequirements_core_v1_k8s1_16       
 typealias ResourceRequirements_core_v1_k8s1_18 = ResourceRequirements_core_v1_k8s1_17       
@@ -23,9 +23,9 @@ typealias ResourceRequirements_core_v1_k8s1_20 = ResourceRequirements_core_v1_k8
 interface ResourceRequirements_core_v1_k8s1_21: ResourceRequirements_core_v1_k8s1_20 {
   /** Limits describes the maximum amount of compute resources allowed. More info:
 https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/ */
-  override var limits: Any?
+  override var limits: de.loosetie.k8s.dsl.types.LimitsAndRequests?
   /** Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults
 to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info:
 https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/ */
-  override var requests: Any?
+  override var requests: de.loosetie.k8s.dsl.types.LimitsAndRequests?
 }

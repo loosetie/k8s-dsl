@@ -14,7 +14,7 @@ the total number of nodes that should be running the daemon pod (i.e. status.des
 stopped for an update at any given time. The update starts by stopping at most 30% of those DaemonSet pods and then
 brings up new DaemonSet pods in their place. Once the new pods are available, it then proceeds onto other DaemonSet
 pods, thus ensuring that at least 70% of original number of DaemonSet pods are available at all times during the update. */
-  // val maxUnavailable: None
+  var maxUnavailable: de.loosetie.k8s.dsl.types.IntOrPercentage?
 }      
 typealias Rollingupdatedaemonset_apps_v1_k8s1_17 = Rollingupdatedaemonset_apps_v1_k8s1_16       
 typealias Rollingupdatedaemonset_apps_v1_k8s1_18 = Rollingupdatedaemonset_apps_v1_k8s1_17       
@@ -43,5 +43,5 @@ status.desiredNumberScheduled) can have their pods stopped for an update at any 
 stopping at most 30% of those DaemonSet pods and then brings up new DaemonSet pods in their place. Once the new pods are
 available, it then proceeds onto other DaemonSet pods, thus ensuring that at least 70% of original number of DaemonSet
 pods are available at all times during the update. */
-  // val maxUnavailable: None
+  override var maxUnavailable: de.loosetie.k8s.dsl.types.IntOrPercentage?
 }

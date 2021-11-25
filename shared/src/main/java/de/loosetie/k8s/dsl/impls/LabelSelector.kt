@@ -13,7 +13,7 @@ class LabelSelector_meta_v1_k8s1_16Impl(
 )
 : LabelSelector_meta_v1_k8s1_16, HasParent {
   override var matchExpressions: List<LabelSelectorRequirement_meta_v1_k8s1_16>? = null
-  override var matchLabels: Any? = null
+  override var matchLabels: Map<String, String>? = null
 }
 typealias LabelSelector_meta_v1_k8s1_17Impl = LabelSelector_meta_v1_k8s1_16Impl
 typealias LabelSelector_meta_v1_k8s1_18Impl = LabelSelector_meta_v1_k8s1_17Impl

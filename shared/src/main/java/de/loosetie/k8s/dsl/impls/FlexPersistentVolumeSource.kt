@@ -14,7 +14,7 @@ class FlexPersistentVolumeSource_core_v1_k8s1_16Impl(
 : FlexPersistentVolumeSource_core_v1_k8s1_16, HasParent {
   override var driver: String? = null
   override var fsType: String? = null
-  override var options: Any? = null
+  override var options: Map<String, String>? = null
   override var readOnly: Boolean? = null
   override var secretRef: SecretReference_core_v1_k8s1_16? = null
 }

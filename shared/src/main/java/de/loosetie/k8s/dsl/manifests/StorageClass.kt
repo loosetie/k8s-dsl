@@ -30,7 +30,7 @@ honored by servers that enable the VolumeScheduling feature. */
 "soft"]. Not validated - mount of the PVs will simply fail if one is invalid. */
   @K8sDslMarker var mountOptions: List<String>?
   /** Parameters holds the parameters for the provisioner that should create volumes of this storage class. */
-  @K8sDslMarker var parameters: Any?
+  @K8sDslMarker var parameters: Map<String, String>?
   /** Provisioner indicates the type of the provisioner. */
   @K8sDslMarker var provisioner: String?
   /** Dynamically provisioned PersistentVolumes of this storage class are created with this reclaimPolicy. Defaults to Delete. */
@@ -64,7 +64,7 @@ honored by servers that enable the VolumeScheduling feature. */
 "soft"]. Not validated - mount of the PVs will simply fail if one is invalid. */
   @K8sDslMarker var mountOptions: List<String>?
   /** Parameters holds the parameters for the provisioner that should create volumes of this storage class. */
-  @K8sDslMarker var parameters: Any?
+  @K8sDslMarker var parameters: Map<String, String>?
   /** Provisioner indicates the type of the provisioner. */
   @K8sDslMarker var provisioner: String?
   /** Dynamically provisioned PersistentVolumes of this storage class are created with this reclaimPolicy. Defaults to Delete. */

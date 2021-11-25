@@ -14,7 +14,7 @@ class Replicationcontrollerspec_core_v1_k8s1_16Impl(
 : Replicationcontrollerspec_core_v1_k8s1_16, HasParent {
   override var minReadySeconds: Int? = null
   override var replicas: Int? = null
-  override var selector: Any? = null
+  override var selector: Map<String, String>? = null
   override var template: Podtemplatespec_core_v1_k8s1_16? = null
 }
 @JsonPropertyOrder("minReadySeconds", "replicas", "selector", "template")
@@ -25,7 +25,7 @@ class Replicationcontrollerspec_core_v1_k8s1_17Impl(
 : Replicationcontrollerspec_core_v1_k8s1_17, HasParent {
   override var minReadySeconds: Int? = null
   override var replicas: Int? = null
-  override var selector: Any? = null
+  override var selector: Map<String, String>? = null
   override var template: Podtemplatespec_core_v1_k8s1_17? = null
 }
 @JsonPropertyOrder("minReadySeconds", "replicas", "selector", "template")
@@ -36,7 +36,7 @@ class Replicationcontrollerspec_core_v1_k8s1_18Impl(
 : Replicationcontrollerspec_core_v1_k8s1_18, HasParent {
   override var minReadySeconds: Int? = null
   override var replicas: Int? = null
-  override var selector: Any? = null
+  override var selector: Map<String, String>? = null
   override var template: Podtemplatespec_core_v1_k8s1_18? = null
 }
 @JsonPropertyOrder("minReadySeconds", "replicas", "selector", "template")
@@ -47,7 +47,7 @@ class Replicationcontrollerspec_core_v1_k8s1_19Impl(
 : Replicationcontrollerspec_core_v1_k8s1_19, HasParent {
   override var minReadySeconds: Int? = null
   override var replicas: Int? = null
-  override var selector: Any? = null
+  override var selector: Map<String, String>? = null
   override var template: Podtemplatespec_core_v1_k8s1_19? = null
 }
 @JsonPropertyOrder("minReadySeconds", "replicas", "selector", "template")
@@ -58,7 +58,7 @@ class Replicationcontrollerspec_core_v1_k8s1_20Impl(
 : Replicationcontrollerspec_core_v1_k8s1_20, HasParent {
   override var minReadySeconds: Int? = null
   override var replicas: Int? = null
-  override var selector: Any? = null
+  override var selector: Map<String, String>? = null
   override var template: Podtemplatespec_core_v1_k8s1_20? = null
 }
 @JsonPropertyOrder("minReadySeconds", "replicas", "selector", "template")
@@ -69,6 +69,6 @@ class Replicationcontrollerspec_core_v1_k8s1_21Impl(
 : Replicationcontrollerspec_core_v1_k8s1_21, HasParent {
   override var minReadySeconds: Int? = null
   override var replicas: Int? = null
-  override var selector: Any? = null
+  override var selector: Map<String, String>? = null
   override var template: Podtemplatespec_core_v1_k8s1_21? = null
 }

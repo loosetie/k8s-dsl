@@ -19,7 +19,7 @@ class CSIPersistentVolumeSource_core_v1_k8s1_16Impl(
   override var nodePublishSecretRef: SecretReference_core_v1_k8s1_16? = null
   override var nodeStageSecretRef: SecretReference_core_v1_k8s1_16? = null
   override var readOnly: Boolean? = null
-  override var volumeAttributes: Any? = null
+  override var volumeAttributes: Map<String, String>? = null
   override var volumeHandle: String? = null
 }
 typealias CSIPersistentVolumeSource_core_v1_k8s1_17Impl = CSIPersistentVolumeSource_core_v1_k8s1_16Impl

@@ -10,7 +10,7 @@ interface WatchEvent_meta_v1_k8s1_16: K8sManifest {
   /** Object is: `*` If Type is Added or Modified: the new state of the object. `*` If Type is Deleted: the state of the
 object immediately before deletion. `*` If Type is Error: `*`Status is recommended; other types may make sense depending
 on context. */
-  // val `object`: None
+  @K8sDslMarker var `object`: Any?
   /**  */
   @K8sDslMarker var type: String?
 }      

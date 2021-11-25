@@ -12,7 +12,7 @@ class Resourcequotaspec_core_v1_k8s1_16Impl(
   override val parent: K8sManifest? = null
 )
 : Resourcequotaspec_core_v1_k8s1_16, HasParent {
-  override var hard: Any? = null
+  override var hard: Map<String, de.loosetie.k8s.dsl.types.DoubleOrString>? = null
   override var scopeSelector: ScopeSelector_core_v1_k8s1_16? = null
   override var scopes: List<String>? = null
 }

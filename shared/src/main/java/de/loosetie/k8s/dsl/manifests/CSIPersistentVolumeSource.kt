@@ -31,7 +31,7 @@ empty if no secret is required. If the secret object contains more than one secr
   /** Optional: The value to pass to ControllerPublishVolumeRequest. Defaults to false (read/write). */
   @K8sDslMarker var readOnly: Boolean?
   /** Attributes of the volume to publish. */
-  @K8sDslMarker var volumeAttributes: Any?
+  @K8sDslMarker var volumeAttributes: Map<String, String>?
   /** VolumeHandle is the unique volume name returned by the CSI volume plugin’s CreateVolume to refer to the volume on all
 subsequent calls. Required. */
   @K8sDslMarker var volumeHandle: String?

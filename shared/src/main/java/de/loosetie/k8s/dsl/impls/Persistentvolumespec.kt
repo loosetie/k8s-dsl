@@ -16,7 +16,7 @@ class Persistentvolumespec_core_v1_k8s1_16Impl(
   override var awsElasticBlockStore: AWSElasticBlockStoreVolumeSource_core_v1_k8s1_16? = null
   override var azureDisk: AzureDiskVolumeSource_core_v1_k8s1_16? = null
   override var azureFile: AzureFilePersistentVolumeSource_core_v1_k8s1_16? = null
-  override var capacity: Any? = null
+  override var capacity: de.loosetie.k8s.dsl.types.Capacity? = null
   override var cephfs: CephFSPersistentVolumeSource_core_v1_k8s1_16? = null
   override var cinder: CinderPersistentVolumeSource_core_v1_k8s1_16? = null
   override var claimRef: ObjectReference_core_v1_k8s1_16? = null
@@ -54,7 +54,7 @@ class Persistentvolumespec_core_v1_k8s1_18Impl(
   override var awsElasticBlockStore: AWSElasticBlockStoreVolumeSource_core_v1_k8s1_18? = null
   override var azureDisk: AzureDiskVolumeSource_core_v1_k8s1_18? = null
   override var azureFile: AzureFilePersistentVolumeSource_core_v1_k8s1_18? = null
-  override var capacity: Any? = null
+  override var capacity: de.loosetie.k8s.dsl.types.Capacity? = null
   override var cephfs: CephFSPersistentVolumeSource_core_v1_k8s1_18? = null
   override var cinder: CinderPersistentVolumeSource_core_v1_k8s1_18? = null
   override var claimRef: ObjectReference_core_v1_k8s1_18? = null

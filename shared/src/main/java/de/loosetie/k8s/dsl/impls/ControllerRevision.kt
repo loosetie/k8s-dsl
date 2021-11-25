@@ -13,6 +13,7 @@ class ControllerRevision_apps_v1_k8s1_16Impl(
 )
 : ControllerRevision_apps_v1_k8s1_16, HasParent {
   override lateinit var metadata: ObjectMeta_meta_v1_k8s1_16
+  override var data: ByteArray? = null
   override var revision: Int? = null
 }
 @JsonPropertyOrder("apiVersion", "kind", "metadata", "data", "revision")
@@ -22,6 +23,7 @@ class ControllerRevision_apps_v1_k8s1_17Impl(
 )
 : ControllerRevision_apps_v1_k8s1_17, HasParent {
   override lateinit var metadata: ObjectMeta_meta_v1_k8s1_17
+  override var data: ByteArray? = null
   override var revision: Int? = null
 }
 typealias ControllerRevision_apps_v1_k8s1_18Impl = ControllerRevision_apps_v1_k8s1_17Impl

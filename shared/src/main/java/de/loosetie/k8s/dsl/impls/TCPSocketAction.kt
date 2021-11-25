@@ -13,6 +13,7 @@ class TCPSocketAction_core_v1_k8s1_16Impl(
 )
 : TCPSocketAction_core_v1_k8s1_16, HasParent {
   override var host: String? = null
+  override var port: de.loosetie.k8s.dsl.types.IntOrString? = null
 }
 typealias TCPSocketAction_core_v1_k8s1_17Impl = TCPSocketAction_core_v1_k8s1_16Impl
 typealias TCPSocketAction_core_v1_k8s1_18Impl = TCPSocketAction_core_v1_k8s1_17Impl

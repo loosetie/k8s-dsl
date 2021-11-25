@@ -13,8 +13,8 @@ class ConfigMap_core_v1_k8s1_16Impl(
 )
 : ConfigMap_core_v1_k8s1_16, HasParent {
   override lateinit var metadata: ObjectMeta_meta_v1_k8s1_16
-  override var binaryData: Any? = null
-  override var data: Any? = null
+  override var binaryData: Map<String, String>? = null
+  override var data: Map<String, String>? = null
 }
 @JsonPropertyOrder("apiVersion", "kind", "metadata", "binaryData", "data")
 class ConfigMap_core_v1_k8s1_17Impl(
@@ -23,8 +23,8 @@ class ConfigMap_core_v1_k8s1_17Impl(
 )
 : ConfigMap_core_v1_k8s1_17, HasParent {
   override lateinit var metadata: ObjectMeta_meta_v1_k8s1_17
-  override var binaryData: Any? = null
-  override var data: Any? = null
+  override var binaryData: Map<String, String>? = null
+  override var data: Map<String, String>? = null
 }
 @JsonPropertyOrder("apiVersion", "kind", "metadata", "binaryData", "data", "immutable")
 class ConfigMap_core_v1_k8s1_18Impl(
@@ -33,8 +33,8 @@ class ConfigMap_core_v1_k8s1_18Impl(
 )
 : ConfigMap_core_v1_k8s1_18, HasParent {
   override lateinit var metadata: ObjectMeta_meta_v1_k8s1_18
-  override var binaryData: Any? = null
-  override var data: Any? = null
+  override var binaryData: Map<String, String>? = null
+  override var data: Map<String, String>? = null
   override var immutable: Boolean? = null
 }
 @JsonPropertyOrder("apiVersion", "kind", "metadata", "binaryData", "data", "immutable")
@@ -44,8 +44,8 @@ class ConfigMap_core_v1_k8s1_19Impl(
 )
 : ConfigMap_core_v1_k8s1_19, HasParent {
   override lateinit var metadata: ObjectMeta_meta_v1_k8s1_19
-  override var binaryData: Any? = null
-  override var data: Any? = null
+  override var binaryData: Map<String, String>? = null
+  override var data: Map<String, String>? = null
   override var immutable: Boolean? = null
 }
 typealias ConfigMap_core_v1_k8s1_20Impl = ConfigMap_core_v1_k8s1_19Impl
@@ -56,7 +56,7 @@ class ConfigMap_core_v1_k8s1_21Impl(
 )
 : ConfigMap_core_v1_k8s1_21, HasParent {
   override lateinit var metadata: ObjectMeta_meta_v1_k8s1_21
-  override var binaryData: Any? = null
-  override var data: Any? = null
+  override var binaryData: Map<String, String>? = null
+  override var data: Map<String, String>? = null
   override var immutable: Boolean? = null
 }

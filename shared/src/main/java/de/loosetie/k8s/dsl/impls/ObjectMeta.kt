@@ -14,8 +14,8 @@ class ObjectMeta_meta_v1_k8s1_16Impl(
 : ObjectMeta_meta_v1_k8s1_16, HasParent {
   override var namespace: String? = null
   override var name: String? = null
-  override var labels: Any? = null
-  override var annotations: Any? = null
+  override var labels: Map<String, String>? = null
+  override var annotations: Map<String, String>? = null
   override var clusterName: String? = null
   override var evilField: String? = null
   override var creationTimestamp: Time_meta_v1_k8s1_16? = null
@@ -38,8 +38,8 @@ class ObjectMeta_meta_v1_k8s1_17Impl(
 : ObjectMeta_meta_v1_k8s1_17, HasParent {
   override var namespace: String? = null
   override var name: String? = null
-  override var labels: Any? = null
-  override var annotations: Any? = null
+  override var labels: Map<String, String>? = null
+  override var annotations: Map<String, String>? = null
   override var clusterName: String? = null
   override var creationTimestamp: Time_meta_v1_k8s1_17? = null
   override var deletionGracePeriodSeconds: Int? = null
@@ -62,8 +62,8 @@ class ObjectMeta_meta_v1_k8s1_19Impl(
 : ObjectMeta_meta_v1_k8s1_19, HasParent {
   override var namespace: String? = null
   override var name: String? = null
-  override var labels: Any? = null
-  override var annotations: Any? = null
+  override var labels: Map<String, String>? = null
+  override var annotations: Map<String, String>? = null
   override var clusterName: String? = null
   override var creationTimestamp: Time_meta_v1_k8s1_19? = null
   override var deletionGracePeriodSeconds: Int? = null

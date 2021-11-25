@@ -28,8 +28,8 @@ class Podspec_core_v1_k8s1_16Impl(
   override var imagePullSecrets: List<LocalObjectReference_core_v1_k8s1_16>? = null
   override var initContainers: List<Container_core_v1_k8s1_16>? = null
   override var nodeName: String? = null
-  override var nodeSelector: Any? = null
-  override var overhead: Any? = null
+  override var nodeSelector: Map<String, String>? = null
+  override var overhead: de.loosetie.k8s.dsl.types.LimitsAndRequests? = null
   override var preemptionPolicy: String? = null
   override var priority: Int? = null
   override var priorityClassName: String? = null
@@ -69,8 +69,8 @@ class Podspec_core_v1_k8s1_17Impl(
   override var imagePullSecrets: List<LocalObjectReference_core_v1_k8s1_17>? = null
   override var initContainers: List<Container_core_v1_k8s1_17>? = null
   override var nodeName: String? = null
-  override var nodeSelector: Any? = null
-  override var overhead: Any? = null
+  override var nodeSelector: Map<String, String>? = null
+  override var overhead: de.loosetie.k8s.dsl.types.LimitsAndRequests? = null
   override var preemptionPolicy: String? = null
   override var priority: Int? = null
   override var priorityClassName: String? = null
@@ -110,8 +110,8 @@ class Podspec_core_v1_k8s1_18Impl(
   override var imagePullSecrets: List<LocalObjectReference_core_v1_k8s1_18>? = null
   override var initContainers: List<Container_core_v1_k8s1_18>? = null
   override var nodeName: String? = null
-  override var nodeSelector: Any? = null
-  override var overhead: Any? = null
+  override var nodeSelector: Map<String, String>? = null
+  override var overhead: de.loosetie.k8s.dsl.types.LimitsAndRequests? = null
   override var preemptionPolicy: String? = null
   override var priority: Int? = null
   override var priorityClassName: String? = null
@@ -151,8 +151,8 @@ class Podspec_core_v1_k8s1_19Impl(
   override var imagePullSecrets: List<LocalObjectReference_core_v1_k8s1_19>? = null
   override var initContainers: List<Container_core_v1_k8s1_19>? = null
   override var nodeName: String? = null
-  override var nodeSelector: Any? = null
-  override var overhead: Any? = null
+  override var nodeSelector: Map<String, String>? = null
+  override var overhead: de.loosetie.k8s.dsl.types.LimitsAndRequests? = null
   override var preemptionPolicy: String? = null
   override var priority: Int? = null
   override var priorityClassName: String? = null
@@ -193,8 +193,8 @@ class Podspec_core_v1_k8s1_20Impl(
   override var imagePullSecrets: List<LocalObjectReference_core_v1_k8s1_20>? = null
   override var initContainers: List<Container_core_v1_k8s1_20>? = null
   override var nodeName: String? = null
-  override var nodeSelector: Any? = null
-  override var overhead: Any? = null
+  override var nodeSelector: Map<String, String>? = null
+  override var overhead: de.loosetie.k8s.dsl.types.LimitsAndRequests? = null
   override var preemptionPolicy: String? = null
   override var priority: Int? = null
   override var priorityClassName: String? = null
@@ -235,8 +235,8 @@ class Podspec_core_v1_k8s1_21Impl(
   override var imagePullSecrets: List<LocalObjectReference_core_v1_k8s1_21>? = null
   override var initContainers: List<Container_core_v1_k8s1_21>? = null
   override var nodeName: String? = null
-  override var nodeSelector: Any? = null
-  override var overhead: Any? = null
+  override var nodeSelector: Map<String, String>? = null
+  override var overhead: de.loosetie.k8s.dsl.types.LimitsAndRequests? = null
   override var preemptionPolicy: String? = null
   override var priority: Int? = null
   override var priorityClassName: String? = null

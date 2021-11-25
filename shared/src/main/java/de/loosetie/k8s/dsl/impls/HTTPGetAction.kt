@@ -15,6 +15,7 @@ class HTTPGetAction_core_v1_k8s1_16Impl(
   override var host: String? = null
   override var httpHeaders: List<HTTPHeader_core_v1_k8s1_16>? = null
   override var path: String? = null
+  override var port: de.loosetie.k8s.dsl.types.IntOrString? = null
   override var scheme: String? = null
 }
 typealias HTTPGetAction_core_v1_k8s1_17Impl = HTTPGetAction_core_v1_k8s1_16Impl

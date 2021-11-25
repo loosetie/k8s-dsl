@@ -12,6 +12,7 @@ class WatchEvent_meta_v1_k8s1_16Impl(
   override val parent: K8sManifest? = null
 )
 : WatchEvent_meta_v1_k8s1_16, HasParent {
+  override var `object`: Any? = null
   override var type: String? = null
 }
 typealias WatchEvent_meta_v1_k8s1_17Impl = WatchEvent_meta_v1_k8s1_16Impl

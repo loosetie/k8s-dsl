@@ -13,7 +13,7 @@ interface FlexVolumeSource_core_v1_k8s1_16: K8sManifest {
 The default filesystem depends on FlexVolume script. */
   @K8sDslMarker var fsType: String?
   /** Optional: Extra command options if any. */
-  @K8sDslMarker var options: Any?
+  @K8sDslMarker var options: Map<String, String>?
   /** Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. */
   @K8sDslMarker var readOnly: Boolean?
   /** Optional: SecretRef is reference to the secret object containing sensitive information to pass to the plugin scripts.

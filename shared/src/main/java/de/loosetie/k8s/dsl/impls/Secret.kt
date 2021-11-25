@@ -13,8 +13,8 @@ class Secret_core_v1_k8s1_16Impl(
 )
 : Secret_core_v1_k8s1_16, HasParent {
   override lateinit var metadata: ObjectMeta_meta_v1_k8s1_16
-  override var data: Any? = null
-  override var stringData: Any? = null
+  override var data: Map<String, String>? = null
+  override var stringData: Map<String, String>? = null
   override var type: String? = null
 }
 @JsonPropertyOrder("apiVersion", "kind", "metadata", "data", "stringData", "type")
@@ -24,8 +24,8 @@ class Secret_core_v1_k8s1_17Impl(
 )
 : Secret_core_v1_k8s1_17, HasParent {
   override lateinit var metadata: ObjectMeta_meta_v1_k8s1_17
-  override var data: Any? = null
-  override var stringData: Any? = null
+  override var data: Map<String, String>? = null
+  override var stringData: Map<String, String>? = null
   override var type: String? = null
 }
 @JsonPropertyOrder("apiVersion", "kind", "metadata", "data", "immutable", "stringData", "type")
@@ -35,9 +35,9 @@ class Secret_core_v1_k8s1_18Impl(
 )
 : Secret_core_v1_k8s1_18, HasParent {
   override lateinit var metadata: ObjectMeta_meta_v1_k8s1_18
-  override var data: Any? = null
+  override var data: Map<String, String>? = null
   override var immutable: Boolean? = null
-  override var stringData: Any? = null
+  override var stringData: Map<String, String>? = null
   override var type: String? = null
 }
 @JsonPropertyOrder("apiVersion", "kind", "metadata", "data", "immutable", "stringData", "type")
@@ -47,9 +47,9 @@ class Secret_core_v1_k8s1_19Impl(
 )
 : Secret_core_v1_k8s1_19, HasParent {
   override lateinit var metadata: ObjectMeta_meta_v1_k8s1_19
-  override var data: Any? = null
+  override var data: Map<String, String>? = null
   override var immutable: Boolean? = null
-  override var stringData: Any? = null
+  override var stringData: Map<String, String>? = null
   override var type: String? = null
 }
 typealias Secret_core_v1_k8s1_20Impl = Secret_core_v1_k8s1_19Impl
@@ -60,8 +60,8 @@ class Secret_core_v1_k8s1_21Impl(
 )
 : Secret_core_v1_k8s1_21, HasParent {
   override lateinit var metadata: ObjectMeta_meta_v1_k8s1_21
-  override var data: Any? = null
+  override var data: Map<String, String>? = null
   override var immutable: Boolean? = null
-  override var stringData: Any? = null
+  override var stringData: Map<String, String>? = null
   override var type: String? = null
 }

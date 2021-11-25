@@ -16,7 +16,7 @@ class Endpoint_discovery_k8s_io_v1alpha1_k8s1_16Impl(
   override var conditions: EndpointConditions_discovery_k8s_io_v1alpha1_k8s1_16? = null
   override var hostname: String? = null
   override var targetRef: ObjectReference_core_v1_k8s1_16? = null
-  override var topology: Any? = null
+  override var topology: Map<String, String>? = null
 }
 
 
@@ -30,7 +30,7 @@ class Endpoint_discovery_k8s_io_v1beta1_k8s1_17Impl(
   override var conditions: EndpointConditions_discovery_k8s_io_v1beta1_k8s1_17? = null
   override var hostname: String? = null
   override var targetRef: ObjectReference_core_v1_k8s1_17? = null
-  override var topology: Any? = null
+  override var topology: Map<String, String>? = null
 }
 
 
@@ -51,7 +51,7 @@ class Endpoint_discovery_k8s_io_v1beta1_k8s1_20Impl(
   override var hostname: String? = null
   override var nodeName: String? = null
   override var targetRef: ObjectReference_core_v1_k8s1_20? = null
-  override var topology: Any? = null
+  override var topology: Map<String, String>? = null
 }
 @JsonPropertyOrder("addresses", "conditions", "deprecatedTopology", "hints", "hostname", "nodeName", "targetRef", "zone")
 class Endpoint_discovery_k8s_io_v1_k8s1_21Impl(
@@ -61,7 +61,7 @@ class Endpoint_discovery_k8s_io_v1_k8s1_21Impl(
 : Endpoint_discovery_k8s_io_v1_k8s1_21, HasParent {
   override var addresses: List<String>? = null
   override var conditions: EndpointConditions_discovery_k8s_io_v1_k8s1_21? = null
-  override var deprecatedTopology: Any? = null
+  override var deprecatedTopology: Map<String, String>? = null
   override var hints: EndpointHints_discovery_k8s_io_v1_k8s1_21? = null
   override var hostname: String? = null
   override var nodeName: String? = null
