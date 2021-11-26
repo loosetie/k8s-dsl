@@ -37,10 +37,5 @@ class CertificateSigningRequest_certificates_k8s_io_v1_k8s1_19Impl(
   override lateinit var spec: Certificatesigningrequestspec_certificates_k8s_io_v1_k8s1_19
   override var status: Certificatesigningrequeststatus_certificates_k8s_io_v1_k8s1_19? = null
 }
-
-
 typealias CertificateSigningRequest_certificates_k8s_io_v1_k8s1_20Impl = CertificateSigningRequest_certificates_k8s_io_v1_k8s1_19Impl
-
-
 typealias CertificateSigningRequest_certificates_k8s_io_v1_k8s1_21Impl = CertificateSigningRequest_certificates_k8s_io_v1_k8s1_20Impl
-

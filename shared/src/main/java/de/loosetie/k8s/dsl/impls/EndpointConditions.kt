@@ -14,8 +14,6 @@ class EndpointConditions_discovery_k8s_io_v1alpha1_k8s1_16Impl(
 : EndpointConditions_discovery_k8s_io_v1alpha1_k8s1_16, HasParent {
   override var ready: Boolean? = null
 }
-
-
 @JsonPropertyOrder("ready")
 class EndpointConditions_discovery_k8s_io_v1beta1_k8s1_17Impl(
   @JsonIgnore
@@ -24,14 +22,8 @@ class EndpointConditions_discovery_k8s_io_v1beta1_k8s1_17Impl(
 : EndpointConditions_discovery_k8s_io_v1beta1_k8s1_17, HasParent {
   override var ready: Boolean? = null
 }
-
-
 typealias EndpointConditions_discovery_k8s_io_v1beta1_k8s1_18Impl = EndpointConditions_discovery_k8s_io_v1beta1_k8s1_17Impl
-
-
 typealias EndpointConditions_discovery_k8s_io_v1beta1_k8s1_19Impl = EndpointConditions_discovery_k8s_io_v1beta1_k8s1_18Impl
-
-
 @JsonPropertyOrder("ready", "serving", "terminating")
 class EndpointConditions_discovery_k8s_io_v1beta1_k8s1_20Impl(
   @JsonIgnore
@@ -52,6 +44,3 @@ class EndpointConditions_discovery_k8s_io_v1_k8s1_21Impl(
   override var serving: Boolean? = null
   override var terminating: Boolean? = null
 }
-
-
-

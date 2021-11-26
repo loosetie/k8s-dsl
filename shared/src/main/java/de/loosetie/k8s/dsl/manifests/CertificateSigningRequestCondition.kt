@@ -39,11 +39,6 @@ added via the /approval subresource, indicating the request was denied and shoul
 and Denied conditions are mutually exclusive. Approved, Denied, and Failed conditions cannot be removed once added. Only
 one condition of a given type is allowed. */
   @K8sDslMarker var type: String?
-}
-
-      
-typealias CertificateSigningRequestCondition_certificates_k8s_io_v1_k8s1_20 = CertificateSigningRequestCondition_certificates_k8s_io_v1_k8s1_19 
-
-      
+}      
+typealias CertificateSigningRequestCondition_certificates_k8s_io_v1_k8s1_20 = CertificateSigningRequestCondition_certificates_k8s_io_v1_k8s1_19       
 typealias CertificateSigningRequestCondition_certificates_k8s_io_v1_k8s1_21 = CertificateSigningRequestCondition_certificates_k8s_io_v1_k8s1_20 
-

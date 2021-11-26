@@ -27,8 +27,5 @@ nodeSelector. Any conflicts will cause the pod to be rejected in admission. */
   /** tolerations are appended (excluding duplicates) to pods running with this RuntimeClass during admission, effectively
 unioning the set of nodes tolerated by the pod and the RuntimeClass. */
   val tolerations: List<Toleration_core_v1_k8s1_20>?
-}
-
-      
+}      
 typealias Scheduling_node_k8s_io_v1_k8s1_21 = Scheduling_node_k8s_io_v1_k8s1_20 
-

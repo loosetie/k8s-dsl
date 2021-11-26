@@ -16,6 +16,3 @@ class Scalestatus_apps_v1beta1_k8s1_17Impl(
   override var selector: Map<String, String>? = null
   override var targetSelector: String? = null
 }
-
-
-

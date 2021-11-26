@@ -29,8 +29,6 @@ When ports is empty, it indicates that there are no defined ports. When a port i
 indicates "all ports". Each slice may include a maximum of 100 ports. */
   val ports: List<EndpointPort_discovery_k8s_io_v1alpha1_k8s1_16>?
 }      
-
-
 @K8sDslMarker
 interface EndpointSlice_discovery_k8s_io_v1beta1_k8s1_17: K8sTopLevel, HasMetadata {
   /** APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas
@@ -56,14 +54,8 @@ When ports is empty, it indicates that there are no defined ports. When a port i
 indicates "all ports". Each slice may include a maximum of 100 ports. */
   val ports: List<EndpointPort_discovery_k8s_io_v1beta1_k8s1_17>?
 }      
-
-
 typealias EndpointSlice_discovery_k8s_io_v1beta1_k8s1_18 = EndpointSlice_discovery_k8s_io_v1beta1_k8s1_17       
-
-
 typealias EndpointSlice_discovery_k8s_io_v1beta1_k8s1_19 = EndpointSlice_discovery_k8s_io_v1beta1_k8s1_18       
-
-
 typealias EndpointSlice_discovery_k8s_io_v1beta1_k8s1_20 = EndpointSlice_discovery_k8s_io_v1beta1_k8s1_19       
 @K8sDslMarker
 interface EndpointSlice_discovery_k8s_io_v1_k8s1_21: K8sTopLevel, HasMetadata {
@@ -90,6 +82,3 @@ When ports is empty, it indicates that there are no defined ports. When a port i
 indicates "all ports". Each slice may include a maximum of 100 ports. */
   val ports: List<EndpointPort_discovery_k8s_io_v1_k8s1_21>?
 }
-
-
-

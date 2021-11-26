@@ -60,4 +60,3 @@ class JobTemplateSpec_batch_v1_k8s1_21Impl(
   override var metadata: ObjectMeta_meta_v1_k8s1_21? = null
   override var spec: Jobspec_batch_v1_k8s1_21? = null
 }
-

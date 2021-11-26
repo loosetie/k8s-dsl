@@ -11,22 +11,14 @@ interface EndpointConditions_discovery_k8s_io_v1alpha1_k8s1_16: K8sManifest {
 endpoint. A nil value indicates an unknown state. In most cases consumers should interpret this unknown state as ready. */
   @K8sDslMarker var ready: Boolean?
 }      
-
-
 @K8sDslMarker
 interface EndpointConditions_discovery_k8s_io_v1beta1_k8s1_17: K8sManifest {
   /** ready indicates that this endpoint is prepared to receive traffic, according to whatever system is managing the
 endpoint. A nil value indicates an unknown state. In most cases consumers should interpret this unknown state as ready. */
   @K8sDslMarker var ready: Boolean?
 }      
-
-
 typealias EndpointConditions_discovery_k8s_io_v1beta1_k8s1_18 = EndpointConditions_discovery_k8s_io_v1beta1_k8s1_17       
-
-
 typealias EndpointConditions_discovery_k8s_io_v1beta1_k8s1_19 = EndpointConditions_discovery_k8s_io_v1beta1_k8s1_18       
-
-
 @K8sDslMarker
 interface EndpointConditions_discovery_k8s_io_v1beta1_k8s1_20: EndpointConditions_discovery_k8s_io_v1beta1_k8s1_19 {
   /** ready indicates that this endpoint is prepared to receive traffic, according to whatever system is managing the
@@ -57,6 +49,3 @@ interpret this unknown state to mean that the endpoint is not terminating. This 
 EndpointSliceTerminatingCondition feature gate. */
   @K8sDslMarker var terminating: Boolean?
 }
-
-
-

@@ -50,8 +50,6 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status */
   val status: Prioritylevelconfigurationstatus_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_19?
 }      
-
-
 @K8sDslMarker
 interface PriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20: K8sTopLevel, HasMetadata {
   /** APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas
@@ -74,6 +72,4 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status */
   val status: Prioritylevelconfigurationstatus_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20?
 }      
-
-
 typealias PriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_21 = PriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20 

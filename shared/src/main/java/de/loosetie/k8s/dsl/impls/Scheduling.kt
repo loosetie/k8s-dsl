@@ -27,7 +27,4 @@ class Scheduling_node_k8s_io_v1_k8s1_20Impl(
   override var nodeSelector: Map<String, String>? = null
   override var tolerations: List<Toleration_core_v1_k8s1_20>? = null
 }
-
-
 typealias Scheduling_node_k8s_io_v1_k8s1_21Impl = Scheduling_node_k8s_io_v1_k8s1_20Impl
-

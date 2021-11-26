@@ -29,8 +29,6 @@ located. This should match the corresponding node label. `*` topology.kubernetes
 region where the endpoint is located. This should match the corresponding node label. */
   @K8sDslMarker var topology: Map<String, String>?
 }      
-
-
 @K8sDslMarker
 interface Endpoint_discovery_k8s_io_v1beta1_k8s1_17: K8sManifest {
   /** addresses of this endpoint. The contents of this field are interpreted according to the corresponding EndpointSlice
@@ -54,14 +52,8 @@ located. This should match the corresponding node label. `*` topology.kubernetes
 region where the endpoint is located. This should match the corresponding node label. */
   @K8sDslMarker var topology: Map<String, String>?
 }      
-
-
 typealias Endpoint_discovery_k8s_io_v1beta1_k8s1_18 = Endpoint_discovery_k8s_io_v1beta1_k8s1_17       
-
-
 typealias Endpoint_discovery_k8s_io_v1beta1_k8s1_19 = Endpoint_discovery_k8s_io_v1beta1_k8s1_18       
-
-
 @K8sDslMarker
 interface Endpoint_discovery_k8s_io_v1beta1_k8s1_20: Endpoint_discovery_k8s_io_v1beta1_k8s1_19 {
   /** hostname of this endpoint. This field may be used by consumers of endpoints to distinguish endpoints from each other
@@ -108,6 +100,3 @@ This field can be enabled with the EndpointSliceNodeName feature gate. */
   /** zone is the name of the Zone this endpoint exists in. */
   @K8sDslMarker var zone: String?
 }
-
-
-

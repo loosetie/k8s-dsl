@@ -73,11 +73,6 @@ system", "ipsec tunnel", "ipsec user", "timestamping", "ocsp signing", "microsof
   /** username contains the name of the user that created the CertificateSigningRequest. Populated by the API server on
 creation and immutable. */
   @K8sDslMarker var username: String?
-}
-
-      
-typealias Certificatesigningrequestspec_certificates_k8s_io_v1_k8s1_20 = Certificatesigningrequestspec_certificates_k8s_io_v1_k8s1_19 
-
-      
+}      
+typealias Certificatesigningrequestspec_certificates_k8s_io_v1_k8s1_20 = Certificatesigningrequestspec_certificates_k8s_io_v1_k8s1_19       
 typealias Certificatesigningrequestspec_certificates_k8s_io_v1_k8s1_21 = Certificatesigningrequestspec_certificates_k8s_io_v1_k8s1_20 
-

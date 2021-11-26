@@ -34,10 +34,5 @@ class IngressRule_networking_k8s_io_v1_k8s1_19Impl(
   override var host: String? = null
   override var http: HTTPIngressRuleValue_networking_k8s_io_v1_k8s1_19? = null
 }
-
-
 typealias IngressRule_networking_k8s_io_v1_k8s1_20Impl = IngressRule_networking_k8s_io_v1_k8s1_19Impl
-
-
 typealias IngressRule_networking_k8s_io_v1_k8s1_21Impl = IngressRule_networking_k8s_io_v1_k8s1_20Impl
-

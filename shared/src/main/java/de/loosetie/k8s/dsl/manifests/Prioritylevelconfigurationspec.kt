@@ -19,8 +19,6 @@ level. Required. */
 }      
 typealias Prioritylevelconfigurationspec_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_18 = Prioritylevelconfigurationspec_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17       
 typealias Prioritylevelconfigurationspec_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_19 = Prioritylevelconfigurationspec_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_18       
-
-
 @K8sDslMarker
 interface Prioritylevelconfigurationspec_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20: K8sManifest {
   /** `limited` specifies how requests are handled for a Limited priority level. This field must be non-empty if and only if
@@ -33,6 +31,4 @@ _are_ subject to limits and (b) some of the server's limited capacity is made av
 level. Required. */
   @K8sDslMarker var type: String?
 }      
-
-
 typealias Prioritylevelconfigurationspec_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_21 = Prioritylevelconfigurationspec_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20 

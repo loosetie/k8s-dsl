@@ -41,7 +41,4 @@ class RuntimeClass_node_k8s_io_v1_k8s1_20Impl(
   override var overhead: Overhead_node_k8s_io_v1_k8s1_20? = null
   override var scheduling: Scheduling_node_k8s_io_v1_k8s1_20? = null
 }
-
-
 typealias RuntimeClass_node_k8s_io_v1_k8s1_21Impl = RuntimeClass_node_k8s_io_v1_k8s1_20Impl
-

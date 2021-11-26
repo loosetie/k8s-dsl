@@ -28,16 +28,7 @@ class CSINodeDriver_storage_k8s_io_v1_k8s1_17Impl(
   override var nodeID: String? = null
   override var topologyKeys: List<String>? = null
 }
-
-
 typealias CSINodeDriver_storage_k8s_io_v1_k8s1_18Impl = CSINodeDriver_storage_k8s_io_v1_k8s1_17Impl
-
-
 typealias CSINodeDriver_storage_k8s_io_v1_k8s1_19Impl = CSINodeDriver_storage_k8s_io_v1_k8s1_18Impl
-
-
 typealias CSINodeDriver_storage_k8s_io_v1_k8s1_20Impl = CSINodeDriver_storage_k8s_io_v1_k8s1_19Impl
-
-
 typealias CSINodeDriver_storage_k8s_io_v1_k8s1_21Impl = CSINodeDriver_storage_k8s_io_v1_k8s1_20Impl
-

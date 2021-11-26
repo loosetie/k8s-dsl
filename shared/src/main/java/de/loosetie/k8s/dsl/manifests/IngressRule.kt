@@ -51,11 +51,6 @@ equal to the suffix (removing the first label) of the wildcard rule. */
   @K8sDslMarker var host: String?
   /**  */
   val http: HTTPIngressRuleValue_networking_k8s_io_v1_k8s1_19?
-}
-
-      
-typealias IngressRule_networking_k8s_io_v1_k8s1_20 = IngressRule_networking_k8s_io_v1_k8s1_19 
-
-      
+}      
+typealias IngressRule_networking_k8s_io_v1_k8s1_20 = IngressRule_networking_k8s_io_v1_k8s1_19       
 typealias IngressRule_networking_k8s_io_v1_k8s1_21 = IngressRule_networking_k8s_io_v1_k8s1_20 
-

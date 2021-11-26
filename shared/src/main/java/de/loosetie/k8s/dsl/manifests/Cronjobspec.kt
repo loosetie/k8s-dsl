@@ -141,4 +141,3 @@ will be counted as failed ones. */
 Defaults to false. */
   @K8sDslMarker var suspend: Boolean?
 }
-

@@ -69,9 +69,7 @@ only going to get a NodePublishVolume call for such a volume. For more informati
 https://kubernetes-csi.github.io/docs/ephemeral-local-volumes.html A driver can support one or more of these modes and
 more modes may be added in the future. This field is beta. */
   @K8sDslMarker var volumeLifecycleModes: List<String>?
-}
-
-      
+}      
 @K8sDslMarker
 interface Csidriverspec_storage_k8s_io_v1_k8s1_19: Csidriverspec_storage_k8s_io_v1_k8s1_18 {
   /** Defines if the underlying volume supports changing ownership and permission of the volume before being mounted. Refer to
@@ -86,9 +84,7 @@ be deployed with the field unset or false and it can be flipped later when stora
 published. This is an alpha field and only available when the CSIStorageCapacity feature is enabled. The default is
 false. */
   @K8sDslMarker var storageCapacity: Boolean?
-}
-
-      
+}      
 @K8sDslMarker
 interface Csidriverspec_storage_k8s_io_v1_k8s1_20: Csidriverspec_storage_k8s_io_v1_k8s1_19 {
   /** RequiresRepublish indicates the CSI driver wants `NodePublishVolume` being periodically called to reflect any possible
@@ -104,9 +100,7 @@ be different and at most one token is empty string. To receive a new token after
 to trigger NodePublishVolume periodically. This is an alpha feature and only available when the CSIServiceAccountToken
 feature is enabled. */
   val tokenRequests: List<TokenRequest_storage_k8s_io_v1_k8s1_20>?
-}
-
-      
+}      
 @K8sDslMarker
 interface Csidriverspec_storage_k8s_io_v1_k8s1_21: K8sManifest {
   /** attachRequired indicates this CSI volume driver requires an attach operation (because it implements the CSI
@@ -164,4 +158,3 @@ https://kubernetes-csi.github.io/docs/ephemeral-local-volumes.html A driver can 
 more modes may be added in the future. This field is beta. This field is immutable. */
   @K8sDslMarker var volumeLifecycleModes: List<String>?
 }
-

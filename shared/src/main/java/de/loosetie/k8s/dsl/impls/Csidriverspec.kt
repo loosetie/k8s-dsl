@@ -27,8 +27,6 @@ class Csidriverspec_storage_k8s_io_v1_k8s1_18Impl(
   override var podInfoOnMount: Boolean? = null
   override var volumeLifecycleModes: List<String>? = null
 }
-
-
 @JsonPropertyOrder("attachRequired", "fsGroupPolicy", "podInfoOnMount", "storageCapacity", "volumeLifecycleModes")
 class Csidriverspec_storage_k8s_io_v1_k8s1_19Impl(
   @JsonIgnore
@@ -41,8 +39,6 @@ class Csidriverspec_storage_k8s_io_v1_k8s1_19Impl(
   override var storageCapacity: Boolean? = null
   override var volumeLifecycleModes: List<String>? = null
 }
-
-
 @JsonPropertyOrder("attachRequired", "fsGroupPolicy", "podInfoOnMount", "requiresRepublish", "storageCapacity", "tokenRequests", "volumeLifecycleModes")
 class Csidriverspec_storage_k8s_io_v1_k8s1_20Impl(
   @JsonIgnore
@@ -57,8 +53,6 @@ class Csidriverspec_storage_k8s_io_v1_k8s1_20Impl(
   override var tokenRequests: List<TokenRequest_storage_k8s_io_v1_k8s1_20>? = null
   override var volumeLifecycleModes: List<String>? = null
 }
-
-
 @JsonPropertyOrder("attachRequired", "fsGroupPolicy", "podInfoOnMount", "requiresRepublish", "storageCapacity", "tokenRequests", "volumeLifecycleModes")
 class Csidriverspec_storage_k8s_io_v1_k8s1_21Impl(
   @JsonIgnore
@@ -73,4 +67,3 @@ class Csidriverspec_storage_k8s_io_v1_k8s1_21Impl(
   override var tokenRequests: List<TokenRequest_storage_k8s_io_v1_k8s1_21>? = null
   override var volumeLifecycleModes: List<String>? = null
 }
-

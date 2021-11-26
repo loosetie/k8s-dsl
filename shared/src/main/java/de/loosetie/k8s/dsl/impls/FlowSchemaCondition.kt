@@ -20,8 +20,6 @@ class FlowSchemaCondition_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17Impl(
 }
 typealias FlowSchemaCondition_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_18Impl = FlowSchemaCondition_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17Impl
 typealias FlowSchemaCondition_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_19Impl = FlowSchemaCondition_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_18Impl
-
-
 @JsonPropertyOrder("lastTransitionTime", "message", "reason", "status", "type")
 class FlowSchemaCondition_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20Impl(
   @JsonIgnore
@@ -34,6 +32,4 @@ class FlowSchemaCondition_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20Impl(
   override var status: String? = null
   override var type: String? = null
 }
-
-
 typealias FlowSchemaCondition_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_21Impl = FlowSchemaCondition_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20Impl

@@ -26,11 +26,6 @@ specified, a service.Name and service.Port must not be specified. This is a mutu
   val resource: TypedLocalObjectReference_core_v1_k8s1_19?
   /** Service references a Service as a Backend. This is a mutually exclusive setting with "Resource". */
   val service: IngressServiceBackend_networking_k8s_io_v1_k8s1_19?
-}
-
-      
-typealias IngressBackend_networking_k8s_io_v1_k8s1_20 = IngressBackend_networking_k8s_io_v1_k8s1_19 
-
-      
+}      
+typealias IngressBackend_networking_k8s_io_v1_k8s1_20 = IngressBackend_networking_k8s_io_v1_k8s1_19       
 typealias IngressBackend_networking_k8s_io_v1_k8s1_21 = IngressBackend_networking_k8s_io_v1_k8s1_20 
-

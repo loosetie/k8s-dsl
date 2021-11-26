@@ -18,8 +18,6 @@ entry. Required. */
 }      
 typealias NonResourcePolicyRule_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_18 = NonResourcePolicyRule_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17       
 typealias NonResourcePolicyRule_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_19 = NonResourcePolicyRule_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_18       
-
-
 @K8sDslMarker
 interface NonResourcePolicyRule_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20: K8sManifest {
   /** `nonResourceURLs` is a set of url prefixes that a user should have access to and may not be empty. For example: -
@@ -31,6 +29,4 @@ be the only entry. Required. */
 entry. Required. */
   @K8sDslMarker var verbs: List<String>?
 }      
-
-
 typealias NonResourcePolicyRule_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_21 = NonResourcePolicyRule_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20 

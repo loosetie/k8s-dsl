@@ -90,8 +90,5 @@ honored by servers that enable the PodOverhead feature. */
   /** Scheduling holds the scheduling constraints to ensure that pods running with this RuntimeClass are scheduled to nodes
 that support it. If scheduling is nil, this RuntimeClass is assumed to be supported by all nodes. */
   val scheduling: Scheduling_node_k8s_io_v1_k8s1_20?
-}
-
-      
+}      
 typealias RuntimeClass_node_k8s_io_v1_k8s1_21 = RuntimeClass_node_k8s_io_v1_k8s1_20 
-

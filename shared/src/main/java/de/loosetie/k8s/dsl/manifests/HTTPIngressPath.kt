@@ -49,11 +49,6 @@ does not match /foo/barbaz). `*` ImplementationSpecific: Interpretation of the P
 Implementations can treat this as a separate PathType or treat it identically to Prefix or Exact path types.
 Implementations are required to support all path types. */
   @K8sDslMarker var pathType: String?
-}
-
-      
-typealias HTTPIngressPath_networking_k8s_io_v1_k8s1_20 = HTTPIngressPath_networking_k8s_io_v1_k8s1_19 
-
-      
+}      
+typealias HTTPIngressPath_networking_k8s_io_v1_k8s1_20 = HTTPIngressPath_networking_k8s_io_v1_k8s1_19       
 typealias HTTPIngressPath_networking_k8s_io_v1_k8s1_21 = HTTPIngressPath_networking_k8s_io_v1_k8s1_20 
-

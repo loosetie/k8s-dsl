@@ -24,11 +24,7 @@ class Ingressclassspec_networking_k8s_io_v1_k8s1_19Impl(
   override var controller: String? = null
   override var parameters: TypedLocalObjectReference_core_v1_k8s1_19? = null
 }
-
-
 typealias Ingressclassspec_networking_k8s_io_v1_k8s1_20Impl = Ingressclassspec_networking_k8s_io_v1_k8s1_19Impl
-
-
 @JsonPropertyOrder("controller", "parameters")
 class Ingressclassspec_networking_k8s_io_v1_k8s1_21Impl(
   @JsonIgnore
@@ -38,4 +34,3 @@ class Ingressclassspec_networking_k8s_io_v1_k8s1_21Impl(
   override var controller: String? = null
   override var parameters: IngressClassParametersReference_networking_k8s_io_v1_k8s1_21? = null
 }
-

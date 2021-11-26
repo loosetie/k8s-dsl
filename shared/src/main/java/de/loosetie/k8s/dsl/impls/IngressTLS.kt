@@ -34,10 +34,5 @@ class IngressTLS_networking_k8s_io_v1_k8s1_19Impl(
   override var hosts: List<String>? = null
   override var secretName: String? = null
 }
-
-
 typealias IngressTLS_networking_k8s_io_v1_k8s1_20Impl = IngressTLS_networking_k8s_io_v1_k8s1_19Impl
-
-
 typealias IngressTLS_networking_k8s_io_v1_k8s1_21Impl = IngressTLS_networking_k8s_io_v1_k8s1_20Impl
-

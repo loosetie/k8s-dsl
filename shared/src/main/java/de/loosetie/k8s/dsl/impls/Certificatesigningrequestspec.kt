@@ -48,10 +48,5 @@ class Certificatesigningrequestspec_certificates_k8s_io_v1_k8s1_19Impl(
   override var usages: List<String>? = null
   override var username: String? = null
 }
-
-
 typealias Certificatesigningrequestspec_certificates_k8s_io_v1_k8s1_20Impl = Certificatesigningrequestspec_certificates_k8s_io_v1_k8s1_19Impl
-
-
 typealias Certificatesigningrequestspec_certificates_k8s_io_v1_k8s1_21Impl = Certificatesigningrequestspec_certificates_k8s_io_v1_k8s1_20Impl
-

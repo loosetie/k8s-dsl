@@ -66,4 +66,3 @@ class CronJob_batch_v1_k8s1_21Impl(
   override lateinit var spec: Cronjobspec_batch_v1_k8s1_21
   override var status: Cronjobstatus_batch_v1_k8s1_21? = null
 }
-

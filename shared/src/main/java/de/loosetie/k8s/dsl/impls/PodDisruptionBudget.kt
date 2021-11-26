@@ -39,4 +39,3 @@ class PodDisruptionBudget_policy_v1_k8s1_21Impl(
   override lateinit var spec: Poddisruptionbudgetspec_policy_v1_k8s1_21
   override var status: Poddisruptionbudgetstatus_policy_v1_k8s1_21? = null
 }
-

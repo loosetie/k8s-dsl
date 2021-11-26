@@ -37,10 +37,5 @@ class Ingress_networking_k8s_io_v1_k8s1_19Impl(
   override lateinit var spec: Ingressspec_networking_k8s_io_v1_k8s1_19
   override var status: Ingressstatus_networking_k8s_io_v1_k8s1_19? = null
 }
-
-
 typealias Ingress_networking_k8s_io_v1_k8s1_20Impl = Ingress_networking_k8s_io_v1_k8s1_19Impl
-
-
 typealias Ingress_networking_k8s_io_v1_k8s1_21Impl = Ingress_networking_k8s_io_v1_k8s1_20Impl
-

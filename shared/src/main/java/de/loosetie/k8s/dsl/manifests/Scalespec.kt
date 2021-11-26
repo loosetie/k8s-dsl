@@ -10,7 +10,4 @@ import de.loosetie.k8s.dsl.HasMetadata
 interface Scalespec_apps_v1beta1_k8s1_17: K8sManifest {
   /** desired number of instances for the scaled object. */
   @K8sDslMarker var replicas: Int?
-}      
-      
-      
-      
+}

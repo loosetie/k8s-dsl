@@ -56,5 +56,4 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
   val metadata: ObjectMeta_meta_v1_k8s1_19
   /**  */
   val spec: Podpresetspec_settings_k8s_io_v1alpha1_k8s1_19
-}      
-      
+}

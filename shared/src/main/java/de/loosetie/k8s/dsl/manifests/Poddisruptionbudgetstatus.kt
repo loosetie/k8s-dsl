@@ -71,4 +71,3 @@ empty for the most of the time. Large number of entries in the map may indicate 
 only if observedGeneration equals to PDB's object generation. */
   @K8sDslMarker var observedGeneration: Int?
 }
-

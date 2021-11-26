@@ -35,10 +35,5 @@ class IngressBackend_networking_k8s_io_v1_k8s1_19Impl(
   override var resource: TypedLocalObjectReference_core_v1_k8s1_19? = null
   override var service: IngressServiceBackend_networking_k8s_io_v1_k8s1_19? = null
 }
-
-
 typealias IngressBackend_networking_k8s_io_v1_k8s1_20Impl = IngressBackend_networking_k8s_io_v1_k8s1_19Impl
-
-
 typealias IngressBackend_networking_k8s_io_v1_k8s1_21Impl = IngressBackend_networking_k8s_io_v1_k8s1_20Impl
-

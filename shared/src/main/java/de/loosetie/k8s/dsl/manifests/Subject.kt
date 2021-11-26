@@ -38,8 +38,6 @@ typealias Subject_rbac_authorization_k8s_io_v1_k8s1_18 = Subject_rbac_authorizat
 typealias Subject_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_19 = Subject_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_18 
 
 typealias Subject_rbac_authorization_k8s_io_v1_k8s1_19 = Subject_rbac_authorization_k8s_io_v1_k8s1_18       
-
-
 @K8sDslMarker
 interface Subject_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20: K8sManifest {
   /** Required */
@@ -53,8 +51,6 @@ interface Subject_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20: K8sManifest {
 }
 
 typealias Subject_rbac_authorization_k8s_io_v1_k8s1_20 = Subject_rbac_authorization_k8s_io_v1_k8s1_19       
-
-
 typealias Subject_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_21 = Subject_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20 
 
 typealias Subject_rbac_authorization_k8s_io_v1_k8s1_21 = Subject_rbac_authorization_k8s_io_v1_k8s1_20 

@@ -17,5 +17,3 @@ class Webhook_auditregistration_k8s_io_v1alpha1_k8s1_16Impl(
 }
 typealias Webhook_auditregistration_k8s_io_v1alpha1_k8s1_17Impl = Webhook_auditregistration_k8s_io_v1alpha1_k8s1_16Impl
 typealias Webhook_auditregistration_k8s_io_v1alpha1_k8s1_18Impl = Webhook_auditregistration_k8s_io_v1alpha1_k8s1_17Impl
-
-

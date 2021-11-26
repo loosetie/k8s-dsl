@@ -27,8 +27,6 @@ class FlowSchema_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_19Impl(
   override lateinit var spec: Flowschemaspec_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_19
   override var status: Flowschemastatus_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_19? = null
 }
-
-
 @JsonPropertyOrder("apiVersion", "kind", "metadata", "spec", "status")
 class FlowSchema_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20Impl(
   @JsonIgnore
@@ -39,6 +37,4 @@ class FlowSchema_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20Impl(
   override lateinit var spec: Flowschemaspec_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20
   override var status: Flowschemastatus_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20? = null
 }
-
-
 typealias FlowSchema_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_21Impl = FlowSchema_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20Impl

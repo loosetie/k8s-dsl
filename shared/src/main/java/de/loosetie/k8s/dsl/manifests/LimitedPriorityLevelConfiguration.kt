@@ -19,8 +19,6 @@ more reserved concurrent requests (at the expense of every other PL). This field
 }      
 typealias LimitedPriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_18 = LimitedPriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17       
 typealias LimitedPriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_19 = LimitedPriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_18       
-
-
 @K8sDslMarker
 interface LimitedPriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20: K8sManifest {
   /** `assuredConcurrencyShares` (ACS) configures the execution limit, which is a limit on the number of requests of this
@@ -33,6 +31,4 @@ more reserved concurrent requests (at the expense of every other PL). This field
   /** `limitResponse` indicates what to do with requests that can not be executed right now */
   val limitResponse: LimitResponse_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20?
 }      
-
-
 typealias LimitedPriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_21 = LimitedPriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20 

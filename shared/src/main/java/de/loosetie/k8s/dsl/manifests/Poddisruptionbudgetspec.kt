@@ -43,4 +43,3 @@ specifying "100%". */
 empty ({}) selector will select all pods within the namespace. */
   val selector: LabelSelector_meta_v1_k8s1_21?
 }
-

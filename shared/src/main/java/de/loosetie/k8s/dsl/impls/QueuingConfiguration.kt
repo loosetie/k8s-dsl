@@ -18,8 +18,6 @@ class QueuingConfiguration_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17Impl(
 }
 typealias QueuingConfiguration_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_18Impl = QueuingConfiguration_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17Impl
 typealias QueuingConfiguration_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_19Impl = QueuingConfiguration_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_18Impl
-
-
 @JsonPropertyOrder("handSize", "queueLengthLimit", "queues")
 class QueuingConfiguration_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20Impl(
   @JsonIgnore
@@ -30,6 +28,4 @@ class QueuingConfiguration_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20Impl(
   override var queueLengthLimit: Int? = null
   override var queues: Int? = null
 }
-
-
 typealias QueuingConfiguration_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_21Impl = QueuingConfiguration_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20Impl

@@ -13,6 +13,4 @@ interface Auditsinkspec_auditregistration_k8s_io_v1alpha1_k8s1_16: K8sManifest {
   val webhook: Webhook_auditregistration_k8s_io_v1alpha1_k8s1_16?
 }      
 typealias Auditsinkspec_auditregistration_k8s_io_v1alpha1_k8s1_17 = Auditsinkspec_auditregistration_k8s_io_v1alpha1_k8s1_16       
-typealias Auditsinkspec_auditregistration_k8s_io_v1alpha1_k8s1_18 = Auditsinkspec_auditregistration_k8s_io_v1alpha1_k8s1_17       
-      
-      
+typealias Auditsinkspec_auditregistration_k8s_io_v1alpha1_k8s1_18 = Auditsinkspec_auditregistration_k8s_io_v1alpha1_k8s1_17 

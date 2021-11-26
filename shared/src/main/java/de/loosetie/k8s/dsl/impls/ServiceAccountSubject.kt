@@ -17,8 +17,6 @@ class ServiceAccountSubject_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17Impl(
 }
 typealias ServiceAccountSubject_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_18Impl = ServiceAccountSubject_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17Impl
 typealias ServiceAccountSubject_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_19Impl = ServiceAccountSubject_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_18Impl
-
-
 @JsonPropertyOrder("namespace", "name")
 class ServiceAccountSubject_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20Impl(
   @JsonIgnore
@@ -28,6 +26,4 @@ class ServiceAccountSubject_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20Impl(
   override var namespace: String? = null
   override var name: String? = null
 }
-
-
 typealias ServiceAccountSubject_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_21Impl = ServiceAccountSubject_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20Impl

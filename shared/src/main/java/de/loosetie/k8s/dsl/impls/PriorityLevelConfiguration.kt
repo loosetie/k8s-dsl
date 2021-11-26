@@ -27,8 +27,6 @@ class PriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_19Im
   override lateinit var spec: Prioritylevelconfigurationspec_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_19
   override var status: Prioritylevelconfigurationstatus_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_19? = null
 }
-
-
 @JsonPropertyOrder("apiVersion", "kind", "metadata", "spec", "status")
 class PriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20Impl(
   @JsonIgnore
@@ -39,6 +37,4 @@ class PriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20Imp
   override lateinit var spec: Prioritylevelconfigurationspec_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20
   override var status: Prioritylevelconfigurationstatus_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20? = null
 }
-
-
 typealias PriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_21Impl = PriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20Impl

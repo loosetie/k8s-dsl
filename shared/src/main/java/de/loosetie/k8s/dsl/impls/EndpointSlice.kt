@@ -17,8 +17,6 @@ class EndpointSlice_discovery_k8s_io_v1alpha1_k8s1_16Impl(
   override var endpoints: List<Endpoint_discovery_k8s_io_v1alpha1_k8s1_16>? = null
   override var ports: List<EndpointPort_discovery_k8s_io_v1alpha1_k8s1_16>? = null
 }
-
-
 @JsonPropertyOrder("apiVersion", "kind", "metadata", "addressType", "endpoints", "ports")
 class EndpointSlice_discovery_k8s_io_v1beta1_k8s1_17Impl(
   @JsonIgnore
@@ -30,14 +28,8 @@ class EndpointSlice_discovery_k8s_io_v1beta1_k8s1_17Impl(
   override var endpoints: List<Endpoint_discovery_k8s_io_v1beta1_k8s1_17>? = null
   override var ports: List<EndpointPort_discovery_k8s_io_v1beta1_k8s1_17>? = null
 }
-
-
 typealias EndpointSlice_discovery_k8s_io_v1beta1_k8s1_18Impl = EndpointSlice_discovery_k8s_io_v1beta1_k8s1_17Impl
-
-
 typealias EndpointSlice_discovery_k8s_io_v1beta1_k8s1_19Impl = EndpointSlice_discovery_k8s_io_v1beta1_k8s1_18Impl
-
-
 typealias EndpointSlice_discovery_k8s_io_v1beta1_k8s1_20Impl = EndpointSlice_discovery_k8s_io_v1beta1_k8s1_19Impl
 @JsonPropertyOrder("apiVersion", "kind", "metadata", "addressType", "endpoints", "ports")
 class EndpointSlice_discovery_k8s_io_v1_k8s1_21Impl(
@@ -50,6 +42,3 @@ class EndpointSlice_discovery_k8s_io_v1_k8s1_21Impl(
   override var endpoints: List<Endpoint_discovery_k8s_io_v1_k8s1_21>? = null
   override var ports: List<EndpointPort_discovery_k8s_io_v1_k8s1_21>? = null
 }
-
-
-

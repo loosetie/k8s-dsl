@@ -20,8 +20,6 @@ interface FlowSchemaCondition_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17: K8s
 }      
 typealias FlowSchemaCondition_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_18 = FlowSchemaCondition_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17       
 typealias FlowSchemaCondition_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_19 = FlowSchemaCondition_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_18       
-
-
 @K8sDslMarker
 interface FlowSchemaCondition_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20: K8sManifest {
   /** `lastTransitionTime` is the last time the condition transitioned from one status to another. */
@@ -35,6 +33,4 @@ interface FlowSchemaCondition_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20: K8sM
   /** `type` is the type of the condition. Required. */
   @K8sDslMarker var type: String?
 }      
-
-
 typealias FlowSchemaCondition_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_21 = FlowSchemaCondition_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20 

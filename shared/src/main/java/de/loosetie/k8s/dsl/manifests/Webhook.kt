@@ -13,6 +13,4 @@ interface Webhook_auditregistration_k8s_io_v1alpha1_k8s1_16: K8sManifest {
   val throttle: WebhookThrottleConfig_auditregistration_k8s_io_v1alpha1_k8s1_16?
 }      
 typealias Webhook_auditregistration_k8s_io_v1alpha1_k8s1_17 = Webhook_auditregistration_k8s_io_v1alpha1_k8s1_16       
-typealias Webhook_auditregistration_k8s_io_v1alpha1_k8s1_18 = Webhook_auditregistration_k8s_io_v1alpha1_k8s1_17       
-      
-      
+typealias Webhook_auditregistration_k8s_io_v1alpha1_k8s1_18 = Webhook_auditregistration_k8s_io_v1alpha1_k8s1_17 

@@ -75,19 +75,14 @@ typealias ServiceReference_admissionregistration_k8s_io_v1_k8s1_19 = ServiceRefe
 
 typealias ServiceReference_apiextensions_k8s_io_v1_k8s1_19 = ServiceReference_apiextensions_k8s_io_v1_k8s1_18 
 
-typealias ServiceReference_apiregistration_k8s_io_v1_k8s1_19 = ServiceReference_apiregistration_k8s_io_v1_k8s1_18 
-
-      
+typealias ServiceReference_apiregistration_k8s_io_v1_k8s1_19 = ServiceReference_apiregistration_k8s_io_v1_k8s1_18       
 typealias ServiceReference_admissionregistration_k8s_io_v1_k8s1_20 = ServiceReference_admissionregistration_k8s_io_v1_k8s1_19 
 
 typealias ServiceReference_apiextensions_k8s_io_v1_k8s1_20 = ServiceReference_apiextensions_k8s_io_v1_k8s1_19 
 
-typealias ServiceReference_apiregistration_k8s_io_v1_k8s1_20 = ServiceReference_apiregistration_k8s_io_v1_k8s1_19 
-
-      
+typealias ServiceReference_apiregistration_k8s_io_v1_k8s1_20 = ServiceReference_apiregistration_k8s_io_v1_k8s1_19       
 typealias ServiceReference_admissionregistration_k8s_io_v1_k8s1_21 = ServiceReference_admissionregistration_k8s_io_v1_k8s1_20 
 
 typealias ServiceReference_apiextensions_k8s_io_v1_k8s1_21 = ServiceReference_apiextensions_k8s_io_v1_k8s1_20 
 
 typealias ServiceReference_apiregistration_k8s_io_v1_k8s1_21 = ServiceReference_apiregistration_k8s_io_v1_k8s1_20 
-

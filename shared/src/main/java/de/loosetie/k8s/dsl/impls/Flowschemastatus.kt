@@ -16,8 +16,6 @@ class Flowschemastatus_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17Impl(
 }
 typealias Flowschemastatus_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_18Impl = Flowschemastatus_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17Impl
 typealias Flowschemastatus_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_19Impl = Flowschemastatus_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_18Impl
-
-
 @JsonPropertyOrder("conditions")
 class Flowschemastatus_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20Impl(
   @JsonIgnore
@@ -26,6 +24,4 @@ class Flowschemastatus_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20Impl(
 : Flowschemastatus_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20, HasParent {
   override var conditions: List<FlowSchemaCondition_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20>? = null
 }
-
-
 typealias Flowschemastatus_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_21Impl = Flowschemastatus_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20Impl

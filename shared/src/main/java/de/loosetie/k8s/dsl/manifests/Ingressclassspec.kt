@@ -26,12 +26,8 @@ controller. This should be specified as a domain-prefixed path no more than 250 
   /** Parameters is a link to a custom resource containing additional configuration for the controller. This is optional if
 the controller does not require extra parameters. */
   val parameters: TypedLocalObjectReference_core_v1_k8s1_19?
-}
-
-      
-typealias Ingressclassspec_networking_k8s_io_v1_k8s1_20 = Ingressclassspec_networking_k8s_io_v1_k8s1_19 
-
-      
+}      
+typealias Ingressclassspec_networking_k8s_io_v1_k8s1_20 = Ingressclassspec_networking_k8s_io_v1_k8s1_19       
 @K8sDslMarker
 interface Ingressclassspec_networking_k8s_io_v1_k8s1_21: K8sManifest {
   /** Controller refers to the name of the controller that should handle this class. This allows for different "flavors" that
@@ -43,4 +39,3 @@ controller. This should be specified as a domain-prefixed path no more than 250 
 the controller does not require extra parameters. */
   val parameters: IngressClassParametersReference_networking_k8s_io_v1_k8s1_21?
 }
-

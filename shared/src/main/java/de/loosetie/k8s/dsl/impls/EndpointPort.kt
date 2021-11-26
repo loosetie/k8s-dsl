@@ -29,8 +29,6 @@ class EndpointPort_discovery_k8s_io_v1alpha1_k8s1_16Impl(
 }
 typealias EndpointPort_core_v1_k8s1_17Impl = EndpointPort_core_v1_k8s1_16Impl
 
-
-
 @JsonPropertyOrder("name", "appProtocol", "port", "protocol")
 class EndpointPort_discovery_k8s_io_v1beta1_k8s1_17Impl(
   @JsonIgnore
@@ -53,8 +51,6 @@ class EndpointPort_core_v1_k8s1_18Impl(
   override var port: Int? = null
   override var protocol: String? = null
 }
-
-
 
 @JsonPropertyOrder("name", "appProtocol", "port", "protocol")
 class EndpointPort_discovery_k8s_io_v1beta1_k8s1_18Impl(
@@ -79,12 +75,8 @@ class EndpointPort_core_v1_k8s1_19Impl(
   override var protocol: String? = null
 }
 
-
-
 typealias EndpointPort_discovery_k8s_io_v1beta1_k8s1_19Impl = EndpointPort_discovery_k8s_io_v1beta1_k8s1_18Impl
 typealias EndpointPort_core_v1_k8s1_20Impl = EndpointPort_core_v1_k8s1_19Impl
-
-
 
 typealias EndpointPort_discovery_k8s_io_v1beta1_k8s1_20Impl = EndpointPort_discovery_k8s_io_v1beta1_k8s1_19Impl
 typealias EndpointPort_core_v1_k8s1_21Impl = EndpointPort_core_v1_k8s1_20Impl
@@ -100,6 +92,3 @@ class EndpointPort_discovery_k8s_io_v1_k8s1_21Impl(
   override var port: Int? = null
   override var protocol: String? = null
 }
-
-
-

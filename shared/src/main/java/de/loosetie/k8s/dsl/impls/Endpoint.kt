@@ -18,8 +18,6 @@ class Endpoint_discovery_k8s_io_v1alpha1_k8s1_16Impl(
   override var targetRef: ObjectReference_core_v1_k8s1_16? = null
   override var topology: Map<String, String>? = null
 }
-
-
 @JsonPropertyOrder("addresses", "conditions", "hostname", "targetRef", "topology")
 class Endpoint_discovery_k8s_io_v1beta1_k8s1_17Impl(
   @JsonIgnore
@@ -32,14 +30,8 @@ class Endpoint_discovery_k8s_io_v1beta1_k8s1_17Impl(
   override var targetRef: ObjectReference_core_v1_k8s1_17? = null
   override var topology: Map<String, String>? = null
 }
-
-
 typealias Endpoint_discovery_k8s_io_v1beta1_k8s1_18Impl = Endpoint_discovery_k8s_io_v1beta1_k8s1_17Impl
-
-
 typealias Endpoint_discovery_k8s_io_v1beta1_k8s1_19Impl = Endpoint_discovery_k8s_io_v1beta1_k8s1_18Impl
-
-
 @JsonPropertyOrder("addresses", "conditions", "hostname", "nodeName", "targetRef", "topology")
 class Endpoint_discovery_k8s_io_v1beta1_k8s1_20Impl(
   @JsonIgnore
@@ -68,6 +60,3 @@ class Endpoint_discovery_k8s_io_v1_k8s1_21Impl(
   override var targetRef: ObjectReference_core_v1_k8s1_21? = null
   override var zone: String? = null
 }
-
-
-

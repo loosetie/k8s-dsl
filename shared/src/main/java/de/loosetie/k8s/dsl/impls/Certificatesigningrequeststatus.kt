@@ -26,10 +26,5 @@ class Certificatesigningrequeststatus_certificates_k8s_io_v1_k8s1_19Impl(
   override var certificate: String? = null
   override var conditions: List<CertificateSigningRequestCondition_certificates_k8s_io_v1_k8s1_19>? = null
 }
-
-
 typealias Certificatesigningrequeststatus_certificates_k8s_io_v1_k8s1_20Impl = Certificatesigningrequeststatus_certificates_k8s_io_v1_k8s1_19Impl
-
-
 typealias Certificatesigningrequeststatus_certificates_k8s_io_v1_k8s1_21Impl = Certificatesigningrequeststatus_certificates_k8s_io_v1_k8s1_20Impl
-

@@ -90,4 +90,3 @@ class Cronjobspec_batch_v1_k8s1_21Impl(
   override var successfulJobsHistoryLimit: Int? = null
   override var suspend: Boolean? = null
 }
-

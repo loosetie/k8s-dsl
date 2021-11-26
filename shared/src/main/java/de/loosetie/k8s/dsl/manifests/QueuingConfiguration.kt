@@ -24,8 +24,6 @@ associated flow schemas irrelevant. This field has a default value of 64. */
 }      
 typealias QueuingConfiguration_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_18 = QueuingConfiguration_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17       
 typealias QueuingConfiguration_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_19 = QueuingConfiguration_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_18       
-
-
 @K8sDslMarker
 interface QueuingConfiguration_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20: K8sManifest {
   /** `handSize` is a small positive number that configures the shuffle sharding of requests into queues. When enqueuing a
@@ -43,6 +41,4 @@ must be positive. Setting it to 1 effectively precludes shufflesharding and thus
 associated flow schemas irrelevant. This field has a default value of 64. */
   @K8sDslMarker var queues: Int?
 }      
-
-
 typealias QueuingConfiguration_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_21 = QueuingConfiguration_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20 

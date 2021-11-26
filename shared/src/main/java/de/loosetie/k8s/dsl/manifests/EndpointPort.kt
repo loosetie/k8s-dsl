@@ -32,8 +32,6 @@ context of the specific consumer. */
 }      
 typealias EndpointPort_core_v1_k8s1_17 = EndpointPort_core_v1_k8s1_16 
 
-
-
 @Deprecated(message="Old api version")
 @K8sDslMarker
 interface EndpointPort_discovery_k8s_io_v1beta1_k8s1_17: K8sManifest {
@@ -61,8 +59,6 @@ ServiceAppProtocol feature gate. */
   @K8sDslMarker var appProtocol: String?
 }
 
-
-
 @K8sDslMarker
 interface EndpointPort_discovery_k8s_io_v1beta1_k8s1_18: EndpointPort_discovery_k8s_io_v1beta1_k8s1_17 {
   /** The application protocol for this port. This field follows standard Kubernetes label syntax. Un-prefixed names are
@@ -79,12 +75,8 @@ guarded by the ServiceAppProtocol feature gate and enabled by default. */
   override var appProtocol: String?
 }
 
-
-
 typealias EndpointPort_discovery_k8s_io_v1beta1_k8s1_19 = EndpointPort_discovery_k8s_io_v1beta1_k8s1_18       
 typealias EndpointPort_core_v1_k8s1_20 = EndpointPort_core_v1_k8s1_19 
-
-
 
 typealias EndpointPort_discovery_k8s_io_v1beta1_k8s1_20 = EndpointPort_discovery_k8s_io_v1beta1_k8s1_19       
 typealias EndpointPort_core_v1_k8s1_21 = EndpointPort_core_v1_k8s1_20 
@@ -107,6 +99,3 @@ context of the specific consumer. */
   /** The IP protocol for this port. Must be UDP, TCP, or SCTP. Default is TCP. */
   @K8sDslMarker var protocol: String?
 }
-
-
-

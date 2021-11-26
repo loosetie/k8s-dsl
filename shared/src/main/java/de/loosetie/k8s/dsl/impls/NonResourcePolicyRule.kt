@@ -17,8 +17,6 @@ class NonResourcePolicyRule_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17Impl(
 }
 typealias NonResourcePolicyRule_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_18Impl = NonResourcePolicyRule_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17Impl
 typealias NonResourcePolicyRule_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_19Impl = NonResourcePolicyRule_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_18Impl
-
-
 @JsonPropertyOrder("nonResourceURLs", "verbs")
 class NonResourcePolicyRule_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20Impl(
   @JsonIgnore
@@ -28,6 +26,4 @@ class NonResourcePolicyRule_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20Impl(
   override var nonResourceURLs: List<String>? = null
   override var verbs: List<String>? = null
 }
-
-
 typealias NonResourcePolicyRule_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_21Impl = NonResourcePolicyRule_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20Impl

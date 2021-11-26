@@ -29,4 +29,3 @@ class Cronjobstatus_batch_v1_k8s1_21Impl(
   override var lastScheduleTime: Time_meta_v1_k8s1_21? = null
   override var lastSuccessfulTime: Time_meta_v1_k8s1_21? = null
 }
-

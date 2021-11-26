@@ -44,5 +44,4 @@ interface Podpresetspec_settings_k8s_io_v1alpha1_k8s1_19: K8sManifest {
   val volumeMounts: List<VolumeMount_core_v1_k8s1_19>?
   /** Volumes defines the collection of Volume to inject into the pod. */
   val volumes: List<Volume_core_v1_k8s1_19>?
-}      
-      
+}

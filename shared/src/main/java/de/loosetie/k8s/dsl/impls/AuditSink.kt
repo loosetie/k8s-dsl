@@ -25,5 +25,3 @@ class AuditSink_auditregistration_k8s_io_v1alpha1_k8s1_17Impl(
   override lateinit var spec: Auditsinkspec_auditregistration_k8s_io_v1alpha1_k8s1_17
 }
 typealias AuditSink_auditregistration_k8s_io_v1alpha1_k8s1_18Impl = AuditSink_auditregistration_k8s_io_v1alpha1_k8s1_17Impl
-
-

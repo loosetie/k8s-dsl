@@ -24,16 +24,7 @@ class CSINode_storage_k8s_io_v1_k8s1_17Impl(
   override lateinit var metadata: ObjectMeta_meta_v1_k8s1_17
   override lateinit var spec: Csinodespec_storage_k8s_io_v1_k8s1_17
 }
-
-
 typealias CSINode_storage_k8s_io_v1_k8s1_18Impl = CSINode_storage_k8s_io_v1_k8s1_17Impl
-
-
 typealias CSINode_storage_k8s_io_v1_k8s1_19Impl = CSINode_storage_k8s_io_v1_k8s1_18Impl
-
-
 typealias CSINode_storage_k8s_io_v1_k8s1_20Impl = CSINode_storage_k8s_io_v1_k8s1_19Impl
-
-
 typealias CSINode_storage_k8s_io_v1_k8s1_21Impl = CSINode_storage_k8s_io_v1_k8s1_20Impl
-

@@ -29,8 +29,6 @@ class Flowschemaspec_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_18Impl(
   override var rules: List<PolicyRulesWithSubjects_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_18>? = null
 }
 typealias Flowschemaspec_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_19Impl = Flowschemaspec_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_18Impl
-
-
 @JsonPropertyOrder("distinguisherMethod", "matchingPrecedence", "priorityLevelConfiguration", "rules")
 class Flowschemaspec_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20Impl(
   @JsonIgnore
@@ -42,6 +40,4 @@ class Flowschemaspec_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20Impl(
   override var priorityLevelConfiguration: PriorityLevelConfigurationReference_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20? = null
   override var rules: List<PolicyRulesWithSubjects_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20>? = null
 }
-
-
 typealias Flowschemaspec_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_21Impl = Flowschemaspec_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20Impl

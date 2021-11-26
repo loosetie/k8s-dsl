@@ -33,14 +33,8 @@ class CSIDriver_storage_k8s_io_v1_k8s1_18Impl(
   override lateinit var metadata: ObjectMeta_meta_v1_k8s1_18
   override lateinit var spec: Csidriverspec_storage_k8s_io_v1_k8s1_18
 }
-
-
 typealias CSIDriver_storage_k8s_io_v1_k8s1_19Impl = CSIDriver_storage_k8s_io_v1_k8s1_18Impl
-
-
 typealias CSIDriver_storage_k8s_io_v1_k8s1_20Impl = CSIDriver_storage_k8s_io_v1_k8s1_19Impl
-
-
 @JsonPropertyOrder("apiVersion", "kind", "metadata", "spec")
 class CSIDriver_storage_k8s_io_v1_k8s1_21Impl(
   @JsonIgnore
@@ -50,4 +44,3 @@ class CSIDriver_storage_k8s_io_v1_k8s1_21Impl(
   override lateinit var metadata: ObjectMeta_meta_v1_k8s1_21
   override lateinit var spec: Csidriverspec_storage_k8s_io_v1_k8s1_21
 }
-

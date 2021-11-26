@@ -46,17 +46,8 @@ node object. When Kubernetes does topology aware provisioning, it can use this l
 retrieve from the node object and pass back to the driver. It is possible for different nodes to use different topology
 keys. This can be empty if driver does not support topology. */
   @K8sDslMarker var topologyKeys: List<String>?
-}
-
-      
-typealias CSINodeDriver_storage_k8s_io_v1_k8s1_18 = CSINodeDriver_storage_k8s_io_v1_k8s1_17 
-
-      
-typealias CSINodeDriver_storage_k8s_io_v1_k8s1_19 = CSINodeDriver_storage_k8s_io_v1_k8s1_18 
-
-      
-typealias CSINodeDriver_storage_k8s_io_v1_k8s1_20 = CSINodeDriver_storage_k8s_io_v1_k8s1_19 
-
-      
+}      
+typealias CSINodeDriver_storage_k8s_io_v1_k8s1_18 = CSINodeDriver_storage_k8s_io_v1_k8s1_17       
+typealias CSINodeDriver_storage_k8s_io_v1_k8s1_19 = CSINodeDriver_storage_k8s_io_v1_k8s1_18       
+typealias CSINodeDriver_storage_k8s_io_v1_k8s1_20 = CSINodeDriver_storage_k8s_io_v1_k8s1_19       
 typealias CSINodeDriver_storage_k8s_io_v1_k8s1_21 = CSINodeDriver_storage_k8s_io_v1_k8s1_20 
-

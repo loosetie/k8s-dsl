@@ -16,8 +16,6 @@ class FlowDistinguisherMethod_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17Impl(
 }
 typealias FlowDistinguisherMethod_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_18Impl = FlowDistinguisherMethod_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17Impl
 typealias FlowDistinguisherMethod_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_19Impl = FlowDistinguisherMethod_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_18Impl
-
-
 @JsonPropertyOrder("type")
 class FlowDistinguisherMethod_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20Impl(
   @JsonIgnore
@@ -26,6 +24,4 @@ class FlowDistinguisherMethod_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20Impl(
 : FlowDistinguisherMethod_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20, HasParent {
   override var type: String? = null
 }
-
-
 typealias FlowDistinguisherMethod_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_21Impl = FlowDistinguisherMethod_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20Impl

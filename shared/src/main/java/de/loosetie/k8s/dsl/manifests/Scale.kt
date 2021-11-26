@@ -26,7 +26,4 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
   /** current status of the scale. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status. Read-only. */
   val status: Scalestatus_apps_v1beta1_k8s1_17?
-}      
-      
-      
-      
+}

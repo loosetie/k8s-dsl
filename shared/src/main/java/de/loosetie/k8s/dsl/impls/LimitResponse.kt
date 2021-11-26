@@ -17,8 +17,6 @@ class LimitResponse_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17Impl(
 }
 typealias LimitResponse_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_18Impl = LimitResponse_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17Impl
 typealias LimitResponse_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_19Impl = LimitResponse_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_18Impl
-
-
 @JsonPropertyOrder("queuing", "type")
 class LimitResponse_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20Impl(
   @JsonIgnore
@@ -28,6 +26,4 @@ class LimitResponse_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20Impl(
   override var queuing: QueuingConfiguration_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20? = null
   override var type: String? = null
 }
-
-
 typealias LimitResponse_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_21Impl = LimitResponse_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20Impl

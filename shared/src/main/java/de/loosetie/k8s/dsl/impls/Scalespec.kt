@@ -14,6 +14,3 @@ class Scalespec_apps_v1beta1_k8s1_17Impl(
 : Scalespec_apps_v1beta1_k8s1_17, HasParent {
   override var replicas: Int? = null
 }
-
-
-

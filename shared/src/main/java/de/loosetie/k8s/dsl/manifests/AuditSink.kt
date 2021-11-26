@@ -39,6 +39,4 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
   /** Spec defines the audit configuration spec */
   val spec: Auditsinkspec_auditregistration_k8s_io_v1alpha1_k8s1_17
 }      
-typealias AuditSink_auditregistration_k8s_io_v1alpha1_k8s1_18 = AuditSink_auditregistration_k8s_io_v1alpha1_k8s1_17       
-      
-      
+typealias AuditSink_auditregistration_k8s_io_v1alpha1_k8s1_18 = AuditSink_auditregistration_k8s_io_v1alpha1_k8s1_17 

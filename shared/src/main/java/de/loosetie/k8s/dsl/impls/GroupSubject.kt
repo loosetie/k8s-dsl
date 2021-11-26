@@ -16,8 +16,6 @@ class GroupSubject_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17Impl(
 }
 typealias GroupSubject_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_18Impl = GroupSubject_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17Impl
 typealias GroupSubject_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_19Impl = GroupSubject_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_18Impl
-
-
 @JsonPropertyOrder("name")
 class GroupSubject_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20Impl(
   @JsonIgnore
@@ -26,6 +24,4 @@ class GroupSubject_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20Impl(
 : GroupSubject_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20, HasParent {
   override var name: String? = null
 }
-
-
 typealias GroupSubject_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_21Impl = GroupSubject_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20Impl

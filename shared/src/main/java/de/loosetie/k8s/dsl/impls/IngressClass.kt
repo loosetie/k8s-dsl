@@ -24,11 +24,7 @@ class IngressClass_networking_k8s_io_v1_k8s1_19Impl(
   override lateinit var metadata: ObjectMeta_meta_v1_k8s1_19
   override lateinit var spec: Ingressclassspec_networking_k8s_io_v1_k8s1_19
 }
-
-
 typealias IngressClass_networking_k8s_io_v1_k8s1_20Impl = IngressClass_networking_k8s_io_v1_k8s1_19Impl
-
-
 @JsonPropertyOrder("apiVersion", "kind", "metadata", "spec")
 class IngressClass_networking_k8s_io_v1_k8s1_21Impl(
   @JsonIgnore
@@ -38,4 +34,3 @@ class IngressClass_networking_k8s_io_v1_k8s1_21Impl(
   override lateinit var metadata: ObjectMeta_meta_v1_k8s1_21
   override lateinit var spec: Ingressclassspec_networking_k8s_io_v1_k8s1_21
 }
-

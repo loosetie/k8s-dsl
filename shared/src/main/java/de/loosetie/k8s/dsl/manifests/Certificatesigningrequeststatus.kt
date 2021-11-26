@@ -31,11 +31,6 @@ CERTIFICATE----- ) */
   @K8sDslMarker var certificate: String?
   /** conditions applied to the request. Known conditions are "Approved", "Denied", and "Failed". */
   val conditions: List<CertificateSigningRequestCondition_certificates_k8s_io_v1_k8s1_19>?
-}
-
-      
-typealias Certificatesigningrequeststatus_certificates_k8s_io_v1_k8s1_20 = Certificatesigningrequeststatus_certificates_k8s_io_v1_k8s1_19 
-
-      
+}      
+typealias Certificatesigningrequeststatus_certificates_k8s_io_v1_k8s1_20 = Certificatesigningrequeststatus_certificates_k8s_io_v1_k8s1_19       
 typealias Certificatesigningrequeststatus_certificates_k8s_io_v1_k8s1_21 = Certificatesigningrequeststatus_certificates_k8s_io_v1_k8s1_20 
-

@@ -59,4 +59,3 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status */
   val spec: Jobspec_batch_v1_k8s1_21?
 }
-

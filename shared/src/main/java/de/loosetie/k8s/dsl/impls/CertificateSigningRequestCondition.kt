@@ -32,10 +32,5 @@ class CertificateSigningRequestCondition_certificates_k8s_io_v1_k8s1_19Impl(
   override var status: String? = null
   override var type: String? = null
 }
-
-
 typealias CertificateSigningRequestCondition_certificates_k8s_io_v1_k8s1_20Impl = CertificateSigningRequestCondition_certificates_k8s_io_v1_k8s1_19Impl
-
-
 typealias CertificateSigningRequestCondition_certificates_k8s_io_v1_k8s1_21Impl = CertificateSigningRequestCondition_certificates_k8s_io_v1_k8s1_20Impl
-

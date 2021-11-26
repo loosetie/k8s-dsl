@@ -24,10 +24,5 @@ class HTTPIngressRuleValue_networking_k8s_io_v1_k8s1_19Impl(
 : HTTPIngressRuleValue_networking_k8s_io_v1_k8s1_19, HasParent {
   override var paths: List<HTTPIngressPath_networking_k8s_io_v1_k8s1_19>? = null
 }
-
-
 typealias HTTPIngressRuleValue_networking_k8s_io_v1_k8s1_20Impl = HTTPIngressRuleValue_networking_k8s_io_v1_k8s1_19Impl
-
-
 typealias HTTPIngressRuleValue_networking_k8s_io_v1_k8s1_21Impl = HTTPIngressRuleValue_networking_k8s_io_v1_k8s1_20Impl
-

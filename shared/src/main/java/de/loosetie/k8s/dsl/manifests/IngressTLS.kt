@@ -34,11 +34,6 @@ unspecified. */
 routing based on SNI hostname alone. If the SNI host in a listener conflicts with the "Host" header field used by an
 IngressRule, the SNI host is used for termination and value of the Host header is used for routing. */
   @K8sDslMarker var secretName: String?
-}
-
-      
-typealias IngressTLS_networking_k8s_io_v1_k8s1_20 = IngressTLS_networking_k8s_io_v1_k8s1_19 
-
-      
+}      
+typealias IngressTLS_networking_k8s_io_v1_k8s1_20 = IngressTLS_networking_k8s_io_v1_k8s1_19       
 typealias IngressTLS_networking_k8s_io_v1_k8s1_21 = IngressTLS_networking_k8s_io_v1_k8s1_20 
-

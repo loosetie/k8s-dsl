@@ -20,8 +20,6 @@ every request. Required. */
 }      
 typealias PolicyRulesWithSubjects_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_18 = PolicyRulesWithSubjects_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17       
 typealias PolicyRulesWithSubjects_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_19 = PolicyRulesWithSubjects_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_18       
-
-
 @K8sDslMarker
 interface PolicyRulesWithSubjects_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20: K8sManifest {
   /** `nonResourceRules` is a list of NonResourcePolicyRules that identify matching requests according to their verb and the
@@ -35,6 +33,4 @@ member in this slice. A slice that includes both the system:authenticated and sy
 every request. Required. */
   val subjects: List<Subject_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20>?
 }      
-
-
 typealias PolicyRulesWithSubjects_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_21 = PolicyRulesWithSubjects_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20 

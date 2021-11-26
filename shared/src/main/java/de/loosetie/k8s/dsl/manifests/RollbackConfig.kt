@@ -10,7 +10,4 @@ interface RollbackConfig_apps_v1beta1_k8s1_16: K8sManifest {
   /** The revision to rollback to. If set to 0, rollback to the last revision. */
   @K8sDslMarker var revision: Int?
 }      
-typealias RollbackConfig_apps_v1beta1_k8s1_17 = RollbackConfig_apps_v1beta1_k8s1_16       
-      
-      
-      
+typealias RollbackConfig_apps_v1beta1_k8s1_17 = RollbackConfig_apps_v1beta1_k8s1_16 

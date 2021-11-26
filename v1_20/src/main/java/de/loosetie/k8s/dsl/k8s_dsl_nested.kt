@@ -1453,6 +1453,24 @@ fun HTTPGetAction.httpHeaders(init: HTTPHeader.() -> Unit) {
     .apply(init)
 }
 
+/** Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an
+IANA_SVC_NAME. */
+@K8sDslMarker
+fun HTTPGetAction.port(string: String) {
+  this as HTTPGetAction_core_v1_k8s1_20Impl
+  de.loosetie.k8s.dsl.types.IntOrString(string)
+    .also { port = it }
+}
+
+/** Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an
+IANA_SVC_NAME. */
+@K8sDslMarker
+fun HTTPGetAction.port(int: Int) {
+  this as HTTPGetAction_core_v1_k8s1_20Impl
+  de.loosetie.k8s.dsl.types.IntOrString(int)
+    .also { port = it }
+}
+
 /** Backend defines the referenced service endpoint to which the traffic will be forwarded to. */
 @K8sDslMarker
 fun HTTPIngressPath.backend(init: IngressBackend.() -> Unit) {
@@ -1880,6 +1898,52 @@ fun Lifecycle.preStop(init: Handler.() -> Unit) {
   this as Lifecycle_core_v1_k8s1_20Impl
   Handler_core_v1_k8s1_20Impl(this)
     .also { preStop = it }
+    .apply(init)
+}
+
+/** Default resource requirement limit value by resource name if resource limit is omitted. */
+@K8sDslMarker
+fun LimitRangeItem.default(init: de.loosetie.k8s.dsl.types.CpuMem.() -> Unit) {
+  this as LimitRangeItem_core_v1_k8s1_20Impl
+  de.loosetie.k8s.dsl.types.CpuMem(this)
+    .also { default = it }
+    .apply(init)
+}
+
+/** DefaultRequest is the default resource requirement request value by resource name if resource request is omitted. */
+@K8sDslMarker
+fun LimitRangeItem.defaultRequest(init: de.loosetie.k8s.dsl.types.CpuMem.() -> Unit) {
+  this as LimitRangeItem_core_v1_k8s1_20Impl
+  de.loosetie.k8s.dsl.types.CpuMem(this)
+    .also { defaultRequest = it }
+    .apply(init)
+}
+
+/** Max usage constraints on this kind by resource name. */
+@K8sDslMarker
+fun LimitRangeItem.max(init: de.loosetie.k8s.dsl.types.CpuMem.() -> Unit) {
+  this as LimitRangeItem_core_v1_k8s1_20Impl
+  de.loosetie.k8s.dsl.types.CpuMem(this)
+    .also { max = it }
+    .apply(init)
+}
+
+/** MaxLimitRequestRatio if specified, the named resource must have a request and limit that are both non-zero where limit
+divided by request is less than or equal to the enumerated value; this represents the max burst for the named resource. */
+@K8sDslMarker
+fun LimitRangeItem.maxLimitRequestRatio(init: de.loosetie.k8s.dsl.types.CpuMem.() -> Unit) {
+  this as LimitRangeItem_core_v1_k8s1_20Impl
+  de.loosetie.k8s.dsl.types.CpuMem(this)
+    .also { maxLimitRequestRatio = it }
+    .apply(init)
+}
+
+/** Min usage constraints on this kind by resource name. */
+@K8sDslMarker
+fun LimitRangeItem.min(init: de.loosetie.k8s.dsl.types.CpuMem.() -> Unit) {
+  this as LimitRangeItem_core_v1_k8s1_20Impl
+  de.loosetie.k8s.dsl.types.CpuMem(this)
+    .also { min = it }
     .apply(init)
 }
 
@@ -2330,6 +2394,24 @@ fun NetworkPolicyPeer.podSelector(init: LabelSelector.() -> Unit) {
     .apply(init)
 }
 
+/** The port on the given protocol. This can either be a numerical or named port on a pod. If this field is not provided,
+this matches all port names and numbers. */
+@K8sDslMarker
+fun NetworkPolicyPort.port(string: String) {
+  this as NetworkPolicyPort_networking_k8s_io_v1_k8s1_20Impl
+  de.loosetie.k8s.dsl.types.IntOrString(string)
+    .also { port = it }
+}
+
+/** The port on the given protocol. This can either be a numerical or named port on a pod. If this field is not provided,
+this matches all port names and numbers. */
+@K8sDslMarker
+fun NetworkPolicyPort.port(int: Int) {
+  this as NetworkPolicyPort_networking_k8s_io_v1_k8s1_20Impl
+  de.loosetie.k8s.dsl.types.IntOrString(int)
+    .also { port = it }
+}
+
 /** Standard object's metadata. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata */
 @K8sDslMarker
@@ -2612,6 +2694,15 @@ fun ObjectMetricStatus.metric(init: MetricIdentifier.() -> Unit) {
   this as ObjectMetricStatus_autoscaling_v2beta2_k8s1_20Impl
   MetricIdentifier_autoscaling_v2beta2_k8s1_20Impl(this)
     .also { metric = it }
+    .apply(init)
+}
+
+/** PodFixed represents the fixed resource overhead associated with running a pod. */
+@K8sDslMarker
+fun Overhead.podFixed(init: de.loosetie.k8s.dsl.types.LimitsAndRequests.() -> Unit) {
+  this as Overhead_node_k8s_io_v1_k8s1_20Impl
+  de.loosetie.k8s.dsl.types.LimitsAndRequests(this)
+    .also { podFixed = it }
     .apply(init)
 }
 
@@ -3261,6 +3352,27 @@ fun ResourceQuota.status(init: Resourcequotastatus.() -> Unit) {
     .apply(init)
 }
 
+/** Limits describes the maximum amount of compute resources allowed. More info:
+https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/ */
+@K8sDslMarker
+fun ResourceRequirements.limits(init: de.loosetie.k8s.dsl.types.LimitsAndRequests.() -> Unit) {
+  this as ResourceRequirements_core_v1_k8s1_20Impl
+  de.loosetie.k8s.dsl.types.LimitsAndRequests(this)
+    .also { limits = it }
+    .apply(init)
+}
+
+/** Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults
+to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info:
+https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/ */
+@K8sDslMarker
+fun ResourceRequirements.requests(init: de.loosetie.k8s.dsl.types.LimitsAndRequests.() -> Unit) {
+  this as ResourceRequirements_core_v1_k8s1_20Impl
+  de.loosetie.k8s.dsl.types.LimitsAndRequests(this)
+    .also { requests = it }
+    .apply(init)
+}
+
 /** Standard object's metadata. */
 @K8sDslMarker
 fun RoleBinding.metadata(init: ObjectMeta.() -> Unit) {
@@ -3567,6 +3679,30 @@ fun ServiceAccount.secrets(init: ObjectReference.() -> Unit) {
     .apply(init)
 }
 
+/** Number or name of the port to access on the pods targeted by the service. Number must be in the range 1 to 65535. Name
+must be an IANA_SVC_NAME. If this is a string, it will be looked up as a named port in the target Pod's container ports.
+If this is not specified, the value of the 'port' field is used (an identity map). This field is ignored for services
+with clusterIP=None, and should be omitted or set equal to the 'port' field. More info:
+https://kubernetes.io/docs/concepts/services-networking/service/#defining-a-service */
+@K8sDslMarker
+fun ServicePort.targetPort(string: String) {
+  this as ServicePort_core_v1_k8s1_20Impl
+  de.loosetie.k8s.dsl.types.IntOrString(string)
+    .also { targetPort = it }
+}
+
+/** Number or name of the port to access on the pods targeted by the service. Number must be in the range 1 to 65535. Name
+must be an IANA_SVC_NAME. If this is a string, it will be looked up as a named port in the target Pod's container ports.
+If this is not specified, the value of the 'port' field is used (an identity map). This field is ignored for services
+with clusterIP=None, and should be omitted or set equal to the 'port' field. More info:
+https://kubernetes.io/docs/concepts/services-networking/service/#defining-a-service */
+@K8sDslMarker
+fun ServicePort.targetPort(int: Int) {
+  this as ServicePort_core_v1_k8s1_20Impl
+  de.loosetie.k8s.dsl.types.IntOrString(int)
+    .also { targetPort = it }
+}
+
 /** Standard object's metadata. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata */
 @K8sDslMarker
@@ -3841,6 +3977,24 @@ fun SupplementalGroupsStrategyOptions.ranges(init: IDRange.() -> Unit) {
   IDRange_policy_v1beta1_k8s1_20Impl(this)
     .also { ranges = ranges?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
+}
+
+/** Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an
+IANA_SVC_NAME. */
+@K8sDslMarker
+fun TCPSocketAction.port(string: String) {
+  this as TCPSocketAction_core_v1_k8s1_20Impl
+  de.loosetie.k8s.dsl.types.IntOrString(string)
+    .also { port = it }
+}
+
+/** Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an
+IANA_SVC_NAME. */
+@K8sDslMarker
+fun TCPSocketAction.port(int: Int) {
+  this as TCPSocketAction_core_v1_k8s1_20Impl
+  de.loosetie.k8s.dsl.types.IntOrString(int)
+    .also { port = it }
 }
 
 /** TimeAdded represents the time at which the taint was added. It is only written for NoExecute taints. */
@@ -5042,6 +5196,16 @@ fun Persistentvolumespec.azureFile(init: AzureFilePersistentVolumeSource.() -> U
     .apply(init)
 }
 
+/** A description of the persistent volume's resources and capacity. More info:
+https://kubernetes.io/docs/concepts/storage/persistent-volumes#capacity */
+@K8sDslMarker
+fun Persistentvolumespec.capacity(init: de.loosetie.k8s.dsl.types.Capacity.() -> Unit) {
+  this as Persistentvolumespec_core_v1_k8s1_20Impl
+  de.loosetie.k8s.dsl.types.Capacity(this)
+    .also { capacity = it }
+    .apply(init)
+}
+
 /** CephFS represents a Ceph FS mount on the host that shares a pod's lifetime */
 @K8sDslMarker
 fun Persistentvolumespec.cephfs(init: CephFSPersistentVolumeSource.() -> Unit) {
@@ -5253,6 +5417,60 @@ fun Poddisruptionbudgetspec.selector(init: LabelSelector.() -> Unit) {
     .apply(init)
 }
 
+/** An eviction is allowed if at most "maxUnavailable" pods selected by "selector" are unavailable after the eviction, i.e.
+even in absence of the evicted pod. For example, one can prevent all voluntary evictions by specifying 0. This is a
+mutually exclusive setting with "minAvailable".
+
+			When you specify an integer, it represents a number of Pods. When
+you specify a percentage by setting the value to a string representation of a percentage (eg. "50%"), it represents a
+percentage of total Pods. */
+@K8sDslMarker
+fun Poddisruptionbudgetspec.maxUnavailable(percentage: String) {
+  this as Poddisruptionbudgetspec_policy_v1beta1_k8s1_20Impl
+  de.loosetie.k8s.dsl.types.IntOrPercentage(percentage)
+    .also { maxUnavailable = it }
+}
+
+/** An eviction is allowed if at most "maxUnavailable" pods selected by "selector" are unavailable after the eviction, i.e.
+even in absence of the evicted pod. For example, one can prevent all voluntary evictions by specifying 0. This is a
+mutually exclusive setting with "minAvailable".
+
+			When you specify an integer, it represents a number of Pods. When
+you specify a percentage by setting the value to a string representation of a percentage (eg. "50%"), it represents a
+percentage of total Pods. */
+@K8sDslMarker
+fun Poddisruptionbudgetspec.maxUnavailable(int: Int) {
+  this as Poddisruptionbudgetspec_policy_v1beta1_k8s1_20Impl
+  de.loosetie.k8s.dsl.types.IntOrPercentage(int)
+    .also { maxUnavailable = it }
+}
+
+/** An eviction is allowed if at least "minAvailable" pods selected by "selector" will still be available after the
+eviction, i.e. even in the absence of the evicted pod. So for example you can prevent all voluntary evictions by
+specifying "100%".
+
+			When you specify an integer, it represents a number of Pods. When you specify a percentage by
+setting the value to a string representation of a percentage (eg. "50%"), it represents a percentage of total Pods. */
+@K8sDslMarker
+fun Poddisruptionbudgetspec.minAvailable(percentage: String) {
+  this as Poddisruptionbudgetspec_policy_v1beta1_k8s1_20Impl
+  de.loosetie.k8s.dsl.types.IntOrPercentage(percentage)
+    .also { minAvailable = it }
+}
+
+/** An eviction is allowed if at least "minAvailable" pods selected by "selector" will still be available after the
+eviction, i.e. even in the absence of the evicted pod. So for example you can prevent all voluntary evictions by
+specifying "100%".
+
+			When you specify an integer, it represents a number of Pods. When you specify a percentage by
+setting the value to a string representation of a percentage (eg. "50%"), it represents a percentage of total Pods. */
+@K8sDslMarker
+fun Poddisruptionbudgetspec.minAvailable(int: Int) {
+  this as Poddisruptionbudgetspec_policy_v1beta1_k8s1_20Impl
+  de.loosetie.k8s.dsl.types.IntOrPercentage(int)
+    .also { minAvailable = it }
+}
+
 /** AllowedCSIDrivers is an allowlist of inline CSI drivers that must be explicitly set to be embedded within a pod spec. An
 empty value indicates that any CSI driver can be used for inline ephemeral volumes. This is a beta field, and is only
 honored if the API server enables the CSIInlineVolume feature gate. */
@@ -5425,6 +5643,21 @@ fun Podspec.initContainers(init: Container.() -> Unit) {
   this as Podspec_core_v1_k8s1_20Impl
   Container_core_v1_k8s1_20Impl(this)
     .also { initContainers = initContainers?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** Overhead represents the resource overhead associated with running a pod for a given RuntimeClass. This field will be
+autopopulated at admission time by the RuntimeClass admission controller. If the RuntimeClass admission controller is
+enabled, overhead must not be set in Pod create requests. The RuntimeClass admission controller will reject Pod create
+requests which have the overhead already set. If RuntimeClass is configured and selected in the PodSpec, Overhead will
+be set to the value defined in the corresponding RuntimeClass, otherwise it will remain unset and treated as zero. More
+info: https://git.k8s.io/enhancements/keps/sig-node/20190226-pod-overhead.md This field is alpha-level as of Kubernetes
+v1.16, and is only honored by servers that enable the PodOverhead feature. */
+@K8sDslMarker
+fun Podspec.overhead(init: de.loosetie.k8s.dsl.types.LimitsAndRequests.() -> Unit) {
+  this as Podspec_core_v1_k8s1_20Impl
+  de.loosetie.k8s.dsl.types.LimitsAndRequests(this)
+    .also { overhead = it }
     .apply(init)
 }
 
@@ -5637,6 +5870,86 @@ fun Resourcequotaspec.scopeSelector(init: ScopeSelector.() -> Unit) {
   ScopeSelector_core_v1_k8s1_20Impl(this)
     .also { scopeSelector = it }
     .apply(init)
+}
+
+/** The maximum number of DaemonSet pods that can be unavailable during the update. Value can be an absolute number (ex: 5)
+or a percentage of total number of DaemonSet pods at the start of the update (ex: 10%). Absolute number is calculated
+from percentage by rounding up. This cannot be 0. Default value is 1. Example: when this is set to 30%, at most 30% of
+the total number of nodes that should be running the daemon pod (i.e. status.desiredNumberScheduled) can have their pods
+stopped for an update at any given time. The update starts by stopping at most 30% of those DaemonSet pods and then
+brings up new DaemonSet pods in their place. Once the new pods are available, it then proceeds onto other DaemonSet
+pods, thus ensuring that at least 70% of original number of DaemonSet pods are available at all times during the update. */
+@K8sDslMarker
+fun Rollingupdatedaemonset.maxUnavailable(percentage: String) {
+  this as Rollingupdatedaemonset_apps_v1_k8s1_20Impl
+  de.loosetie.k8s.dsl.types.IntOrPercentage(percentage)
+    .also { maxUnavailable = it }
+}
+
+/** The maximum number of DaemonSet pods that can be unavailable during the update. Value can be an absolute number (ex: 5)
+or a percentage of total number of DaemonSet pods at the start of the update (ex: 10%). Absolute number is calculated
+from percentage by rounding up. This cannot be 0. Default value is 1. Example: when this is set to 30%, at most 30% of
+the total number of nodes that should be running the daemon pod (i.e. status.desiredNumberScheduled) can have their pods
+stopped for an update at any given time. The update starts by stopping at most 30% of those DaemonSet pods and then
+brings up new DaemonSet pods in their place. Once the new pods are available, it then proceeds onto other DaemonSet
+pods, thus ensuring that at least 70% of original number of DaemonSet pods are available at all times during the update. */
+@K8sDslMarker
+fun Rollingupdatedaemonset.maxUnavailable(int: Int) {
+  this as Rollingupdatedaemonset_apps_v1_k8s1_20Impl
+  de.loosetie.k8s.dsl.types.IntOrPercentage(int)
+    .also { maxUnavailable = it }
+}
+
+/** The maximum number of pods that can be scheduled above the desired number of pods. Value can be an absolute number (ex:
+5) or a percentage of desired pods (ex: 10%). This can not be 0 if MaxUnavailable is 0. Absolute number is calculated
+from percentage by rounding up. Defaults to 25%. Example: when this is set to 30%, the new ReplicaSet can be scaled up
+immediately when the rolling update starts, such that the total number of old and new pods do not exceed 130% of desired
+pods. Once old pods have been killed, new ReplicaSet can be scaled up further, ensuring that total number of pods
+running at any time during the update is at most 130% of desired pods. */
+@K8sDslMarker
+fun Rollingupdatedeployment.maxSurge(percentage: String) {
+  this as Rollingupdatedeployment_apps_v1_k8s1_20Impl
+  de.loosetie.k8s.dsl.types.IntOrPercentage(percentage)
+    .also { maxSurge = it }
+}
+
+/** The maximum number of pods that can be scheduled above the desired number of pods. Value can be an absolute number (ex:
+5) or a percentage of desired pods (ex: 10%). This can not be 0 if MaxUnavailable is 0. Absolute number is calculated
+from percentage by rounding up. Defaults to 25%. Example: when this is set to 30%, the new ReplicaSet can be scaled up
+immediately when the rolling update starts, such that the total number of old and new pods do not exceed 130% of desired
+pods. Once old pods have been killed, new ReplicaSet can be scaled up further, ensuring that total number of pods
+running at any time during the update is at most 130% of desired pods. */
+@K8sDslMarker
+fun Rollingupdatedeployment.maxSurge(int: Int) {
+  this as Rollingupdatedeployment_apps_v1_k8s1_20Impl
+  de.loosetie.k8s.dsl.types.IntOrPercentage(int)
+    .also { maxSurge = it }
+}
+
+/** The maximum number of pods that can be unavailable during the update. Value can be an absolute number (ex: 5) or a
+percentage of desired pods (ex: 10%). Absolute number is calculated from percentage by rounding down. This can not be 0
+if MaxSurge is 0. Defaults to 25%. Example: when this is set to 30%, the old ReplicaSet can be scaled down to 70% of
+desired pods immediately when the rolling update starts. Once new pods are ready, old ReplicaSet can be scaled down
+further, followed by scaling up the new ReplicaSet, ensuring that the total number of pods available at all times during
+the update is at least 70% of desired pods. */
+@K8sDslMarker
+fun Rollingupdatedeployment.maxUnavailable(percentage: String) {
+  this as Rollingupdatedeployment_apps_v1_k8s1_20Impl
+  de.loosetie.k8s.dsl.types.IntOrPercentage(percentage)
+    .also { maxUnavailable = it }
+}
+
+/** The maximum number of pods that can be unavailable during the update. Value can be an absolute number (ex: 5) or a
+percentage of desired pods (ex: 10%). Absolute number is calculated from percentage by rounding down. This can not be 0
+if MaxSurge is 0. Defaults to 25%. Example: when this is set to 30%, the old ReplicaSet can be scaled down to 70% of
+desired pods immediately when the rolling update starts. Once new pods are ready, old ReplicaSet can be scaled down
+further, followed by scaling up the new ReplicaSet, ensuring that the total number of pods available at all times during
+the update is at least 70% of desired pods. */
+@K8sDslMarker
+fun Rollingupdatedeployment.maxUnavailable(int: Int) {
+  this as Rollingupdatedeployment_apps_v1_k8s1_20Impl
+  de.loosetie.k8s.dsl.types.IntOrPercentage(int)
+    .also { maxUnavailable = it }
 }
 
 /** NonResourceAttributes describes information for a non-resource access request */

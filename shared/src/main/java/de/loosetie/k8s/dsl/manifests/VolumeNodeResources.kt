@@ -20,17 +20,8 @@ and mounted on a node is considered to be used once, not twice. The same rule ap
 among multiple pods on the same node. If this field is not specified, then the supported number of volumes on this node
 is unbounded. */
   @K8sDslMarker var count: Int?
-}
-
-      
-typealias VolumeNodeResources_storage_k8s_io_v1_k8s1_18 = VolumeNodeResources_storage_k8s_io_v1_k8s1_17 
-
-      
-typealias VolumeNodeResources_storage_k8s_io_v1_k8s1_19 = VolumeNodeResources_storage_k8s_io_v1_k8s1_18 
-
-      
-typealias VolumeNodeResources_storage_k8s_io_v1_k8s1_20 = VolumeNodeResources_storage_k8s_io_v1_k8s1_19 
-
-      
+}      
+typealias VolumeNodeResources_storage_k8s_io_v1_k8s1_18 = VolumeNodeResources_storage_k8s_io_v1_k8s1_17       
+typealias VolumeNodeResources_storage_k8s_io_v1_k8s1_19 = VolumeNodeResources_storage_k8s_io_v1_k8s1_18       
+typealias VolumeNodeResources_storage_k8s_io_v1_k8s1_20 = VolumeNodeResources_storage_k8s_io_v1_k8s1_19       
 typealias VolumeNodeResources_storage_k8s_io_v1_k8s1_21 = VolumeNodeResources_storage_k8s_io_v1_k8s1_20 
-

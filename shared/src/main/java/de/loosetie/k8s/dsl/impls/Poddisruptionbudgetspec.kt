@@ -28,4 +28,3 @@ class Poddisruptionbudgetspec_policy_v1_k8s1_21Impl(
 : Poddisruptionbudgetspec_policy_v1_k8s1_21, HasParent {
   override var selector: LabelSelector_meta_v1_k8s1_21? = null
 }
-

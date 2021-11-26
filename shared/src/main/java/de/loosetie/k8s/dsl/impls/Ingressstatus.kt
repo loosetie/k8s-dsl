@@ -24,10 +24,5 @@ class Ingressstatus_networking_k8s_io_v1_k8s1_19Impl(
 : Ingressstatus_networking_k8s_io_v1_k8s1_19, HasParent {
   override var loadBalancer: LoadBalancerStatus_core_v1_k8s1_19? = null
 }
-
-
 typealias Ingressstatus_networking_k8s_io_v1_k8s1_20Impl = Ingressstatus_networking_k8s_io_v1_k8s1_19Impl
-
-
 typealias Ingressstatus_networking_k8s_io_v1_k8s1_21Impl = Ingressstatus_networking_k8s_io_v1_k8s1_20Impl
-

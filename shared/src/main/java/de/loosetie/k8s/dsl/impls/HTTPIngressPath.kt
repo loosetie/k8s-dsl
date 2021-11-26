@@ -36,10 +36,5 @@ class HTTPIngressPath_networking_k8s_io_v1_k8s1_19Impl(
   override var path: String? = null
   override var pathType: String? = null
 }
-
-
 typealias HTTPIngressPath_networking_k8s_io_v1_k8s1_20Impl = HTTPIngressPath_networking_k8s_io_v1_k8s1_19Impl
-
-
 typealias HTTPIngressPath_networking_k8s_io_v1_k8s1_21Impl = HTTPIngressPath_networking_k8s_io_v1_k8s1_20Impl
-

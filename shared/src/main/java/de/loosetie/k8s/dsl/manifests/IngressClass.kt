@@ -42,12 +42,8 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
   /** Spec is the desired state of the IngressClass. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status */
   val spec: Ingressclassspec_networking_k8s_io_v1_k8s1_19
-}
-
-      
-typealias IngressClass_networking_k8s_io_v1_k8s1_20 = IngressClass_networking_k8s_io_v1_k8s1_19 
-
-      
+}      
+typealias IngressClass_networking_k8s_io_v1_k8s1_20 = IngressClass_networking_k8s_io_v1_k8s1_19       
 @K8sDslMarker
 interface IngressClass_networking_k8s_io_v1_k8s1_21: K8sTopLevel, HasMetadata {
   /** APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas
@@ -67,4 +63,3 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status */
   val spec: Ingressclassspec_networking_k8s_io_v1_k8s1_21
 }
-

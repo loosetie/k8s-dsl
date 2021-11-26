@@ -25,4 +25,3 @@ interface Cronjobstatus_batch_v1_k8s1_21: K8sManifest {
   /** Information when was the last time the job successfully completed. */
   val lastSuccessfulTime: Time_meta_v1_k8s1_21?
 }
-

@@ -15,6 +15,3 @@ class RollbackConfig_apps_v1beta1_k8s1_16Impl(
   override var revision: Int? = null
 }
 typealias RollbackConfig_apps_v1beta1_k8s1_17Impl = RollbackConfig_apps_v1beta1_k8s1_16Impl
-
-
-

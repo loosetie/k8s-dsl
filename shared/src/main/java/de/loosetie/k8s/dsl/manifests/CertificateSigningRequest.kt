@@ -64,11 +64,6 @@ can be set on creation. Other fields are derived by Kubernetes and cannot be mod
   /** status contains information about whether the request is approved or denied, and the certificate issued by the signer,
 or the failure condition indicating signer failure. */
   val status: Certificatesigningrequeststatus_certificates_k8s_io_v1_k8s1_19?
-}
-
-      
-typealias CertificateSigningRequest_certificates_k8s_io_v1_k8s1_20 = CertificateSigningRequest_certificates_k8s_io_v1_k8s1_19 
-
-      
+}      
+typealias CertificateSigningRequest_certificates_k8s_io_v1_k8s1_20 = CertificateSigningRequest_certificates_k8s_io_v1_k8s1_19       
 typealias CertificateSigningRequest_certificates_k8s_io_v1_k8s1_21 = CertificateSigningRequest_certificates_k8s_io_v1_k8s1_20 
-

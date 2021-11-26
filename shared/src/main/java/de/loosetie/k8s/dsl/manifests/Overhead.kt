@@ -17,8 +17,5 @@ typealias Overhead_node_k8s_io_v1beta1_k8s1_19 = Overhead_node_k8s_io_v1beta1_k8
 interface Overhead_node_k8s_io_v1_k8s1_20: K8sManifest {
   /** PodFixed represents the fixed resource overhead associated with running a pod. */
   var podFixed: de.loosetie.k8s.dsl.types.LimitsAndRequests?
-}
-
-      
+}      
 typealias Overhead_node_k8s_io_v1_k8s1_21 = Overhead_node_k8s_io_v1_k8s1_20 
-

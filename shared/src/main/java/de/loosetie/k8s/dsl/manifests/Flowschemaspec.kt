@@ -29,8 +29,6 @@ value must be ranged in [1,10000]. Note that if the precedence is not specified,
   override var matchingPrecedence: Int?
 }      
 typealias Flowschemaspec_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_19 = Flowschemaspec_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_18       
-
-
 @K8sDslMarker
 interface Flowschemaspec_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20: K8sManifest {
   /** `distinguisherMethod` defines how to compute the flow distinguisher for requests that match this schema. `nil` specifies
@@ -47,6 +45,4 @@ resolved, the FlowSchema will be ignored and marked as invalid in its status. Re
 one member of rules matches the request. if it is an empty slice, there will be no requests matching the FlowSchema. */
   val rules: List<PolicyRulesWithSubjects_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20>?
 }      
-
-
 typealias Flowschemaspec_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_21 = Flowschemaspec_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20 

@@ -66,4 +66,3 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
   /** Most recently observed status of the PodDisruptionBudget. */
   val status: Poddisruptionbudgetstatus_policy_v1_k8s1_21?
 }
-

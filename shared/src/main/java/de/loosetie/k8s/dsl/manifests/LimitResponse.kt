@@ -16,8 +16,6 @@ arrival are rejected. Required. */
 }      
 typealias LimitResponse_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_18 = LimitResponse_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17       
 typealias LimitResponse_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_19 = LimitResponse_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_18       
-
-
 @K8sDslMarker
 interface LimitResponse_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20: K8sManifest {
   /** `queuing` holds the configuration parameters for queuing. This field may be non-empty only if `type` is `"Queue"`. */
@@ -27,6 +25,4 @@ until they can be executed or a queuing limit is reached. "Reject" means that re
 arrival are rejected. Required. */
   @K8sDslMarker var type: String?
 }      
-
-
 typealias LimitResponse_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_21 = LimitResponse_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20 

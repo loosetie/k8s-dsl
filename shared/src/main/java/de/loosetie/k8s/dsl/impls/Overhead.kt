@@ -25,7 +25,4 @@ class Overhead_node_k8s_io_v1_k8s1_20Impl(
 : Overhead_node_k8s_io_v1_k8s1_20, HasParent {
   override var podFixed: de.loosetie.k8s.dsl.types.LimitsAndRequests? = null
 }
-
-
 typealias Overhead_node_k8s_io_v1_k8s1_21Impl = Overhead_node_k8s_io_v1_k8s1_20Impl
-

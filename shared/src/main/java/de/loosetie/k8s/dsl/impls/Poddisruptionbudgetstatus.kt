@@ -61,4 +61,3 @@ class Poddisruptionbudgetstatus_policy_v1_k8s1_21Impl(
   override var expectedPods: Int? = null
   override var observedGeneration: Int? = null
 }
-

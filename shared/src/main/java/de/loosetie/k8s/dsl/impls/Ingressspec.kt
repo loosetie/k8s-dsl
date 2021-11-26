@@ -39,10 +39,5 @@ class Ingressspec_networking_k8s_io_v1_k8s1_19Impl(
   override var rules: List<IngressRule_networking_k8s_io_v1_k8s1_19>? = null
   override var tls: List<IngressTLS_networking_k8s_io_v1_k8s1_19>? = null
 }
-
-
 typealias Ingressspec_networking_k8s_io_v1_k8s1_20Impl = Ingressspec_networking_k8s_io_v1_k8s1_19Impl
-
-
 typealias Ingressspec_networking_k8s_io_v1_k8s1_21Impl = Ingressspec_networking_k8s_io_v1_k8s1_20Impl
-

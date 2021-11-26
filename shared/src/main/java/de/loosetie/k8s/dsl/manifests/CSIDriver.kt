@@ -64,15 +64,9 @@ More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-
   val metadata: ObjectMeta_meta_v1_k8s1_18
   /** Specification of the CSI Driver. */
   val spec: Csidriverspec_storage_k8s_io_v1_k8s1_18
-}
-
-      
-typealias CSIDriver_storage_k8s_io_v1_k8s1_19 = CSIDriver_storage_k8s_io_v1_k8s1_18 
-
-      
-typealias CSIDriver_storage_k8s_io_v1_k8s1_20 = CSIDriver_storage_k8s_io_v1_k8s1_19 
-
-      
+}      
+typealias CSIDriver_storage_k8s_io_v1_k8s1_19 = CSIDriver_storage_k8s_io_v1_k8s1_18       
+typealias CSIDriver_storage_k8s_io_v1_k8s1_20 = CSIDriver_storage_k8s_io_v1_k8s1_19       
 @K8sDslMarker
 interface CSIDriver_storage_k8s_io_v1_k8s1_21: K8sTopLevel, HasMetadata {
   /** APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas
@@ -93,4 +87,3 @@ More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-
   /** Specification of the CSI Driver. */
   val spec: Csidriverspec_storage_k8s_io_v1_k8s1_21
 }
-

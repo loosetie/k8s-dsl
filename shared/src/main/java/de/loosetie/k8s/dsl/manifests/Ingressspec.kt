@@ -49,11 +49,6 @@ default backend. */
 different hosts, they will be multiplexed on the same port according to the hostname specified through the SNI TLS
 extension, if the ingress controller fulfilling the ingress supports SNI. */
   val tls: List<IngressTLS_networking_k8s_io_v1_k8s1_19>?
-}
-
-      
-typealias Ingressspec_networking_k8s_io_v1_k8s1_20 = Ingressspec_networking_k8s_io_v1_k8s1_19 
-
-      
+}      
+typealias Ingressspec_networking_k8s_io_v1_k8s1_20 = Ingressspec_networking_k8s_io_v1_k8s1_19       
 typealias Ingressspec_networking_k8s_io_v1_k8s1_21 = Ingressspec_networking_k8s_io_v1_k8s1_20 
-

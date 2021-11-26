@@ -71,11 +71,6 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
   /** Status is the current state of the Ingress. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status */
   val status: Ingressstatus_networking_k8s_io_v1_k8s1_19?
-}
-
-      
-typealias Ingress_networking_k8s_io_v1_k8s1_20 = Ingress_networking_k8s_io_v1_k8s1_19 
-
-      
+}      
+typealias Ingress_networking_k8s_io_v1_k8s1_20 = Ingress_networking_k8s_io_v1_k8s1_19       
 typealias Ingress_networking_k8s_io_v1_k8s1_21 = Ingress_networking_k8s_io_v1_k8s1_20 
-

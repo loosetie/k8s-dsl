@@ -22,16 +22,7 @@ class VolumeNodeResources_storage_k8s_io_v1_k8s1_17Impl(
 : VolumeNodeResources_storage_k8s_io_v1_k8s1_17, HasParent {
   override var count: Int? = null
 }
-
-
 typealias VolumeNodeResources_storage_k8s_io_v1_k8s1_18Impl = VolumeNodeResources_storage_k8s_io_v1_k8s1_17Impl
-
-
 typealias VolumeNodeResources_storage_k8s_io_v1_k8s1_19Impl = VolumeNodeResources_storage_k8s_io_v1_k8s1_18Impl
-
-
 typealias VolumeNodeResources_storage_k8s_io_v1_k8s1_20Impl = VolumeNodeResources_storage_k8s_io_v1_k8s1_19Impl
-
-
 typealias VolumeNodeResources_storage_k8s_io_v1_k8s1_21Impl = VolumeNodeResources_storage_k8s_io_v1_k8s1_20Impl
-

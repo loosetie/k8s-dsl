@@ -34,4 +34,3 @@ class PodPreset_settings_k8s_io_v1alpha1_k8s1_19Impl(
   override lateinit var metadata: ObjectMeta_meta_v1_k8s1_19
   override lateinit var spec: Podpresetspec_settings_k8s_io_v1alpha1_k8s1_19
 }
-

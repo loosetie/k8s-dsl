@@ -43,4 +43,3 @@ class Podpresetspec_settings_k8s_io_v1alpha1_k8s1_19Impl(
   override var volumeMounts: List<VolumeMount_core_v1_k8s1_19>? = null
   override var volumes: List<Volume_core_v1_k8s1_19>? = null
 }
-

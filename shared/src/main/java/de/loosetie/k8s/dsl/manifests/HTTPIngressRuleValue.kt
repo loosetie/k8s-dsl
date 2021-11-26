@@ -16,11 +16,6 @@ typealias HTTPIngressRuleValue_networking_k8s_io_v1beta1_k8s1_18 = HTTPIngressRu
 interface HTTPIngressRuleValue_networking_k8s_io_v1_k8s1_19: K8sManifest {
   /** A collection of paths that map requests to backends. */
   val paths: List<HTTPIngressPath_networking_k8s_io_v1_k8s1_19>?
-}
-
-      
-typealias HTTPIngressRuleValue_networking_k8s_io_v1_k8s1_20 = HTTPIngressRuleValue_networking_k8s_io_v1_k8s1_19 
-
-      
+}      
+typealias HTTPIngressRuleValue_networking_k8s_io_v1_k8s1_20 = HTTPIngressRuleValue_networking_k8s_io_v1_k8s1_19       
 typealias HTTPIngressRuleValue_networking_k8s_io_v1_k8s1_21 = HTTPIngressRuleValue_networking_k8s_io_v1_k8s1_20 
-

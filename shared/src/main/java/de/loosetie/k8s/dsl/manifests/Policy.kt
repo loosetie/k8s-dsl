@@ -13,6 +13,4 @@ interface Policy_auditregistration_k8s_io_v1alpha1_k8s1_16: K8sManifest {
   @K8sDslMarker var stages: List<String>?
 }      
 typealias Policy_auditregistration_k8s_io_v1alpha1_k8s1_17 = Policy_auditregistration_k8s_io_v1alpha1_k8s1_16       
-typealias Policy_auditregistration_k8s_io_v1alpha1_k8s1_18 = Policy_auditregistration_k8s_io_v1alpha1_k8s1_17       
-      
-      
+typealias Policy_auditregistration_k8s_io_v1alpha1_k8s1_18 = Policy_auditregistration_k8s_io_v1alpha1_k8s1_17 

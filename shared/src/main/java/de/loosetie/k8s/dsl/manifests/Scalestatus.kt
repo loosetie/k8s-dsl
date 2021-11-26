@@ -19,7 +19,4 @@ format as the query-param syntax. If the target type only supports map-based sel
 selector field are populated. More info:
 https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors */
   @K8sDslMarker var targetSelector: String?
-}      
-      
-      
-      
+}

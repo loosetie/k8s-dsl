@@ -29,8 +29,6 @@ entry. Required. */
 }      
 typealias ResourcePolicyRule_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_18 = ResourcePolicyRule_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_17       
 typealias ResourcePolicyRule_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_19 = ResourcePolicyRule_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_18       
-
-
 @K8sDslMarker
 interface ResourcePolicyRule_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20: K8sManifest {
   /** `apiGroups` is a list of matching API groups and may not be empty. "`*`" matches all API groups and, if present, must be
@@ -53,6 +51,4 @@ entry. Required. */
 entry. Required. */
   @K8sDslMarker var verbs: List<String>?
 }      
-
-
 typealias ResourcePolicyRule_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_21 = ResourcePolicyRule_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20 

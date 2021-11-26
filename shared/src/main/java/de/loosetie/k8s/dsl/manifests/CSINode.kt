@@ -38,17 +38,8 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
   val metadata: ObjectMeta_meta_v1_k8s1_17
   /** spec is the specification of CSINode */
   val spec: Csinodespec_storage_k8s_io_v1_k8s1_17
-}
-
-      
-typealias CSINode_storage_k8s_io_v1_k8s1_18 = CSINode_storage_k8s_io_v1_k8s1_17 
-
-      
-typealias CSINode_storage_k8s_io_v1_k8s1_19 = CSINode_storage_k8s_io_v1_k8s1_18 
-
-      
-typealias CSINode_storage_k8s_io_v1_k8s1_20 = CSINode_storage_k8s_io_v1_k8s1_19 
-
-      
+}      
+typealias CSINode_storage_k8s_io_v1_k8s1_18 = CSINode_storage_k8s_io_v1_k8s1_17       
+typealias CSINode_storage_k8s_io_v1_k8s1_19 = CSINode_storage_k8s_io_v1_k8s1_18       
+typealias CSINode_storage_k8s_io_v1_k8s1_20 = CSINode_storage_k8s_io_v1_k8s1_19       
 typealias CSINode_storage_k8s_io_v1_k8s1_21 = CSINode_storage_k8s_io_v1_k8s1_20 
-

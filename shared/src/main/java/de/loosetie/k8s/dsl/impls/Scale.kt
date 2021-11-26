@@ -16,6 +16,3 @@ class Scale_apps_v1beta2_k8s1_17Impl(
   override lateinit var spec: Scalespec_apps_v1beta1_k8s1_17
   override var status: Scalestatus_apps_v1beta1_k8s1_17? = null
 }
-
-
-

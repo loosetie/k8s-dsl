@@ -36,8 +36,6 @@ typealias Subject_rbac_authorization_k8s_io_v1_k8s1_18Impl = Subject_rbac_author
 typealias Subject_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_19Impl = Subject_flowcontrol_apiserver_k8s_io_v1alpha1_k8s1_18Impl
 
 typealias Subject_rbac_authorization_k8s_io_v1_k8s1_19Impl = Subject_rbac_authorization_k8s_io_v1_k8s1_18Impl
-
-
 @JsonPropertyOrder("kind", "group", "serviceAccount", "user")
 class Subject_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20Impl(
   @JsonIgnore
@@ -51,8 +49,6 @@ class Subject_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20Impl(
 }
 
 typealias Subject_rbac_authorization_k8s_io_v1_k8s1_20Impl = Subject_rbac_authorization_k8s_io_v1_k8s1_19Impl
-
-
 typealias Subject_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_21Impl = Subject_flowcontrol_apiserver_k8s_io_v1beta1_k8s1_20Impl
 
 typealias Subject_rbac_authorization_k8s_io_v1_k8s1_21Impl = Subject_rbac_authorization_k8s_io_v1_k8s1_20Impl
