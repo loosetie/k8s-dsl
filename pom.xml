@@ -18,13 +18,19 @@
     <module>v1_19</module>
     <module>v1_20</module>
     <module>v1_21</module>
+    <module>v1_23</module>
+    <module>v1_24</module>
+    <module>v1_25</module>
+    <module>v1_26</module>
+    <module>v1_27</module>
+    <module>v1_28</module>
     <module>shared</module>
     <module>kubevirt_v0_31_0</module>
   </modules>
 
   <properties>
-    <kotlin.version>1.3.72</kotlin.version>
-    <targetJdk>13</targetJdk>
+    <kotlin.version>1.9.21</kotlin.version>
+    <targetJdk>17</targetJdk>
     <java.version>${targetJdk}</java.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -33,7 +39,7 @@
     <maven.javadoc.failOnError>false</maven.javadoc.failOnError>
     <maven.javadoc.skip>true</maven.javadoc.skip>
 
-    <spring-boot.version>2.3.2.RELEASE</spring-boot.version>
+    <spring-boot.version>3.2.0</spring-boot.version>
     <mockk.version>1.10.0</mockk.version>
     <jackson.version>2.10.5</jackson.version> <!-- Serialization is broken with 2.11.1 (iscsi vs. csi) -->
     <jackson-bom.version>${jackson.version}</jackson-bom.version>
@@ -170,10 +176,6 @@
     <developer>
       <name>Christian Keller</name>
       <email>christian.keller@loosetie.de</email>
-    </developer>
-    <developer>
-      <name>Eileen Dickson</name>
-      <email>eileen.dickson@expert.loosetie.de</email>
     </developer>
   </developers>
 
