@@ -7,6 +7,16 @@ import de.loosetie.k8s.dsl.HasParent
 import de.loosetie.k8s.dsl.manifests.*
 
 @JsonPropertyOrder("nonResourceURLs", "verbs")
+class NonResourcePolicyRule_flowcontrol_apiserver_k8s_io_v1beta1Impl(
+  @JsonIgnore
+  override val parent: K8sManifest? = null
+)
+: NonResourcePolicyRule_flowcontrol_apiserver_k8s_io_v1beta1, HasParent {
+  override var nonResourceURLs: List<String>? = null
+  override var verbs: List<String>? = null
+}
+
+@JsonPropertyOrder("nonResourceURLs", "verbs")
 class NonResourcePolicyRule_flowcontrol_apiserver_k8s_io_v1beta2Impl(
   @JsonIgnore
   override val parent: K8sManifest? = null

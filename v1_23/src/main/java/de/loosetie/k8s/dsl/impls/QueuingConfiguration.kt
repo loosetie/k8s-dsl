@@ -7,6 +7,17 @@ import de.loosetie.k8s.dsl.HasParent
 import de.loosetie.k8s.dsl.manifests.*
 
 @JsonPropertyOrder("handSize", "queueLengthLimit", "queues")
+class QueuingConfiguration_flowcontrol_apiserver_k8s_io_v1beta1Impl(
+  @JsonIgnore
+  override val parent: K8sManifest? = null
+)
+: QueuingConfiguration_flowcontrol_apiserver_k8s_io_v1beta1, HasParent {
+  override var handSize: Int? = null
+  override var queueLengthLimit: Int? = null
+  override var queues: Int? = null
+}
+
+@JsonPropertyOrder("handSize", "queueLengthLimit", "queues")
 class QueuingConfiguration_flowcontrol_apiserver_k8s_io_v1beta2Impl(
   @JsonIgnore
   override val parent: K8sManifest? = null

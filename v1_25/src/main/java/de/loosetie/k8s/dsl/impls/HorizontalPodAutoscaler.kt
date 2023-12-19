@@ -13,8 +13,8 @@ class HorizontalPodAutoscaler_autoscaling_v1Impl(
 )
 : HorizontalPodAutoscaler_autoscaling_v1, HasParent {
   override lateinit var metadata: ObjectMeta_meta_v1
-  override lateinit var spec: Any
-  override var status: Any? = null
+  override lateinit var spec: Horizontalpodautoscalerspec_autoscaling_v1
+  override var status: Horizontalpodautoscalerstatus_autoscaling_v1? = null
 }
 
 @JsonPropertyOrder("apiVersion", "kind", "metadata", "spec", "status")

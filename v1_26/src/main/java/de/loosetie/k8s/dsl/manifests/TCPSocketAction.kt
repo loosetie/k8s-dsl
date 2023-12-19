@@ -12,5 +12,5 @@ interface TCPSocketAction_core_v1: K8sManifest {
   @K8sDslMarker var host: String?
   /** Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an
 IANA_SVC_NAME. */
-  // val port: None
+  var port: de.loosetie.k8s.dsl.types.IntOrString?
 }

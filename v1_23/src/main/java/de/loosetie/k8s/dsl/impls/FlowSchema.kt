@@ -13,8 +13,8 @@ class FlowSchema_flowcontrol_apiserver_k8s_io_v1beta1Impl(
 )
 : FlowSchema_flowcontrol_apiserver_k8s_io_v1beta1, HasParent {
   override lateinit var metadata: ObjectMeta_meta_v1
-  override lateinit var spec: Any
-  override var status: Any? = null
+  override lateinit var spec: Flowschemaspec_flowcontrol_apiserver_k8s_io_v1beta1
+  override var status: Flowschemastatus_flowcontrol_apiserver_k8s_io_v1beta1? = null
 }
 
 @JsonPropertyOrder("apiVersion", "kind", "metadata", "spec", "status")

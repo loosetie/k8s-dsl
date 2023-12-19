@@ -12,5 +12,6 @@ class RollingUpdateStatefulSetStrategy_apps_v1Impl(
   override val parent: K8sManifest? = null
 )
 : RollingUpdateStatefulSetStrategy_apps_v1, HasParent {
+  override var maxUnavailable: de.loosetie.k8s.dsl.types.IntOrPercentage? = null
   override var partition: Int? = null
 }

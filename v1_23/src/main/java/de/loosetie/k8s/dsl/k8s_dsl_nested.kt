@@ -1472,7 +1472,16 @@ fun FlexVolumeSource.secretRef(init: LocalObjectReference.() -> Unit) {
 
 /** `lastTransitionTime` is the last time the condition transitioned from one status to another. */
 @K8sDslMarker
-fun FlowSchemaCondition.lastTransitionTime(init: Time.() -> Unit) {
+fun FlowSchemaCondition_flowcontrol_apiserver_k8s_io_v1beta1.lastTransitionTime(init: Time.() -> Unit) {
+  this as FlowSchemaCondition_flowcontrol_apiserver_k8s_io_v1beta1Impl
+  Time_meta_v1Impl(this)
+    .also { lastTransitionTime = it }
+    .apply(init)
+}
+
+/** `lastTransitionTime` is the last time the condition transitioned from one status to another. */
+@K8sDslMarker
+fun FlowSchemaCondition_flowcontrol_apiserver_k8s_io_v1beta2.lastTransitionTime(init: Time.() -> Unit) {
   this as FlowSchemaCondition_flowcontrol_apiserver_k8s_io_v1beta2Impl
   Time_meta_v1Impl(this)
     .also { lastTransitionTime = it }
@@ -1486,6 +1495,26 @@ fun FlowSchema.metadata(init: ObjectMeta.() -> Unit) {
   this as FlowSchema_flowcontrol_apiserver_k8s_io_v1beta1Impl
   ObjectMeta_meta_v1Impl(this)
     .also { metadata = it }
+    .apply(init)
+}
+
+/** `spec` is the specification of the desired behavior of a FlowSchema. More info:
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status */
+@K8sDslMarker
+fun FlowSchema.spec(init: Flowschemaspec.() -> Unit) {
+  this as FlowSchema_flowcontrol_apiserver_k8s_io_v1beta1Impl
+  Flowschemaspec_flowcontrol_apiserver_k8s_io_v1beta1Impl(this)
+    .also { spec = it }
+    .apply(init)
+}
+
+/** `status` is the current status of a FlowSchema. More info:
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status */
+@K8sDslMarker
+fun FlowSchema.status(init: Flowschemastatus.() -> Unit) {
+  this as FlowSchema_flowcontrol_apiserver_k8s_io_v1beta1Impl
+  Flowschemastatus_flowcontrol_apiserver_k8s_io_v1beta1Impl(this)
+    .also { status = it }
     .apply(init)
 }
 
@@ -1516,6 +1545,24 @@ fun HTTPGetAction.httpHeaders(init: HTTPHeader.() -> Unit) {
   HTTPHeader_core_v1Impl(this)
     .also { httpHeaders = httpHeaders?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
+}
+
+/** Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an
+IANA_SVC_NAME. */
+@K8sDslMarker
+fun HTTPGetAction.port(string: String) {
+  this as HTTPGetAction_core_v1Impl
+  de.loosetie.k8s.dsl.types.IntOrString(string)
+    .also { port = it }
+}
+
+/** Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an
+IANA_SVC_NAME. */
+@K8sDslMarker
+fun HTTPGetAction.port(int: Int) {
+  this as HTTPGetAction_core_v1Impl
+  de.loosetie.k8s.dsl.types.IntOrString(int)
+    .also { port = it }
 }
 
 /** Backend defines the referenced service endpoint to which the traffic will be forwarded to. */
@@ -1572,6 +1619,25 @@ fun HorizontalPodAutoscaler.metadata(init: ObjectMeta.() -> Unit) {
   this as HorizontalPodAutoscaler_autoscaling_v1Impl
   ObjectMeta_meta_v1Impl(this)
     .also { metadata = it }
+    .apply(init)
+}
+
+/** behaviour of autoscaler. More info:
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status. */
+@K8sDslMarker
+fun HorizontalPodAutoscaler.spec(init: Horizontalpodautoscalerspec.() -> Unit) {
+  this as HorizontalPodAutoscaler_autoscaling_v1Impl
+  Horizontalpodautoscalerspec_autoscaling_v1Impl(this)
+    .also { spec = it }
+    .apply(init)
+}
+
+/** current information about the autoscaler. */
+@K8sDslMarker
+fun HorizontalPodAutoscaler.status(init: Horizontalpodautoscalerstatus.() -> Unit) {
+  this as HorizontalPodAutoscaler_autoscaling_v1Impl
+  Horizontalpodautoscalerstatus_autoscaling_v1Impl(this)
+    .also { status = it }
     .apply(init)
 }
 
@@ -1971,7 +2037,16 @@ fun LimitRange.spec(init: Limitrangespec.() -> Unit) {
 
 /** `queuing` holds the configuration parameters for queuing. This field may be non-empty only if `type` is `"Queue"`. */
 @K8sDslMarker
-fun LimitResponse.queuing(init: QueuingConfiguration.() -> Unit) {
+fun LimitResponse_flowcontrol_apiserver_k8s_io_v1beta1.queuing(init: QueuingConfiguration_flowcontrol_apiserver_k8s_io_v1beta1.() -> Unit) {
+  this as LimitResponse_flowcontrol_apiserver_k8s_io_v1beta1Impl
+  QueuingConfiguration_flowcontrol_apiserver_k8s_io_v1beta1Impl(this)
+    .also { queuing = it }
+    .apply(init)
+}
+
+/** `queuing` holds the configuration parameters for queuing. This field may be non-empty only if `type` is `"Queue"`. */
+@K8sDslMarker
+fun LimitResponse_flowcontrol_apiserver_k8s_io_v1beta2.queuing(init: QueuingConfiguration_flowcontrol_apiserver_k8s_io_v1beta2.() -> Unit) {
   this as LimitResponse_flowcontrol_apiserver_k8s_io_v1beta2Impl
   QueuingConfiguration_flowcontrol_apiserver_k8s_io_v1beta2Impl(this)
     .also { queuing = it }
@@ -1980,7 +2055,16 @@ fun LimitResponse.queuing(init: QueuingConfiguration.() -> Unit) {
 
 /** `limitResponse` indicates what to do with requests that can not be executed right now */
 @K8sDslMarker
-fun LimitedPriorityLevelConfiguration.limitResponse(init: LimitResponse.() -> Unit) {
+fun LimitedPriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1beta1.limitResponse(init: LimitResponse_flowcontrol_apiserver_k8s_io_v1beta1.() -> Unit) {
+  this as LimitedPriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1beta1Impl
+  LimitResponse_flowcontrol_apiserver_k8s_io_v1beta1Impl(this)
+    .also { limitResponse = it }
+    .apply(init)
+}
+
+/** `limitResponse` indicates what to do with requests that can not be executed right now */
+@K8sDslMarker
+fun LimitedPriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1beta2.limitResponse(init: LimitResponse_flowcontrol_apiserver_k8s_io_v1beta2.() -> Unit) {
   this as LimitedPriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1beta2Impl
   LimitResponse_flowcontrol_apiserver_k8s_io_v1beta2Impl(this)
     .also { limitResponse = it }
@@ -2395,6 +2479,24 @@ fun NetworkPolicyPeer.podSelector(init: LabelSelector.() -> Unit) {
   LabelSelector_meta_v1Impl(this)
     .also { podSelector = it }
     .apply(init)
+}
+
+/** The port on the given protocol. This can either be a numerical or named port on a pod. If this field is not provided,
+this matches all port names and numbers. If present, only traffic on the specified protocol AND port will be matched. */
+@K8sDslMarker
+fun NetworkPolicyPort.port(string: String) {
+  this as NetworkPolicyPort_networking_k8s_io_v1Impl
+  de.loosetie.k8s.dsl.types.IntOrString(string)
+    .also { port = it }
+}
+
+/** The port on the given protocol. This can either be a numerical or named port on a pod. If this field is not provided,
+this matches all port names and numbers. If present, only traffic on the specified protocol AND port will be matched. */
+@K8sDslMarker
+fun NetworkPolicyPort.port(int: Int) {
+  this as NetworkPolicyPort_networking_k8s_io_v1Impl
+  de.loosetie.k8s.dsl.types.IntOrString(int)
+    .also { port = it }
 }
 
 /** Standard object's metadata. More info:
@@ -3062,7 +3164,38 @@ fun PodsMetricStatus.metric(init: MetricIdentifier.() -> Unit) {
 /** `nonResourceRules` is a list of NonResourcePolicyRules that identify matching requests according to their verb and the
 target non-resource URL. */
 @K8sDslMarker
-fun PolicyRulesWithSubjects.nonResourceRules(init: NonResourcePolicyRule.() -> Unit) {
+fun PolicyRulesWithSubjects_flowcontrol_apiserver_k8s_io_v1beta1.nonResourceRules(init: NonResourcePolicyRule_flowcontrol_apiserver_k8s_io_v1beta1.() -> Unit) {
+  this as PolicyRulesWithSubjects_flowcontrol_apiserver_k8s_io_v1beta1Impl
+  NonResourcePolicyRule_flowcontrol_apiserver_k8s_io_v1beta1Impl(this)
+    .also { nonResourceRules = nonResourceRules?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** `resourceRules` is a slice of ResourcePolicyRules that identify matching requests according to their verb and the target
+resource. At least one of `resourceRules` and `nonResourceRules` has to be non-empty. */
+@K8sDslMarker
+fun PolicyRulesWithSubjects_flowcontrol_apiserver_k8s_io_v1beta1.resourceRules(init: ResourcePolicyRule_flowcontrol_apiserver_k8s_io_v1beta1.() -> Unit) {
+  this as PolicyRulesWithSubjects_flowcontrol_apiserver_k8s_io_v1beta1Impl
+  ResourcePolicyRule_flowcontrol_apiserver_k8s_io_v1beta1Impl(this)
+    .also { resourceRules = resourceRules?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** subjects is the list of normal user, serviceaccount, or group that this rule cares about. There must be at least one
+member in this slice. A slice that includes both the system:authenticated and system:unauthenticated user groups matches
+every request. Required. */
+@K8sDslMarker
+fun PolicyRulesWithSubjects_flowcontrol_apiserver_k8s_io_v1beta1.subjects(init: Subject_flowcontrol_apiserver_k8s_io_v1beta1.() -> Unit) {
+  this as PolicyRulesWithSubjects_flowcontrol_apiserver_k8s_io_v1beta1Impl
+  Subject_flowcontrol_apiserver_k8s_io_v1beta1Impl(this)
+    .also { subjects = subjects?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** `nonResourceRules` is a list of NonResourcePolicyRules that identify matching requests according to their verb and the
+target non-resource URL. */
+@K8sDslMarker
+fun PolicyRulesWithSubjects_flowcontrol_apiserver_k8s_io_v1beta2.nonResourceRules(init: NonResourcePolicyRule_flowcontrol_apiserver_k8s_io_v1beta2.() -> Unit) {
   this as PolicyRulesWithSubjects_flowcontrol_apiserver_k8s_io_v1beta2Impl
   NonResourcePolicyRule_flowcontrol_apiserver_k8s_io_v1beta2Impl(this)
     .also { nonResourceRules = nonResourceRules?.let { p -> p + it } ?: listOf(it) }
@@ -3072,7 +3205,7 @@ fun PolicyRulesWithSubjects.nonResourceRules(init: NonResourcePolicyRule.() -> U
 /** `resourceRules` is a slice of ResourcePolicyRules that identify matching requests according to their verb and the target
 resource. At least one of `resourceRules` and `nonResourceRules` has to be non-empty. */
 @K8sDslMarker
-fun PolicyRulesWithSubjects.resourceRules(init: ResourcePolicyRule.() -> Unit) {
+fun PolicyRulesWithSubjects_flowcontrol_apiserver_k8s_io_v1beta2.resourceRules(init: ResourcePolicyRule_flowcontrol_apiserver_k8s_io_v1beta2.() -> Unit) {
   this as PolicyRulesWithSubjects_flowcontrol_apiserver_k8s_io_v1beta2Impl
   ResourcePolicyRule_flowcontrol_apiserver_k8s_io_v1beta2Impl(this)
     .also { resourceRules = resourceRules?.let { p -> p + it } ?: listOf(it) }
@@ -3083,7 +3216,7 @@ fun PolicyRulesWithSubjects.resourceRules(init: ResourcePolicyRule.() -> Unit) {
 member in this slice. A slice that includes both the system:authenticated and system:unauthenticated user groups matches
 every request. Required. */
 @K8sDslMarker
-fun PolicyRulesWithSubjects.subjects(init: Subject.() -> Unit) {
+fun PolicyRulesWithSubjects_flowcontrol_apiserver_k8s_io_v1beta2.subjects(init: Subject_flowcontrol_apiserver_k8s_io_v1beta2.() -> Unit) {
   this as PolicyRulesWithSubjects_flowcontrol_apiserver_k8s_io_v1beta2Impl
   Subject_flowcontrol_apiserver_k8s_io_v1beta2Impl(this)
     .also { subjects = subjects?.let { p -> p + it } ?: listOf(it) }
@@ -3111,7 +3244,16 @@ fun PriorityClass.metadata(init: ObjectMeta.() -> Unit) {
 
 /** `lastTransitionTime` is the last time the condition transitioned from one status to another. */
 @K8sDslMarker
-fun PriorityLevelConfigurationCondition.lastTransitionTime(init: Time.() -> Unit) {
+fun PriorityLevelConfigurationCondition_flowcontrol_apiserver_k8s_io_v1beta1.lastTransitionTime(init: Time.() -> Unit) {
+  this as PriorityLevelConfigurationCondition_flowcontrol_apiserver_k8s_io_v1beta1Impl
+  Time_meta_v1Impl(this)
+    .also { lastTransitionTime = it }
+    .apply(init)
+}
+
+/** `lastTransitionTime` is the last time the condition transitioned from one status to another. */
+@K8sDslMarker
+fun PriorityLevelConfigurationCondition_flowcontrol_apiserver_k8s_io_v1beta2.lastTransitionTime(init: Time.() -> Unit) {
   this as PriorityLevelConfigurationCondition_flowcontrol_apiserver_k8s_io_v1beta2Impl
   Time_meta_v1Impl(this)
     .also { lastTransitionTime = it }
@@ -3125,6 +3267,26 @@ fun PriorityLevelConfiguration.metadata(init: ObjectMeta.() -> Unit) {
   this as PriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1beta1Impl
   ObjectMeta_meta_v1Impl(this)
     .also { metadata = it }
+    .apply(init)
+}
+
+/** `spec` is the specification of the desired behavior of a "request-priority". More info:
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status */
+@K8sDslMarker
+fun PriorityLevelConfiguration.spec(init: Prioritylevelconfigurationspec.() -> Unit) {
+  this as PriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1beta1Impl
+  Prioritylevelconfigurationspec_flowcontrol_apiserver_k8s_io_v1beta1Impl(this)
+    .also { spec = it }
+    .apply(init)
+}
+
+/** `status` is the current status of a "request-priority". More info:
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status */
+@K8sDslMarker
+fun PriorityLevelConfiguration.status(init: Prioritylevelconfigurationstatus.() -> Unit) {
+  this as PriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1beta1Impl
+  Prioritylevelconfigurationstatus_flowcontrol_apiserver_k8s_io_v1beta1Impl(this)
+    .also { status = it }
     .apply(init)
 }
 
@@ -3340,6 +3502,27 @@ fun ResourceQuota.status(init: Resourcequotastatus.() -> Unit) {
   this as ResourceQuota_core_v1Impl
   Resourcequotastatus_core_v1Impl(this)
     .also { status = it }
+    .apply(init)
+}
+
+/** Limits describes the maximum amount of compute resources allowed. More info:
+https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/ */
+@K8sDslMarker
+fun ResourceRequirements.limits(init: de.loosetie.k8s.dsl.types.LimitsAndRequests.() -> Unit) {
+  this as ResourceRequirements_core_v1Impl
+  de.loosetie.k8s.dsl.types.LimitsAndRequests(this)
+    .also { limits = it }
+    .apply(init)
+}
+
+/** Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults
+to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info:
+https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/ */
+@K8sDslMarker
+fun ResourceRequirements.requests(init: de.loosetie.k8s.dsl.types.LimitsAndRequests.() -> Unit) {
+  this as ResourceRequirements_core_v1Impl
+  de.loosetie.k8s.dsl.types.LimitsAndRequests(this)
+    .also { requests = it }
     .apply(init)
 }
 
@@ -3663,6 +3846,30 @@ fun ServiceAccount.secrets(init: ObjectReference.() -> Unit) {
     .apply(init)
 }
 
+/** Number or name of the port to access on the pods targeted by the service. Number must be in the range 1 to 65535. Name
+must be an IANA_SVC_NAME. If this is a string, it will be looked up as a named port in the target Pod's container ports.
+If this is not specified, the value of the 'port' field is used (an identity map). This field is ignored for services
+with clusterIP=None, and should be omitted or set equal to the 'port' field. More info:
+https://kubernetes.io/docs/concepts/services-networking/service/#defining-a-service */
+@K8sDslMarker
+fun ServicePort.targetPort(string: String) {
+  this as ServicePort_core_v1Impl
+  de.loosetie.k8s.dsl.types.IntOrString(string)
+    .also { targetPort = it }
+}
+
+/** Number or name of the port to access on the pods targeted by the service. Number must be in the range 1 to 65535. Name
+must be an IANA_SVC_NAME. If this is a string, it will be looked up as a named port in the target Pod's container ports.
+If this is not specified, the value of the 'port' field is used (an identity map). This field is ignored for services
+with clusterIP=None, and should be omitted or set equal to the 'port' field. More info:
+https://kubernetes.io/docs/concepts/services-networking/service/#defining-a-service */
+@K8sDslMarker
+fun ServicePort.targetPort(int: Int) {
+  this as ServicePort_core_v1Impl
+  de.loosetie.k8s.dsl.types.IntOrString(int)
+    .also { targetPort = it }
+}
+
 /** Standard object's metadata. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata */
 @K8sDslMarker
@@ -3906,7 +4113,34 @@ fun SubjectRulesReviewStatus.resourceRules(init: ResourceRule.() -> Unit) {
 
 /** `group` matches based on user group name. */
 @K8sDslMarker
-fun Subject.group(init: GroupSubject.() -> Unit) {
+fun Subject_flowcontrol_apiserver_k8s_io_v1beta1.group(init: GroupSubject_flowcontrol_apiserver_k8s_io_v1beta1.() -> Unit) {
+  this as Subject_flowcontrol_apiserver_k8s_io_v1beta1Impl
+  GroupSubject_flowcontrol_apiserver_k8s_io_v1beta1Impl(this)
+    .also { group = it }
+    .apply(init)
+}
+
+/** `serviceAccount` matches ServiceAccounts. */
+@K8sDslMarker
+fun Subject_flowcontrol_apiserver_k8s_io_v1beta1.serviceAccount(init: ServiceAccountSubject_flowcontrol_apiserver_k8s_io_v1beta1.() -> Unit) {
+  this as Subject_flowcontrol_apiserver_k8s_io_v1beta1Impl
+  ServiceAccountSubject_flowcontrol_apiserver_k8s_io_v1beta1Impl(this)
+    .also { serviceAccount = it }
+    .apply(init)
+}
+
+/** `user` matches based on username. */
+@K8sDslMarker
+fun Subject_flowcontrol_apiserver_k8s_io_v1beta1.user(init: UserSubject_flowcontrol_apiserver_k8s_io_v1beta1.() -> Unit) {
+  this as Subject_flowcontrol_apiserver_k8s_io_v1beta1Impl
+  UserSubject_flowcontrol_apiserver_k8s_io_v1beta1Impl(this)
+    .also { user = it }
+    .apply(init)
+}
+
+/** `group` matches based on user group name. */
+@K8sDslMarker
+fun Subject_flowcontrol_apiserver_k8s_io_v1beta2.group(init: GroupSubject_flowcontrol_apiserver_k8s_io_v1beta2.() -> Unit) {
   this as Subject_flowcontrol_apiserver_k8s_io_v1beta2Impl
   GroupSubject_flowcontrol_apiserver_k8s_io_v1beta2Impl(this)
     .also { group = it }
@@ -3915,7 +4149,7 @@ fun Subject.group(init: GroupSubject.() -> Unit) {
 
 /** `serviceAccount` matches ServiceAccounts. */
 @K8sDslMarker
-fun Subject.serviceAccount(init: ServiceAccountSubject.() -> Unit) {
+fun Subject_flowcontrol_apiserver_k8s_io_v1beta2.serviceAccount(init: ServiceAccountSubject_flowcontrol_apiserver_k8s_io_v1beta2.() -> Unit) {
   this as Subject_flowcontrol_apiserver_k8s_io_v1beta2Impl
   ServiceAccountSubject_flowcontrol_apiserver_k8s_io_v1beta2Impl(this)
     .also { serviceAccount = it }
@@ -3924,7 +4158,7 @@ fun Subject.serviceAccount(init: ServiceAccountSubject.() -> Unit) {
 
 /** `user` matches based on username. */
 @K8sDslMarker
-fun Subject.user(init: UserSubject.() -> Unit) {
+fun Subject_flowcontrol_apiserver_k8s_io_v1beta2.user(init: UserSubject_flowcontrol_apiserver_k8s_io_v1beta2.() -> Unit) {
   this as Subject_flowcontrol_apiserver_k8s_io_v1beta2Impl
   UserSubject_flowcontrol_apiserver_k8s_io_v1beta2Impl(this)
     .also { user = it }
@@ -3939,6 +4173,24 @@ fun SupplementalGroupsStrategyOptions.ranges(init: IDRange.() -> Unit) {
   IDRange_policy_v1beta1Impl(this)
     .also { ranges = ranges?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
+}
+
+/** Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an
+IANA_SVC_NAME. */
+@K8sDslMarker
+fun TCPSocketAction.port(string: String) {
+  this as TCPSocketAction_core_v1Impl
+  de.loosetie.k8s.dsl.types.IntOrString(string)
+    .also { port = it }
+}
+
+/** Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an
+IANA_SVC_NAME. */
+@K8sDslMarker
+fun TCPSocketAction.port(int: Int) {
+  this as TCPSocketAction_core_v1Impl
+  de.loosetie.k8s.dsl.types.IntOrString(int)
+    .also { port = it }
 }
 
 /** TimeAdded represents the time at which the taint was added. It is only written for NoExecute taints. */
@@ -4759,6 +5011,65 @@ fun Deploymentstrategy.rollingUpdate(init: Rollingupdatedeployment.() -> Unit) {
     .apply(init)
 }
 
+/** `distinguisherMethod` defines how to compute the flow distinguisher for requests that match this schema. `nil` specifies
+that the distinguisher is disabled and thus will always be the empty string. */
+@K8sDslMarker
+fun Flowschemaspec.distinguisherMethod(init: FlowDistinguisherMethod_flowcontrol_apiserver_k8s_io_v1beta1.() -> Unit) {
+  this as Flowschemaspec_flowcontrol_apiserver_k8s_io_v1beta1Impl
+  FlowDistinguisherMethod_flowcontrol_apiserver_k8s_io_v1beta1Impl(this)
+    .also { distinguisherMethod = it }
+    .apply(init)
+}
+
+/** `priorityLevelConfiguration` should reference a PriorityLevelConfiguration in the cluster. If the reference cannot be
+resolved, the FlowSchema will be ignored and marked as invalid in its status. Required. */
+@K8sDslMarker
+fun Flowschemaspec.priorityLevelConfiguration(init: PriorityLevelConfigurationReference_flowcontrol_apiserver_k8s_io_v1beta1.() -> Unit) {
+  this as Flowschemaspec_flowcontrol_apiserver_k8s_io_v1beta1Impl
+  PriorityLevelConfigurationReference_flowcontrol_apiserver_k8s_io_v1beta1Impl(this)
+    .also { priorityLevelConfiguration = it }
+    .apply(init)
+}
+
+/** `rules` describes which requests will match this flow schema. This FlowSchema matches a request if and only if at least
+one member of rules matches the request. if it is an empty slice, there will be no requests matching the FlowSchema. */
+@K8sDslMarker
+fun Flowschemaspec.rules(init: PolicyRulesWithSubjects_flowcontrol_apiserver_k8s_io_v1beta1.() -> Unit) {
+  this as Flowschemaspec_flowcontrol_apiserver_k8s_io_v1beta1Impl
+  PolicyRulesWithSubjects_flowcontrol_apiserver_k8s_io_v1beta1Impl(this)
+    .also { rules = rules?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** `conditions` is a list of the current states of FlowSchema. */
+@K8sDslMarker
+fun Flowschemastatus.conditions(init: FlowSchemaCondition_flowcontrol_apiserver_k8s_io_v1beta1.() -> Unit) {
+  this as Flowschemastatus_flowcontrol_apiserver_k8s_io_v1beta1Impl
+  FlowSchemaCondition_flowcontrol_apiserver_k8s_io_v1beta1Impl(this)
+    .also { conditions = conditions?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** reference to scaled resource; horizontal pod autoscaler will learn the current resource consumption and will set the
+desired number of pods by using its Scale subresource. */
+@K8sDslMarker
+fun Horizontalpodautoscalerspec.scaleTargetRef(init: CrossVersionObjectReference.() -> Unit) {
+  this as Horizontalpodautoscalerspec_autoscaling_v1Impl
+  CrossVersionObjectReference_autoscaling_v1Impl(this)
+    .also { scaleTargetRef = it }
+    .apply(init)
+}
+
+/** last time the HorizontalPodAutoscaler scaled the number of pods; used by the autoscaler to control how often the number
+of pods is changed. */
+@K8sDslMarker
+fun Horizontalpodautoscalerstatus.lastScaleTime(init: Time.() -> Unit) {
+  this as Horizontalpodautoscalerstatus_autoscaling_v1Impl
+  Time_meta_v1Impl(this)
+    .also { lastScaleTime = it }
+    .apply(init)
+}
+
 /** Parameters is a link to a custom resource containing additional configuration for the controller. This is optional if
 the controller does not require extra parameters. */
 @K8sDslMarker
@@ -5341,6 +5652,60 @@ fun Poddisruptionbudgetspec.selector(init: LabelSelector.() -> Unit) {
     .apply(init)
 }
 
+/** An eviction is allowed if at most "maxUnavailable" pods selected by "selector" are unavailable after the eviction, i.e.
+even in absence of the evicted pod. For example, one can prevent all voluntary evictions by specifying 0. This is a
+mutually exclusive setting with "minAvailable".
+
+			When you specify an integer, it represents a number of Pods. When
+you specify a percentage by setting the value to a string representation of a percentage (eg. "50%"), it represents a
+percentage of total Pods. */
+@K8sDslMarker
+fun Poddisruptionbudgetspec.maxUnavailable(percentage: String) {
+  this as Poddisruptionbudgetspec_policy_v1Impl
+  de.loosetie.k8s.dsl.types.IntOrPercentage(percentage)
+    .also { maxUnavailable = it }
+}
+
+/** An eviction is allowed if at most "maxUnavailable" pods selected by "selector" are unavailable after the eviction, i.e.
+even in absence of the evicted pod. For example, one can prevent all voluntary evictions by specifying 0. This is a
+mutually exclusive setting with "minAvailable".
+
+			When you specify an integer, it represents a number of Pods. When
+you specify a percentage by setting the value to a string representation of a percentage (eg. "50%"), it represents a
+percentage of total Pods. */
+@K8sDslMarker
+fun Poddisruptionbudgetspec.maxUnavailable(int: Int) {
+  this as Poddisruptionbudgetspec_policy_v1Impl
+  de.loosetie.k8s.dsl.types.IntOrPercentage(int)
+    .also { maxUnavailable = it }
+}
+
+/** An eviction is allowed if at least "minAvailable" pods selected by "selector" will still be available after the
+eviction, i.e. even in the absence of the evicted pod. So for example you can prevent all voluntary evictions by
+specifying "100%".
+
+			When you specify an integer, it represents a number of Pods. When you specify a percentage by
+setting the value to a string representation of a percentage (eg. "50%"), it represents a percentage of total Pods. */
+@K8sDslMarker
+fun Poddisruptionbudgetspec.minAvailable(percentage: String) {
+  this as Poddisruptionbudgetspec_policy_v1Impl
+  de.loosetie.k8s.dsl.types.IntOrPercentage(percentage)
+    .also { minAvailable = it }
+}
+
+/** An eviction is allowed if at least "minAvailable" pods selected by "selector" will still be available after the
+eviction, i.e. even in the absence of the evicted pod. So for example you can prevent all voluntary evictions by
+specifying "100%".
+
+			When you specify an integer, it represents a number of Pods. When you specify a percentage by
+setting the value to a string representation of a percentage (eg. "50%"), it represents a percentage of total Pods. */
+@K8sDslMarker
+fun Poddisruptionbudgetspec.minAvailable(int: Int) {
+  this as Poddisruptionbudgetspec_policy_v1Impl
+  de.loosetie.k8s.dsl.types.IntOrPercentage(int)
+    .also { minAvailable = it }
+}
+
 /** Conditions contain conditions for PDB. The disruption controller sets the DisruptionAllowed condition. The following are
 known values for the reason field (additional reasons could be added in the future): - SyncFailed: The controller
 encountered an error and wasn't able to compute the number of allowed disruptions. Therefore no disruptions are allowed
@@ -5682,6 +6047,25 @@ fun Podtemplatespec.spec(init: Podspec.() -> Unit) {
     .apply(init)
 }
 
+/** `limited` specifies how requests are handled for a Limited priority level. This field must be non-empty if and only if
+`type` is `"Limited"`. */
+@K8sDslMarker
+fun Prioritylevelconfigurationspec.limited(init: LimitedPriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1beta1.() -> Unit) {
+  this as Prioritylevelconfigurationspec_flowcontrol_apiserver_k8s_io_v1beta1Impl
+  LimitedPriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1beta1Impl(this)
+    .also { limited = it }
+    .apply(init)
+}
+
+/** `conditions` is the current state of "request-priority". */
+@K8sDslMarker
+fun Prioritylevelconfigurationstatus.conditions(init: PriorityLevelConfigurationCondition_flowcontrol_apiserver_k8s_io_v1beta1.() -> Unit) {
+  this as Prioritylevelconfigurationstatus_flowcontrol_apiserver_k8s_io_v1beta1Impl
+  PriorityLevelConfigurationCondition_flowcontrol_apiserver_k8s_io_v1beta1Impl(this)
+    .also { conditions = conditions?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
 /** Selector is a label query over pods that should match the replica count. Label keys and values that must match in order
 to be controlled by this replica set. It must match the pod template's labels. More info:
 https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors */
@@ -5741,6 +6125,126 @@ fun Resourcequotaspec.scopeSelector(init: ScopeSelector.() -> Unit) {
   ScopeSelector_core_v1Impl(this)
     .also { scopeSelector = it }
     .apply(init)
+}
+
+/** The maximum number of nodes with an existing available DaemonSet pod that can have an updated DaemonSet pod during
+during an update. Value can be an absolute number (ex: 5) or a percentage of desired pods (ex: 10%). This can not be 0
+if MaxUnavailable is 0. Absolute number is calculated from percentage by rounding up to a minimum of 1. Default value is
+0. Example: when this is set to 30%, at most 30% of the total number of nodes that should be running the daemon pod
+(i.e. status.desiredNumberScheduled) can have their a new pod created before the old pod is marked as deleted. The
+update starts by launching new pods on 30% of nodes. Once an updated pod is available (Ready for at least
+minReadySeconds) the old DaemonSet pod on that node is marked deleted. If the old pod becomes unavailable for any reason
+(Ready transitions to false, is evicted, or is drained) an updated pod is immediatedly created on that node without
+considering surge limits. Allowing surge implies the possibility that the resources consumed by the daemonset on any
+given node can double if the readiness check fails, and so resource intensive daemonsets should take into account that
+they may cause evictions during disruption. This is beta field and enabled/disabled by DaemonSetUpdateSurge feature
+gate. */
+@K8sDslMarker
+fun Rollingupdatedaemonset.maxSurge(percentage: String) {
+  this as Rollingupdatedaemonset_apps_v1Impl
+  de.loosetie.k8s.dsl.types.IntOrPercentage(percentage)
+    .also { maxSurge = it }
+}
+
+/** The maximum number of nodes with an existing available DaemonSet pod that can have an updated DaemonSet pod during
+during an update. Value can be an absolute number (ex: 5) or a percentage of desired pods (ex: 10%). This can not be 0
+if MaxUnavailable is 0. Absolute number is calculated from percentage by rounding up to a minimum of 1. Default value is
+0. Example: when this is set to 30%, at most 30% of the total number of nodes that should be running the daemon pod
+(i.e. status.desiredNumberScheduled) can have their a new pod created before the old pod is marked as deleted. The
+update starts by launching new pods on 30% of nodes. Once an updated pod is available (Ready for at least
+minReadySeconds) the old DaemonSet pod on that node is marked deleted. If the old pod becomes unavailable for any reason
+(Ready transitions to false, is evicted, or is drained) an updated pod is immediatedly created on that node without
+considering surge limits. Allowing surge implies the possibility that the resources consumed by the daemonset on any
+given node can double if the readiness check fails, and so resource intensive daemonsets should take into account that
+they may cause evictions during disruption. This is beta field and enabled/disabled by DaemonSetUpdateSurge feature
+gate. */
+@K8sDslMarker
+fun Rollingupdatedaemonset.maxSurge(int: Int) {
+  this as Rollingupdatedaemonset_apps_v1Impl
+  de.loosetie.k8s.dsl.types.IntOrPercentage(int)
+    .also { maxSurge = it }
+}
+
+/** The maximum number of DaemonSet pods that can be unavailable during the update. Value can be an absolute number (ex: 5)
+or a percentage of total number of DaemonSet pods at the start of the update (ex: 10%). Absolute number is calculated
+from percentage by rounding up. This cannot be 0 if MaxSurge is 0 Default value is 1. Example: when this is set to 30%,
+at most 30% of the total number of nodes that should be running the daemon pod (i.e. status.desiredNumberScheduled) can
+have their pods stopped for an update at any given time. The update starts by stopping at most 30% of those DaemonSet
+pods and then brings up new DaemonSet pods in their place. Once the new pods are available, it then proceeds onto other
+DaemonSet pods, thus ensuring that at least 70% of original number of DaemonSet pods are available at all times during
+the update. */
+@K8sDslMarker
+fun Rollingupdatedaemonset.maxUnavailable(percentage: String) {
+  this as Rollingupdatedaemonset_apps_v1Impl
+  de.loosetie.k8s.dsl.types.IntOrPercentage(percentage)
+    .also { maxUnavailable = it }
+}
+
+/** The maximum number of DaemonSet pods that can be unavailable during the update. Value can be an absolute number (ex: 5)
+or a percentage of total number of DaemonSet pods at the start of the update (ex: 10%). Absolute number is calculated
+from percentage by rounding up. This cannot be 0 if MaxSurge is 0 Default value is 1. Example: when this is set to 30%,
+at most 30% of the total number of nodes that should be running the daemon pod (i.e. status.desiredNumberScheduled) can
+have their pods stopped for an update at any given time. The update starts by stopping at most 30% of those DaemonSet
+pods and then brings up new DaemonSet pods in their place. Once the new pods are available, it then proceeds onto other
+DaemonSet pods, thus ensuring that at least 70% of original number of DaemonSet pods are available at all times during
+the update. */
+@K8sDslMarker
+fun Rollingupdatedaemonset.maxUnavailable(int: Int) {
+  this as Rollingupdatedaemonset_apps_v1Impl
+  de.loosetie.k8s.dsl.types.IntOrPercentage(int)
+    .also { maxUnavailable = it }
+}
+
+/** The maximum number of pods that can be scheduled above the desired number of pods. Value can be an absolute number (ex:
+5) or a percentage of desired pods (ex: 10%). This can not be 0 if MaxUnavailable is 0. Absolute number is calculated
+from percentage by rounding up. Defaults to 25%. Example: when this is set to 30%, the new ReplicaSet can be scaled up
+immediately when the rolling update starts, such that the total number of old and new pods do not exceed 130% of desired
+pods. Once old pods have been killed, new ReplicaSet can be scaled up further, ensuring that total number of pods
+running at any time during the update is at most 130% of desired pods. */
+@K8sDslMarker
+fun Rollingupdatedeployment.maxSurge(percentage: String) {
+  this as Rollingupdatedeployment_apps_v1Impl
+  de.loosetie.k8s.dsl.types.IntOrPercentage(percentage)
+    .also { maxSurge = it }
+}
+
+/** The maximum number of pods that can be scheduled above the desired number of pods. Value can be an absolute number (ex:
+5) or a percentage of desired pods (ex: 10%). This can not be 0 if MaxUnavailable is 0. Absolute number is calculated
+from percentage by rounding up. Defaults to 25%. Example: when this is set to 30%, the new ReplicaSet can be scaled up
+immediately when the rolling update starts, such that the total number of old and new pods do not exceed 130% of desired
+pods. Once old pods have been killed, new ReplicaSet can be scaled up further, ensuring that total number of pods
+running at any time during the update is at most 130% of desired pods. */
+@K8sDslMarker
+fun Rollingupdatedeployment.maxSurge(int: Int) {
+  this as Rollingupdatedeployment_apps_v1Impl
+  de.loosetie.k8s.dsl.types.IntOrPercentage(int)
+    .also { maxSurge = it }
+}
+
+/** The maximum number of pods that can be unavailable during the update. Value can be an absolute number (ex: 5) or a
+percentage of desired pods (ex: 10%). Absolute number is calculated from percentage by rounding down. This can not be 0
+if MaxSurge is 0. Defaults to 25%. Example: when this is set to 30%, the old ReplicaSet can be scaled down to 70% of
+desired pods immediately when the rolling update starts. Once new pods are ready, old ReplicaSet can be scaled down
+further, followed by scaling up the new ReplicaSet, ensuring that the total number of pods available at all times during
+the update is at least 70% of desired pods. */
+@K8sDslMarker
+fun Rollingupdatedeployment.maxUnavailable(percentage: String) {
+  this as Rollingupdatedeployment_apps_v1Impl
+  de.loosetie.k8s.dsl.types.IntOrPercentage(percentage)
+    .also { maxUnavailable = it }
+}
+
+/** The maximum number of pods that can be unavailable during the update. Value can be an absolute number (ex: 5) or a
+percentage of desired pods (ex: 10%). Absolute number is calculated from percentage by rounding down. This can not be 0
+if MaxSurge is 0. Defaults to 25%. Example: when this is set to 30%, the old ReplicaSet can be scaled down to 70% of
+desired pods immediately when the rolling update starts. Once new pods are ready, old ReplicaSet can be scaled down
+further, followed by scaling up the new ReplicaSet, ensuring that the total number of pods available at all times during
+the update is at least 70% of desired pods. */
+@K8sDslMarker
+fun Rollingupdatedeployment.maxUnavailable(int: Int) {
+  this as Rollingupdatedeployment_apps_v1Impl
+  de.loosetie.k8s.dsl.types.IntOrPercentage(int)
+    .also { maxUnavailable = it }
 }
 
 /** NonResourceAttributes describes information for a non-resource access request */

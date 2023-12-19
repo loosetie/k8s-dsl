@@ -6,6 +6,13 @@ import de.loosetie.k8s.dsl.K8sManifest
 import de.loosetie.k8s.dsl.HasMetadata
 
 
+@Deprecated(message="Old api version")
+@K8sDslMarker
+interface FlowDistinguisherMethod_flowcontrol_apiserver_k8s_io_v1beta1: K8sManifest {
+  /** `type` is the type of flow distinguisher method The supported types are "ByUser" and "ByNamespace". Required. */
+  @K8sDslMarker var type: String?
+}
+
 @K8sDslMarker
 interface FlowDistinguisherMethod_flowcontrol_apiserver_k8s_io_v1beta2: K8sManifest {
   /** `type` is the type of flow distinguisher method The supported types are "ByUser" and "ByNamespace". Required. */

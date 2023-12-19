@@ -27,7 +27,7 @@ class Servicespec_core_v1Impl(
   override var loadBalancerSourceRanges: List<String>? = null
   override var ports: List<ServicePort_core_v1>? = null
   override var publishNotReadyAddresses: Boolean? = null
-  override var selector: Any? = null
+  override var selector: Map<String, String>? = null
   override var sessionAffinity: String? = null
   override var sessionAffinityConfig: SessionAffinityConfig_core_v1? = null
   override var type: String? = null

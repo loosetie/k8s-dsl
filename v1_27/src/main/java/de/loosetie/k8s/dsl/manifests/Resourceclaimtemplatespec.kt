@@ -13,5 +13,5 @@ allowed and will be rejected during validation. */
   val metadata: ObjectMeta_meta_v1?
   /** Spec for the ResourceClaim. The entire content is copied unchanged into the ResourceClaim that gets created from this
 template. The same fields as in a ResourceClaim are also valid here. */
-  @K8sDslMarker var spec: Any?
+  val spec: Resourceclaimspec_resource_k8s_io_v1alpha2?
 }

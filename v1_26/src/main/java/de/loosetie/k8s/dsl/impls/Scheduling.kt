@@ -12,6 +12,6 @@ class Scheduling_node_k8s_io_v1Impl(
   override val parent: K8sManifest? = null
 )
 : Scheduling_node_k8s_io_v1, HasParent {
-  override var nodeSelector: Any? = null
+  override var nodeSelector: Map<String, String>? = null
   override var tolerations: List<Toleration_core_v1>? = null
 }

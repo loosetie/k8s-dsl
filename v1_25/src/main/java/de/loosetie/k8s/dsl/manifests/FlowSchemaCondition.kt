@@ -6,6 +6,21 @@ import de.loosetie.k8s.dsl.K8sManifest
 import de.loosetie.k8s.dsl.HasMetadata
 
 
+@Deprecated(message="Old api version")
+@K8sDslMarker
+interface FlowSchemaCondition_flowcontrol_apiserver_k8s_io_v1beta1: K8sManifest {
+  /** `lastTransitionTime` is the last time the condition transitioned from one status to another. */
+  val lastTransitionTime: Time_meta_v1?
+  /** `message` is a human-readable message indicating details about last transition. */
+  @K8sDslMarker var message: String?
+  /** `reason` is a unique, one-word, CamelCase reason for the condition's last transition. */
+  @K8sDslMarker var reason: String?
+  /** `status` is the status of the condition. Can be True, False, Unknown. Required. */
+  @K8sDslMarker var status: String?
+  /** `type` is the type of the condition. Required. */
+  @K8sDslMarker var type: String?
+}
+
 @K8sDslMarker
 interface FlowSchemaCondition_flowcontrol_apiserver_k8s_io_v1beta2: K8sManifest {
   /** `lastTransitionTime` is the last time the condition transitioned from one status to another. */

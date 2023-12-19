@@ -13,5 +13,5 @@ class LabelSelector_meta_v1Impl(
 )
 : LabelSelector_meta_v1, HasParent {
   override var matchExpressions: List<LabelSelectorRequirement_meta_v1>? = null
-  override var matchLabels: Any? = null
+  override var matchLabels: Map<String, String>? = null
 }

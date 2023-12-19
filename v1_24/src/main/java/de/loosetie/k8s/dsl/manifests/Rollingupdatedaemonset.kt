@@ -20,7 +20,7 @@ considering surge limits. Allowing surge implies the possibility that the resour
 given node can double if the readiness check fails, and so resource intensive daemonsets should take into account that
 they may cause evictions during disruption. This is beta field and enabled/disabled by DaemonSetUpdateSurge feature
 gate. */
-  // val maxSurge: None
+  var maxSurge: de.loosetie.k8s.dsl.types.IntOrPercentage?
   /** The maximum number of DaemonSet pods that can be unavailable during the update. Value can be an absolute number (ex: 5)
 or a percentage of total number of DaemonSet pods at the start of the update (ex: 10%). Absolute number is calculated
 from percentage by rounding up. This cannot be 0 if MaxSurge is 0 Default value is 1. Example: when this is set to 30%,
@@ -29,5 +29,5 @@ have their pods stopped for an update at any given time. The update starts by st
 pods and then brings up new DaemonSet pods in their place. Once the new pods are available, it then proceeds onto other
 DaemonSet pods, thus ensuring that at least 70% of original number of DaemonSet pods are available at all times during
 the update. */
-  // val maxUnavailable: None
+  var maxUnavailable: de.loosetie.k8s.dsl.types.IntOrPercentage?
 }

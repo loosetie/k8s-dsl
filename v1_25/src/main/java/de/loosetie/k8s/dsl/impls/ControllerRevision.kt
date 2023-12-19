@@ -13,5 +13,6 @@ class ControllerRevision_apps_v1Impl(
 )
 : ControllerRevision_apps_v1, HasParent {
   override lateinit var metadata: ObjectMeta_meta_v1
+  override var data: ByteArray? = null
   override var revision: Int? = null
 }

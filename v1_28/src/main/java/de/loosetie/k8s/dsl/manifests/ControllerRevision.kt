@@ -22,7 +22,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata */
   val metadata: ObjectMeta_meta_v1
   /** Data is the serialized representation of the state. */
-  // val data: None
+  @K8sDslMarker var data: ByteArray?
   /** Revision indicates the revision of the state represented by Data. */
   @K8sDslMarker var revision: Int?
 }

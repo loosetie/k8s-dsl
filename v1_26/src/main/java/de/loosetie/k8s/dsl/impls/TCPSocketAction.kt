@@ -13,4 +13,5 @@ class TCPSocketAction_core_v1Impl(
 )
 : TCPSocketAction_core_v1, HasParent {
   override var host: String? = null
+  override var port: de.loosetie.k8s.dsl.types.IntOrString? = null
 }

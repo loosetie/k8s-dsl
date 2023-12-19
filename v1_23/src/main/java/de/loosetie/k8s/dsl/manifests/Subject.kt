@@ -6,6 +6,19 @@ import de.loosetie.k8s.dsl.K8sManifest
 import de.loosetie.k8s.dsl.HasMetadata
 
 
+@Deprecated(message="Old api version")
+@K8sDslMarker
+interface Subject_flowcontrol_apiserver_k8s_io_v1beta1: K8sManifest {
+  /** `kind` indicates which one of the other fields is non-empty. Required */
+  @K8sDslMarker var kind: String?
+  /** `group` matches based on user group name. */
+  val group: GroupSubject_flowcontrol_apiserver_k8s_io_v1beta1?
+  /** `serviceAccount` matches ServiceAccounts. */
+  val serviceAccount: ServiceAccountSubject_flowcontrol_apiserver_k8s_io_v1beta1?
+  /** `user` matches based on username. */
+  val user: UserSubject_flowcontrol_apiserver_k8s_io_v1beta1?
+}
+
 @K8sDslMarker
 interface Subject_flowcontrol_apiserver_k8s_io_v1beta2: K8sManifest {
   /** `kind` indicates which one of the other fields is non-empty. Required */

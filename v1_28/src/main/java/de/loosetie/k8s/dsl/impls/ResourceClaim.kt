@@ -22,6 +22,6 @@ class ResourceClaim_resource_k8s_io_v1alpha2Impl(
 )
 : ResourceClaim_resource_k8s_io_v1alpha2, HasParent {
   override lateinit var metadata: ObjectMeta_meta_v1
-  override lateinit var spec: Any
-  override var status: Any? = null
+  override lateinit var spec: Resourceclaimspec_resource_k8s_io_v1alpha2
+  override var status: Resourceclaimstatus_resource_k8s_io_v1alpha2? = null
 }

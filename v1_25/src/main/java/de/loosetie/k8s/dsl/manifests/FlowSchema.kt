@@ -23,10 +23,10 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
   val metadata: ObjectMeta_meta_v1
   /** `spec` is the specification of the desired behavior of a FlowSchema. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status */
-  val spec: Any
+  val spec: Flowschemaspec_flowcontrol_apiserver_k8s_io_v1beta1
   /** `status` is the current status of a FlowSchema. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status */
-  @K8sDslMarker var status: Any?
+  val status: Flowschemastatus_flowcontrol_apiserver_k8s_io_v1beta1?
 }
 
 @K8sDslMarker

@@ -13,8 +13,8 @@ class PriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1beta1Impl(
 )
 : PriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1beta1, HasParent {
   override lateinit var metadata: ObjectMeta_meta_v1
-  override lateinit var spec: Any
-  override var status: Any? = null
+  override lateinit var spec: Prioritylevelconfigurationspec_flowcontrol_apiserver_k8s_io_v1beta1
+  override var status: Prioritylevelconfigurationstatus_flowcontrol_apiserver_k8s_io_v1beta1? = null
 }
 
 @JsonPropertyOrder("apiVersion", "kind", "metadata", "spec", "status")

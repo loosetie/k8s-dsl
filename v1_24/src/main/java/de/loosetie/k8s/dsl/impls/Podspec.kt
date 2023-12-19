@@ -28,7 +28,7 @@ class Podspec_core_v1Impl(
   override var imagePullSecrets: List<LocalObjectReference_core_v1>? = null
   override var initContainers: List<Container_core_v1>? = null
   override var nodeName: String? = null
-  override var nodeSelector: Any? = null
+  override var nodeSelector: Map<String, String>? = null
   override var os: PodOS_core_v1? = null
   override var overhead: Any? = null
   override var preemptionPolicy: String? = null

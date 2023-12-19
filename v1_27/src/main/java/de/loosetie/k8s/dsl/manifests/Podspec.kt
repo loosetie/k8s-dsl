@@ -70,7 +70,7 @@ pod onto that node, assuming that it fits resource requirements. */
   @K8sDslMarker var nodeName: String?
   /** NodeSelector is a selector which must be true for the pod to fit on a node. Selector which must match a node's labels
 for the pod to be scheduled on that node. More info: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/ */
-  @K8sDslMarker var nodeSelector: Any?
+  @K8sDslMarker var nodeSelector: Map<String, String>?
   /** Specifies the OS of the containers in the pod. Some pod and container fields are restricted if this is set. If the OS
 field is set to linux, the following fields must be unset: -securityContext.windowsOptions If the OS field is set to
 windows, following fields must be unset: - spec.hostPID - spec.hostIPC - spec.hostUsers -

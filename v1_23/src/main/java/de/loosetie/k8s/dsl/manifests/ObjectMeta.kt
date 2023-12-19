@@ -19,11 +19,11 @@ configuration definition. Cannot be updated. More info: http://kubernetes.io/doc
   @K8sDslMarker var name: String?
   /** Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match
 selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels */
-  @K8sDslMarker var labels: Any?
+  @K8sDslMarker var labels: Map<String, String>?
   /** Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and
 retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info:
 http://kubernetes.io/docs/user-guide/annotations */
-  @K8sDslMarker var annotations: Any?
+  @K8sDslMarker var annotations: Map<String, String>?
   /** The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace
 in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or
 update request. */

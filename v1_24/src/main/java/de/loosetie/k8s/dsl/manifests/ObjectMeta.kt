@@ -19,11 +19,11 @@ configuration definition. Cannot be updated. More info: http://kubernetes.io/doc
   @K8sDslMarker var name: String?
   /** Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match
 selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels */
-  @K8sDslMarker var labels: Any?
+  @K8sDslMarker var labels: Map<String, String>?
   /** Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and
 retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info:
 http://kubernetes.io/docs/user-guide/annotations */
-  @K8sDslMarker var annotations: Any?
+  @K8sDslMarker var annotations: Map<String, String>?
   /** Deprecated: ClusterName is a legacy field that was always cleared by the system and never used; it will be removed
 completely in 1.25. The name in the go struct is changed to help clients detect accidental use. */
   @K8sDslMarker var clusterName: String?

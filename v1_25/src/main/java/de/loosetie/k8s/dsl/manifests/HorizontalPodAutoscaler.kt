@@ -23,9 +23,9 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
   val metadata: ObjectMeta_meta_v1
   /** behaviour of autoscaler. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status. */
-  val spec: Any
+  val spec: Horizontalpodautoscalerspec_autoscaling_v1
   /** current information about the autoscaler. */
-  @K8sDslMarker var status: Any?
+  val status: Horizontalpodautoscalerstatus_autoscaling_v1?
 }
 
 @K8sDslMarker

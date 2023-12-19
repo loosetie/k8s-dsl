@@ -14,8 +14,8 @@ class ObjectMeta_meta_v1Impl(
 : ObjectMeta_meta_v1, HasParent {
   override var namespace: String? = null
   override var name: String? = null
-  override var labels: Any? = null
-  override var annotations: Any? = null
+  override var labels: Map<String, String>? = null
+  override var annotations: Map<String, String>? = null
   override var clusterName: String? = null
   override var creationTimestamp: Time_meta_v1? = null
   override var deletionGracePeriodSeconds: Int? = null

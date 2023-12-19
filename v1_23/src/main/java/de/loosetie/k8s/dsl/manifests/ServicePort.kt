@@ -33,5 +33,5 @@ must be an IANA_SVC_NAME. If this is a string, it will be looked up as a named p
 If this is not specified, the value of the 'port' field is used (an identity map). This field is ignored for services
 with clusterIP=None, and should be omitted or set equal to the 'port' field. More info:
 https://kubernetes.io/docs/concepts/services-networking/service/#defining-a-service */
-  // val targetPort: None
+  var targetPort: de.loosetie.k8s.dsl.types.IntOrString?
 }

@@ -12,18 +12,13 @@
     <module>api</module>
     <module>util-k8s</module>
     <module>util-jackson</module>
-    <module>v1_16</module>
-    <module>v1_17</module>
-    <module>v1_18</module>
-    <module>v1_19</module>
-    <module>v1_20</module>
-    <module>v1_21</module>
     <module>v1_23</module>
     <module>v1_24</module>
     <module>v1_25</module>
     <module>v1_26</module>
     <module>v1_27</module>
     <module>v1_28</module>
+    <module>v1_29</module>
     <module>shared</module>
     <module>kubevirt_v0_31_0</module>
   </modules>

@@ -29,7 +29,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
   val metadata: ObjectMeta_meta_v1
   /** Spec describes the desired attributes of a resource that then needs to be allocated. It can only be set once when
 creating the ResourceClaim. */
-  val spec: Any
+  val spec: Resourceclaimspec_resource_k8s_io_v1alpha2
   /** Status describes whether the resource is available and with which attributes. */
-  @K8sDslMarker var status: Any?
+  val status: Resourceclaimstatus_resource_k8s_io_v1alpha2?
 }

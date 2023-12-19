@@ -13,5 +13,6 @@ class NetworkPolicyPort_networking_k8s_io_v1Impl(
 )
 : NetworkPolicyPort_networking_k8s_io_v1, HasParent {
   override var endPort: Int? = null
+  override var port: de.loosetie.k8s.dsl.types.IntOrString? = null
   override var protocol: String? = null
 }

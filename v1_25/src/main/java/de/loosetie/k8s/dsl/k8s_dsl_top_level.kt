@@ -103,7 +103,7 @@ fun K8sApi.cronjob(init: CronJob.() -> Unit): CronJob =
 
 @K8sDslMarker
 fun K8sApi.crossversionobjectreference(init: CrossVersionObjectReference.() -> Unit): CrossVersionObjectReference =
-  CrossVersionObjectReference_autoscaling_v2Impl()
+  CrossVersionObjectReference_autoscaling_v1Impl()
     .also{manifests.add(it)}
     .apply(init)
 

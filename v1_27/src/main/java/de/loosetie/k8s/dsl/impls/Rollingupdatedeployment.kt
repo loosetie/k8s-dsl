@@ -12,5 +12,6 @@ class Rollingupdatedeployment_apps_v1Impl(
   override val parent: K8sManifest? = null
 )
 : Rollingupdatedeployment_apps_v1, HasParent {
-  
+  override var maxSurge: de.loosetie.k8s.dsl.types.IntOrPercentage? = null
+  override var maxUnavailable: de.loosetie.k8s.dsl.types.IntOrPercentage? = null
 }

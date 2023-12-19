@@ -118,7 +118,7 @@ EndpointSlice resources can safely assume this behavior. */
 assumed to have an external process managing its endpoints, which Kubernetes will not modify. Only applies to types
 ClusterIP, NodePort, and LoadBalancer. Ignored if type is ExternalName. More info:
 https://kubernetes.io/docs/concepts/services-networking/service/ */
-  @K8sDslMarker var selector: Any?
+  @K8sDslMarker var selector: Map<String, String>?
   /** Supports "ClientIP" and "None". Used to maintain session affinity. Enable client IP based session affinity. Must be
 ClientIP or None. Defaults to None. More info:
 https://kubernetes.io/docs/concepts/services-networking/service/#virtual-ips-and-service-proxies */

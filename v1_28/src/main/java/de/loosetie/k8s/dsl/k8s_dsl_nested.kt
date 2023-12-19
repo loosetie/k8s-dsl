@@ -1609,6 +1609,24 @@ fun HTTPGetAction.httpHeaders(init: HTTPHeader.() -> Unit) {
     .apply(init)
 }
 
+/** Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an
+IANA_SVC_NAME. */
+@K8sDslMarker
+fun HTTPGetAction.port(string: String) {
+  this as HTTPGetAction_core_v1Impl
+  de.loosetie.k8s.dsl.types.IntOrString(string)
+    .also { port = it }
+}
+
+/** Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an
+IANA_SVC_NAME. */
+@K8sDslMarker
+fun HTTPGetAction.port(int: Int) {
+  this as HTTPGetAction_core_v1Impl
+  de.loosetie.k8s.dsl.types.IntOrString(int)
+    .also { port = it }
+}
+
 /** backend defines the referenced service endpoint to which the traffic will be forwarded to. */
 @K8sDslMarker
 fun HTTPIngressPath.backend(init: IngressBackend.() -> Unit) {
@@ -2604,6 +2622,26 @@ fun NetworkPolicyPeer.podSelector(init: LabelSelector.() -> Unit) {
     .apply(init)
 }
 
+/** port represents the port on the given protocol. This can either be a numerical or named port on a pod. If this field is
+not provided, this matches all port names and numbers. If present, only traffic on the specified protocol AND port will
+be matched. */
+@K8sDslMarker
+fun NetworkPolicyPort.port(string: String) {
+  this as NetworkPolicyPort_networking_k8s_io_v1Impl
+  de.loosetie.k8s.dsl.types.IntOrString(string)
+    .also { port = it }
+}
+
+/** port represents the port on the given protocol. This can either be a numerical or named port on a pod. If this field is
+not provided, this matches all port names and numbers. If present, only traffic on the specified protocol AND port will
+be matched. */
+@K8sDslMarker
+fun NetworkPolicyPort.port(int: Int) {
+  this as NetworkPolicyPort_networking_k8s_io_v1Impl
+  de.loosetie.k8s.dsl.types.IntOrString(int)
+    .also { port = it }
+}
+
 /** Standard object's metadata. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata */
 @K8sDslMarker
@@ -3588,6 +3626,25 @@ fun ResourceClaim_resource_k8s_io_v1alpha2.metadata(init: ObjectMeta.() -> Unit)
     .apply(init)
 }
 
+/** Spec describes the desired attributes of a resource that then needs to be allocated. It can only be set once when
+creating the ResourceClaim. */
+@K8sDslMarker
+fun ResourceClaim_resource_k8s_io_v1alpha2.spec(init: Resourceclaimspec_resource_k8s_io_v1alpha2.() -> Unit) {
+  this as ResourceClaim_resource_k8s_io_v1alpha2Impl
+  Resourceclaimspec_resource_k8s_io_v1alpha2Impl(this)
+    .also { spec = it }
+    .apply(init)
+}
+
+/** Status describes whether the resource is available and with which attributes. */
+@K8sDslMarker
+fun ResourceClaim_resource_k8s_io_v1alpha2.status(init: Resourceclaimstatus_resource_k8s_io_v1alpha2.() -> Unit) {
+  this as ResourceClaim_resource_k8s_io_v1alpha2Impl
+  Resourceclaimstatus_resource_k8s_io_v1alpha2Impl(this)
+    .also { status = it }
+    .apply(init)
+}
+
 /** Standard object metadata */
 @K8sDslMarker
 fun ResourceClass.metadata(init: ObjectMeta.() -> Unit) {
@@ -3687,6 +3744,27 @@ fun ResourceRequirements.claims(init: ResourceClaim.() -> Unit) {
     .apply(init)
 }
 
+/** Limits describes the maximum amount of compute resources allowed. More info:
+https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/ */
+@K8sDslMarker
+fun ResourceRequirements.limits(init: de.loosetie.k8s.dsl.types.LimitsAndRequests.() -> Unit) {
+  this as ResourceRequirements_core_v1Impl
+  de.loosetie.k8s.dsl.types.LimitsAndRequests(this)
+    .also { limits = it }
+    .apply(init)
+}
+
+/** Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults
+to Limits if that is explicitly specified, otherwise to an implementation-defined value. Requests cannot exceed Limits.
+More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/ */
+@K8sDslMarker
+fun ResourceRequirements.requests(init: de.loosetie.k8s.dsl.types.LimitsAndRequests.() -> Unit) {
+  this as ResourceRequirements_core_v1Impl
+  de.loosetie.k8s.dsl.types.LimitsAndRequests(this)
+    .also { requests = it }
+    .apply(init)
+}
+
 /** Standard object's metadata. */
 @K8sDslMarker
 fun RoleBinding.metadata(init: ObjectMeta.() -> Unit) {
@@ -3731,6 +3809,30 @@ fun Role.rules(init: PolicyRule.() -> Unit) {
   PolicyRule_rbac_authorization_k8s_io_v1Impl(this)
     .also { rules = rules?.let { p -> p + it } ?: listOf(it) }
     .apply(init)
+}
+
+/** The maximum number of pods that can be unavailable during the update. Value can be an absolute number (ex: 5) or a
+percentage of desired pods (ex: 10%). Absolute number is calculated from percentage by rounding up. This can not be 0.
+Defaults to 1. This field is alpha-level and is only honored by servers that enable the MaxUnavailableStatefulSet
+feature. The field applies to all pods in the range 0 to Replicas-1. That means if there is any unavailable pod in the
+range 0 to Replicas-1, it will be counted towards MaxUnavailable. */
+@K8sDslMarker
+fun RollingUpdateStatefulSetStrategy.maxUnavailable(percentage: String) {
+  this as RollingUpdateStatefulSetStrategy_apps_v1Impl
+  de.loosetie.k8s.dsl.types.IntOrPercentage(percentage)
+    .also { maxUnavailable = it }
+}
+
+/** The maximum number of pods that can be unavailable during the update. Value can be an absolute number (ex: 5) or a
+percentage of desired pods (ex: 10%). Absolute number is calculated from percentage by rounding up. This can not be 0.
+Defaults to 1. This field is alpha-level and is only honored by servers that enable the MaxUnavailableStatefulSet
+feature. The field applies to all pods in the range 0 to Replicas-1. That means if there is any unavailable pod in the
+range 0 to Replicas-1, it will be counted towards MaxUnavailable. */
+@K8sDslMarker
+fun RollingUpdateStatefulSetStrategy.maxUnavailable(int: Int) {
+  this as RollingUpdateStatefulSetStrategy_apps_v1Impl
+  de.loosetie.k8s.dsl.types.IntOrPercentage(int)
+    .also { maxUnavailable = it }
 }
 
 /** More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata */
@@ -4000,6 +4102,30 @@ fun ServiceAccount.secrets(init: ObjectReference.() -> Unit) {
     .apply(init)
 }
 
+/** Number or name of the port to access on the pods targeted by the service. Number must be in the range 1 to 65535. Name
+must be an IANA_SVC_NAME. If this is a string, it will be looked up as a named port in the target Pod's container ports.
+If this is not specified, the value of the 'port' field is used (an identity map). This field is ignored for services
+with clusterIP=None, and should be omitted or set equal to the 'port' field. More info:
+https://kubernetes.io/docs/concepts/services-networking/service/#defining-a-service */
+@K8sDslMarker
+fun ServicePort.targetPort(string: String) {
+  this as ServicePort_core_v1Impl
+  de.loosetie.k8s.dsl.types.IntOrString(string)
+    .also { targetPort = it }
+}
+
+/** Number or name of the port to access on the pods targeted by the service. Number must be in the range 1 to 65535. Name
+must be an IANA_SVC_NAME. If this is a string, it will be looked up as a named port in the target Pod's container ports.
+If this is not specified, the value of the 'port' field is used (an identity map). This field is ignored for services
+with clusterIP=None, and should be omitted or set equal to the 'port' field. More info:
+https://kubernetes.io/docs/concepts/services-networking/service/#defining-a-service */
+@K8sDslMarker
+fun ServicePort.targetPort(int: Int) {
+  this as ServicePort_core_v1Impl
+  de.loosetie.k8s.dsl.types.IntOrString(int)
+    .also { targetPort = it }
+}
+
 /** Standard object's metadata. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata */
 @K8sDslMarker
@@ -4266,6 +4392,24 @@ fun Subject.user(init: UserSubject.() -> Unit) {
   UserSubject_flowcontrol_apiserver_k8s_io_v1beta3Impl(this)
     .also { user = it }
     .apply(init)
+}
+
+/** Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an
+IANA_SVC_NAME. */
+@K8sDslMarker
+fun TCPSocketAction.port(string: String) {
+  this as TCPSocketAction_core_v1Impl
+  de.loosetie.k8s.dsl.types.IntOrString(string)
+    .also { port = it }
+}
+
+/** Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an
+IANA_SVC_NAME. */
+@K8sDslMarker
+fun TCPSocketAction.port(int: Int) {
+  this as TCPSocketAction_core_v1Impl
+  de.loosetie.k8s.dsl.types.IntOrString(int)
+    .also { port = it }
 }
 
 /** TimeAdded represents the time at which the taint was added. It is only written for NoExecute taints. */
@@ -4911,5 +5055,1944 @@ fun WeightedPodAffinityTerm.podAffinityTerm(init: PodAffinityTerm.() -> Unit) {
   this as WeightedPodAffinityTerm_core_v1Impl
   PodAffinityTerm_core_v1Impl(this)
     .also { podAffinityTerm = it }
+    .apply(init)
+}
+
+/** Service is a reference to the service for this API server. It must communicate on port 443. If the Service is nil, that
+means the handling for the API groupversion is handled locally on this server. The call will simply delegate to the
+normal handler chain to be fulfilled. */
+@K8sDslMarker
+fun Apiservicespec_apiregistration_k8s_io_v1.service(init: ServiceReference_apiregistration_k8s_io_v1.() -> Unit) {
+  this as Apiservicespec_apiregistration_k8s_io_v1Impl
+  ServiceReference_apiregistration_k8s_io_v1Impl(this)
+    .also { service = it }
+    .apply(init)
+}
+
+/** Current service state of apiService. */
+@K8sDslMarker
+fun Apiservicestatus_apiregistration_k8s_io_v1.conditions(init: APIServiceCondition.() -> Unit) {
+  this as Apiservicestatus_apiregistration_k8s_io_v1Impl
+  APIServiceCondition_apiregistration_k8s_io_v1Impl(this)
+    .also { conditions = conditions?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** conditions applied to the request. Known conditions are "Approved", "Denied", and "Failed". */
+@K8sDslMarker
+fun Certificatesigningrequeststatus_certificates_k8s_io_v1.conditions(init: CertificateSigningRequestCondition.() -> Unit) {
+  this as Certificatesigningrequeststatus_certificates_k8s_io_v1Impl
+  CertificateSigningRequestCondition_certificates_k8s_io_v1Impl(this)
+    .also { conditions = conditions?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** nodeSelector defines which nodes the config is applicable to. An empty or nil nodeSelector selects all nodes. This field
+is immutable. */
+@K8sDslMarker
+fun Clustercidrspec_networking_k8s_io_v1alpha1.nodeSelector(init: NodeSelector.() -> Unit) {
+  this as Clustercidrspec_networking_k8s_io_v1alpha1Impl
+  NodeSelector_core_v1Impl(this)
+    .also { nodeSelector = it }
+    .apply(init)
+}
+
+/** LastTerminationState holds the last termination state of the container to help debug container crashes and restarts.
+This field is not populated if the container is still running and RestartCount is 0. */
+@K8sDslMarker
+fun Containerstatus_core_v1.lastState(init: ContainerState.() -> Unit) {
+  this as Containerstatus_core_v1Impl
+  ContainerState_core_v1Impl(this)
+    .also { lastState = it }
+    .apply(init)
+}
+
+/** Resources represents the compute resource requests and limits that have been successfully enacted on the running
+container after it has been started or has been successfully resized. */
+@K8sDslMarker
+fun Containerstatus_core_v1.resources(init: ResourceRequirements.() -> Unit) {
+  this as Containerstatus_core_v1Impl
+  ResourceRequirements_core_v1Impl(this)
+    .also { resources = it }
+    .apply(init)
+}
+
+/** State holds details about the container's current condition. */
+@K8sDslMarker
+fun Containerstatus_core_v1.state(init: ContainerState.() -> Unit) {
+  this as Containerstatus_core_v1Impl
+  ContainerState_core_v1Impl(this)
+    .also { state = it }
+    .apply(init)
+}
+
+/** Specifies the job that will be created when executing a CronJob. */
+@K8sDslMarker
+fun Cronjobspec_batch_v1.jobTemplate(init: JobTemplateSpec.() -> Unit) {
+  this as Cronjobspec_batch_v1Impl
+  JobTemplateSpec_batch_v1Impl(this)
+    .also { jobTemplate = it }
+    .apply(init)
+}
+
+/** A list of pointers to currently running jobs. */
+@K8sDslMarker
+fun Cronjobstatus_batch_v1.active(init: ObjectReference.() -> Unit) {
+  this as Cronjobstatus_batch_v1Impl
+  ObjectReference_core_v1Impl(this)
+    .also { active = active?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** Information when was the last time the job was successfully scheduled. */
+@K8sDslMarker
+fun Cronjobstatus_batch_v1.lastScheduleTime(init: Time.() -> Unit) {
+  this as Cronjobstatus_batch_v1Impl
+  Time_meta_v1Impl(this)
+    .also { lastScheduleTime = it }
+    .apply(init)
+}
+
+/** Information when was the last time the job successfully completed. */
+@K8sDslMarker
+fun Cronjobstatus_batch_v1.lastSuccessfulTime(init: Time.() -> Unit) {
+  this as Cronjobstatus_batch_v1Impl
+  Time_meta_v1Impl(this)
+    .also { lastSuccessfulTime = it }
+    .apply(init)
+}
+
+/** tokenRequests indicates the CSI driver needs pods' service account tokens it is mounting volume for to do necessary
+authentication. Kubelet will pass the tokens in VolumeContext in the CSI NodePublishVolume calls. The CSI driver should
+parse and validate the following VolumeContext: "csi.storage.k8s.io/serviceAccount.tokens": { "<audience>": { "token":
+<token>, "expirationTimestamp": <expiration timestamp in RFC3339>, }, ... } Note: Audience in each TokenRequest should
+be different and at most one token is empty string. To receive a new token after expiry, RequiresRepublish can be used
+to trigger NodePublishVolume periodically. */
+@K8sDslMarker
+fun Csidriverspec_storage_k8s_io_v1.tokenRequests(init: TokenRequest_storage_k8s_io_v1.() -> Unit) {
+  this as Csidriverspec_storage_k8s_io_v1Impl
+  TokenRequest_storage_k8s_io_v1Impl(this)
+    .also { tokenRequests = tokenRequests?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** drivers is a list of information of all CSI Drivers existing on a node. If all drivers in the list are uninstalled, this
+can become empty. */
+@K8sDslMarker
+fun Csinodespec_storage_k8s_io_v1.drivers(init: CSINodeDriver.() -> Unit) {
+  this as Csinodespec_storage_k8s_io_v1Impl
+  CSINodeDriver_storage_k8s_io_v1Impl(this)
+    .also { drivers = drivers?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** conversion defines conversion settings for the CRD. */
+@K8sDslMarker
+fun Customresourcedefinitionspec_apiextensions_k8s_io_v1.conversion(init: CustomResourceConversion.() -> Unit) {
+  this as Customresourcedefinitionspec_apiextensions_k8s_io_v1Impl
+  CustomResourceConversion_apiextensions_k8s_io_v1Impl(this)
+    .also { conversion = it }
+    .apply(init)
+}
+
+/** names specify the resource and kind names for the custom resource. */
+@K8sDslMarker
+fun Customresourcedefinitionspec_apiextensions_k8s_io_v1.names(init: CustomResourceDefinitionNames.() -> Unit) {
+  this as Customresourcedefinitionspec_apiextensions_k8s_io_v1Impl
+  CustomResourceDefinitionNames_apiextensions_k8s_io_v1Impl(this)
+    .also { names = it }
+    .apply(init)
+}
+
+/** versions is the list of all API versions of the defined custom resource. Version names are used to compute the order in
+which served versions are listed in API discovery. If the version string is "kube-like", it will sort above non
+"kube-like" version strings, which are ordered lexicographically. "Kube-like" versions start with a "v", then are
+followed by a number (the major version), then optionally the string "alpha" or "beta" and another number (the minor
+version). These are sorted first by GA > beta > alpha (where GA is a version with no suffix such as beta or alpha), and
+then by comparing major version, then minor version. An example sorted list of versions: v10, v2, v1, v11beta2,
+v10beta3, v3beta1, v12alpha1, v11alpha2, foo1, foo10. */
+@K8sDslMarker
+fun Customresourcedefinitionspec_apiextensions_k8s_io_v1.versions(init: CustomResourceDefinitionVersion.() -> Unit) {
+  this as Customresourcedefinitionspec_apiextensions_k8s_io_v1Impl
+  CustomResourceDefinitionVersion_apiextensions_k8s_io_v1Impl(this)
+    .also { versions = versions?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** acceptedNames are the names that are actually being used to serve discovery. They may be different than the names in
+spec. */
+@K8sDslMarker
+fun Customresourcedefinitionstatus_apiextensions_k8s_io_v1.acceptedNames(init: CustomResourceDefinitionNames.() -> Unit) {
+  this as Customresourcedefinitionstatus_apiextensions_k8s_io_v1Impl
+  CustomResourceDefinitionNames_apiextensions_k8s_io_v1Impl(this)
+    .also { acceptedNames = it }
+    .apply(init)
+}
+
+/** conditions indicate state for particular aspects of a CustomResourceDefinition */
+@K8sDslMarker
+fun Customresourcedefinitionstatus_apiextensions_k8s_io_v1.conditions(init: CustomResourceDefinitionCondition.() -> Unit) {
+  this as Customresourcedefinitionstatus_apiextensions_k8s_io_v1Impl
+  CustomResourceDefinitionCondition_apiextensions_k8s_io_v1Impl(this)
+    .also { conditions = conditions?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** A label query over pods that are managed by the daemon set. Must match in order to be controlled. It must match the pod
+template's labels. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors */
+@K8sDslMarker
+fun Daemonsetspec_apps_v1.selector(init: LabelSelector.() -> Unit) {
+  this as Daemonsetspec_apps_v1Impl
+  LabelSelector_meta_v1Impl(this)
+    .also { selector = it }
+    .apply(init)
+}
+
+/** An object that describes the pod that will be created. The DaemonSet will create exactly one copy of this pod on every
+node that matches the template's node selector (or on every node if no node selector is specified). The only allowed
+template.spec.restartPolicy value is "Always". More info:
+https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#pod-template */
+@K8sDslMarker
+fun Daemonsetspec_apps_v1.template(init: Podtemplatespec_core_v1.() -> Unit) {
+  this as Daemonsetspec_apps_v1Impl
+  Podtemplatespec_core_v1Impl(this)
+    .also { template = it }
+    .apply(init)
+}
+
+/** An update strategy to replace existing DaemonSet pods with new pods. */
+@K8sDslMarker
+fun Daemonsetspec_apps_v1.updateStrategy(init: DaemonSetUpdateStrategy.() -> Unit) {
+  this as Daemonsetspec_apps_v1Impl
+  DaemonSetUpdateStrategy_apps_v1Impl(this)
+    .also { updateStrategy = it }
+    .apply(init)
+}
+
+/** Represents the latest available observations of a DaemonSet's current state. */
+@K8sDslMarker
+fun Daemonsetstatus_apps_v1.conditions(init: DaemonSetCondition.() -> Unit) {
+  this as Daemonsetstatus_apps_v1Impl
+  DaemonSetCondition_apps_v1Impl(this)
+    .also { conditions = conditions?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** Label selector for pods. Existing ReplicaSets whose pods are selected by this will be the ones affected by this
+deployment. It must match the pod template's labels. */
+@K8sDslMarker
+fun Deploymentspec_apps_v1.selector(init: LabelSelector.() -> Unit) {
+  this as Deploymentspec_apps_v1Impl
+  LabelSelector_meta_v1Impl(this)
+    .also { selector = it }
+    .apply(init)
+}
+
+/** The deployment strategy to use to replace existing pods with new ones. */
+@K8sDslMarker
+fun Deploymentspec_apps_v1.strategy(init: Deploymentstrategy_apps_v1.() -> Unit) {
+  this as Deploymentspec_apps_v1Impl
+  Deploymentstrategy_apps_v1Impl(this)
+    .also { strategy = it }
+    .apply(init)
+}
+
+/** Template describes the pods that will be created. The only allowed template.spec.restartPolicy value is "Always". */
+@K8sDslMarker
+fun Deploymentspec_apps_v1.template(init: Podtemplatespec_core_v1.() -> Unit) {
+  this as Deploymentspec_apps_v1Impl
+  Podtemplatespec_core_v1Impl(this)
+    .also { template = it }
+    .apply(init)
+}
+
+/** Represents the latest available observations of a deployment's current state. */
+@K8sDslMarker
+fun Deploymentstatus_apps_v1.conditions(init: DeploymentCondition.() -> Unit) {
+  this as Deploymentstatus_apps_v1Impl
+  DeploymentCondition_apps_v1Impl(this)
+    .also { conditions = conditions?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** Rolling update config params. Present only if DeploymentStrategyType = RollingUpdate. */
+@K8sDslMarker
+fun Deploymentstrategy_apps_v1.rollingUpdate(init: Rollingupdatedeployment_apps_v1.() -> Unit) {
+  this as Deploymentstrategy_apps_v1Impl
+  Rollingupdatedeployment_apps_v1Impl(this)
+    .also { rollingUpdate = it }
+    .apply(init)
+}
+
+/** `distinguisherMethod` defines how to compute the flow distinguisher for requests that match this schema. `nil` specifies
+that the distinguisher is disabled and thus will always be the empty string. */
+@K8sDslMarker
+fun Flowschemaspec_flowcontrol_apiserver_k8s_io_v1beta3.distinguisherMethod(init: FlowDistinguisherMethod.() -> Unit) {
+  this as Flowschemaspec_flowcontrol_apiserver_k8s_io_v1beta3Impl
+  FlowDistinguisherMethod_flowcontrol_apiserver_k8s_io_v1beta3Impl(this)
+    .also { distinguisherMethod = it }
+    .apply(init)
+}
+
+/** `priorityLevelConfiguration` should reference a PriorityLevelConfiguration in the cluster. If the reference cannot be
+resolved, the FlowSchema will be ignored and marked as invalid in its status. Required. */
+@K8sDslMarker
+fun Flowschemaspec_flowcontrol_apiserver_k8s_io_v1beta3.priorityLevelConfiguration(init: PriorityLevelConfigurationReference.() -> Unit) {
+  this as Flowschemaspec_flowcontrol_apiserver_k8s_io_v1beta3Impl
+  PriorityLevelConfigurationReference_flowcontrol_apiserver_k8s_io_v1beta3Impl(this)
+    .also { priorityLevelConfiguration = it }
+    .apply(init)
+}
+
+/** `rules` describes which requests will match this flow schema. This FlowSchema matches a request if and only if at least
+one member of rules matches the request. if it is an empty slice, there will be no requests matching the FlowSchema. */
+@K8sDslMarker
+fun Flowschemaspec_flowcontrol_apiserver_k8s_io_v1beta3.rules(init: PolicyRulesWithSubjects.() -> Unit) {
+  this as Flowschemaspec_flowcontrol_apiserver_k8s_io_v1beta3Impl
+  PolicyRulesWithSubjects_flowcontrol_apiserver_k8s_io_v1beta3Impl(this)
+    .also { rules = rules?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** `conditions` is a list of the current states of FlowSchema. */
+@K8sDslMarker
+fun Flowschemastatus_flowcontrol_apiserver_k8s_io_v1beta3.conditions(init: FlowSchemaCondition.() -> Unit) {
+  this as Flowschemastatus_flowcontrol_apiserver_k8s_io_v1beta3Impl
+  FlowSchemaCondition_flowcontrol_apiserver_k8s_io_v1beta3Impl(this)
+    .also { conditions = conditions?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** behavior configures the scaling behavior of the target in both Up and Down directions (scaleUp and scaleDown fields
+respectively). If not set, the default HPAScalingRules for scale up and scale down are used. */
+@K8sDslMarker
+fun Horizontalpodautoscalerspec_autoscaling_v2.behavior(init: HorizontalPodAutoscalerBehavior.() -> Unit) {
+  this as Horizontalpodautoscalerspec_autoscaling_v2Impl
+  HorizontalPodAutoscalerBehavior_autoscaling_v2Impl(this)
+    .also { behavior = it }
+    .apply(init)
+}
+
+/** metrics contains the specifications for which to use to calculate the desired replica count (the maximum replica count
+across all metrics will be used). The desired replica count is calculated multiplying the ratio between the target value
+and the current value by the current number of pods. Ergo, metrics used must decrease as the pod count is increased, and
+vice-versa. See the individual metric source types for more information about how each type of metric must respond. If
+not set, the default metric will be set to 80% average CPU utilization. */
+@K8sDslMarker
+fun Horizontalpodautoscalerspec_autoscaling_v2.metrics(init: MetricSpec.() -> Unit) {
+  this as Horizontalpodautoscalerspec_autoscaling_v2Impl
+  MetricSpec_autoscaling_v2Impl(this)
+    .also { metrics = metrics?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** scaleTargetRef points to the target resource to scale, and is used to the pods for which metrics should be collected, as
+well as to actually change the replica count. */
+@K8sDslMarker
+fun Horizontalpodautoscalerspec_autoscaling_v2.scaleTargetRef(init: CrossVersionObjectReference.() -> Unit) {
+  this as Horizontalpodautoscalerspec_autoscaling_v2Impl
+  CrossVersionObjectReference_autoscaling_v2Impl(this)
+    .also { scaleTargetRef = it }
+    .apply(init)
+}
+
+/** conditions is the set of conditions required for this autoscaler to scale its target, and indicates whether or not those
+conditions are met. */
+@K8sDslMarker
+fun Horizontalpodautoscalerstatus_autoscaling_v2.conditions(init: HorizontalPodAutoscalerCondition.() -> Unit) {
+  this as Horizontalpodautoscalerstatus_autoscaling_v2Impl
+  HorizontalPodAutoscalerCondition_autoscaling_v2Impl(this)
+    .also { conditions = conditions?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** currentMetrics is the last read state of the metrics used by this autoscaler. */
+@K8sDslMarker
+fun Horizontalpodautoscalerstatus_autoscaling_v2.currentMetrics(init: MetricStatus.() -> Unit) {
+  this as Horizontalpodautoscalerstatus_autoscaling_v2Impl
+  MetricStatus_autoscaling_v2Impl(this)
+    .also { currentMetrics = currentMetrics?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** lastScaleTime is the last time the HorizontalPodAutoscaler scaled the number of pods, used by the autoscaler to control
+how often the number of pods is changed. */
+@K8sDslMarker
+fun Horizontalpodautoscalerstatus_autoscaling_v2.lastScaleTime(init: Time.() -> Unit) {
+  this as Horizontalpodautoscalerstatus_autoscaling_v2Impl
+  Time_meta_v1Impl(this)
+    .also { lastScaleTime = it }
+    .apply(init)
+}
+
+/** parameters is a link to a custom resource containing additional configuration for the controller. This is optional if
+the controller does not require extra parameters. */
+@K8sDslMarker
+fun Ingressclassspec_networking_k8s_io_v1.parameters(init: IngressClassParametersReference.() -> Unit) {
+  this as Ingressclassspec_networking_k8s_io_v1Impl
+  IngressClassParametersReference_networking_k8s_io_v1Impl(this)
+    .also { parameters = it }
+    .apply(init)
+}
+
+/** defaultBackend is the backend that should handle requests that don't match any rule. If Rules are not specified,
+DefaultBackend must be specified. If DefaultBackend is not set, the handling of requests that do not match any of the
+rules will be up to the Ingress controller. */
+@K8sDslMarker
+fun Ingressspec_networking_k8s_io_v1.defaultBackend(init: IngressBackend.() -> Unit) {
+  this as Ingressspec_networking_k8s_io_v1Impl
+  IngressBackend_networking_k8s_io_v1Impl(this)
+    .also { defaultBackend = it }
+    .apply(init)
+}
+
+/** rules is a list of host rules used to configure the Ingress. If unspecified, or no rule matches, all traffic is sent to
+the default backend. */
+@K8sDslMarker
+fun Ingressspec_networking_k8s_io_v1.rules(init: IngressRule.() -> Unit) {
+  this as Ingressspec_networking_k8s_io_v1Impl
+  IngressRule_networking_k8s_io_v1Impl(this)
+    .also { rules = rules?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** tls represents the TLS configuration. Currently the Ingress only supports a single TLS port, 443. If multiple members of
+this list specify different hosts, they will be multiplexed on the same port according to the hostname specified through
+the SNI TLS extension, if the ingress controller fulfilling the ingress supports SNI. */
+@K8sDslMarker
+fun Ingressspec_networking_k8s_io_v1.tls(init: IngressTLS.() -> Unit) {
+  this as Ingressspec_networking_k8s_io_v1Impl
+  IngressTLS_networking_k8s_io_v1Impl(this)
+    .also { tls = tls?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** loadBalancer contains the current status of the load-balancer. */
+@K8sDslMarker
+fun Ingressstatus_networking_k8s_io_v1.loadBalancer(init: IngressLoadBalancerStatus.() -> Unit) {
+  this as Ingressstatus_networking_k8s_io_v1Impl
+  IngressLoadBalancerStatus_networking_k8s_io_v1Impl(this)
+    .also { loadBalancer = it }
+    .apply(init)
+}
+
+/** ParentRef references the resource that an IPAddress is attached to. An IPAddress must reference a parent object. */
+@K8sDslMarker
+fun Ipaddressspec_networking_k8s_io_v1alpha1.parentRef(init: ParentReference.() -> Unit) {
+  this as Ipaddressspec_networking_k8s_io_v1alpha1Impl
+  ParentReference_networking_k8s_io_v1alpha1Impl(this)
+    .also { parentRef = it }
+    .apply(init)
+}
+
+/** Specifies the policy of handling failed pods. In particular, it allows to specify the set of actions and conditions
+which need to be satisfied to take the associated action. If empty, the default behaviour applies - the counter of
+failed pods, represented by the jobs's .status.failed field, is incremented and it is checked against the backoffLimit.
+This field cannot be used in combination with restartPolicy=OnFailure. This field is beta-level. It can be used when the
+`JobPodFailurePolicy` feature gate is enabled (enabled by default). */
+@K8sDslMarker
+fun Jobspec_batch_v1.podFailurePolicy(init: PodFailurePolicy.() -> Unit) {
+  this as Jobspec_batch_v1Impl
+  PodFailurePolicy_batch_v1Impl(this)
+    .also { podFailurePolicy = it }
+    .apply(init)
+}
+
+/** A label query over pods that should match the pod count. Normally, the system sets this field for you. More info:
+https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors */
+@K8sDslMarker
+fun Jobspec_batch_v1.selector(init: LabelSelector.() -> Unit) {
+  this as Jobspec_batch_v1Impl
+  LabelSelector_meta_v1Impl(this)
+    .also { selector = it }
+    .apply(init)
+}
+
+/** Describes the pod that will be created when executing a job. The only allowed template.spec.restartPolicy values are
+"Never" or "OnFailure". More info: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/ */
+@K8sDslMarker
+fun Jobspec_batch_v1.template(init: Podtemplatespec_core_v1.() -> Unit) {
+  this as Jobspec_batch_v1Impl
+  Podtemplatespec_core_v1Impl(this)
+    .also { template = it }
+    .apply(init)
+}
+
+/** Represents time when the job was completed. It is not guaranteed to be set in happens-before order across separate
+operations. It is represented in RFC3339 form and is in UTC. The completion time is only set when the job finishes
+successfully. */
+@K8sDslMarker
+fun Jobstatus_batch_v1.completionTime(init: Time.() -> Unit) {
+  this as Jobstatus_batch_v1Impl
+  Time_meta_v1Impl(this)
+    .also { completionTime = it }
+    .apply(init)
+}
+
+/** The latest available observations of an object's current state. When a Job fails, one of the conditions will have type
+"Failed" and status true. When a Job is suspended, one of the conditions will have type "Suspended" and status true;
+when the Job is resumed, the status of this condition will become false. When a Job is completed, one of the conditions
+will have type "Complete" and status true. More info:
+https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/ */
+@K8sDslMarker
+fun Jobstatus_batch_v1.conditions(init: JobCondition.() -> Unit) {
+  this as Jobstatus_batch_v1Impl
+  JobCondition_batch_v1Impl(this)
+    .also { conditions = conditions?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** Represents time when the job controller started processing a job. When a Job is created in the suspended state, this
+field is not set until the first time it is resumed. This field is reset every time a Job is resumed from suspension. It
+is represented in RFC3339 form and is in UTC. */
+@K8sDslMarker
+fun Jobstatus_batch_v1.startTime(init: Time.() -> Unit) {
+  this as Jobstatus_batch_v1Impl
+  Time_meta_v1Impl(this)
+    .also { startTime = it }
+    .apply(init)
+}
+
+/** uncountedTerminatedPods holds the UIDs of Pods that have terminated but the job controller hasn't yet accounted for in
+the status counters. The job controller creates pods with a finalizer. When a pod terminates (succeeded or failed), the
+controller does three steps to account for it in the job status: 1. Add the pod UID to the arrays in this field. 2.
+Remove the pod finalizer. 3. Remove the pod UID from the arrays while increasing the corresponding counter. Old jobs
+might not be tracked using this field, in which case the field remains null. */
+@K8sDslMarker
+fun Jobstatus_batch_v1.uncountedTerminatedPods(init: UncountedTerminatedPods.() -> Unit) {
+  this as Jobstatus_batch_v1Impl
+  UncountedTerminatedPods_batch_v1Impl(this)
+    .also { uncountedTerminatedPods = it }
+    .apply(init)
+}
+
+/** acquireTime is a time when the current lease was acquired. */
+@K8sDslMarker
+fun Leasespec_coordination_k8s_io_v1.acquireTime(init: MicroTime.() -> Unit) {
+  this as Leasespec_coordination_k8s_io_v1Impl
+  MicroTime_meta_v1Impl(this)
+    .also { acquireTime = it }
+    .apply(init)
+}
+
+/** renewTime is a time when the current holder of a lease has last updated the lease. */
+@K8sDslMarker
+fun Leasespec_coordination_k8s_io_v1.renewTime(init: MicroTime.() -> Unit) {
+  this as Leasespec_coordination_k8s_io_v1Impl
+  MicroTime_meta_v1Impl(this)
+    .also { renewTime = it }
+    .apply(init)
+}
+
+/** Limits is the list of LimitRangeItem objects that are enforced. */
+@K8sDslMarker
+fun Limitrangespec_core_v1.limits(init: LimitRangeItem.() -> Unit) {
+  this as Limitrangespec_core_v1Impl
+  LimitRangeItem_core_v1Impl(this)
+    .also { limits = limits?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** Represents the latest available observations of a namespace's current state. */
+@K8sDslMarker
+fun Namespacestatus_core_v1.conditions(init: NamespaceCondition.() -> Unit) {
+  this as Namespacestatus_core_v1Impl
+  NamespaceCondition_core_v1Impl(this)
+    .also { conditions = conditions?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** egress is a list of egress rules to be applied to the selected pods. Outgoing traffic is allowed if there are no
+NetworkPolicies selecting the pod (and cluster policy otherwise allows the traffic), OR if the traffic matches at least
+one egress rule across all of the NetworkPolicy objects whose podSelector matches the pod. If this field is empty then
+this NetworkPolicy limits all outgoing traffic (and serves solely to ensure that the pods it selects are isolated by
+default). This field is beta-level in 1.8 */
+@K8sDslMarker
+fun Networkpolicyspec_networking_k8s_io_v1.egress(init: NetworkPolicyEgressRule.() -> Unit) {
+  this as Networkpolicyspec_networking_k8s_io_v1Impl
+  NetworkPolicyEgressRule_networking_k8s_io_v1Impl(this)
+    .also { egress = egress?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** ingress is a list of ingress rules to be applied to the selected pods. Traffic is allowed to a pod if there are no
+NetworkPolicies selecting the pod (and cluster policy otherwise allows the traffic), OR if the traffic source is the
+pod's local node, OR if the traffic matches at least one ingress rule across all of the NetworkPolicy objects whose
+podSelector matches the pod. If this field is empty then this NetworkPolicy does not allow any traffic (and serves
+solely to ensure that the pods it selects are isolated by default) */
+@K8sDslMarker
+fun Networkpolicyspec_networking_k8s_io_v1.ingress(init: NetworkPolicyIngressRule.() -> Unit) {
+  this as Networkpolicyspec_networking_k8s_io_v1Impl
+  NetworkPolicyIngressRule_networking_k8s_io_v1Impl(this)
+    .also { ingress = ingress?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** podSelector selects the pods to which this NetworkPolicy object applies. The array of ingress rules is applied to any
+pods selected by this field. Multiple network policies can select the same set of pods. In this case, the ingress rules
+for each are combined additively. This field is NOT optional and follows standard label selector semantics. An empty
+podSelector matches all pods in this namespace. */
+@K8sDslMarker
+fun Networkpolicyspec_networking_k8s_io_v1.podSelector(init: LabelSelector.() -> Unit) {
+  this as Networkpolicyspec_networking_k8s_io_v1Impl
+  LabelSelector_meta_v1Impl(this)
+    .also { podSelector = it }
+    .apply(init)
+}
+
+/** Deprecated: Previously used to specify the source of the node's configuration for the DynamicKubeletConfig feature. This
+feature is removed. */
+@K8sDslMarker
+fun Nodespec_core_v1.configSource(init: NodeConfigSource.() -> Unit) {
+  this as Nodespec_core_v1Impl
+  NodeConfigSource_core_v1Impl(this)
+    .also { configSource = it }
+    .apply(init)
+}
+
+/** If specified, the node's taints. */
+@K8sDslMarker
+fun Nodespec_core_v1.taints(init: Taint.() -> Unit) {
+  this as Nodespec_core_v1Impl
+  Taint_core_v1Impl(this)
+    .also { taints = taints?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** List of addresses reachable to the node. Queried from cloud provider, if available. More info:
+https://kubernetes.io/docs/concepts/nodes/node/#addresses Note: This field is declared as mergeable, but the merge key
+is not sufficiently unique, which can cause data corruption when it is merged. Callers should instead use a
+full-replacement patch. See https://pr.k8s.io/79391 for an example. Consumers should assume that addresses can change
+during the lifetime of a Node. However, there are some exceptions where this may not be possible, such as Pods that
+inherit a Node's address in its own status or consumers of the downward API (status.hostIP). */
+@K8sDslMarker
+fun Nodestatus_core_v1.addresses(init: NodeAddress.() -> Unit) {
+  this as Nodestatus_core_v1Impl
+  NodeAddress_core_v1Impl(this)
+    .also { addresses = addresses?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** Conditions is an array of current observed node conditions. More info:
+https://kubernetes.io/docs/concepts/nodes/node/#condition */
+@K8sDslMarker
+fun Nodestatus_core_v1.conditions(init: NodeCondition.() -> Unit) {
+  this as Nodestatus_core_v1Impl
+  NodeCondition_core_v1Impl(this)
+    .also { conditions = conditions?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** Status of the config assigned to the node via the dynamic Kubelet config feature. */
+@K8sDslMarker
+fun Nodestatus_core_v1.config(init: NodeConfigStatus.() -> Unit) {
+  this as Nodestatus_core_v1Impl
+  NodeConfigStatus_core_v1Impl(this)
+    .also { config = it }
+    .apply(init)
+}
+
+/** Endpoints of daemons running on the Node. */
+@K8sDslMarker
+fun Nodestatus_core_v1.daemonEndpoints(init: NodeDaemonEndpoints.() -> Unit) {
+  this as Nodestatus_core_v1Impl
+  NodeDaemonEndpoints_core_v1Impl(this)
+    .also { daemonEndpoints = it }
+    .apply(init)
+}
+
+/** List of container images on this node */
+@K8sDslMarker
+fun Nodestatus_core_v1.images(init: ContainerImage.() -> Unit) {
+  this as Nodestatus_core_v1Impl
+  ContainerImage_core_v1Impl(this)
+    .also { images = images?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** Set of ids/uuids to uniquely identify the node. More info: https://kubernetes.io/docs/concepts/nodes/node/#info */
+@K8sDslMarker
+fun Nodestatus_core_v1.nodeInfo(init: NodeSystemInfo.() -> Unit) {
+  this as Nodestatus_core_v1Impl
+  NodeSystemInfo_core_v1Impl(this)
+    .also { nodeInfo = it }
+    .apply(init)
+}
+
+/** List of volumes that are attached to the node. */
+@K8sDslMarker
+fun Nodestatus_core_v1.volumesAttached(init: AttachedVolume.() -> Unit) {
+  this as Nodestatus_core_v1Impl
+  AttachedVolume_core_v1Impl(this)
+    .also { volumesAttached = volumesAttached?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** dataSource field can be used to specify either: `*` An existing VolumeSnapshot object
+(snapshot.storage.k8s.io/VolumeSnapshot) `*` An existing PVC (PersistentVolumeClaim) If the provisioner or an external
+controller can support the specified data source, it will create a new volume based on the contents of the specified
+data source. When the AnyVolumeDataSource feature gate is enabled, dataSource contents will be copied to dataSourceRef,
+and dataSourceRef contents will be copied to dataSource when dataSourceRef.namespace is not specified. If the namespace
+is specified, then dataSourceRef will not be copied to dataSource. */
+@K8sDslMarker
+fun Persistentvolumeclaimspec_core_v1.dataSource(init: TypedLocalObjectReference.() -> Unit) {
+  this as Persistentvolumeclaimspec_core_v1Impl
+  TypedLocalObjectReference_core_v1Impl(this)
+    .also { dataSource = it }
+    .apply(init)
+}
+
+/** dataSourceRef specifies the object from which to populate the volume with data, if a non-empty volume is desired. This
+may be any object from a non-empty API group (non core object) or a PersistentVolumeClaim object. When this field is
+specified, volume binding will only succeed if the type of the specified object matches some installed volume populator
+or dynamic provisioner. This field will replace the functionality of the dataSource field and as such if both fields are
+non-empty, they must have the same value. For backwards compatibility, when namespace isn't specified in dataSourceRef,
+both fields (dataSource and dataSourceRef) will be set to the same value automatically if one of them is empty and the
+other is non-empty. When namespace is specified in dataSourceRef, dataSource isn't set to the same value and must be
+empty. There are three important differences between dataSource and dataSourceRef: `*` While dataSource only allows two
+specific types of objects, dataSourceRef allows any non-core object, as well as PersistentVolumeClaim objects. `*` While
+dataSource ignores disallowed values (dropping them), dataSourceRef preserves all values, and generates an error if a
+disallowed value is specified. `*` While dataSource only allows local objects, dataSourceRef allows objects in any
+namespaces. (Beta) Using this field requires the AnyVolumeDataSource feature gate to be enabled. (Alpha) Using the
+namespace field of dataSourceRef requires the CrossNamespaceVolumeDataSource feature gate to be enabled. */
+@K8sDslMarker
+fun Persistentvolumeclaimspec_core_v1.dataSourceRef(init: TypedObjectReference.() -> Unit) {
+  this as Persistentvolumeclaimspec_core_v1Impl
+  TypedObjectReference_core_v1Impl(this)
+    .also { dataSourceRef = it }
+    .apply(init)
+}
+
+/** resources represents the minimum resources the volume should have. If RecoverVolumeExpansionFailure feature is enabled
+users are allowed to specify resource requirements that are lower than previous value but must still be higher than
+capacity recorded in the status field of the claim. More info:
+https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources */
+@K8sDslMarker
+fun Persistentvolumeclaimspec_core_v1.resources(init: ResourceRequirements.() -> Unit) {
+  this as Persistentvolumeclaimspec_core_v1Impl
+  ResourceRequirements_core_v1Impl(this)
+    .also { resources = it }
+    .apply(init)
+}
+
+/** selector is a label query over volumes to consider for binding. */
+@K8sDslMarker
+fun Persistentvolumeclaimspec_core_v1.selector(init: LabelSelector.() -> Unit) {
+  this as Persistentvolumeclaimspec_core_v1Impl
+  LabelSelector_meta_v1Impl(this)
+    .also { selector = it }
+    .apply(init)
+}
+
+/** conditions is the current Condition of persistent volume claim. If underlying persistent volume is being resized then
+the Condition will be set to 'ResizeStarted'. */
+@K8sDslMarker
+fun Persistentvolumeclaimstatus_core_v1.conditions(init: PersistentVolumeClaimCondition.() -> Unit) {
+  this as Persistentvolumeclaimstatus_core_v1Impl
+  PersistentVolumeClaimCondition_core_v1Impl(this)
+    .also { conditions = conditions?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** awsElasticBlockStore represents an AWS Disk resource that is attached to a kubelet's host machine and then exposed to
+the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore */
+@K8sDslMarker
+fun Persistentvolumespec_core_v1.awsElasticBlockStore(init: AWSElasticBlockStoreVolumeSource.() -> Unit) {
+  this as Persistentvolumespec_core_v1Impl
+  AWSElasticBlockStoreVolumeSource_core_v1Impl(this)
+    .also { awsElasticBlockStore = it }
+    .apply(init)
+}
+
+/** azureDisk represents an Azure Data Disk mount on the host and bind mount to the pod. */
+@K8sDslMarker
+fun Persistentvolumespec_core_v1.azureDisk(init: AzureDiskVolumeSource.() -> Unit) {
+  this as Persistentvolumespec_core_v1Impl
+  AzureDiskVolumeSource_core_v1Impl(this)
+    .also { azureDisk = it }
+    .apply(init)
+}
+
+/** azureFile represents an Azure File Service mount on the host and bind mount to the pod. */
+@K8sDslMarker
+fun Persistentvolumespec_core_v1.azureFile(init: AzureFilePersistentVolumeSource.() -> Unit) {
+  this as Persistentvolumespec_core_v1Impl
+  AzureFilePersistentVolumeSource_core_v1Impl(this)
+    .also { azureFile = it }
+    .apply(init)
+}
+
+/** cephFS represents a Ceph FS mount on the host that shares a pod's lifetime */
+@K8sDslMarker
+fun Persistentvolumespec_core_v1.cephfs(init: CephFSPersistentVolumeSource.() -> Unit) {
+  this as Persistentvolumespec_core_v1Impl
+  CephFSPersistentVolumeSource_core_v1Impl(this)
+    .also { cephfs = it }
+    .apply(init)
+}
+
+/** cinder represents a cinder volume attached and mounted on kubelets host machine. More info:
+https://examples.k8s.io/mysql-cinder-pd/README.md */
+@K8sDslMarker
+fun Persistentvolumespec_core_v1.cinder(init: CinderPersistentVolumeSource.() -> Unit) {
+  this as Persistentvolumespec_core_v1Impl
+  CinderPersistentVolumeSource_core_v1Impl(this)
+    .also { cinder = it }
+    .apply(init)
+}
+
+/** claimRef is part of a bi-directional binding between PersistentVolume and PersistentVolumeClaim. Expected to be non-nil
+when bound. claim.VolumeName is the authoritative bind between PV and PVC. More info:
+https://kubernetes.io/docs/concepts/storage/persistent-volumes#binding */
+@K8sDslMarker
+fun Persistentvolumespec_core_v1.claimRef(init: ObjectReference.() -> Unit) {
+  this as Persistentvolumespec_core_v1Impl
+  ObjectReference_core_v1Impl(this)
+    .also { claimRef = it }
+    .apply(init)
+}
+
+/** csi represents storage that is handled by an external CSI driver (Beta feature). */
+@K8sDslMarker
+fun Persistentvolumespec_core_v1.csi(init: CSIPersistentVolumeSource.() -> Unit) {
+  this as Persistentvolumespec_core_v1Impl
+  CSIPersistentVolumeSource_core_v1Impl(this)
+    .also { csi = it }
+    .apply(init)
+}
+
+/** fc represents a Fibre Channel resource that is attached to a kubelet's host machine and then exposed to the pod. */
+@K8sDslMarker
+fun Persistentvolumespec_core_v1.fc(init: FCVolumeSource.() -> Unit) {
+  this as Persistentvolumespec_core_v1Impl
+  FCVolumeSource_core_v1Impl(this)
+    .also { fc = it }
+    .apply(init)
+}
+
+/** flexVolume represents a generic volume resource that is provisioned/attached using an exec based plugin. */
+@K8sDslMarker
+fun Persistentvolumespec_core_v1.flexVolume(init: FlexPersistentVolumeSource.() -> Unit) {
+  this as Persistentvolumespec_core_v1Impl
+  FlexPersistentVolumeSource_core_v1Impl(this)
+    .also { flexVolume = it }
+    .apply(init)
+}
+
+/** flocker represents a Flocker volume attached to a kubelet's host machine and exposed to the pod for its usage. This
+depends on the Flocker control service being running */
+@K8sDslMarker
+fun Persistentvolumespec_core_v1.flocker(init: FlockerVolumeSource.() -> Unit) {
+  this as Persistentvolumespec_core_v1Impl
+  FlockerVolumeSource_core_v1Impl(this)
+    .also { flocker = it }
+    .apply(init)
+}
+
+/** gcePersistentDisk represents a GCE Disk resource that is attached to a kubelet's host machine and then exposed to the
+pod. Provisioned by an admin. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk */
+@K8sDslMarker
+fun Persistentvolumespec_core_v1.gcePersistentDisk(init: GCEPersistentDiskVolumeSource.() -> Unit) {
+  this as Persistentvolumespec_core_v1Impl
+  GCEPersistentDiskVolumeSource_core_v1Impl(this)
+    .also { gcePersistentDisk = it }
+    .apply(init)
+}
+
+/** glusterfs represents a Glusterfs volume that is attached to a host and exposed to the pod. Provisioned by an admin. More
+info: https://examples.k8s.io/volumes/glusterfs/README.md */
+@K8sDslMarker
+fun Persistentvolumespec_core_v1.glusterfs(init: GlusterfsPersistentVolumeSource.() -> Unit) {
+  this as Persistentvolumespec_core_v1Impl
+  GlusterfsPersistentVolumeSource_core_v1Impl(this)
+    .also { glusterfs = it }
+    .apply(init)
+}
+
+/** hostPath represents a directory on the host. Provisioned by a developer or tester. This is useful for single-node
+development and testing only! On-host storage is not supported in any way and WILL NOT WORK in a multi-node cluster.
+More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath */
+@K8sDslMarker
+fun Persistentvolumespec_core_v1.hostPath(init: HostPathVolumeSource.() -> Unit) {
+  this as Persistentvolumespec_core_v1Impl
+  HostPathVolumeSource_core_v1Impl(this)
+    .also { hostPath = it }
+    .apply(init)
+}
+
+/** iscsi represents an ISCSI Disk resource that is attached to a kubelet's host machine and then exposed to the pod.
+Provisioned by an admin. */
+@K8sDslMarker
+fun Persistentvolumespec_core_v1.iscsi(init: ISCSIPersistentVolumeSource.() -> Unit) {
+  this as Persistentvolumespec_core_v1Impl
+  ISCSIPersistentVolumeSource_core_v1Impl(this)
+    .also { iscsi = it }
+    .apply(init)
+}
+
+/** local represents directly-attached storage with node affinity */
+@K8sDslMarker
+fun Persistentvolumespec_core_v1.local(init: LocalVolumeSource.() -> Unit) {
+  this as Persistentvolumespec_core_v1Impl
+  LocalVolumeSource_core_v1Impl(this)
+    .also { local = it }
+    .apply(init)
+}
+
+/** nfs represents an NFS mount on the host. Provisioned by an admin. More info:
+https://kubernetes.io/docs/concepts/storage/volumes#nfs */
+@K8sDslMarker
+fun Persistentvolumespec_core_v1.nfs(init: NFSVolumeSource.() -> Unit) {
+  this as Persistentvolumespec_core_v1Impl
+  NFSVolumeSource_core_v1Impl(this)
+    .also { nfs = it }
+    .apply(init)
+}
+
+/** nodeAffinity defines constraints that limit what nodes this volume can be accessed from. This field influences the
+scheduling of pods that use this volume. */
+@K8sDslMarker
+fun Persistentvolumespec_core_v1.nodeAffinity(init: VolumeNodeAffinity.() -> Unit) {
+  this as Persistentvolumespec_core_v1Impl
+  VolumeNodeAffinity_core_v1Impl(this)
+    .also { nodeAffinity = it }
+    .apply(init)
+}
+
+/** photonPersistentDisk represents a PhotonController persistent disk attached and mounted on kubelets host machine */
+@K8sDslMarker
+fun Persistentvolumespec_core_v1.photonPersistentDisk(init: PhotonPersistentDiskVolumeSource.() -> Unit) {
+  this as Persistentvolumespec_core_v1Impl
+  PhotonPersistentDiskVolumeSource_core_v1Impl(this)
+    .also { photonPersistentDisk = it }
+    .apply(init)
+}
+
+/** portworxVolume represents a portworx volume attached and mounted on kubelets host machine */
+@K8sDslMarker
+fun Persistentvolumespec_core_v1.portworxVolume(init: PortworxVolumeSource.() -> Unit) {
+  this as Persistentvolumespec_core_v1Impl
+  PortworxVolumeSource_core_v1Impl(this)
+    .also { portworxVolume = it }
+    .apply(init)
+}
+
+/** quobyte represents a Quobyte mount on the host that shares a pod's lifetime */
+@K8sDslMarker
+fun Persistentvolumespec_core_v1.quobyte(init: QuobyteVolumeSource.() -> Unit) {
+  this as Persistentvolumespec_core_v1Impl
+  QuobyteVolumeSource_core_v1Impl(this)
+    .also { quobyte = it }
+    .apply(init)
+}
+
+/** rbd represents a Rados Block Device mount on the host that shares a pod's lifetime. More info:
+https://examples.k8s.io/volumes/rbd/README.md */
+@K8sDslMarker
+fun Persistentvolumespec_core_v1.rbd(init: RBDPersistentVolumeSource.() -> Unit) {
+  this as Persistentvolumespec_core_v1Impl
+  RBDPersistentVolumeSource_core_v1Impl(this)
+    .also { rbd = it }
+    .apply(init)
+}
+
+/** scaleIO represents a ScaleIO persistent volume attached and mounted on Kubernetes nodes. */
+@K8sDslMarker
+fun Persistentvolumespec_core_v1.scaleIO(init: ScaleIOPersistentVolumeSource.() -> Unit) {
+  this as Persistentvolumespec_core_v1Impl
+  ScaleIOPersistentVolumeSource_core_v1Impl(this)
+    .also { scaleIO = it }
+    .apply(init)
+}
+
+/** storageOS represents a StorageOS volume that is attached to the kubelet's host machine and mounted into the pod More
+info: https://examples.k8s.io/volumes/storageos/README.md */
+@K8sDslMarker
+fun Persistentvolumespec_core_v1.storageos(init: StorageOSPersistentVolumeSource.() -> Unit) {
+  this as Persistentvolumespec_core_v1Impl
+  StorageOSPersistentVolumeSource_core_v1Impl(this)
+    .also { storageos = it }
+    .apply(init)
+}
+
+/** vsphereVolume represents a vSphere volume attached and mounted on kubelets host machine */
+@K8sDslMarker
+fun Persistentvolumespec_core_v1.vsphereVolume(init: VsphereVirtualDiskVolumeSource.() -> Unit) {
+  this as Persistentvolumespec_core_v1Impl
+  VsphereVirtualDiskVolumeSource_core_v1Impl(this)
+    .also { vsphereVolume = it }
+    .apply(init)
+}
+
+/** lastPhaseTransitionTime is the time the phase transitioned from one to another and automatically resets to current time
+everytime a volume phase transitions. This is an alpha field and requires enabling
+PersistentVolumeLastPhaseTransitionTime feature. */
+@K8sDslMarker
+fun Persistentvolumestatus_core_v1.lastPhaseTransitionTime(init: Time.() -> Unit) {
+  this as Persistentvolumestatus_core_v1Impl
+  Time_meta_v1Impl(this)
+    .also { lastPhaseTransitionTime = it }
+    .apply(init)
+}
+
+/** Label query over pods whose evictions are managed by the disruption budget. A null selector will match no pods, while an
+empty ({}) selector will select all pods within the namespace. */
+@K8sDslMarker
+fun Poddisruptionbudgetspec_policy_v1.selector(init: LabelSelector.() -> Unit) {
+  this as Poddisruptionbudgetspec_policy_v1Impl
+  LabelSelector_meta_v1Impl(this)
+    .also { selector = it }
+    .apply(init)
+}
+
+/** An eviction is allowed if at most "maxUnavailable" pods selected by "selector" are unavailable after the eviction, i.e.
+even in absence of the evicted pod. For example, one can prevent all voluntary evictions by specifying 0. This is a
+mutually exclusive setting with "minAvailable".
+
+			When you specify an integer, it represents a number of Pods. When
+you specify a percentage by setting the value to a string representation of a percentage (eg. "50%"), it represents a
+percentage of total Pods. */
+@K8sDslMarker
+fun Poddisruptionbudgetspec_policy_v1.maxUnavailable(percentage: String) {
+  this as Poddisruptionbudgetspec_policy_v1Impl
+  de.loosetie.k8s.dsl.types.IntOrPercentage(percentage)
+    .also { maxUnavailable = it }
+}
+
+/** An eviction is allowed if at most "maxUnavailable" pods selected by "selector" are unavailable after the eviction, i.e.
+even in absence of the evicted pod. For example, one can prevent all voluntary evictions by specifying 0. This is a
+mutually exclusive setting with "minAvailable".
+
+			When you specify an integer, it represents a number of Pods. When
+you specify a percentage by setting the value to a string representation of a percentage (eg. "50%"), it represents a
+percentage of total Pods. */
+@K8sDslMarker
+fun Poddisruptionbudgetspec_policy_v1.maxUnavailable(int: Int) {
+  this as Poddisruptionbudgetspec_policy_v1Impl
+  de.loosetie.k8s.dsl.types.IntOrPercentage(int)
+    .also { maxUnavailable = it }
+}
+
+/** An eviction is allowed if at least "minAvailable" pods selected by "selector" will still be available after the
+eviction, i.e. even in the absence of the evicted pod. So for example you can prevent all voluntary evictions by
+specifying "100%".
+
+			When you specify an integer, it represents a number of Pods. When you specify a percentage by
+setting the value to a string representation of a percentage (eg. "50%"), it represents a percentage of total Pods. */
+@K8sDslMarker
+fun Poddisruptionbudgetspec_policy_v1.minAvailable(percentage: String) {
+  this as Poddisruptionbudgetspec_policy_v1Impl
+  de.loosetie.k8s.dsl.types.IntOrPercentage(percentage)
+    .also { minAvailable = it }
+}
+
+/** An eviction is allowed if at least "minAvailable" pods selected by "selector" will still be available after the
+eviction, i.e. even in the absence of the evicted pod. So for example you can prevent all voluntary evictions by
+specifying "100%".
+
+			When you specify an integer, it represents a number of Pods. When you specify a percentage by
+setting the value to a string representation of a percentage (eg. "50%"), it represents a percentage of total Pods. */
+@K8sDslMarker
+fun Poddisruptionbudgetspec_policy_v1.minAvailable(int: Int) {
+  this as Poddisruptionbudgetspec_policy_v1Impl
+  de.loosetie.k8s.dsl.types.IntOrPercentage(int)
+    .also { minAvailable = it }
+}
+
+/** Conditions contain conditions for PDB. The disruption controller sets the DisruptionAllowed condition. The following are
+known values for the reason field (additional reasons could be added in the future): - SyncFailed: The controller
+encountered an error and wasn't able to compute the number of allowed disruptions. Therefore no disruptions are allowed
+and the status of the condition will be False. - InsufficientPods: The number of pods are either at or below the number
+required by the PodDisruptionBudget. No disruptions are allowed and the status of the condition will be False. -
+SufficientPods: There are more pods than required by the PodDisruptionBudget. The condition will be True, and the number
+of allowed disruptions are provided by the disruptionsAllowed property. */
+@K8sDslMarker
+fun Poddisruptionbudgetstatus_policy_v1.conditions(init: Condition.() -> Unit) {
+  this as Poddisruptionbudgetstatus_policy_v1Impl
+  Condition_meta_v1Impl(this)
+    .also { conditions = conditions?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** ResourceClaims describes resource availability for each pod.spec.resourceClaim entry where the corresponding
+ResourceClaim uses "WaitForFirstConsumer" allocation mode. */
+@K8sDslMarker
+fun Podschedulingcontextstatus_resource_k8s_io_v1alpha2.resourceClaims(init: ResourceClaimSchedulingStatus.() -> Unit) {
+  this as Podschedulingcontextstatus_resource_k8s_io_v1alpha2Impl
+  ResourceClaimSchedulingStatus_resource_k8s_io_v1alpha2Impl(this)
+    .also { resourceClaims = resourceClaims?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** If specified, the pod's scheduling constraints */
+@K8sDslMarker
+fun Podspec_core_v1.affinity(init: Affinity.() -> Unit) {
+  this as Podspec_core_v1Impl
+  Affinity_core_v1Impl(this)
+    .also { affinity = it }
+    .apply(init)
+}
+
+/** List of containers belonging to the pod. Containers cannot currently be added or removed. There must be at least one
+container in a Pod. Cannot be updated. */
+@K8sDslMarker
+fun Podspec_core_v1.containers(init: Container.() -> Unit) {
+  this as Podspec_core_v1Impl
+  Container_core_v1Impl(this)
+    .also { containers = containers?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** Specifies the DNS parameters of a pod. Parameters specified here will be merged to the generated DNS configuration based
+on DNSPolicy. */
+@K8sDslMarker
+fun Podspec_core_v1.dnsConfig(init: PodDNSConfig.() -> Unit) {
+  this as Podspec_core_v1Impl
+  PodDNSConfig_core_v1Impl(this)
+    .also { dnsConfig = it }
+    .apply(init)
+}
+
+/** List of ephemeral containers run in this pod. Ephemeral containers may be run in an existing pod to perform
+user-initiated actions such as debugging. This list cannot be specified when creating a pod, and it cannot be modified
+by updating the pod spec. In order to add an ephemeral container to an existing pod, use the pod's ephemeralcontainers
+subresource. */
+@K8sDslMarker
+fun Podspec_core_v1.ephemeralContainers(init: EphemeralContainer.() -> Unit) {
+  this as Podspec_core_v1Impl
+  EphemeralContainer_core_v1Impl(this)
+    .also { ephemeralContainers = ephemeralContainers?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** HostAliases is an optional list of hosts and IPs that will be injected into the pod's hosts file if specified. This is
+only valid for non-hostNetwork pods. */
+@K8sDslMarker
+fun Podspec_core_v1.hostAliases(init: HostAlias.() -> Unit) {
+  this as Podspec_core_v1Impl
+  HostAlias_core_v1Impl(this)
+    .also { hostAliases = hostAliases?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** ImagePullSecrets is an optional list of references to secrets in the same namespace to use for pulling any of the images
+used by this PodSpec. If specified, these secrets will be passed to individual puller implementations for them to use.
+More info: https://kubernetes.io/docs/concepts/containers/images#specifying-imagepullsecrets-on-a-pod */
+@K8sDslMarker
+fun Podspec_core_v1.imagePullSecrets(init: LocalObjectReference.() -> Unit) {
+  this as Podspec_core_v1Impl
+  LocalObjectReference_core_v1Impl(this)
+    .also { imagePullSecrets = imagePullSecrets?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** List of initialization containers belonging to the pod. Init containers are executed in order prior to containers being
+started. If any init container fails, the pod is considered to have failed and is handled according to its
+restartPolicy. The name for an init container or normal container must be unique among all containers. Init containers
+may not have Lifecycle actions, Readiness probes, Liveness probes, or Startup probes. The resourceRequirements of an
+init container are taken into account during scheduling by finding the highest request/limit for each resource type, and
+then using the max of of that value or the sum of the normal containers. Limits are applied to init containers in a
+similar fashion. Init containers cannot currently be added or removed. Cannot be updated. More info:
+https://kubernetes.io/docs/concepts/workloads/pods/init-containers/ */
+@K8sDslMarker
+fun Podspec_core_v1.initContainers(init: Container.() -> Unit) {
+  this as Podspec_core_v1Impl
+  Container_core_v1Impl(this)
+    .also { initContainers = initContainers?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** Specifies the OS of the containers in the pod. Some pod and container fields are restricted if this is set. If the OS
+field is set to linux, the following fields must be unset: -securityContext.windowsOptions If the OS field is set to
+windows, following fields must be unset: - spec.hostPID - spec.hostIPC - spec.hostUsers -
+spec.securityContext.seLinuxOptions - spec.securityContext.seccompProfile - spec.securityContext.fsGroup -
+spec.securityContext.fsGroupChangePolicy - spec.securityContext.sysctls - spec.shareProcessNamespace -
+spec.securityContext.runAsUser - spec.securityContext.runAsGroup - spec.securityContext.supplementalGroups -
+spec.containers[`*`].securityContext.seLinuxOptions - spec.containers[`*`].securityContext.seccompProfile -
+spec.containers[`*`].securityContext.capabilities - spec.containers[`*`].securityContext.readOnlyRootFilesystem -
+spec.containers[`*`].securityContext.privileged - spec.containers[`*`].securityContext.allowPrivilegeEscalation -
+spec.containers[`*`].securityContext.procMount - spec.containers[`*`].securityContext.runAsUser -
+spec.containers[`*`].securityContext.runAsGroup */
+@K8sDslMarker
+fun Podspec_core_v1.os(init: PodOS.() -> Unit) {
+  this as Podspec_core_v1Impl
+  PodOS_core_v1Impl(this)
+    .also { os = it }
+    .apply(init)
+}
+
+/** If specified, all readiness gates will be evaluated for pod readiness. A pod is ready when all its containers are ready
+AND all conditions specified in the readiness gates have status equal to "True" More info:
+https://git.k8s.io/enhancements/keps/sig-network/580-pod-readiness-gates */
+@K8sDslMarker
+fun Podspec_core_v1.readinessGates(init: PodReadinessGate.() -> Unit) {
+  this as Podspec_core_v1Impl
+  PodReadinessGate_core_v1Impl(this)
+    .also { readinessGates = readinessGates?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** ResourceClaims defines which ResourceClaims must be allocated and reserved before the Pod is allowed to start. The
+resources will be made available to those containers which consume them by name. This is an alpha field and requires
+enabling the DynamicResourceAllocation feature gate. This field is immutable. */
+@K8sDslMarker
+fun Podspec_core_v1.resourceClaims(init: PodResourceClaim.() -> Unit) {
+  this as Podspec_core_v1Impl
+  PodResourceClaim_core_v1Impl(this)
+    .also { resourceClaims = resourceClaims?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** SchedulingGates is an opaque list of values that if specified will block scheduling the pod. If schedulingGates is not
+empty, the pod will stay in the SchedulingGated state and the scheduler will not attempt to schedule the pod.
+SchedulingGates can only be set at pod creation time, and be removed only afterwards. This is a beta feature enabled by
+the PodSchedulingReadiness feature gate. */
+@K8sDslMarker
+fun Podspec_core_v1.schedulingGates(init: PodSchedulingGate.() -> Unit) {
+  this as Podspec_core_v1Impl
+  PodSchedulingGate_core_v1Impl(this)
+    .also { schedulingGates = schedulingGates?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** SecurityContext holds pod-level security attributes and common container settings. Optional: Defaults to empty. See type
+description for default values of each field. */
+@K8sDslMarker
+fun Podspec_core_v1.securityContext(init: PodSecurityContext.() -> Unit) {
+  this as Podspec_core_v1Impl
+  PodSecurityContext_core_v1Impl(this)
+    .also { securityContext = it }
+    .apply(init)
+}
+
+/** If specified, the pod's tolerations. */
+@K8sDslMarker
+fun Podspec_core_v1.tolerations(init: Toleration.() -> Unit) {
+  this as Podspec_core_v1Impl
+  Toleration_core_v1Impl(this)
+    .also { tolerations = tolerations?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** TopologySpreadConstraints describes how a group of pods ought to spread across topology domains. Scheduler will schedule
+pods in a way which abides by the constraints. All topologySpreadConstraints are ANDed. */
+@K8sDslMarker
+fun Podspec_core_v1.topologySpreadConstraints(init: TopologySpreadConstraint.() -> Unit) {
+  this as Podspec_core_v1Impl
+  TopologySpreadConstraint_core_v1Impl(this)
+    .also { topologySpreadConstraints = topologySpreadConstraints?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** List of volumes that can be mounted by containers belonging to the pod. More info:
+https://kubernetes.io/docs/concepts/storage/volumes */
+@K8sDslMarker
+fun Podspec_core_v1.volumes(init: Volume.() -> Unit) {
+  this as Podspec_core_v1Impl
+  Volume_core_v1Impl(this)
+    .also { volumes = volumes?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** Current service state of pod. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-conditions */
+@K8sDslMarker
+fun Podstatus_core_v1.conditions(init: PodCondition.() -> Unit) {
+  this as Podstatus_core_v1Impl
+  PodCondition_core_v1Impl(this)
+    .also { conditions = conditions?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** The list has one entry per container in the manifest. More info:
+https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-and-container-status */
+@K8sDslMarker
+fun Podstatus_core_v1.containerStatuses(init: Containerstatus_core_v1.() -> Unit) {
+  this as Podstatus_core_v1Impl
+  Containerstatus_core_v1Impl(this)
+    .also { containerStatuses = containerStatuses?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** Status for any ephemeral containers that have run in this pod. */
+@K8sDslMarker
+fun Podstatus_core_v1.ephemeralContainerStatuses(init: Containerstatus_core_v1.() -> Unit) {
+  this as Podstatus_core_v1Impl
+  Containerstatus_core_v1Impl(this)
+    .also { ephemeralContainerStatuses = ephemeralContainerStatuses?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** hostIPs holds the IP addresses allocated to the host. If this field is specified, the first entry must match the hostIP
+field. This list is empty if the pod has not started yet. A pod can be assigned to a node that has a problem in kubelet
+which in turns means that HostIPs will not be updated even if there is a node is assigned to this pod. */
+@K8sDslMarker
+fun Podstatus_core_v1.hostIPs(init: HostIP.() -> Unit) {
+  this as Podstatus_core_v1Impl
+  HostIP_core_v1Impl(this)
+    .also { hostIPs = hostIPs?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** The list has one entry per init container in the manifest. The most recent successful init container will have ready =
+true, the most recently started container will have startTime set. More info:
+https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-and-container-status */
+@K8sDslMarker
+fun Podstatus_core_v1.initContainerStatuses(init: Containerstatus_core_v1.() -> Unit) {
+  this as Podstatus_core_v1Impl
+  Containerstatus_core_v1Impl(this)
+    .also { initContainerStatuses = initContainerStatuses?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** podIPs holds the IP addresses allocated to the pod. If this field is specified, the 0th entry must match the podIP
+field. Pods may be allocated at most 1 value for each of IPv4 and IPv6. This list is empty if no IPs have been allocated
+yet. */
+@K8sDslMarker
+fun Podstatus_core_v1.podIPs(init: PodIP.() -> Unit) {
+  this as Podstatus_core_v1Impl
+  PodIP_core_v1Impl(this)
+    .also { podIPs = podIPs?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** RFC 3339 date and time at which the object was acknowledged by the Kubelet. This is before the Kubelet pulled the
+container image(s) for the pod. */
+@K8sDslMarker
+fun Podstatus_core_v1.startTime(init: Time.() -> Unit) {
+  this as Podstatus_core_v1Impl
+  Time_meta_v1Impl(this)
+    .also { startTime = it }
+    .apply(init)
+}
+
+/** Standard object's metadata. More info:
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata */
+@K8sDslMarker
+fun Podtemplatespec_core_v1.metadata(init: ObjectMeta.() -> Unit) {
+  this as Podtemplatespec_core_v1Impl
+  ObjectMeta_meta_v1Impl(this)
+    .also { metadata = it }
+    .apply(init)
+}
+
+/** Specification of the desired behavior of the pod. More info:
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status */
+@K8sDslMarker
+fun Podtemplatespec_core_v1.spec(init: Podspec_core_v1.() -> Unit) {
+  this as Podtemplatespec_core_v1Impl
+  Podspec_core_v1Impl(this)
+    .also { spec = it }
+    .apply(init)
+}
+
+/** `exempt` specifies how requests are handled for an exempt priority level. This field MUST be empty if `type` is
+`"Limited"`. This field MAY be non-empty if `type` is `"Exempt"`. If empty and `type` is `"Exempt"` then the default
+values for `ExemptPriorityLevelConfiguration` apply. */
+@K8sDslMarker
+fun Prioritylevelconfigurationspec_flowcontrol_apiserver_k8s_io_v1beta3.exempt(init: ExemptPriorityLevelConfiguration.() -> Unit) {
+  this as Prioritylevelconfigurationspec_flowcontrol_apiserver_k8s_io_v1beta3Impl
+  ExemptPriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1beta3Impl(this)
+    .also { exempt = it }
+    .apply(init)
+}
+
+/** `limited` specifies how requests are handled for a Limited priority level. This field must be non-empty if and only if
+`type` is `"Limited"`. */
+@K8sDslMarker
+fun Prioritylevelconfigurationspec_flowcontrol_apiserver_k8s_io_v1beta3.limited(init: LimitedPriorityLevelConfiguration.() -> Unit) {
+  this as Prioritylevelconfigurationspec_flowcontrol_apiserver_k8s_io_v1beta3Impl
+  LimitedPriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1beta3Impl(this)
+    .also { limited = it }
+    .apply(init)
+}
+
+/** `conditions` is the current state of "request-priority". */
+@K8sDslMarker
+fun Prioritylevelconfigurationstatus_flowcontrol_apiserver_k8s_io_v1beta3.conditions(init: PriorityLevelConfigurationCondition.() -> Unit) {
+  this as Prioritylevelconfigurationstatus_flowcontrol_apiserver_k8s_io_v1beta3Impl
+  PriorityLevelConfigurationCondition_flowcontrol_apiserver_k8s_io_v1beta3Impl(this)
+    .also { conditions = conditions?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** Selector is a label query over pods that should match the replica count. Label keys and values that must match in order
+to be controlled by this replica set. It must match the pod template's labels. More info:
+https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors */
+@K8sDslMarker
+fun Replicasetspec_apps_v1.selector(init: LabelSelector.() -> Unit) {
+  this as Replicasetspec_apps_v1Impl
+  LabelSelector_meta_v1Impl(this)
+    .also { selector = it }
+    .apply(init)
+}
+
+/** Template is the object that describes the pod that will be created if insufficient replicas are detected. More info:
+https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#pod-template */
+@K8sDslMarker
+fun Replicasetspec_apps_v1.template(init: Podtemplatespec_core_v1.() -> Unit) {
+  this as Replicasetspec_apps_v1Impl
+  Podtemplatespec_core_v1Impl(this)
+    .also { template = it }
+    .apply(init)
+}
+
+/** Represents the latest available observations of a replica set's current state. */
+@K8sDslMarker
+fun Replicasetstatus_apps_v1.conditions(init: ReplicaSetCondition.() -> Unit) {
+  this as Replicasetstatus_apps_v1Impl
+  ReplicaSetCondition_apps_v1Impl(this)
+    .also { conditions = conditions?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** Template is the object that describes the pod that will be created if insufficient replicas are detected. This takes
+precedence over a TemplateRef. The only allowed template.spec.restartPolicy value is "Always". More info:
+https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#pod-template */
+@K8sDslMarker
+fun Replicationcontrollerspec_core_v1.template(init: Podtemplatespec_core_v1.() -> Unit) {
+  this as Replicationcontrollerspec_core_v1Impl
+  Podtemplatespec_core_v1Impl(this)
+    .also { template = it }
+    .apply(init)
+}
+
+/** Represents the latest available observations of a replication controller's current state. */
+@K8sDslMarker
+fun Replicationcontrollerstatus_core_v1.conditions(init: ReplicationControllerCondition.() -> Unit) {
+  this as Replicationcontrollerstatus_core_v1Impl
+  ReplicationControllerCondition_core_v1Impl(this)
+    .also { conditions = conditions?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** ParametersRef references a separate object with arbitrary parameters that will be used by the driver when allocating a
+resource for the claim. The object must be in the same namespace as the ResourceClaim. */
+@K8sDslMarker
+fun Resourceclaimspec_resource_k8s_io_v1alpha2.parametersRef(init: ResourceClaimParametersReference.() -> Unit) {
+  this as Resourceclaimspec_resource_k8s_io_v1alpha2Impl
+  ResourceClaimParametersReference_resource_k8s_io_v1alpha2Impl(this)
+    .also { parametersRef = it }
+    .apply(init)
+}
+
+/** Allocation is set by the resource driver once a resource or set of resources has been allocated successfully. If this is
+not specified, the resources have not been allocated yet. */
+@K8sDslMarker
+fun Resourceclaimstatus_resource_k8s_io_v1alpha2.allocation(init: AllocationResult.() -> Unit) {
+  this as Resourceclaimstatus_resource_k8s_io_v1alpha2Impl
+  AllocationResult_resource_k8s_io_v1alpha2Impl(this)
+    .also { allocation = it }
+    .apply(init)
+}
+
+/** ReservedFor indicates which entities are currently allowed to use the claim. A Pod which references a ResourceClaim
+which is not reserved for that Pod will not be started. There can be at most 32 such reservations. This may get
+increased in the future, but not reduced. */
+@K8sDslMarker
+fun Resourceclaimstatus_resource_k8s_io_v1alpha2.reservedFor(init: ResourceClaimConsumerReference.() -> Unit) {
+  this as Resourceclaimstatus_resource_k8s_io_v1alpha2Impl
+  ResourceClaimConsumerReference_resource_k8s_io_v1alpha2Impl(this)
+    .also { reservedFor = reservedFor?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** ObjectMeta may contain labels and annotations that will be copied into the PVC when creating it. No other fields are
+allowed and will be rejected during validation. */
+@K8sDslMarker
+fun Resourceclaimtemplatespec_resource_k8s_io_v1alpha2.metadata(init: ObjectMeta.() -> Unit) {
+  this as Resourceclaimtemplatespec_resource_k8s_io_v1alpha2Impl
+  ObjectMeta_meta_v1Impl(this)
+    .also { metadata = it }
+    .apply(init)
+}
+
+/** Spec for the ResourceClaim. The entire content is copied unchanged into the ResourceClaim that gets created from this
+template. The same fields as in a ResourceClaim are also valid here. */
+@K8sDslMarker
+fun Resourceclaimtemplatespec_resource_k8s_io_v1alpha2.spec(init: Resourceclaimspec_resource_k8s_io_v1alpha2.() -> Unit) {
+  this as Resourceclaimtemplatespec_resource_k8s_io_v1alpha2Impl
+  Resourceclaimspec_resource_k8s_io_v1alpha2Impl(this)
+    .also { spec = it }
+    .apply(init)
+}
+
+/** scopeSelector is also a collection of filters like scopes that must match each object tracked by a quota but expressed
+using ScopeSelectorOperator in combination with possible values. For a resource to match, both scopes AND scopeSelector
+(if specified in spec), must be matched. */
+@K8sDslMarker
+fun Resourcequotaspec_core_v1.scopeSelector(init: ScopeSelector.() -> Unit) {
+  this as Resourcequotaspec_core_v1Impl
+  ScopeSelector_core_v1Impl(this)
+    .also { scopeSelector = it }
+    .apply(init)
+}
+
+/** The maximum number of nodes with an existing available DaemonSet pod that can have an updated DaemonSet pod during
+during an update. Value can be an absolute number (ex: 5) or a percentage of desired pods (ex: 10%). This can not be 0
+if MaxUnavailable is 0. Absolute number is calculated from percentage by rounding up to a minimum of 1. Default value is
+0. Example: when this is set to 30%, at most 30% of the total number of nodes that should be running the daemon pod
+(i.e. status.desiredNumberScheduled) can have their a new pod created before the old pod is marked as deleted. The
+update starts by launching new pods on 30% of nodes. Once an updated pod is available (Ready for at least
+minReadySeconds) the old DaemonSet pod on that node is marked deleted. If the old pod becomes unavailable for any reason
+(Ready transitions to false, is evicted, or is drained) an updated pod is immediatedly created on that node without
+considering surge limits. Allowing surge implies the possibility that the resources consumed by the daemonset on any
+given node can double if the readiness check fails, and so resource intensive daemonsets should take into account that
+they may cause evictions during disruption. */
+@K8sDslMarker
+fun Rollingupdatedaemonset_apps_v1.maxSurge(percentage: String) {
+  this as Rollingupdatedaemonset_apps_v1Impl
+  de.loosetie.k8s.dsl.types.IntOrPercentage(percentage)
+    .also { maxSurge = it }
+}
+
+/** The maximum number of nodes with an existing available DaemonSet pod that can have an updated DaemonSet pod during
+during an update. Value can be an absolute number (ex: 5) or a percentage of desired pods (ex: 10%). This can not be 0
+if MaxUnavailable is 0. Absolute number is calculated from percentage by rounding up to a minimum of 1. Default value is
+0. Example: when this is set to 30%, at most 30% of the total number of nodes that should be running the daemon pod
+(i.e. status.desiredNumberScheduled) can have their a new pod created before the old pod is marked as deleted. The
+update starts by launching new pods on 30% of nodes. Once an updated pod is available (Ready for at least
+minReadySeconds) the old DaemonSet pod on that node is marked deleted. If the old pod becomes unavailable for any reason
+(Ready transitions to false, is evicted, or is drained) an updated pod is immediatedly created on that node without
+considering surge limits. Allowing surge implies the possibility that the resources consumed by the daemonset on any
+given node can double if the readiness check fails, and so resource intensive daemonsets should take into account that
+they may cause evictions during disruption. */
+@K8sDslMarker
+fun Rollingupdatedaemonset_apps_v1.maxSurge(int: Int) {
+  this as Rollingupdatedaemonset_apps_v1Impl
+  de.loosetie.k8s.dsl.types.IntOrPercentage(int)
+    .also { maxSurge = it }
+}
+
+/** The maximum number of DaemonSet pods that can be unavailable during the update. Value can be an absolute number (ex: 5)
+or a percentage of total number of DaemonSet pods at the start of the update (ex: 10%). Absolute number is calculated
+from percentage by rounding up. This cannot be 0 if MaxSurge is 0 Default value is 1. Example: when this is set to 30%,
+at most 30% of the total number of nodes that should be running the daemon pod (i.e. status.desiredNumberScheduled) can
+have their pods stopped for an update at any given time. The update starts by stopping at most 30% of those DaemonSet
+pods and then brings up new DaemonSet pods in their place. Once the new pods are available, it then proceeds onto other
+DaemonSet pods, thus ensuring that at least 70% of original number of DaemonSet pods are available at all times during
+the update. */
+@K8sDslMarker
+fun Rollingupdatedaemonset_apps_v1.maxUnavailable(percentage: String) {
+  this as Rollingupdatedaemonset_apps_v1Impl
+  de.loosetie.k8s.dsl.types.IntOrPercentage(percentage)
+    .also { maxUnavailable = it }
+}
+
+/** The maximum number of DaemonSet pods that can be unavailable during the update. Value can be an absolute number (ex: 5)
+or a percentage of total number of DaemonSet pods at the start of the update (ex: 10%). Absolute number is calculated
+from percentage by rounding up. This cannot be 0 if MaxSurge is 0 Default value is 1. Example: when this is set to 30%,
+at most 30% of the total number of nodes that should be running the daemon pod (i.e. status.desiredNumberScheduled) can
+have their pods stopped for an update at any given time. The update starts by stopping at most 30% of those DaemonSet
+pods and then brings up new DaemonSet pods in their place. Once the new pods are available, it then proceeds onto other
+DaemonSet pods, thus ensuring that at least 70% of original number of DaemonSet pods are available at all times during
+the update. */
+@K8sDslMarker
+fun Rollingupdatedaemonset_apps_v1.maxUnavailable(int: Int) {
+  this as Rollingupdatedaemonset_apps_v1Impl
+  de.loosetie.k8s.dsl.types.IntOrPercentage(int)
+    .also { maxUnavailable = it }
+}
+
+/** The maximum number of pods that can be scheduled above the desired number of pods. Value can be an absolute number (ex:
+5) or a percentage of desired pods (ex: 10%). This can not be 0 if MaxUnavailable is 0. Absolute number is calculated
+from percentage by rounding up. Defaults to 25%. Example: when this is set to 30%, the new ReplicaSet can be scaled up
+immediately when the rolling update starts, such that the total number of old and new pods do not exceed 130% of desired
+pods. Once old pods have been killed, new ReplicaSet can be scaled up further, ensuring that total number of pods
+running at any time during the update is at most 130% of desired pods. */
+@K8sDslMarker
+fun Rollingupdatedeployment_apps_v1.maxSurge(percentage: String) {
+  this as Rollingupdatedeployment_apps_v1Impl
+  de.loosetie.k8s.dsl.types.IntOrPercentage(percentage)
+    .also { maxSurge = it }
+}
+
+/** The maximum number of pods that can be scheduled above the desired number of pods. Value can be an absolute number (ex:
+5) or a percentage of desired pods (ex: 10%). This can not be 0 if MaxUnavailable is 0. Absolute number is calculated
+from percentage by rounding up. Defaults to 25%. Example: when this is set to 30%, the new ReplicaSet can be scaled up
+immediately when the rolling update starts, such that the total number of old and new pods do not exceed 130% of desired
+pods. Once old pods have been killed, new ReplicaSet can be scaled up further, ensuring that total number of pods
+running at any time during the update is at most 130% of desired pods. */
+@K8sDslMarker
+fun Rollingupdatedeployment_apps_v1.maxSurge(int: Int) {
+  this as Rollingupdatedeployment_apps_v1Impl
+  de.loosetie.k8s.dsl.types.IntOrPercentage(int)
+    .also { maxSurge = it }
+}
+
+/** The maximum number of pods that can be unavailable during the update. Value can be an absolute number (ex: 5) or a
+percentage of desired pods (ex: 10%). Absolute number is calculated from percentage by rounding down. This can not be 0
+if MaxSurge is 0. Defaults to 25%. Example: when this is set to 30%, the old ReplicaSet can be scaled down to 70% of
+desired pods immediately when the rolling update starts. Once new pods are ready, old ReplicaSet can be scaled down
+further, followed by scaling up the new ReplicaSet, ensuring that the total number of pods available at all times during
+the update is at least 70% of desired pods. */
+@K8sDslMarker
+fun Rollingupdatedeployment_apps_v1.maxUnavailable(percentage: String) {
+  this as Rollingupdatedeployment_apps_v1Impl
+  de.loosetie.k8s.dsl.types.IntOrPercentage(percentage)
+    .also { maxUnavailable = it }
+}
+
+/** The maximum number of pods that can be unavailable during the update. Value can be an absolute number (ex: 5) or a
+percentage of desired pods (ex: 10%). Absolute number is calculated from percentage by rounding down. This can not be 0
+if MaxSurge is 0. Defaults to 25%. Example: when this is set to 30%, the old ReplicaSet can be scaled down to 70% of
+desired pods immediately when the rolling update starts. Once new pods are ready, old ReplicaSet can be scaled down
+further, followed by scaling up the new ReplicaSet, ensuring that the total number of pods available at all times during
+the update is at least 70% of desired pods. */
+@K8sDslMarker
+fun Rollingupdatedeployment_apps_v1.maxUnavailable(int: Int) {
+  this as Rollingupdatedeployment_apps_v1Impl
+  de.loosetie.k8s.dsl.types.IntOrPercentage(int)
+    .also { maxUnavailable = it }
+}
+
+/** NonResourceAttributes describes information for a non-resource access request */
+@K8sDslMarker
+fun Selfsubjectaccessreviewspec_authorization_k8s_io_v1.nonResourceAttributes(init: NonResourceAttributes.() -> Unit) {
+  this as Selfsubjectaccessreviewspec_authorization_k8s_io_v1Impl
+  NonResourceAttributes_authorization_k8s_io_v1Impl(this)
+    .also { nonResourceAttributes = it }
+    .apply(init)
+}
+
+/** ResourceAuthorizationAttributes describes information for a resource access request */
+@K8sDslMarker
+fun Selfsubjectaccessreviewspec_authorization_k8s_io_v1.resourceAttributes(init: ResourceAttributes.() -> Unit) {
+  this as Selfsubjectaccessreviewspec_authorization_k8s_io_v1Impl
+  ResourceAttributes_authorization_k8s_io_v1Impl(this)
+    .also { resourceAttributes = it }
+    .apply(init)
+}
+
+/** User attributes of the user making this request. */
+@K8sDslMarker
+fun Selfsubjectreviewstatus_authentication_k8s_io_v1.userInfo(init: UserInfo.() -> Unit) {
+  this as Selfsubjectreviewstatus_authentication_k8s_io_v1Impl
+  UserInfo_authentication_k8s_io_v1Impl(this)
+    .also { userInfo = it }
+    .apply(init)
+}
+
+/** The list of ports that are exposed by this service. More info:
+https://kubernetes.io/docs/concepts/services-networking/service/#virtual-ips-and-service-proxies */
+@K8sDslMarker
+fun Servicespec_core_v1.ports(init: ServicePort.() -> Unit) {
+  this as Servicespec_core_v1Impl
+  ServicePort_core_v1Impl(this)
+    .also { ports = ports?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** sessionAffinityConfig contains the configurations of session affinity. */
+@K8sDslMarker
+fun Servicespec_core_v1.sessionAffinityConfig(init: SessionAffinityConfig.() -> Unit) {
+  this as Servicespec_core_v1Impl
+  SessionAffinityConfig_core_v1Impl(this)
+    .also { sessionAffinityConfig = it }
+    .apply(init)
+}
+
+/** Current service state */
+@K8sDslMarker
+fun Servicestatus_core_v1.conditions(init: Condition.() -> Unit) {
+  this as Servicestatus_core_v1Impl
+  Condition_meta_v1Impl(this)
+    .also { conditions = conditions?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** LoadBalancer contains the current status of the load-balancer, if one is present. */
+@K8sDslMarker
+fun Servicestatus_core_v1.loadBalancer(init: LoadBalancerStatus.() -> Unit) {
+  this as Servicestatus_core_v1Impl
+  LoadBalancerStatus_core_v1Impl(this)
+    .also { loadBalancer = it }
+    .apply(init)
+}
+
+/** ordinals controls the numbering of replica indices in a StatefulSet. The default ordinals behavior assigns a "0" index
+to the first replica and increments the index by one for each additional replica requested. Using the ordinals field
+requires the StatefulSetStartOrdinal feature gate to be enabled, which is beta. */
+@K8sDslMarker
+fun Statefulsetspec_apps_v1.ordinals(init: StatefulSetOrdinals.() -> Unit) {
+  this as Statefulsetspec_apps_v1Impl
+  StatefulSetOrdinals_apps_v1Impl(this)
+    .also { ordinals = it }
+    .apply(init)
+}
+
+/** persistentVolumeClaimRetentionPolicy describes the lifecycle of persistent volume claims created from
+volumeClaimTemplates. By default, all persistent volume claims are created as needed and retained until manually
+deleted. This policy allows the lifecycle to be altered, for example by deleting persistent volume claims when their
+stateful set is deleted, or when their pod is scaled down. This requires the StatefulSetAutoDeletePVC feature gate to be
+enabled, which is alpha. +optional */
+@K8sDslMarker
+fun Statefulsetspec_apps_v1.persistentVolumeClaimRetentionPolicy(init: StatefulSetPersistentVolumeClaimRetentionPolicy.() -> Unit) {
+  this as Statefulsetspec_apps_v1Impl
+  StatefulSetPersistentVolumeClaimRetentionPolicy_apps_v1Impl(this)
+    .also { persistentVolumeClaimRetentionPolicy = it }
+    .apply(init)
+}
+
+/** selector is a label query over pods that should match the replica count. It must match the pod template's labels. More
+info: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors */
+@K8sDslMarker
+fun Statefulsetspec_apps_v1.selector(init: LabelSelector.() -> Unit) {
+  this as Statefulsetspec_apps_v1Impl
+  LabelSelector_meta_v1Impl(this)
+    .also { selector = it }
+    .apply(init)
+}
+
+/** template is the object that describes the pod that will be created if insufficient replicas are detected. Each pod
+stamped out by the StatefulSet will fulfill this Template, but have a unique identity from the rest of the StatefulSet.
+Each pod will be named with the format <statefulsetname>-<podindex>. For example, a pod in a StatefulSet named "web"
+with index number "3" would be named "web-3". The only allowed template.spec.restartPolicy value is "Always". */
+@K8sDslMarker
+fun Statefulsetspec_apps_v1.template(init: Podtemplatespec_core_v1.() -> Unit) {
+  this as Statefulsetspec_apps_v1Impl
+  Podtemplatespec_core_v1Impl(this)
+    .also { template = it }
+    .apply(init)
+}
+
+/** updateStrategy indicates the StatefulSetUpdateStrategy that will be employed to update Pods in the StatefulSet when a
+revision is made to Template. */
+@K8sDslMarker
+fun Statefulsetspec_apps_v1.updateStrategy(init: StatefulSetUpdateStrategy.() -> Unit) {
+  this as Statefulsetspec_apps_v1Impl
+  StatefulSetUpdateStrategy_apps_v1Impl(this)
+    .also { updateStrategy = it }
+    .apply(init)
+}
+
+/** volumeClaimTemplates is a list of claims that pods are allowed to reference. The StatefulSet controller is responsible
+for mapping network identities to claims in a way that maintains the identity of a pod. Every claim in this list must
+have at least one matching (by name) volumeMount in one container in the template. A claim in this list takes precedence
+over any volumes in the template, with the same name. */
+@K8sDslMarker
+fun Statefulsetspec_apps_v1.volumeClaimTemplates(init: PersistentVolumeClaim.() -> Unit) {
+  this as Statefulsetspec_apps_v1Impl
+  PersistentVolumeClaim_core_v1Impl(this)
+    .also { volumeClaimTemplates = volumeClaimTemplates?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** Represents the latest available observations of a statefulset's current state. */
+@K8sDslMarker
+fun Statefulsetstatus_apps_v1.conditions(init: StatefulSetCondition.() -> Unit) {
+  this as Statefulsetstatus_apps_v1Impl
+  StatefulSetCondition_apps_v1Impl(this)
+    .also { conditions = conditions?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** The latest available observations of the storageVersion's state. */
+@K8sDslMarker
+fun Storageversionstatus_internal_apiserver_k8s_io_v1alpha1.conditions(init: StorageVersionCondition.() -> Unit) {
+  this as Storageversionstatus_internal_apiserver_k8s_io_v1alpha1Impl
+  StorageVersionCondition_internal_apiserver_k8s_io_v1alpha1Impl(this)
+    .also { conditions = conditions?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** The reported versions per API server instance. */
+@K8sDslMarker
+fun Storageversionstatus_internal_apiserver_k8s_io_v1alpha1.storageVersions(init: ServerStorageVersion.() -> Unit) {
+  this as Storageversionstatus_internal_apiserver_k8s_io_v1alpha1Impl
+  ServerStorageVersion_internal_apiserver_k8s_io_v1alpha1Impl(this)
+    .also { storageVersions = storageVersions?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** NonResourceAttributes describes information for a non-resource access request */
+@K8sDslMarker
+fun Subjectaccessreviewspec_authorization_k8s_io_v1.nonResourceAttributes(init: NonResourceAttributes.() -> Unit) {
+  this as Subjectaccessreviewspec_authorization_k8s_io_v1Impl
+  NonResourceAttributes_authorization_k8s_io_v1Impl(this)
+    .also { nonResourceAttributes = it }
+    .apply(init)
+}
+
+/** ResourceAuthorizationAttributes describes information for a resource access request */
+@K8sDslMarker
+fun Subjectaccessreviewspec_authorization_k8s_io_v1.resourceAttributes(init: ResourceAttributes.() -> Unit) {
+  this as Subjectaccessreviewspec_authorization_k8s_io_v1Impl
+  ResourceAttributes_authorization_k8s_io_v1Impl(this)
+    .also { resourceAttributes = it }
+    .apply(init)
+}
+
+/** BoundObjectRef is a reference to an object that the token will be bound to. The token will only be valid for as long as
+the bound object exists. NOTE: The API server's TokenReview endpoint will validate the BoundObjectRef, but other
+audiences may not. Keep ExpirationSeconds small if you want prompt revocation. */
+@K8sDslMarker
+fun Tokenrequestspec_authentication_k8s_io_v1.boundObjectRef(init: BoundObjectReference.() -> Unit) {
+  this as Tokenrequestspec_authentication_k8s_io_v1Impl
+  BoundObjectReference_authentication_k8s_io_v1Impl(this)
+    .also { boundObjectRef = it }
+    .apply(init)
+}
+
+/** ExpirationTimestamp is the time of expiration of the returned token. */
+@K8sDslMarker
+fun Tokenrequeststatus_authentication_k8s_io_v1.expirationTimestamp(init: Time.() -> Unit) {
+  this as Tokenrequeststatus_authentication_k8s_io_v1Impl
+  Time_meta_v1Impl(this)
+    .also { expirationTimestamp = it }
+    .apply(init)
+}
+
+/** User is the UserInfo associated with the provided token. */
+@K8sDslMarker
+fun Tokenreviewstatus_authentication_k8s_io_v1.user(init: UserInfo.() -> Unit) {
+  this as Tokenreviewstatus_authentication_k8s_io_v1Impl
+  UserInfo_authentication_k8s_io_v1Impl(this)
+    .also { user = it }
+    .apply(init)
+}
+
+/** MatchResources declares what resources match this binding and will be validated by it. Note that this is intersected
+with the policy's matchConstraints, so only requests that are matched by the policy can be selected by this. If this is
+unset, all resources matched by the policy are validated by this binding When resourceRules is unset, it does not
+constrain resource matching. If a resource is matched by the other fields of this object, it will be validated. Note
+that this is differs from ValidatingAdmissionPolicy matchConstraints, where resourceRules are required. */
+@K8sDslMarker
+fun Validatingadmissionpolicybindingspec_admissionregistration_k8s_io_v1beta1.matchResources(init: MatchResources.() -> Unit) {
+  this as Validatingadmissionpolicybindingspec_admissionregistration_k8s_io_v1beta1Impl
+  MatchResources_admissionregistration_k8s_io_v1beta1Impl(this)
+    .also { matchResources = it }
+    .apply(init)
+}
+
+/** paramRef specifies the parameter resource used to configure the admission control policy. It should point to a resource
+of the type specified in ParamKind of the bound ValidatingAdmissionPolicy. If the policy specifies a ParamKind and the
+resource referred to by ParamRef does not exist, this binding is considered mis-configured and the FailurePolicy of the
+ValidatingAdmissionPolicy applied. If the policy does not specify a ParamKind then this field is ignored, and the rules
+are evaluated without a param. */
+@K8sDslMarker
+fun Validatingadmissionpolicybindingspec_admissionregistration_k8s_io_v1beta1.paramRef(init: ParamRef.() -> Unit) {
+  this as Validatingadmissionpolicybindingspec_admissionregistration_k8s_io_v1beta1Impl
+  ParamRef_admissionregistration_k8s_io_v1beta1Impl(this)
+    .also { paramRef = it }
+    .apply(init)
+}
+
+/** auditAnnotations contains CEL expressions which are used to produce audit annotations for the audit event of the API
+request. validations and auditAnnotations may not both be empty; a least one of validations or auditAnnotations is
+required. */
+@K8sDslMarker
+fun Validatingadmissionpolicyspec_admissionregistration_k8s_io_v1beta1.auditAnnotations(init: AuditAnnotation.() -> Unit) {
+  this as Validatingadmissionpolicyspec_admissionregistration_k8s_io_v1beta1Impl
+  AuditAnnotation_admissionregistration_k8s_io_v1beta1Impl(this)
+    .also { auditAnnotations = auditAnnotations?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** MatchConditions is a list of conditions that must be met for a request to be validated. Match conditions filter requests
+that have already been matched by the rules, namespaceSelector, and objectSelector. An empty list of matchConditions
+matches all requests. There are a maximum of 64 match conditions allowed. If a parameter object is provided, it can be
+accessed via the `params` handle in the same manner as validation expressions. The exact matching logic is (in order):
+1. If ANY matchCondition evaluates to FALSE, the policy is skipped. 2. If ALL matchConditions evaluate to TRUE, the
+policy is evaluated. 3. If any matchCondition evaluates to an error (but none are FALSE): - If failurePolicy=Fail,
+reject the request - If failurePolicy=Ignore, the policy is skipped */
+@K8sDslMarker
+fun Validatingadmissionpolicyspec_admissionregistration_k8s_io_v1beta1.matchConditions(init: MatchCondition_admissionregistration_k8s_io_v1beta1.() -> Unit) {
+  this as Validatingadmissionpolicyspec_admissionregistration_k8s_io_v1beta1Impl
+  MatchCondition_admissionregistration_k8s_io_v1beta1Impl(this)
+    .also { matchConditions = matchConditions?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** MatchConstraints specifies what resources this policy is designed to validate. The AdmissionPolicy cares about a request
+if it matches _all_ Constraints. However, in order to prevent clusters from being put into an unstable state that cannot
+be recovered from via the API ValidatingAdmissionPolicy cannot match ValidatingAdmissionPolicy and
+ValidatingAdmissionPolicyBinding. Required. */
+@K8sDslMarker
+fun Validatingadmissionpolicyspec_admissionregistration_k8s_io_v1beta1.matchConstraints(init: MatchResources.() -> Unit) {
+  this as Validatingadmissionpolicyspec_admissionregistration_k8s_io_v1beta1Impl
+  MatchResources_admissionregistration_k8s_io_v1beta1Impl(this)
+    .also { matchConstraints = it }
+    .apply(init)
+}
+
+/** ParamKind specifies the kind of resources used to parameterize this policy. If absent, there are no parameters for this
+policy and the param CEL variable will not be provided to validation expressions. If ParamKind refers to a non-existent
+kind, this policy definition is mis-configured and the FailurePolicy is applied. If paramKind is specified but paramRef
+is unset in ValidatingAdmissionPolicyBinding, the params variable will be null. */
+@K8sDslMarker
+fun Validatingadmissionpolicyspec_admissionregistration_k8s_io_v1beta1.paramKind(init: ParamKind.() -> Unit) {
+  this as Validatingadmissionpolicyspec_admissionregistration_k8s_io_v1beta1Impl
+  ParamKind_admissionregistration_k8s_io_v1beta1Impl(this)
+    .also { paramKind = it }
+    .apply(init)
+}
+
+/** Validations contain CEL expressions which is used to apply the validation. Validations and AuditAnnotations may not both
+be empty; a minimum of one Validations or AuditAnnotations is required. */
+@K8sDslMarker
+fun Validatingadmissionpolicyspec_admissionregistration_k8s_io_v1beta1.validations(init: Validation.() -> Unit) {
+  this as Validatingadmissionpolicyspec_admissionregistration_k8s_io_v1beta1Impl
+  Validation_admissionregistration_k8s_io_v1beta1Impl(this)
+    .also { validations = validations?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** Variables contain definitions of variables that can be used in composition of other expressions. Each variable is
+defined as a named CEL expression. The variables defined here will be available under `variables` in other expressions
+of the policy except MatchConditions because MatchConditions are evaluated before the rest of the policy. The expression
+of a variable can refer to other variables defined earlier in the list but not those after. Thus, Variables must be
+sorted by the order of first appearance and acyclic. */
+@K8sDslMarker
+fun Validatingadmissionpolicyspec_admissionregistration_k8s_io_v1beta1.variables(init: Variable.() -> Unit) {
+  this as Validatingadmissionpolicyspec_admissionregistration_k8s_io_v1beta1Impl
+  Variable_admissionregistration_k8s_io_v1beta1Impl(this)
+    .also { variables = variables?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** The conditions represent the latest available observations of a policy's current state. */
+@K8sDslMarker
+fun Validatingadmissionpolicystatus_admissionregistration_k8s_io_v1beta1.conditions(init: Condition.() -> Unit) {
+  this as Validatingadmissionpolicystatus_admissionregistration_k8s_io_v1beta1Impl
+  Condition_meta_v1Impl(this)
+    .also { conditions = conditions?.let { p -> p + it } ?: listOf(it) }
+    .apply(init)
+}
+
+/** The results of type checking for each expression. Presence of this field indicates the completion of the type checking. */
+@K8sDslMarker
+fun Validatingadmissionpolicystatus_admissionregistration_k8s_io_v1beta1.typeChecking(init: TypeChecking.() -> Unit) {
+  this as Validatingadmissionpolicystatus_admissionregistration_k8s_io_v1beta1Impl
+  TypeChecking_admissionregistration_k8s_io_v1beta1Impl(this)
+    .also { typeChecking = it }
+    .apply(init)
+}
+
+/** source represents the volume that should be attached. */
+@K8sDslMarker
+fun Volumeattachmentspec_storage_k8s_io_v1.source(init: VolumeAttachmentSource.() -> Unit) {
+  this as Volumeattachmentspec_storage_k8s_io_v1Impl
+  VolumeAttachmentSource_storage_k8s_io_v1Impl(this)
+    .also { source = it }
+    .apply(init)
+}
+
+/** attachError represents the last error encountered during attach operation, if any. This field must only be set by the
+entity completing the attach operation, i.e. the external-attacher. */
+@K8sDslMarker
+fun Volumeattachmentstatus_storage_k8s_io_v1.attachError(init: VolumeError.() -> Unit) {
+  this as Volumeattachmentstatus_storage_k8s_io_v1Impl
+  VolumeError_storage_k8s_io_v1Impl(this)
+    .also { attachError = it }
+    .apply(init)
+}
+
+/** detachError represents the last error encountered during detach operation, if any. This field must only be set by the
+entity completing the detach operation, i.e. the external-attacher. */
+@K8sDslMarker
+fun Volumeattachmentstatus_storage_k8s_io_v1.detachError(init: VolumeError.() -> Unit) {
+  this as Volumeattachmentstatus_storage_k8s_io_v1Impl
+  VolumeError_storage_k8s_io_v1Impl(this)
+    .also { detachError = it }
     .apply(init)
 }

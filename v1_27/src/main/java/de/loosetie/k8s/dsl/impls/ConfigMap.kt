@@ -13,7 +13,7 @@ class ConfigMap_core_v1Impl(
 )
 : ConfigMap_core_v1, HasParent {
   override lateinit var metadata: ObjectMeta_meta_v1
-  override var binaryData: Any? = null
-  override var data: Any? = null
+  override var binaryData: Map<String, String>? = null
+  override var data: Map<String, String>? = null
   override var immutable: Boolean? = null
 }

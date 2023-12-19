@@ -13,8 +13,8 @@ class Secret_core_v1Impl(
 )
 : Secret_core_v1, HasParent {
   override lateinit var metadata: ObjectMeta_meta_v1
-  override var data: Any? = null
+  override var data: Map<String, String>? = null
   override var immutable: Boolean? = null
-  override var stringData: Any? = null
+  override var stringData: Map<String, String>? = null
   override var type: String? = null
 }

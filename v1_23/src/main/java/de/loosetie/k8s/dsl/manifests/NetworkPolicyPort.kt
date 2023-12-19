@@ -15,7 +15,7 @@ the Feature Gate "NetworkPolicyEndPort". */
   @K8sDslMarker var endPort: Int?
   /** The port on the given protocol. This can either be a numerical or named port on a pod. If this field is not provided,
 this matches all port names and numbers. If present, only traffic on the specified protocol AND port will be matched. */
-  // val port: None
+  var port: de.loosetie.k8s.dsl.types.IntOrString?
   /** The protocol (TCP, UDP, or SCTP) which traffic must match. If not specified, this field defaults to TCP. */
   @K8sDslMarker var protocol: String?
 }

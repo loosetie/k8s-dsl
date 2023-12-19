@@ -16,7 +16,7 @@ interface HTTPGetAction_core_v1: K8sManifest {
   @K8sDslMarker var path: String?
   /** Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an
 IANA_SVC_NAME. */
-  // val port: None
+  var port: de.loosetie.k8s.dsl.types.IntOrString?
   /** Scheme to use for connecting to the host. Defaults to HTTP. */
   @K8sDslMarker var scheme: String?
 }

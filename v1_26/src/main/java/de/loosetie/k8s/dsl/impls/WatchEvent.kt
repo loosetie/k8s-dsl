@@ -12,5 +12,6 @@ class WatchEvent_meta_v1Impl(
   override val parent: K8sManifest? = null
 )
 : WatchEvent_meta_v1, HasParent {
+  override var `object`: Any? = null
   override var type: String? = null
 }

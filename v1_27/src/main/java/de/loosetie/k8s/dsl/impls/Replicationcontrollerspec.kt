@@ -14,6 +14,6 @@ class Replicationcontrollerspec_core_v1Impl(
 : Replicationcontrollerspec_core_v1, HasParent {
   override var minReadySeconds: Int? = null
   override var replicas: Int? = null
-  override var selector: Any? = null
+  override var selector: Map<String, String>? = null
   override var template: Podtemplatespec_core_v1? = null
 }

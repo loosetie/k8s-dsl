@@ -7,6 +7,16 @@ import de.loosetie.k8s.dsl.HasParent
 import de.loosetie.k8s.dsl.manifests.*
 
 @JsonPropertyOrder("assuredConcurrencyShares", "limitResponse")
+class LimitedPriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1beta1Impl(
+  @JsonIgnore
+  override val parent: K8sManifest? = null
+)
+: LimitedPriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1beta1, HasParent {
+  override var assuredConcurrencyShares: Int? = null
+  override var limitResponse: LimitResponse_flowcontrol_apiserver_k8s_io_v1beta1? = null
+}
+
+@JsonPropertyOrder("assuredConcurrencyShares", "limitResponse")
 class LimitedPriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1beta2Impl(
   @JsonIgnore
   override val parent: K8sManifest? = null

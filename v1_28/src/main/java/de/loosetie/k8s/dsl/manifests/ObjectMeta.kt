@@ -21,11 +21,11 @@ https://kubernetes.io/docs/concepts/overview/working-with-objects/names#names */
   /** Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match
 selectors of replication controllers and services. More info:
 https://kubernetes.io/docs/concepts/overview/working-with-objects/labels */
-  @K8sDslMarker var labels: Any?
+  @K8sDslMarker var labels: Map<String, String>?
   /** Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and
 retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info:
 https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations */
-  @K8sDslMarker var annotations: Any?
+  @K8sDslMarker var annotations: Map<String, String>?
   /** CreationTimestamp is a timestamp representing the server time when this object was created. It is not guaranteed to be
 set in happens-before order across separate operations. Clients may not set this value. It is represented in RFC3339
 form and is in UTC. Populated by the system. Read-only. Null for lists. More info:

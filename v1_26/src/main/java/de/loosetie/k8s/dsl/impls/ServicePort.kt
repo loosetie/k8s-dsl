@@ -17,4 +17,5 @@ class ServicePort_core_v1Impl(
   override var nodePort: Int? = null
   override var port: Int? = null
   override var protocol: String? = null
+  override var targetPort: de.loosetie.k8s.dsl.types.IntOrString? = null
 }
