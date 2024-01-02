@@ -10,7 +10,7 @@
     <groupId>de.loosetie.k8s</groupId>
     <artifactId>lt-k8s-dsl-parent</artifactId>
     <version>1.0.0</version>
-    <relativePath>../</relativePath>
+    <relativePath>../pom.xml</relativePath>
   </parent>
 
   <dependencies>
