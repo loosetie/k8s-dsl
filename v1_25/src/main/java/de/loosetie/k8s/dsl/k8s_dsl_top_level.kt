@@ -6,6 +6,48 @@ import de.loosetie.k8s.dsl.impls.*
 
 
 @K8sDslMarker
+fun K8sApi.crossversionobjectreference(init: CrossVersionObjectReference.() -> Unit): CrossVersionObjectReference =
+  CrossVersionObjectReference_autoscaling_v2Impl()
+    .also{manifests.add(it)}
+    .apply(init)
+
+@K8sDslMarker
+fun K8sApi.horizontalpodautoscaler(init: HorizontalPodAutoscaler.() -> Unit): HorizontalPodAutoscaler =
+  HorizontalPodAutoscaler_autoscaling_v2Impl()
+    .also{manifests.add(it)}
+    .apply(init)
+
+@K8sDslMarker
+fun K8sApi.flowschema(init: FlowSchema.() -> Unit): FlowSchema =
+  FlowSchema_flowcontrol_apiserver_k8s_io_v1beta2Impl()
+    .also{manifests.add(it)}
+    .apply(init)
+
+@K8sDslMarker
+fun K8sApi.prioritylevelconfiguration(init: PriorityLevelConfiguration.() -> Unit): PriorityLevelConfiguration =
+  PriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1beta2Impl()
+    .also{manifests.add(it)}
+    .apply(init)
+
+@K8sDslMarker
+fun K8sApi.csistoragecapacity(init: CSIStorageCapacity.() -> Unit): CSIStorageCapacity =
+  CSIStorageCapacity_storage_k8s_io_v1beta1Impl()
+    .also{manifests.add(it)}
+    .apply(init)
+
+@K8sDslMarker
+fun K8sApi.clustercidr(init: ClusterCIDR.() -> Unit): ClusterCIDR =
+  ClusterCIDR_networking_k8s_io_v1alpha1Impl()
+    .also{manifests.add(it)}
+    .apply(init)
+
+@K8sDslMarker
+fun K8sApi.storageversion(init: StorageVersion.() -> Unit): StorageVersion =
+  StorageVersion_internal_apiserver_k8s_io_v1alpha1Impl()
+    .also{manifests.add(it)}
+    .apply(init)
+
+@K8sDslMarker
 fun K8sApi.apigroup(init: APIGroup.() -> Unit): APIGroup =
   APIGroup_meta_v1Impl()
     .also{manifests.add(it)}
@@ -48,20 +90,8 @@ fun K8sApi.csinode(init: CSINode.() -> Unit): CSINode =
     .apply(init)
 
 @K8sDslMarker
-fun K8sApi.csistoragecapacity(init: CSIStorageCapacity.() -> Unit): CSIStorageCapacity =
-  CSIStorageCapacity_storage_k8s_io_v1Impl()
-    .also{manifests.add(it)}
-    .apply(init)
-
-@K8sDslMarker
 fun K8sApi.certificatesigningrequest(init: CertificateSigningRequest.() -> Unit): CertificateSigningRequest =
   CertificateSigningRequest_certificates_k8s_io_v1Impl()
-    .also{manifests.add(it)}
-    .apply(init)
-
-@K8sDslMarker
-fun K8sApi.clustercidr(init: ClusterCIDR.() -> Unit): ClusterCIDR =
-  ClusterCIDR_networking_k8s_io_v1alpha1Impl()
     .also{manifests.add(it)}
     .apply(init)
 
@@ -98,12 +128,6 @@ fun K8sApi.controllerrevision(init: ControllerRevision.() -> Unit): ControllerRe
 @K8sDslMarker
 fun K8sApi.cronjob(init: CronJob.() -> Unit): CronJob =
   CronJob_batch_v1Impl()
-    .also{manifests.add(it)}
-    .apply(init)
-
-@K8sDslMarker
-fun K8sApi.crossversionobjectreference(init: CrossVersionObjectReference.() -> Unit): CrossVersionObjectReference =
-  CrossVersionObjectReference_autoscaling_v1Impl()
     .also{manifests.add(it)}
     .apply(init)
 
@@ -152,18 +176,6 @@ fun K8sApi.event(init: Event.() -> Unit): Event =
 @K8sDslMarker
 fun K8sApi.eviction(init: Eviction.() -> Unit): Eviction =
   Eviction_policy_v1Impl()
-    .also{manifests.add(it)}
-    .apply(init)
-
-@K8sDslMarker
-fun K8sApi.flowschema(init: FlowSchema.() -> Unit): FlowSchema =
-  FlowSchema_flowcontrol_apiserver_k8s_io_v1beta1Impl()
-    .also{manifests.add(it)}
-    .apply(init)
-
-@K8sDslMarker
-fun K8sApi.horizontalpodautoscaler(init: HorizontalPodAutoscaler.() -> Unit): HorizontalPodAutoscaler =
-  HorizontalPodAutoscaler_autoscaling_v1Impl()
     .also{manifests.add(it)}
     .apply(init)
 
@@ -276,12 +288,6 @@ fun K8sApi.priorityclass(init: PriorityClass.() -> Unit): PriorityClass =
     .apply(init)
 
 @K8sDslMarker
-fun K8sApi.prioritylevelconfiguration(init: PriorityLevelConfiguration.() -> Unit): PriorityLevelConfiguration =
-  PriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1beta1Impl()
-    .also{manifests.add(it)}
-    .apply(init)
-
-@K8sDslMarker
 fun K8sApi.replicaset(init: ReplicaSet.() -> Unit): ReplicaSet =
   ReplicaSet_apps_v1Impl()
     .also{manifests.add(it)}
@@ -368,12 +374,6 @@ fun K8sApi.status(init: Status.() -> Unit): Status =
 @K8sDslMarker
 fun K8sApi.storageclass(init: StorageClass.() -> Unit): StorageClass =
   StorageClass_storage_k8s_io_v1Impl()
-    .also{manifests.add(it)}
-    .apply(init)
-
-@K8sDslMarker
-fun K8sApi.storageversion(init: StorageVersion.() -> Unit): StorageVersion =
-  StorageVersion_internal_apiserver_k8s_io_v1alpha1Impl()
     .also{manifests.add(it)}
     .apply(init)
 

@@ -6,6 +6,102 @@ import de.loosetie.k8s.dsl.impls.*
 
 
 @K8sDslMarker
+fun K8sApi.crossversionobjectreference(init: CrossVersionObjectReference.() -> Unit): CrossVersionObjectReference =
+  CrossVersionObjectReference_autoscaling_v2Impl()
+    .also{manifests.add(it)}
+    .apply(init)
+
+@K8sDslMarker
+fun K8sApi.horizontalpodautoscaler(init: HorizontalPodAutoscaler.() -> Unit): HorizontalPodAutoscaler =
+  HorizontalPodAutoscaler_autoscaling_v2Impl()
+    .also{manifests.add(it)}
+    .apply(init)
+
+@K8sDslMarker
+fun K8sApi.flowschema(init: FlowSchema.() -> Unit): FlowSchema =
+  FlowSchema_flowcontrol_apiserver_k8s_io_v1beta3Impl()
+    .also{manifests.add(it)}
+    .apply(init)
+
+@K8sDslMarker
+fun K8sApi.prioritylevelconfiguration(init: PriorityLevelConfiguration.() -> Unit): PriorityLevelConfiguration =
+  PriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1beta3Impl()
+    .also{manifests.add(it)}
+    .apply(init)
+
+@K8sDslMarker
+fun K8sApi.selfsubjectreview(init: SelfSubjectReview.() -> Unit): SelfSubjectReview =
+  SelfSubjectReview_authentication_k8s_io_v1beta1Impl()
+    .also{manifests.add(it)}
+    .apply(init)
+
+@K8sDslMarker
+fun K8sApi.podschedulingcontext(init: PodSchedulingContext.() -> Unit): PodSchedulingContext =
+  PodSchedulingContext_resource_k8s_io_v1alpha2Impl()
+    .also{manifests.add(it)}
+    .apply(init)
+
+@K8sDslMarker
+fun K8sApi.resourceclaimtemplate(init: ResourceClaimTemplate.() -> Unit): ResourceClaimTemplate =
+  ResourceClaimTemplate_resource_k8s_io_v1alpha2Impl()
+    .also{manifests.add(it)}
+    .apply(init)
+
+@K8sDslMarker
+fun K8sApi.resourceclaim(init: ResourceClaim.() -> Unit): ResourceClaim =
+  ResourceClaim_resource_k8s_io_v1alpha2Impl()
+    .also{manifests.add(it)}
+    .apply(init)
+
+@K8sDslMarker
+fun K8sApi.resourceclass(init: ResourceClass.() -> Unit): ResourceClass =
+  ResourceClass_resource_k8s_io_v1alpha2Impl()
+    .also{manifests.add(it)}
+    .apply(init)
+
+@K8sDslMarker
+fun K8sApi.clustercidr(init: ClusterCIDR.() -> Unit): ClusterCIDR =
+  ClusterCIDR_networking_k8s_io_v1alpha1Impl()
+    .also{manifests.add(it)}
+    .apply(init)
+
+@K8sDslMarker
+fun K8sApi.clustertrustbundle(init: ClusterTrustBundle.() -> Unit): ClusterTrustBundle =
+  ClusterTrustBundle_certificates_k8s_io_v1alpha1Impl()
+    .also{manifests.add(it)}
+    .apply(init)
+
+@K8sDslMarker
+fun K8sApi.ipaddress(init: IPAddress.() -> Unit): IPAddress =
+  IPAddress_networking_k8s_io_v1alpha1Impl()
+    .also{manifests.add(it)}
+    .apply(init)
+
+@K8sDslMarker
+fun K8sApi.paramkind(init: ParamKind.() -> Unit): ParamKind =
+  ParamKind_admissionregistration_k8s_io_v1alpha1Impl()
+    .also{manifests.add(it)}
+    .apply(init)
+
+@K8sDslMarker
+fun K8sApi.storageversion(init: StorageVersion.() -> Unit): StorageVersion =
+  StorageVersion_internal_apiserver_k8s_io_v1alpha1Impl()
+    .also{manifests.add(it)}
+    .apply(init)
+
+@K8sDslMarker
+fun K8sApi.validatingadmissionpolicybinding(init: ValidatingAdmissionPolicyBinding.() -> Unit): ValidatingAdmissionPolicyBinding =
+  ValidatingAdmissionPolicyBinding_admissionregistration_k8s_io_v1alpha1Impl()
+    .also{manifests.add(it)}
+    .apply(init)
+
+@K8sDslMarker
+fun K8sApi.validatingadmissionpolicy(init: ValidatingAdmissionPolicy.() -> Unit): ValidatingAdmissionPolicy =
+  ValidatingAdmissionPolicy_admissionregistration_k8s_io_v1alpha1Impl()
+    .also{manifests.add(it)}
+    .apply(init)
+
+@K8sDslMarker
 fun K8sApi.apigroup(init: APIGroup.() -> Unit): APIGroup =
   APIGroup_meta_v1Impl()
     .also{manifests.add(it)}
@@ -60,12 +156,6 @@ fun K8sApi.certificatesigningrequest(init: CertificateSigningRequest.() -> Unit)
     .apply(init)
 
 @K8sDslMarker
-fun K8sApi.clustercidr(init: ClusterCIDR.() -> Unit): ClusterCIDR =
-  ClusterCIDR_networking_k8s_io_v1alpha1Impl()
-    .also{manifests.add(it)}
-    .apply(init)
-
-@K8sDslMarker
 fun K8sApi.clusterrolebinding(init: ClusterRoleBinding.() -> Unit): ClusterRoleBinding =
   ClusterRoleBinding_rbac_authorization_k8s_io_v1Impl()
     .also{manifests.add(it)}
@@ -74,12 +164,6 @@ fun K8sApi.clusterrolebinding(init: ClusterRoleBinding.() -> Unit): ClusterRoleB
 @K8sDslMarker
 fun K8sApi.clusterrole(init: ClusterRole.() -> Unit): ClusterRole =
   ClusterRole_rbac_authorization_k8s_io_v1Impl()
-    .also{manifests.add(it)}
-    .apply(init)
-
-@K8sDslMarker
-fun K8sApi.clustertrustbundle(init: ClusterTrustBundle.() -> Unit): ClusterTrustBundle =
-  ClusterTrustBundle_certificates_k8s_io_v1alpha1Impl()
     .also{manifests.add(it)}
     .apply(init)
 
@@ -104,12 +188,6 @@ fun K8sApi.controllerrevision(init: ControllerRevision.() -> Unit): ControllerRe
 @K8sDslMarker
 fun K8sApi.cronjob(init: CronJob.() -> Unit): CronJob =
   CronJob_batch_v1Impl()
-    .also{manifests.add(it)}
-    .apply(init)
-
-@K8sDslMarker
-fun K8sApi.crossversionobjectreference(init: CrossVersionObjectReference.() -> Unit): CrossVersionObjectReference =
-  CrossVersionObjectReference_autoscaling_v2Impl()
     .also{manifests.add(it)}
     .apply(init)
 
@@ -158,24 +236,6 @@ fun K8sApi.event(init: Event.() -> Unit): Event =
 @K8sDslMarker
 fun K8sApi.eviction(init: Eviction.() -> Unit): Eviction =
   Eviction_policy_v1Impl()
-    .also{manifests.add(it)}
-    .apply(init)
-
-@K8sDslMarker
-fun K8sApi.flowschema(init: FlowSchema.() -> Unit): FlowSchema =
-  FlowSchema_flowcontrol_apiserver_k8s_io_v1beta3Impl()
-    .also{manifests.add(it)}
-    .apply(init)
-
-@K8sDslMarker
-fun K8sApi.horizontalpodautoscaler(init: HorizontalPodAutoscaler.() -> Unit): HorizontalPodAutoscaler =
-  HorizontalPodAutoscaler_autoscaling_v2Impl()
-    .also{manifests.add(it)}
-    .apply(init)
-
-@K8sDslMarker
-fun K8sApi.ipaddress(init: IPAddress.() -> Unit): IPAddress =
-  IPAddress_networking_k8s_io_v1alpha1Impl()
     .also{manifests.add(it)}
     .apply(init)
 
@@ -252,12 +312,6 @@ fun K8sApi.ownerreference(init: OwnerReference.() -> Unit): OwnerReference =
     .apply(init)
 
 @K8sDslMarker
-fun K8sApi.paramkind(init: ParamKind.() -> Unit): ParamKind =
-  ParamKind_admissionregistration_k8s_io_v1alpha1Impl()
-    .also{manifests.add(it)}
-    .apply(init)
-
-@K8sDslMarker
 fun K8sApi.persistentvolumeclaim(init: PersistentVolumeClaim.() -> Unit): PersistentVolumeClaim =
   PersistentVolumeClaim_core_v1Impl()
     .also{manifests.add(it)}
@@ -272,12 +326,6 @@ fun K8sApi.persistentvolume(init: PersistentVolume.() -> Unit): PersistentVolume
 @K8sDslMarker
 fun K8sApi.poddisruptionbudget(init: PodDisruptionBudget.() -> Unit): PodDisruptionBudget =
   PodDisruptionBudget_policy_v1Impl()
-    .also{manifests.add(it)}
-    .apply(init)
-
-@K8sDslMarker
-fun K8sApi.podschedulingcontext(init: PodSchedulingContext.() -> Unit): PodSchedulingContext =
-  PodSchedulingContext_resource_k8s_io_v1alpha2Impl()
     .also{manifests.add(it)}
     .apply(init)
 
@@ -300,12 +348,6 @@ fun K8sApi.priorityclass(init: PriorityClass.() -> Unit): PriorityClass =
     .apply(init)
 
 @K8sDslMarker
-fun K8sApi.prioritylevelconfiguration(init: PriorityLevelConfiguration.() -> Unit): PriorityLevelConfiguration =
-  PriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1beta3Impl()
-    .also{manifests.add(it)}
-    .apply(init)
-
-@K8sDslMarker
 fun K8sApi.replicaset(init: ReplicaSet.() -> Unit): ReplicaSet =
   ReplicaSet_apps_v1Impl()
     .also{manifests.add(it)}
@@ -314,18 +356,6 @@ fun K8sApi.replicaset(init: ReplicaSet.() -> Unit): ReplicaSet =
 @K8sDslMarker
 fun K8sApi.replicationcontroller(init: ReplicationController.() -> Unit): ReplicationController =
   ReplicationController_core_v1Impl()
-    .also{manifests.add(it)}
-    .apply(init)
-
-@K8sDslMarker
-fun K8sApi.resourceclaimtemplate(init: ResourceClaimTemplate.() -> Unit): ResourceClaimTemplate =
-  ResourceClaimTemplate_resource_k8s_io_v1alpha2Impl()
-    .also{manifests.add(it)}
-    .apply(init)
-
-@K8sDslMarker
-fun K8sApi.resourceclass(init: ResourceClass.() -> Unit): ResourceClass =
-  ResourceClass_resource_k8s_io_v1alpha2Impl()
     .also{manifests.add(it)}
     .apply(init)
 
@@ -372,12 +402,6 @@ fun K8sApi.selfsubjectaccessreview(init: SelfSubjectAccessReview.() -> Unit): Se
     .apply(init)
 
 @K8sDslMarker
-fun K8sApi.selfsubjectreview(init: SelfSubjectReview.() -> Unit): SelfSubjectReview =
-  SelfSubjectReview_authentication_k8s_io_v1beta1Impl()
-    .also{manifests.add(it)}
-    .apply(init)
-
-@K8sDslMarker
 fun K8sApi.selfsubjectrulesreview(init: SelfSubjectRulesReview.() -> Unit): SelfSubjectRulesReview =
   SelfSubjectRulesReview_authorization_k8s_io_v1Impl()
     .also{manifests.add(it)}
@@ -414,12 +438,6 @@ fun K8sApi.storageclass(init: StorageClass.() -> Unit): StorageClass =
     .apply(init)
 
 @K8sDslMarker
-fun K8sApi.storageversion(init: StorageVersion.() -> Unit): StorageVersion =
-  StorageVersion_internal_apiserver_k8s_io_v1alpha1Impl()
-    .also{manifests.add(it)}
-    .apply(init)
-
-@K8sDslMarker
 fun K8sApi.subjectaccessreview(init: SubjectAccessReview.() -> Unit): SubjectAccessReview =
   SubjectAccessReview_authorization_k8s_io_v1Impl()
     .also{manifests.add(it)}
@@ -434,18 +452,6 @@ fun K8sApi.tokenrequest(init: TokenRequest.() -> Unit): TokenRequest =
 @K8sDslMarker
 fun K8sApi.tokenreview(init: TokenReview.() -> Unit): TokenReview =
   TokenReview_authentication_k8s_io_v1Impl()
-    .also{manifests.add(it)}
-    .apply(init)
-
-@K8sDslMarker
-fun K8sApi.validatingadmissionpolicybinding(init: ValidatingAdmissionPolicyBinding.() -> Unit): ValidatingAdmissionPolicyBinding =
-  ValidatingAdmissionPolicyBinding_admissionregistration_k8s_io_v1alpha1Impl()
-    .also{manifests.add(it)}
-    .apply(init)
-
-@K8sDslMarker
-fun K8sApi.validatingadmissionpolicy(init: ValidatingAdmissionPolicy.() -> Unit): ValidatingAdmissionPolicy =
-  ValidatingAdmissionPolicy_admissionregistration_k8s_io_v1alpha1Impl()
     .also{manifests.add(it)}
     .apply(init)
 

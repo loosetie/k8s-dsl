@@ -3619,7 +3619,7 @@ fun ResourceClaimTemplate.spec(init: Resourceclaimtemplatespec_resource_k8s_io_v
 
 /** Standard object metadata */
 @K8sDslMarker
-fun ResourceClaim_resource_k8s_io_v1alpha2.metadata(init: ObjectMeta.() -> Unit) {
+fun ResourceClaim.metadata(init: ObjectMeta.() -> Unit) {
   this as ResourceClaim_resource_k8s_io_v1alpha2Impl
   ObjectMeta_meta_v1Impl(this)
     .also { metadata = it }
@@ -3629,7 +3629,7 @@ fun ResourceClaim_resource_k8s_io_v1alpha2.metadata(init: ObjectMeta.() -> Unit)
 /** Spec describes the desired attributes of a resource that then needs to be allocated. It can only be set once when
 creating the ResourceClaim. */
 @K8sDslMarker
-fun ResourceClaim_resource_k8s_io_v1alpha2.spec(init: Resourceclaimspec_resource_k8s_io_v1alpha2.() -> Unit) {
+fun ResourceClaim.spec(init: Resourceclaimspec_resource_k8s_io_v1alpha2.() -> Unit) {
   this as ResourceClaim_resource_k8s_io_v1alpha2Impl
   Resourceclaimspec_resource_k8s_io_v1alpha2Impl(this)
     .also { spec = it }
@@ -3638,7 +3638,7 @@ fun ResourceClaim_resource_k8s_io_v1alpha2.spec(init: Resourceclaimspec_resource
 
 /** Status describes whether the resource is available and with which attributes. */
 @K8sDslMarker
-fun ResourceClaim_resource_k8s_io_v1alpha2.status(init: Resourceclaimstatus_resource_k8s_io_v1alpha2.() -> Unit) {
+fun ResourceClaim.status(init: Resourceclaimstatus_resource_k8s_io_v1alpha2.() -> Unit) {
   this as ResourceClaim_resource_k8s_io_v1alpha2Impl
   Resourceclaimstatus_resource_k8s_io_v1alpha2Impl(this)
     .also { status = it }
@@ -3737,7 +3737,7 @@ fun ResourceQuota.status(init: Resourcequotastatus_core_v1.() -> Unit) {
 field and requires enabling the DynamicResourceAllocation feature gate. This field is immutable. It can only be set for
 containers. */
 @K8sDslMarker
-fun ResourceRequirements.claims(init: ResourceClaim.() -> Unit) {
+fun ResourceRequirements.claims(init: ResourceClaim_core_v1.() -> Unit) {
   this as ResourceRequirements_core_v1Impl
   ResourceClaim_core_v1Impl(this)
     .also { claims = claims?.let { p -> p + it } ?: listOf(it) }
