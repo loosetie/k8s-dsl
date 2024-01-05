@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("path", "type")
 class HostPathVolumeSource_core_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : HostPathVolumeSource_core_v1, HasParent {
   override var path: String? = null

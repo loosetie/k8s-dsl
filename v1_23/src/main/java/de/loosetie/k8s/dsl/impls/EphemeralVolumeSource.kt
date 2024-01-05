@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("volumeClaimTemplate")
 class EphemeralVolumeSource_core_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : EphemeralVolumeSource_core_v1, HasParent {
   override var volumeClaimTemplate: PersistentVolumeClaimTemplate_core_v1? = null

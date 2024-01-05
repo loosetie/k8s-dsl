@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("monitors", "path", "readOnly", "secretFile", "secretRef", "user")
 class CephFSVolumeSource_core_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : CephFSVolumeSource_core_v1, HasParent {
   override var monitors: List<String>? = null

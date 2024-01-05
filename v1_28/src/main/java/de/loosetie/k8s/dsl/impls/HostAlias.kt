@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("hostnames", "ip")
 class HostAlias_core_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : HostAlias_core_v1, HasParent {
   override var hostnames: List<String>? = null

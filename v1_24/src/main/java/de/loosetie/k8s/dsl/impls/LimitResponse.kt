@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("queuing", "type")
 class LimitResponse_flowcontrol_apiserver_k8s_io_v1beta2Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : LimitResponse_flowcontrol_apiserver_k8s_io_v1beta2, HasParent {
   override var queuing: QueuingConfiguration_flowcontrol_apiserver_k8s_io_v1beta2? = null

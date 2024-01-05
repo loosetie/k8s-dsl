@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("distinguisherMethod", "matchingPrecedence", "priorityLevelConfiguration", "rules")
 class Flowschemaspec_flowcontrol_apiserver_k8s_io_v1beta1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : Flowschemaspec_flowcontrol_apiserver_k8s_io_v1beta1, HasParent {
   override var distinguisherMethod: FlowDistinguisherMethod_flowcontrol_apiserver_k8s_io_v1beta1? = null

@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("nodeSelector", "tolerations")
 class Scheduling_node_k8s_io_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : Scheduling_node_k8s_io_v1, HasParent {
   override var nodeSelector: Map<String, String>? = null

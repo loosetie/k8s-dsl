@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("lastTransitionTime", "message", "reason", "status", "type")
 class PriorityLevelConfigurationCondition_flowcontrol_apiserver_k8s_io_v1beta1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : PriorityLevelConfigurationCondition_flowcontrol_apiserver_k8s_io_v1beta1, HasParent {
   override var lastTransitionTime: Time_meta_v1? = null
@@ -22,7 +23,8 @@ class PriorityLevelConfigurationCondition_flowcontrol_apiserver_k8s_io_v1beta1Im
 @JsonPropertyOrder("lastTransitionTime", "message", "reason", "status", "type")
 class PriorityLevelConfigurationCondition_flowcontrol_apiserver_k8s_io_v1beta2Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : PriorityLevelConfigurationCondition_flowcontrol_apiserver_k8s_io_v1beta2, HasParent {
   override var lastTransitionTime: Time_meta_v1? = null

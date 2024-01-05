@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("allowedRuntimeClassNames", "defaultRuntimeClassName")
 class RuntimeClassStrategyOptions_policy_v1beta1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : RuntimeClassStrategyOptions_policy_v1beta1, HasParent {
   override var allowedRuntimeClassNames: List<String>? = null

@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("claims", "limits", "requests")
 class ResourceRequirements_core_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : ResourceRequirements_core_v1, HasParent {
   override var claims: List<ResourceClaim_core_v1>? = null

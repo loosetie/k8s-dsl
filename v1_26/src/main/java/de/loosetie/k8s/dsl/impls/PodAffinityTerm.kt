@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("labelSelector", "namespaceSelector", "namespaces", "topologyKey")
 class PodAffinityTerm_core_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : PodAffinityTerm_core_v1, HasParent {
   override var labelSelector: LabelSelector_meta_v1? = null

@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("maxUnavailable", "minAvailable", "selector")
 class Poddisruptionbudgetspec_policy_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : Poddisruptionbudgetspec_policy_v1, HasParent {
   override var maxUnavailable: de.loosetie.k8s.dsl.types.IntOrPercentage? = null

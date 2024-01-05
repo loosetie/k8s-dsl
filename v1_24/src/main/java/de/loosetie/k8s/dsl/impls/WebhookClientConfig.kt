@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("caBundle", "service", "url")
 class WebhookClientConfig_admissionregistration_k8s_io_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : WebhookClientConfig_admissionregistration_k8s_io_v1, HasParent {
   override var caBundle: String? = null
@@ -20,7 +21,8 @@ class WebhookClientConfig_admissionregistration_k8s_io_v1Impl(
 @JsonPropertyOrder("caBundle", "service", "url")
 class WebhookClientConfig_apiextensions_k8s_io_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : WebhookClientConfig_apiextensions_k8s_io_v1, HasParent {
   override var caBundle: String? = null

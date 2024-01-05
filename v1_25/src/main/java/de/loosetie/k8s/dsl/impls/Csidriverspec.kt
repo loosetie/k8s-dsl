@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("attachRequired", "fsGroupPolicy", "podInfoOnMount", "requiresRepublish", "seLinuxMount", "storageCapacity", "tokenRequests", "volumeLifecycleModes")
 class Csidriverspec_storage_k8s_io_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : Csidriverspec_storage_k8s_io_v1, HasParent {
   override var attachRequired: Boolean? = null

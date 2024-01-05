@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("active", "lastScheduleTime", "lastSuccessfulTime")
 class Cronjobstatus_batch_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : Cronjobstatus_batch_v1, HasParent {
   override var active: List<ObjectReference_core_v1>? = null

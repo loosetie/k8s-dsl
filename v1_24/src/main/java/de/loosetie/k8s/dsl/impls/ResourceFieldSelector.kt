@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("containerName", "divisor", "resource")
 class ResourceFieldSelector_core_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : ResourceFieldSelector_core_v1, HasParent {
   override var containerName: String? = null

@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("\$ref", "\$schema", "additionalItems", "additionalProperties", "allOf", "anyOf", "default", "definitions", "dependencies", "description", "enum", "example", "exclusiveMaximum", "exclusiveMinimum", "externalDocs", "format", "id", "items", "maxItems", "maxLength", "maxProperties", "maximum", "minItems", "minLength", "minProperties", "minimum", "multipleOf", "not", "nullable", "oneOf", "pattern", "patternProperties", "properties", "required", "title", "type", "uniqueItems", "x-kubernetes-embedded-resource", "x-kubernetes-int-or-string", "x-kubernetes-list-map-keys", "x-kubernetes-list-type", "x-kubernetes-map-type", "x-kubernetes-preserve-unknown-fields", "x-kubernetes-validations")
 class JSONSchemaProps_apiextensions_k8s_io_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : JSONSchemaProps_apiextensions_k8s_io_v1, HasParent {
   override var `$ref`: String? = null

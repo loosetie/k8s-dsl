@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("name", "value")
 class PodDNSConfigOption_core_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : PodDNSConfigOption_core_v1, HasParent {
   override var name: String? = null

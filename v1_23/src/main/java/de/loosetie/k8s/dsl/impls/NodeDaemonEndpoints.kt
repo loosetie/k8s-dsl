@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("kubeletEndpoint")
 class NodeDaemonEndpoints_core_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : NodeDaemonEndpoints_core_v1, HasParent {
   override var kubeletEndpoint: DaemonEndpoint_core_v1? = null

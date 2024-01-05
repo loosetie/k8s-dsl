@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("driver", "fsType", "nodePublishSecretRef", "readOnly", "volumeAttributes")
 class CSIVolumeSource_core_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : CSIVolumeSource_core_v1, HasParent {
   override var driver: String? = null

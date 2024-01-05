@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("ranges", "rule")
 class RunAsUserStrategyOptions_policy_v1beta1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : RunAsUserStrategyOptions_policy_v1beta1, HasParent {
   override var ranges: List<IDRange_policy_v1beta1>? = null

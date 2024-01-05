@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("start")
 class StatefulSetOrdinals_apps_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : StatefulSetOrdinals_apps_v1, HasParent {
   override var start: Int? = null

@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("minReadySeconds", "replicas", "selector", "template")
 class Replicasetspec_apps_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : Replicasetspec_apps_v1, HasParent {
   override var minReadySeconds: Int? = null

@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("whenDeleted", "whenScaled")
 class StatefulSetPersistentVolumeClaimRetentionPolicy_apps_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : StatefulSetPersistentVolumeClaimRetentionPolicy_apps_v1, HasParent {
   override var whenDeleted: String? = null

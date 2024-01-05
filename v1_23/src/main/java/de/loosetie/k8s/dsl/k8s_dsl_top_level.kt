@@ -6,6 +6,42 @@ import de.loosetie.k8s.dsl.impls.*
 
 
 @K8sDslMarker
+fun K8sApi.horizontalpodautoscaler(init: HorizontalPodAutoscaler.() -> Unit): HorizontalPodAutoscaler =
+  HorizontalPodAutoscaler_autoscaling_v2Impl()
+    .also{manifests.add(it)}
+    .apply(init)
+
+@K8sDslMarker
+fun K8sApi.flowschema(init: FlowSchema.() -> Unit): FlowSchema =
+  FlowSchema_flowcontrol_apiserver_k8s_io_v1beta2Impl()
+    .also{manifests.add(it)}
+    .apply(init)
+
+@K8sDslMarker
+fun K8sApi.prioritylevelconfiguration(init: PriorityLevelConfiguration.() -> Unit): PriorityLevelConfiguration =
+  PriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1beta2Impl()
+    .also{manifests.add(it)}
+    .apply(init)
+
+@K8sDslMarker
+fun K8sApi.csistoragecapacity(init: CSIStorageCapacity.() -> Unit): CSIStorageCapacity =
+  CSIStorageCapacity_storage_k8s_io_v1beta1Impl()
+    .also{manifests.add(it)}
+    .apply(init)
+
+@K8sDslMarker
+fun K8sApi.podsecuritypolicy(init: PodSecurityPolicy.() -> Unit): PodSecurityPolicy =
+  PodSecurityPolicy_policy_v1beta1Impl()
+    .also{manifests.add(it)}
+    .apply(init)
+
+@K8sDslMarker
+fun K8sApi.storageversion(init: StorageVersion.() -> Unit): StorageVersion =
+  StorageVersion_internal_apiserver_k8s_io_v1alpha1Impl()
+    .also{manifests.add(it)}
+    .apply(init)
+
+@K8sDslMarker
 fun K8sApi.apigroup(init: APIGroup.() -> Unit): APIGroup =
   APIGroup_meta_v1Impl()
     .also{manifests.add(it)}
@@ -44,12 +80,6 @@ fun K8sApi.csidriver(init: CSIDriver.() -> Unit): CSIDriver =
 @K8sDslMarker
 fun K8sApi.csinode(init: CSINode.() -> Unit): CSINode =
   CSINode_storage_k8s_io_v1Impl()
-    .also{manifests.add(it)}
-    .apply(init)
-
-@K8sDslMarker
-fun K8sApi.csistoragecapacity(init: CSIStorageCapacity.() -> Unit): CSIStorageCapacity =
-  CSIStorageCapacity_storage_k8s_io_v1beta1Impl()
     .also{manifests.add(it)}
     .apply(init)
 
@@ -150,18 +180,6 @@ fun K8sApi.eviction(init: Eviction.() -> Unit): Eviction =
     .apply(init)
 
 @K8sDslMarker
-fun K8sApi.flowschema(init: FlowSchema.() -> Unit): FlowSchema =
-  FlowSchema_flowcontrol_apiserver_k8s_io_v1beta1Impl()
-    .also{manifests.add(it)}
-    .apply(init)
-
-@K8sDslMarker
-fun K8sApi.horizontalpodautoscaler(init: HorizontalPodAutoscaler.() -> Unit): HorizontalPodAutoscaler =
-  HorizontalPodAutoscaler_autoscaling_v1Impl()
-    .also{manifests.add(it)}
-    .apply(init)
-
-@K8sDslMarker
 fun K8sApi.ingressclass(init: IngressClass.() -> Unit): IngressClass =
   IngressClass_networking_k8s_io_v1Impl()
     .also{manifests.add(it)}
@@ -252,12 +270,6 @@ fun K8sApi.poddisruptionbudget(init: PodDisruptionBudget.() -> Unit): PodDisrupt
     .apply(init)
 
 @K8sDslMarker
-fun K8sApi.podsecuritypolicy(init: PodSecurityPolicy.() -> Unit): PodSecurityPolicy =
-  PodSecurityPolicy_policy_v1beta1Impl()
-    .also{manifests.add(it)}
-    .apply(init)
-
-@K8sDslMarker
 fun K8sApi.podtemplate(init: PodTemplate.() -> Unit): PodTemplate =
   PodTemplate_core_v1Impl()
     .also{manifests.add(it)}
@@ -272,12 +284,6 @@ fun K8sApi.pod(init: Pod.() -> Unit): Pod =
 @K8sDslMarker
 fun K8sApi.priorityclass(init: PriorityClass.() -> Unit): PriorityClass =
   PriorityClass_scheduling_k8s_io_v1Impl()
-    .also{manifests.add(it)}
-    .apply(init)
-
-@K8sDslMarker
-fun K8sApi.prioritylevelconfiguration(init: PriorityLevelConfiguration.() -> Unit): PriorityLevelConfiguration =
-  PriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1beta1Impl()
     .also{manifests.add(it)}
     .apply(init)
 
@@ -368,12 +374,6 @@ fun K8sApi.status(init: Status.() -> Unit): Status =
 @K8sDslMarker
 fun K8sApi.storageclass(init: StorageClass.() -> Unit): StorageClass =
   StorageClass_storage_k8s_io_v1Impl()
-    .also{manifests.add(it)}
-    .apply(init)
-
-@K8sDslMarker
-fun K8sApi.storageversion(init: StorageVersion.() -> Unit): StorageVersion =
-  StorageVersion_internal_apiserver_k8s_io_v1alpha1Impl()
     .also{manifests.add(it)}
     .apply(init)
 

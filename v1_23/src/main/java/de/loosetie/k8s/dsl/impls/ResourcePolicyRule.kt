@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("apiGroups", "clusterScope", "namespaces", "resources", "verbs")
 class ResourcePolicyRule_flowcontrol_apiserver_k8s_io_v1beta1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : ResourcePolicyRule_flowcontrol_apiserver_k8s_io_v1beta1, HasParent {
   override var apiGroups: List<String>? = null
@@ -22,7 +23,8 @@ class ResourcePolicyRule_flowcontrol_apiserver_k8s_io_v1beta1Impl(
 @JsonPropertyOrder("apiGroups", "clusterScope", "namespaces", "resources", "verbs")
 class ResourcePolicyRule_flowcontrol_apiserver_k8s_io_v1beta2Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : ResourcePolicyRule_flowcontrol_apiserver_k8s_io_v1beta2, HasParent {
   override var apiGroups: List<String>? = null

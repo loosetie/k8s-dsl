@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("metadata", "spec")
 class Resourceclaimtemplatespec_resource_k8s_io_v1alpha1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : Resourceclaimtemplatespec_resource_k8s_io_v1alpha1, HasParent {
   override var metadata: ObjectMeta_meta_v1? = null

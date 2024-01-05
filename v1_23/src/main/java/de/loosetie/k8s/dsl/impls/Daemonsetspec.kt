@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("minReadySeconds", "revisionHistoryLimit", "selector", "template", "updateStrategy")
 class Daemonsetspec_apps_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : Daemonsetspec_apps_v1, HasParent {
   override var minReadySeconds: Int? = null

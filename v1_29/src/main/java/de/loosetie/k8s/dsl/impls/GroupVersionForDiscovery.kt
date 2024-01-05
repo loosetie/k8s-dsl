@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("groupVersion", "version")
 class GroupVersionForDiscovery_meta_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : GroupVersionForDiscovery_meta_v1, HasParent {
   override var groupVersion: String? = null

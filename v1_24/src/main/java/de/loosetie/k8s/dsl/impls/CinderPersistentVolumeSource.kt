@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("fsType", "readOnly", "secretRef", "volumeID")
 class CinderPersistentVolumeSource_core_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : CinderPersistentVolumeSource_core_v1, HasParent {
   override var fsType: String? = null

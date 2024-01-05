@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("operator", "scopeName", "values")
 class ScopedResourceSelectorRequirement_core_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : ScopedResourceSelectorRequirement_core_v1, HasParent {
   override var operator: String? = null

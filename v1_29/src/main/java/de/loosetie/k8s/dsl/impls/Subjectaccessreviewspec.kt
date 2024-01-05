@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("extra", "groups", "nonResourceAttributes", "resourceAttributes", "uid", "user")
 class Subjectaccessreviewspec_authorization_k8s_io_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : Subjectaccessreviewspec_authorization_k8s_io_v1, HasParent {
   override var extra: Any? = null

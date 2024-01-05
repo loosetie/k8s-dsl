@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("lastTransitionTime", "message", "reason", "status", "type")
 class HorizontalPodAutoscalerCondition_autoscaling_v2Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : HorizontalPodAutoscalerCondition_autoscaling_v2, HasParent {
   override var lastTransitionTime: Time_meta_v1? = null

@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("configSource", "externalID", "podCIDR", "podCIDRs", "providerID", "taints", "unschedulable")
 class Nodespec_core_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : Nodespec_core_v1, HasParent {
   override var configSource: NodeConfigSource_core_v1? = null

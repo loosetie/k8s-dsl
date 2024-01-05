@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("lastTransitionTime", "lastUpdateTime", "message", "reason", "status", "type")
 class DeploymentCondition_apps_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : DeploymentCondition_apps_v1, HasParent {
   override var lastTransitionTime: Time_meta_v1? = null

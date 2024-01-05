@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("kind", "name", "apiGroup")
 class TypedLocalObjectReference_core_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : TypedLocalObjectReference_core_v1, HasParent {
   override var kind: String? = null

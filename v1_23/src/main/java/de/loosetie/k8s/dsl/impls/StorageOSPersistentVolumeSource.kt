@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("fsType", "readOnly", "secretRef", "volumeName", "volumeNamespace")
 class StorageOSPersistentVolumeSource_core_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : StorageOSPersistentVolumeSource_core_v1, HasParent {
   override var fsType: String? = null

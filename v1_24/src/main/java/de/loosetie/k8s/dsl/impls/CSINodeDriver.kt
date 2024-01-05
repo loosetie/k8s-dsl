@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("name", "allocatable", "nodeID", "topologyKeys")
 class CSINodeDriver_storage_k8s_io_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : CSINodeDriver_storage_k8s_io_v1, HasParent {
   override var name: String? = null

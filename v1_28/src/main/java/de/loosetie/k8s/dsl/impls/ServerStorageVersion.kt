@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("apiServerID", "decodableVersions", "encodingVersion", "servedVersions")
 class ServerStorageVersion_internal_apiserver_k8s_io_v1alpha1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : ServerStorageVersion_internal_apiserver_k8s_io_v1alpha1, HasParent {
   override var apiServerID: String? = null

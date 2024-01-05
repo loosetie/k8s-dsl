@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("potentialNodes", "selectedNode")
 class Podschedulingcontextspec_resource_k8s_io_v1alpha2Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : Podschedulingcontextspec_resource_k8s_io_v1alpha2, HasParent {
   override var potentialNodes: List<String>? = null

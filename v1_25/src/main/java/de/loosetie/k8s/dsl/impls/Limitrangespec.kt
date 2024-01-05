@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("limits")
 class Limitrangespec_core_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : Limitrangespec_core_v1, HasParent {
   override var limits: List<LimitRangeItem_core_v1>? = null

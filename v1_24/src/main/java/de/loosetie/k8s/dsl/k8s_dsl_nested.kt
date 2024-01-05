@@ -241,8 +241,55 @@ fun CSIPersistentVolumeSource.nodeStageSecretRef(init: SecretReference.() -> Uni
 parameters that match the previous fields. The semantic is currently (CSI spec 1.2) defined as: The available capacity,
 in bytes, of the storage that can be used to provision volumes. If not set, that information is currently unavailable. */
 @K8sDslMarker
-fun CSIStorageCapacity.capacity(init: Quantity.() -> Unit) {
+fun CSIStorageCapacity_storage_k8s_io_v1.capacity(init: Quantity.() -> Unit) {
   this as CSIStorageCapacity_storage_k8s_io_v1Impl
+  Quantity_core_resourceImpl(this)
+    .also { capacity = it }
+    .apply(init)
+}
+
+/** MaximumVolumeSize is the value reported by the CSI driver in its GetCapacityResponse for a GetCapacityRequest with
+topology and parameters that match the previous fields. This is defined since CSI spec 1.4.0 as the largest size that
+may be used in a CreateVolumeRequest.capacity_range.required_bytes field to create a volume with the same parameters as
+those in GetCapacityRequest. The corresponding value in the Kubernetes API is ResourceRequirements.Requests in a volume
+claim. */
+@K8sDslMarker
+fun CSIStorageCapacity_storage_k8s_io_v1.maximumVolumeSize(init: Quantity.() -> Unit) {
+  this as CSIStorageCapacity_storage_k8s_io_v1Impl
+  Quantity_core_resourceImpl(this)
+    .also { maximumVolumeSize = it }
+    .apply(init)
+}
+
+/** Standard object's metadata. The name has no particular meaning. It must be be a DNS subdomain (dots allowed, 253
+characters). To ensure that there are no conflicts with other CSI drivers on the cluster, the recommendation is to use
+csisc-<uuid>, a generated name, or a reverse-domain name which ends with the unique CSI driver name. Objects are
+namespaced. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata */
+@K8sDslMarker
+fun CSIStorageCapacity_storage_k8s_io_v1.metadata(init: ObjectMeta.() -> Unit) {
+  this as CSIStorageCapacity_storage_k8s_io_v1Impl
+  ObjectMeta_meta_v1Impl(this)
+    .also { metadata = it }
+    .apply(init)
+}
+
+/** NodeTopology defines which nodes have access to the storage for which capacity was reported. If not set, the storage is
+not accessible from any node in the cluster. If empty, the storage is accessible from all nodes. This field is
+immutable. */
+@K8sDslMarker
+fun CSIStorageCapacity_storage_k8s_io_v1.nodeTopology(init: LabelSelector.() -> Unit) {
+  this as CSIStorageCapacity_storage_k8s_io_v1Impl
+  LabelSelector_meta_v1Impl(this)
+    .also { nodeTopology = it }
+    .apply(init)
+}
+
+/** Capacity is the value reported by the CSI driver in its GetCapacityResponse for a GetCapacityRequest with topology and
+parameters that match the previous fields. The semantic is currently (CSI spec 1.2) defined as: The available capacity,
+in bytes, of the storage that can be used to provision volumes. If not set, that information is currently unavailable. */
+@K8sDslMarker
+fun CSIStorageCapacity.capacity(init: Quantity.() -> Unit) {
+  this as CSIStorageCapacity_storage_k8s_io_v1beta1Impl
   Quantity_core_resourceImpl(this)
     .also { capacity = it }
     .apply(init)
@@ -255,7 +302,7 @@ those in GetCapacityRequest. The corresponding value in the Kubernetes API is Re
 claim. */
 @K8sDslMarker
 fun CSIStorageCapacity.maximumVolumeSize(init: Quantity.() -> Unit) {
-  this as CSIStorageCapacity_storage_k8s_io_v1Impl
+  this as CSIStorageCapacity_storage_k8s_io_v1beta1Impl
   Quantity_core_resourceImpl(this)
     .also { maximumVolumeSize = it }
     .apply(init)
@@ -267,7 +314,7 @@ csisc-<uuid>, a generated name, or a reverse-domain name which ends with the uni
 namespaced. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata */
 @K8sDslMarker
 fun CSIStorageCapacity.metadata(init: ObjectMeta.() -> Unit) {
-  this as CSIStorageCapacity_storage_k8s_io_v1Impl
+  this as CSIStorageCapacity_storage_k8s_io_v1beta1Impl
   ObjectMeta_meta_v1Impl(this)
     .also { metadata = it }
     .apply(init)
@@ -278,53 +325,6 @@ not accessible from any node in the cluster. If empty, the storage is accessible
 immutable. */
 @K8sDslMarker
 fun CSIStorageCapacity.nodeTopology(init: LabelSelector.() -> Unit) {
-  this as CSIStorageCapacity_storage_k8s_io_v1Impl
-  LabelSelector_meta_v1Impl(this)
-    .also { nodeTopology = it }
-    .apply(init)
-}
-
-/** Capacity is the value reported by the CSI driver in its GetCapacityResponse for a GetCapacityRequest with topology and
-parameters that match the previous fields. The semantic is currently (CSI spec 1.2) defined as: The available capacity,
-in bytes, of the storage that can be used to provision volumes. If not set, that information is currently unavailable. */
-@K8sDslMarker
-fun CSIStorageCapacity_storage_k8s_io_v1beta1.capacity(init: Quantity.() -> Unit) {
-  this as CSIStorageCapacity_storage_k8s_io_v1beta1Impl
-  Quantity_core_resourceImpl(this)
-    .also { capacity = it }
-    .apply(init)
-}
-
-/** MaximumVolumeSize is the value reported by the CSI driver in its GetCapacityResponse for a GetCapacityRequest with
-topology and parameters that match the previous fields. This is defined since CSI spec 1.4.0 as the largest size that
-may be used in a CreateVolumeRequest.capacity_range.required_bytes field to create a volume with the same parameters as
-those in GetCapacityRequest. The corresponding value in the Kubernetes API is ResourceRequirements.Requests in a volume
-claim. */
-@K8sDslMarker
-fun CSIStorageCapacity_storage_k8s_io_v1beta1.maximumVolumeSize(init: Quantity.() -> Unit) {
-  this as CSIStorageCapacity_storage_k8s_io_v1beta1Impl
-  Quantity_core_resourceImpl(this)
-    .also { maximumVolumeSize = it }
-    .apply(init)
-}
-
-/** Standard object's metadata. The name has no particular meaning. It must be be a DNS subdomain (dots allowed, 253
-characters). To ensure that there are no conflicts with other CSI drivers on the cluster, the recommendation is to use
-csisc-<uuid>, a generated name, or a reverse-domain name which ends with the unique CSI driver name. Objects are
-namespaced. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata */
-@K8sDslMarker
-fun CSIStorageCapacity_storage_k8s_io_v1beta1.metadata(init: ObjectMeta.() -> Unit) {
-  this as CSIStorageCapacity_storage_k8s_io_v1beta1Impl
-  ObjectMeta_meta_v1Impl(this)
-    .also { metadata = it }
-    .apply(init)
-}
-
-/** NodeTopology defines which nodes have access to the storage for which capacity was reported. If not set, the storage is
-not accessible from any node in the cluster. If empty, the storage is accessible from all nodes. This field is
-immutable. */
-@K8sDslMarker
-fun CSIStorageCapacity_storage_k8s_io_v1beta1.nodeTopology(init: LabelSelector.() -> Unit) {
   this as CSIStorageCapacity_storage_k8s_io_v1beta1Impl
   LabelSelector_meta_v1Impl(this)
     .also { nodeTopology = it }

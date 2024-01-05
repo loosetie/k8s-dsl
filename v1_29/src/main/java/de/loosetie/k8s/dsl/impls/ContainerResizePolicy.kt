@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("resourceName", "restartPolicy")
 class ContainerResizePolicy_core_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : ContainerResizePolicy_core_v1, HasParent {
   override var resourceName: String? = null

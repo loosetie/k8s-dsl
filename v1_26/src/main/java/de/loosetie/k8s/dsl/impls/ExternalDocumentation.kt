@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("description", "url")
 class ExternalDocumentation_apiextensions_k8s_io_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : ExternalDocumentation_apiextensions_k8s_io_v1, HasParent {
   override var description: String? = null

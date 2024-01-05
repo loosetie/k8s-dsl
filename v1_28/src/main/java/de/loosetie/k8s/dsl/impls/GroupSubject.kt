@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("name")
 class GroupSubject_flowcontrol_apiserver_k8s_io_v1beta3Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : GroupSubject_flowcontrol_apiserver_k8s_io_v1beta3, HasParent {
   override var name: String? = null

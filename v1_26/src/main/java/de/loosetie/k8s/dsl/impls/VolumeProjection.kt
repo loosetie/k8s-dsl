@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("configMap", "downwardAPI", "secret", "serviceAccountToken")
 class VolumeProjection_core_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : VolumeProjection_core_v1, HasParent {
   override var configMap: ConfigMapProjection_core_v1? = null

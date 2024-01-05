@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("kind", "name", "apiGroup")
 class RoleRef_rbac_authorization_k8s_io_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : RoleRef_rbac_authorization_k8s_io_v1, HasParent {
   override var kind: String? = null

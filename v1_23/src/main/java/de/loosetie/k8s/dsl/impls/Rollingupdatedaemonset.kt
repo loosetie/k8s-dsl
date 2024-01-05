@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("maxSurge", "maxUnavailable")
 class Rollingupdatedaemonset_apps_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : Rollingupdatedaemonset_apps_v1, HasParent {
   override var maxSurge: de.loosetie.k8s.dsl.types.IntOrPercentage? = null

@@ -9,7 +9,11 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("apiVersion", "kind", "metadata", "data", "revision")
 class ControllerRevision_apps_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
+  @JsonIgnore
+  override val helmVariables: MutableMap<String, String> = mutableMapOf(),
+      
 )
 : ControllerRevision_apps_v1, HasParent {
   override lateinit var metadata: ObjectMeta_meta_v1

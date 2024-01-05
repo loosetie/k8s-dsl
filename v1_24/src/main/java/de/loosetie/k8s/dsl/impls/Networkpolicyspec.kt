@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("egress", "ingress", "podSelector", "policyTypes")
 class Networkpolicyspec_networking_k8s_io_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : Networkpolicyspec_networking_k8s_io_v1, HasParent {
   override var egress: List<NetworkPolicyEgressRule_networking_k8s_io_v1>? = null

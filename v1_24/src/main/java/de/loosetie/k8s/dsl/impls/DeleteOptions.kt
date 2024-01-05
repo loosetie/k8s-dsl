@@ -9,7 +9,11 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("apiVersion", "kind", "dryRun", "gracePeriodSeconds", "orphanDependents", "preconditions", "propagationPolicy")
 class DeleteOptions_meta_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
+  @JsonIgnore
+  override val helmVariables: MutableMap<String, String> = mutableMapOf(),
+      
 )
 : DeleteOptions_meta_v1, HasParent {
   override var dryRun: List<String>? = null

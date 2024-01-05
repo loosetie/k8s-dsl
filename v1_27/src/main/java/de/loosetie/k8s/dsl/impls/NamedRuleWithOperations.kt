@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("apiGroups", "apiVersions", "operations", "resourceNames", "resources", "scope")
 class NamedRuleWithOperations_admissionregistration_k8s_io_v1alpha1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : NamedRuleWithOperations_admissionregistration_k8s_io_v1alpha1, HasParent {
   override var apiGroups: List<String>? = null

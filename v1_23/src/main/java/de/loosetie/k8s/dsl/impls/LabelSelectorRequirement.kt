@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("key", "operator", "values")
 class LabelSelectorRequirement_meta_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : LabelSelectorRequirement_meta_v1, HasParent {
   override var key: String? = null

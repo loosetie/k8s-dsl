@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("apiVersion", "fieldsType", "fieldsV1", "manager", "operation", "subresource", "time")
 class ManagedFieldsEntry_meta_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : ManagedFieldsEntry_meta_v1, HasParent {
   override var apiVersion: String? = null

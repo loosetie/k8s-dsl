@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("name")
 class ResourceClaim_core_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : ResourceClaim_core_v1, HasParent {
   override var name: String? = null
@@ -18,7 +19,11 @@ class ResourceClaim_core_v1Impl(
 @JsonPropertyOrder("apiVersion", "kind", "metadata", "spec", "status")
 class ResourceClaim_resource_k8s_io_v1alpha2Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
+  @JsonIgnore
+  override val helmVariables: MutableMap<String, String> = mutableMapOf(),
+      
 )
 : ResourceClaim_resource_k8s_io_v1alpha2, HasParent {
   override lateinit var metadata: ObjectMeta_meta_v1

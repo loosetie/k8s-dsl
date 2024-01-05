@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("rollingUpdate", "type")
 class Deploymentstrategy_apps_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : Deploymentstrategy_apps_v1, HasParent {
   override var rollingUpdate: Rollingupdatedeployment_apps_v1? = null

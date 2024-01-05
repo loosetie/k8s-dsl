@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("audience", "expirationSeconds", "path")
 class ServiceAccountTokenProjection_core_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : ServiceAccountTokenProjection_core_v1, HasParent {
   override var audience: String? = null

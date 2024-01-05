@@ -9,7 +9,11 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("apiVersion", "kind", "name")
 class CrossVersionObjectReference_autoscaling_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
+  @JsonIgnore
+  override val helmVariables: MutableMap<String, String> = mutableMapOf(),
+      
 )
 : CrossVersionObjectReference_autoscaling_v1, HasParent {
   override var name: String? = null
@@ -18,7 +22,11 @@ class CrossVersionObjectReference_autoscaling_v1Impl(
 @JsonPropertyOrder("apiVersion", "kind", "name")
 class CrossVersionObjectReference_autoscaling_v2Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
+  @JsonIgnore
+  override val helmVariables: MutableMap<String, String> = mutableMapOf(),
+      
 )
 : CrossVersionObjectReference_autoscaling_v2, HasParent {
   override var name: String? = null

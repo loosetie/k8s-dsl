@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("clientCIDR", "serverAddress")
 class ServerAddressByClientCIDR_meta_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : ServerAddressByClientCIDR_meta_v1, HasParent {
   override var clientCIDR: String? = null

@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("localhostProfile", "type")
 class SeccompProfile_core_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : SeccompProfile_core_v1, HasParent {
   override var localhostProfile: String? = null

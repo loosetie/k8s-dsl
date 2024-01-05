@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("parentRef")
 class Ipaddressspec_networking_k8s_io_v1alpha1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : Ipaddressspec_networking_k8s_io_v1alpha1, HasParent {
   override var parentRef: ParentReference_networking_k8s_io_v1alpha1? = null

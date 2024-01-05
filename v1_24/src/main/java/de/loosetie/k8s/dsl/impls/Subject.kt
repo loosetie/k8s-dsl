@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("kind", "group", "serviceAccount", "user")
 class Subject_flowcontrol_apiserver_k8s_io_v1beta2Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : Subject_flowcontrol_apiserver_k8s_io_v1beta2, HasParent {
   override var kind: String? = null
@@ -21,7 +22,8 @@ class Subject_flowcontrol_apiserver_k8s_io_v1beta2Impl(
 @JsonPropertyOrder("kind", "namespace", "name", "apiGroup")
 class Subject_rbac_authorization_k8s_io_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : Subject_rbac_authorization_k8s_io_v1, HasParent {
   override var kind: String? = null

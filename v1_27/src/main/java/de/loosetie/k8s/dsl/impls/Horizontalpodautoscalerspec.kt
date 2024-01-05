@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("behavior", "maxReplicas", "metrics", "minReplicas", "scaleTargetRef")
 class Horizontalpodautoscalerspec_autoscaling_v2Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : Horizontalpodautoscalerspec_autoscaling_v2, HasParent {
   override var behavior: HorizontalPodAutoscalerBehavior_autoscaling_v2? = null

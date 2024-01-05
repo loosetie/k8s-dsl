@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("name")
 class AllowedCSIDriver_policy_v1beta1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : AllowedCSIDriver_policy_v1beta1, HasParent {
   override var name: String? = null

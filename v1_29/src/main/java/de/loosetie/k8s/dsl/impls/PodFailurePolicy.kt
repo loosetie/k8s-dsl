@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("rules")
 class PodFailurePolicy_batch_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : PodFailurePolicy_batch_v1, HasParent {
   override var rules: List<PodFailurePolicyRule_batch_v1>? = null

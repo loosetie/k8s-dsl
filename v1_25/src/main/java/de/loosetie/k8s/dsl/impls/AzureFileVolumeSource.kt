@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("readOnly", "secretName", "shareName")
 class AzureFileVolumeSource_core_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : AzureFileVolumeSource_core_v1, HasParent {
   override var readOnly: Boolean? = null

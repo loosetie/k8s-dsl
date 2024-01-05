@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("lastProbeTime", "lastTransitionTime", "message", "reason", "status", "type")
 class JobCondition_batch_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : JobCondition_batch_v1, HasParent {
   override var lastProbeTime: Time_meta_v1? = null

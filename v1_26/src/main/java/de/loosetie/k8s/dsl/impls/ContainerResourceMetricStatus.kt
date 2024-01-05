@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("name", "container", "current")
 class ContainerResourceMetricStatus_autoscaling_v2Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : ContainerResourceMetricStatus_autoscaling_v2, HasParent {
   override var name: String? = null

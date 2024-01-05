@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("backend", "path", "pathType")
 class HTTPIngressPath_networking_k8s_io_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : HTTPIngressPath_networking_k8s_io_v1, HasParent {
   override var backend: IngressBackend_networking_k8s_io_v1? = null

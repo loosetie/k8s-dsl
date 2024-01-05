@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("endpoints", "path", "readOnly")
 class GlusterfsVolumeSource_core_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : GlusterfsVolumeSource_core_v1, HasParent {
   override var endpoints: String? = null

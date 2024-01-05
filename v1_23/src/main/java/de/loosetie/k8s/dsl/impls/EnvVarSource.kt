@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("configMapKeyRef", "fieldRef", "resourceFieldRef", "secretKeyRef")
 class EnvVarSource_core_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : EnvVarSource_core_v1, HasParent {
   override var configMapKeyRef: ConfigMapKeySelector_core_v1? = null

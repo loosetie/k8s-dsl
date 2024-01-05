@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("activeDeadlineSeconds", "backoffLimit", "completionMode", "completions", "manualSelector", "parallelism", "selector", "suspend", "template", "ttlSecondsAfterFinished")
 class Jobspec_batch_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : Jobspec_batch_v1, HasParent {
   override var activeDeadlineSeconds: Int? = null

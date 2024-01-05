@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("key", "valueExpression")
 class AuditAnnotation_admissionregistration_k8s_io_v1beta1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : AuditAnnotation_admissionregistration_k8s_io_v1beta1, HasParent {
   override var key: String? = null

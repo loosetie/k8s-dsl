@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("accessModes", "allocatedResourceStatuses", "allocatedResources", "capacity", "conditions", "currentVolumeAttributesClassName", "modifyVolumeStatus", "phase")
 class Persistentvolumeclaimstatus_core_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : Persistentvolumeclaimstatus_core_v1, HasParent {
   override var accessModes: List<String>? = null

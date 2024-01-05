@@ -9,7 +9,11 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("apiVersion", "kind", "metadata", "spec")
 class ValidatingAdmissionPolicyBinding_admissionregistration_k8s_io_v1beta1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
+  @JsonIgnore
+  override val helmVariables: MutableMap<String, String> = mutableMapOf(),
+      
 )
 : ValidatingAdmissionPolicyBinding_admissionregistration_k8s_io_v1beta1, HasParent {
   override lateinit var metadata: ObjectMeta_meta_v1

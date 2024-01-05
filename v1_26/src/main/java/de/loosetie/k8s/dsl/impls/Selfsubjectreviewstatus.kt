@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("userInfo")
 class Selfsubjectreviewstatus_authentication_k8s_io_v1alpha1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : Selfsubjectreviewstatus_authentication_k8s_io_v1alpha1, HasParent {
   override var userInfo: UserInfo_authentication_k8s_io_v1? = null

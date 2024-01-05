@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("hard", "scopeSelector", "scopes")
 class Resourcequotaspec_core_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : Resourcequotaspec_core_v1, HasParent {
   override var hard: Any? = null

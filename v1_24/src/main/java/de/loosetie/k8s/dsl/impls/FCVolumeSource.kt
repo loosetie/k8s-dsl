@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("fsType", "lun", "readOnly", "targetWWNs", "wwids")
 class FCVolumeSource_core_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : FCVolumeSource_core_v1, HasParent {
   override var fsType: String? = null

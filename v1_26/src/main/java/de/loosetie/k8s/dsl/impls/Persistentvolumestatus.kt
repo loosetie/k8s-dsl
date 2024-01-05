@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("message", "phase", "reason")
 class Persistentvolumestatus_core_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : Persistentvolumestatus_core_v1, HasParent {
   override var message: String? = null

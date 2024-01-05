@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("datasetName", "datasetUUID")
 class FlockerVolumeSource_core_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : FlockerVolumeSource_core_v1, HasParent {
   override var datasetName: String? = null

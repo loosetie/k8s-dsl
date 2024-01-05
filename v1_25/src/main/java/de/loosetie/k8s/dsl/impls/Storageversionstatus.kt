@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("commonEncodingVersion", "conditions", "storageVersions")
 class Storageversionstatus_internal_apiserver_k8s_io_v1alpha1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : Storageversionstatus_internal_apiserver_k8s_io_v1alpha1, HasParent {
   override var commonEncodingVersion: String? = null

@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("labelSelector", "matchLabelKeys", "maxSkew", "minDomains", "nodeAffinityPolicy", "nodeTaintsPolicy", "topologyKey", "whenUnsatisfiable")
 class TopologySpreadConstraint_core_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : TopologySpreadConstraint_core_v1, HasParent {
   override var labelSelector: LabelSelector_meta_v1? = null

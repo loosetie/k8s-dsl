@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("apiGroups", "resourceNames", "resources", "verbs")
 class ResourceRule_authorization_k8s_io_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : ResourceRule_authorization_k8s_io_v1, HasParent {
   override var apiGroups: List<String>? = null

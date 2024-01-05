@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("fieldRef", "mode", "path", "resourceFieldRef")
 class DownwardAPIVolumeFile_core_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : DownwardAPIVolumeFile_core_v1, HasParent {
   override var fieldRef: ObjectFieldSelector_core_v1? = null

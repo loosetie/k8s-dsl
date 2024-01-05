@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("ingress")
 class LoadBalancerStatus_core_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : LoadBalancerStatus_core_v1, HasParent {
   override var ingress: List<LoadBalancerIngress_core_v1>? = null

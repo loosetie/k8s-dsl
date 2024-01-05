@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("namespace", "name", "kubeletConfigKey", "resourceVersion", "uid")
 class ConfigMapNodeConfigSource_core_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : ConfigMapNodeConfigSource_core_v1, HasParent {
   override var namespace: String? = null

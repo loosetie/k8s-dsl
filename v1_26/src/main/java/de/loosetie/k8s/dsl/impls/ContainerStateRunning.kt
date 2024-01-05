@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("startedAt")
 class ContainerStateRunning_core_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : ContainerStateRunning_core_v1, HasParent {
   override var startedAt: Time_meta_v1? = null

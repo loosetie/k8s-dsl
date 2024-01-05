@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("name", "expression")
 class MatchCondition_admissionregistration_k8s_io_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : MatchCondition_admissionregistration_k8s_io_v1, HasParent {
   override var name: String? = null
@@ -19,7 +20,8 @@ class MatchCondition_admissionregistration_k8s_io_v1Impl(
 @JsonPropertyOrder("name", "expression")
 class MatchCondition_admissionregistration_k8s_io_v1alpha1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : MatchCondition_admissionregistration_k8s_io_v1alpha1, HasParent {
   override var name: String? = null

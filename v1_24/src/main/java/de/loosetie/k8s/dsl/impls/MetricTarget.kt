@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("averageUtilization", "averageValue", "type", "value")
 class MetricTarget_autoscaling_v2Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : MetricTarget_autoscaling_v2, HasParent {
   override var averageUtilization: Int? = null

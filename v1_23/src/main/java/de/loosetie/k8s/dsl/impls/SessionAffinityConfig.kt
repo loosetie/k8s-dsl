@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("clientIP")
 class SessionAffinityConfig_core_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : SessionAffinityConfig_core_v1, HasParent {
   override var clientIP: ClientIPConfig_core_v1? = null

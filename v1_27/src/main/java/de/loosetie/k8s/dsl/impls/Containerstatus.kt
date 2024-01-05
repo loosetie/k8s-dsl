@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("name", "allocatedResources", "containerID", "image", "imageID", "lastState", "ready", "resources", "restartCount", "started", "state")
 class Containerstatus_core_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : Containerstatus_core_v1, HasParent {
   override var name: String? = null

@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("conditions")
 class Networkpolicystatus_networking_k8s_io_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : Networkpolicystatus_networking_k8s_io_v1, HasParent {
   override var conditions: List<Condition_meta_v1>? = null

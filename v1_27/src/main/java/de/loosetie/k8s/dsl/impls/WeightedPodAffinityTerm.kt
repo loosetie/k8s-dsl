@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("podAffinityTerm", "weight")
 class WeightedPodAffinityTerm_core_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : WeightedPodAffinityTerm_core_v1, HasParent {
   override var podAffinityTerm: PodAffinityTerm_core_v1? = null

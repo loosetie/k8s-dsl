@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("scaleDown", "scaleUp")
 class HorizontalPodAutoscalerBehavior_autoscaling_v2Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : HorizontalPodAutoscalerBehavior_autoscaling_v2, HasParent {
   override var scaleDown: HPAScalingRules_autoscaling_v2? = null

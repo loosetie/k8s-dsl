@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("directory", "repository", "revision")
 class GitRepoVolumeSource_core_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : GitRepoVolumeSource_core_v1, HasParent {
   override var directory: String? = null

@@ -9,7 +9,11 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("apiVersion", "kind", "serverAddressByClientCIDRs", "versions")
 class APIVersions_meta_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
+  @JsonIgnore
+  override val helmVariables: MutableMap<String, String> = mutableMapOf(),
+      
 )
 : APIVersions_meta_v1, HasParent {
   override var serverAddressByClientCIDRs: List<ServerAddressByClientCIDR_meta_v1>? = null

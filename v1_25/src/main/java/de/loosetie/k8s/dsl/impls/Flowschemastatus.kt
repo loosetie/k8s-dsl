@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("conditions")
 class Flowschemastatus_flowcontrol_apiserver_k8s_io_v1beta1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : Flowschemastatus_flowcontrol_apiserver_k8s_io_v1beta1, HasParent {
   override var conditions: List<FlowSchemaCondition_flowcontrol_apiserver_k8s_io_v1beta1>? = null

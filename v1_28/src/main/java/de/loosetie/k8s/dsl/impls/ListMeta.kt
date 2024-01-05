@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("continue", "remainingItemCount", "resourceVersion", "selfLink")
 class ListMeta_meta_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : ListMeta_meta_v1, HasParent {
   override var `continue`: String? = null

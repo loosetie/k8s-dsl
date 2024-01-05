@@ -9,7 +9,11 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("apiVersion", "kind", "metadata", "spec", "status")
 class VolumeAttachment_storage_k8s_io_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
+  @JsonIgnore
+  override val helmVariables: MutableMap<String, String> = mutableMapOf(),
+      
 )
 : VolumeAttachment_storage_k8s_io_v1, HasParent {
   override lateinit var metadata: ObjectMeta_meta_v1

@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("preferredDuringSchedulingIgnoredDuringExecution", "requiredDuringSchedulingIgnoredDuringExecution")
 class NodeAffinity_core_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : NodeAffinity_core_v1, HasParent {
   override var preferredDuringSchedulingIgnoredDuringExecution: List<PreferredSchedulingTerm_core_v1>? = null

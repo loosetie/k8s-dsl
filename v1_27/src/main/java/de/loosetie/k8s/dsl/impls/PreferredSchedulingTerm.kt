@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("preference", "weight")
 class PreferredSchedulingTerm_core_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : PreferredSchedulingTerm_core_v1, HasParent {
   override var preference: NodeSelectorTerm_core_v1? = null

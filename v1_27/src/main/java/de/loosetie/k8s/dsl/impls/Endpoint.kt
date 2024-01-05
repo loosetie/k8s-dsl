@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("addresses", "conditions", "deprecatedTopology", "hints", "hostname", "nodeName", "targetRef", "zone")
 class Endpoint_discovery_k8s_io_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : Endpoint_discovery_k8s_io_v1, HasParent {
   override var addresses: List<String>? = null

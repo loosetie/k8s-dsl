@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("medium", "sizeLimit")
 class EmptyDirVolumeSource_core_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : EmptyDirVolumeSource_core_v1, HasParent {
   override var medium: String? = null

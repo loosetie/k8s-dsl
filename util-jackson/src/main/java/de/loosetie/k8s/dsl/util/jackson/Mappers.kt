@@ -10,7 +10,7 @@ import de.loosetie.k8s.dsl.types.NumberOrString
 
 
 object Mappers {
-  private val module = SimpleModule()
+  val module = SimpleModule()
     .addSerializer(NumberOrString::class.java, NumberOrStringSerializer())
     .addSerializer(MapDelegate::class.java, MapDelegateSerializer())
 

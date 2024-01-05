@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("containerID", "exitCode", "finishedAt", "message", "reason", "signal", "startedAt")
 class ContainerStateTerminated_core_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : ContainerStateTerminated_core_v1, HasParent {
   override var containerID: String? = null

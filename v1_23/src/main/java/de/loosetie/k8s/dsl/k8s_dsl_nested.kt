@@ -1481,7 +1481,7 @@ fun FlowSchemaCondition_flowcontrol_apiserver_k8s_io_v1beta1.lastTransitionTime(
 
 /** `lastTransitionTime` is the last time the condition transitioned from one status to another. */
 @K8sDslMarker
-fun FlowSchemaCondition_flowcontrol_apiserver_k8s_io_v1beta2.lastTransitionTime(init: Time.() -> Unit) {
+fun FlowSchemaCondition.lastTransitionTime(init: Time.() -> Unit) {
   this as FlowSchemaCondition_flowcontrol_apiserver_k8s_io_v1beta2Impl
   Time_meta_v1Impl(this)
     .also { lastTransitionTime = it }
@@ -1491,7 +1491,7 @@ fun FlowSchemaCondition_flowcontrol_apiserver_k8s_io_v1beta2.lastTransitionTime(
 /** `metadata` is the standard object's metadata. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata */
 @K8sDslMarker
-fun FlowSchema.metadata(init: ObjectMeta.() -> Unit) {
+fun FlowSchema_flowcontrol_apiserver_k8s_io_v1beta1.metadata(init: ObjectMeta.() -> Unit) {
   this as FlowSchema_flowcontrol_apiserver_k8s_io_v1beta1Impl
   ObjectMeta_meta_v1Impl(this)
     .also { metadata = it }
@@ -1501,7 +1501,7 @@ fun FlowSchema.metadata(init: ObjectMeta.() -> Unit) {
 /** `spec` is the specification of the desired behavior of a FlowSchema. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status */
 @K8sDslMarker
-fun FlowSchema.spec(init: Flowschemaspec.() -> Unit) {
+fun FlowSchema_flowcontrol_apiserver_k8s_io_v1beta1.spec(init: Flowschemaspec.() -> Unit) {
   this as FlowSchema_flowcontrol_apiserver_k8s_io_v1beta1Impl
   Flowschemaspec_flowcontrol_apiserver_k8s_io_v1beta1Impl(this)
     .also { spec = it }
@@ -1511,7 +1511,7 @@ fun FlowSchema.spec(init: Flowschemaspec.() -> Unit) {
 /** `status` is the current status of a FlowSchema. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status */
 @K8sDslMarker
-fun FlowSchema.status(init: Flowschemastatus.() -> Unit) {
+fun FlowSchema_flowcontrol_apiserver_k8s_io_v1beta1.status(init: Flowschemastatus.() -> Unit) {
   this as FlowSchema_flowcontrol_apiserver_k8s_io_v1beta1Impl
   Flowschemastatus_flowcontrol_apiserver_k8s_io_v1beta1Impl(this)
     .also { status = it }
@@ -1521,7 +1521,7 @@ fun FlowSchema.status(init: Flowschemastatus.() -> Unit) {
 /** `metadata` is the standard object's metadata. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata */
 @K8sDslMarker
-fun FlowSchema_flowcontrol_apiserver_k8s_io_v1beta2.metadata(init: ObjectMeta.() -> Unit) {
+fun FlowSchema.metadata(init: ObjectMeta.() -> Unit) {
   this as FlowSchema_flowcontrol_apiserver_k8s_io_v1beta2Impl
   ObjectMeta_meta_v1Impl(this)
     .also { metadata = it }
@@ -1615,7 +1615,7 @@ fun HorizontalPodAutoscalerCondition.lastTransitionTime(init: Time.() -> Unit) {
 /** Standard object metadata. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata */
 @K8sDslMarker
-fun HorizontalPodAutoscaler.metadata(init: ObjectMeta.() -> Unit) {
+fun HorizontalPodAutoscaler_autoscaling_v1.metadata(init: ObjectMeta.() -> Unit) {
   this as HorizontalPodAutoscaler_autoscaling_v1Impl
   ObjectMeta_meta_v1Impl(this)
     .also { metadata = it }
@@ -1625,7 +1625,7 @@ fun HorizontalPodAutoscaler.metadata(init: ObjectMeta.() -> Unit) {
 /** behaviour of autoscaler. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status. */
 @K8sDslMarker
-fun HorizontalPodAutoscaler.spec(init: Horizontalpodautoscalerspec.() -> Unit) {
+fun HorizontalPodAutoscaler_autoscaling_v1.spec(init: Horizontalpodautoscalerspec.() -> Unit) {
   this as HorizontalPodAutoscaler_autoscaling_v1Impl
   Horizontalpodautoscalerspec_autoscaling_v1Impl(this)
     .also { spec = it }
@@ -1634,7 +1634,7 @@ fun HorizontalPodAutoscaler.spec(init: Horizontalpodautoscalerspec.() -> Unit) {
 
 /** current information about the autoscaler. */
 @K8sDslMarker
-fun HorizontalPodAutoscaler.status(init: Horizontalpodautoscalerstatus.() -> Unit) {
+fun HorizontalPodAutoscaler_autoscaling_v1.status(init: Horizontalpodautoscalerstatus.() -> Unit) {
   this as HorizontalPodAutoscaler_autoscaling_v1Impl
   Horizontalpodautoscalerstatus_autoscaling_v1Impl(this)
     .also { status = it }
@@ -1644,7 +1644,7 @@ fun HorizontalPodAutoscaler.status(init: Horizontalpodautoscalerstatus.() -> Uni
 /** metadata is the standard object metadata. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata */
 @K8sDslMarker
-fun HorizontalPodAutoscaler_autoscaling_v2.metadata(init: ObjectMeta.() -> Unit) {
+fun HorizontalPodAutoscaler.metadata(init: ObjectMeta.() -> Unit) {
   this as HorizontalPodAutoscaler_autoscaling_v2Impl
   ObjectMeta_meta_v1Impl(this)
     .also { metadata = it }
@@ -2046,7 +2046,7 @@ fun LimitResponse_flowcontrol_apiserver_k8s_io_v1beta1.queuing(init: QueuingConf
 
 /** `queuing` holds the configuration parameters for queuing. This field may be non-empty only if `type` is `"Queue"`. */
 @K8sDslMarker
-fun LimitResponse_flowcontrol_apiserver_k8s_io_v1beta2.queuing(init: QueuingConfiguration_flowcontrol_apiserver_k8s_io_v1beta2.() -> Unit) {
+fun LimitResponse.queuing(init: QueuingConfiguration.() -> Unit) {
   this as LimitResponse_flowcontrol_apiserver_k8s_io_v1beta2Impl
   QueuingConfiguration_flowcontrol_apiserver_k8s_io_v1beta2Impl(this)
     .also { queuing = it }
@@ -2064,7 +2064,7 @@ fun LimitedPriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1beta1.limit
 
 /** `limitResponse` indicates what to do with requests that can not be executed right now */
 @K8sDslMarker
-fun LimitedPriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1beta2.limitResponse(init: LimitResponse_flowcontrol_apiserver_k8s_io_v1beta2.() -> Unit) {
+fun LimitedPriorityLevelConfiguration.limitResponse(init: LimitResponse.() -> Unit) {
   this as LimitedPriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1beta2Impl
   LimitResponse_flowcontrol_apiserver_k8s_io_v1beta2Impl(this)
     .also { limitResponse = it }
@@ -3195,7 +3195,7 @@ fun PolicyRulesWithSubjects_flowcontrol_apiserver_k8s_io_v1beta1.subjects(init: 
 /** `nonResourceRules` is a list of NonResourcePolicyRules that identify matching requests according to their verb and the
 target non-resource URL. */
 @K8sDslMarker
-fun PolicyRulesWithSubjects_flowcontrol_apiserver_k8s_io_v1beta2.nonResourceRules(init: NonResourcePolicyRule_flowcontrol_apiserver_k8s_io_v1beta2.() -> Unit) {
+fun PolicyRulesWithSubjects.nonResourceRules(init: NonResourcePolicyRule.() -> Unit) {
   this as PolicyRulesWithSubjects_flowcontrol_apiserver_k8s_io_v1beta2Impl
   NonResourcePolicyRule_flowcontrol_apiserver_k8s_io_v1beta2Impl(this)
     .also { nonResourceRules = nonResourceRules?.let { p -> p + it } ?: listOf(it) }
@@ -3205,7 +3205,7 @@ fun PolicyRulesWithSubjects_flowcontrol_apiserver_k8s_io_v1beta2.nonResourceRule
 /** `resourceRules` is a slice of ResourcePolicyRules that identify matching requests according to their verb and the target
 resource. At least one of `resourceRules` and `nonResourceRules` has to be non-empty. */
 @K8sDslMarker
-fun PolicyRulesWithSubjects_flowcontrol_apiserver_k8s_io_v1beta2.resourceRules(init: ResourcePolicyRule_flowcontrol_apiserver_k8s_io_v1beta2.() -> Unit) {
+fun PolicyRulesWithSubjects.resourceRules(init: ResourcePolicyRule.() -> Unit) {
   this as PolicyRulesWithSubjects_flowcontrol_apiserver_k8s_io_v1beta2Impl
   ResourcePolicyRule_flowcontrol_apiserver_k8s_io_v1beta2Impl(this)
     .also { resourceRules = resourceRules?.let { p -> p + it } ?: listOf(it) }
@@ -3216,7 +3216,7 @@ fun PolicyRulesWithSubjects_flowcontrol_apiserver_k8s_io_v1beta2.resourceRules(i
 member in this slice. A slice that includes both the system:authenticated and system:unauthenticated user groups matches
 every request. Required. */
 @K8sDslMarker
-fun PolicyRulesWithSubjects_flowcontrol_apiserver_k8s_io_v1beta2.subjects(init: Subject_flowcontrol_apiserver_k8s_io_v1beta2.() -> Unit) {
+fun PolicyRulesWithSubjects.subjects(init: Subject.() -> Unit) {
   this as PolicyRulesWithSubjects_flowcontrol_apiserver_k8s_io_v1beta2Impl
   Subject_flowcontrol_apiserver_k8s_io_v1beta2Impl(this)
     .also { subjects = subjects?.let { p -> p + it } ?: listOf(it) }
@@ -3253,7 +3253,7 @@ fun PriorityLevelConfigurationCondition_flowcontrol_apiserver_k8s_io_v1beta1.las
 
 /** `lastTransitionTime` is the last time the condition transitioned from one status to another. */
 @K8sDslMarker
-fun PriorityLevelConfigurationCondition_flowcontrol_apiserver_k8s_io_v1beta2.lastTransitionTime(init: Time.() -> Unit) {
+fun PriorityLevelConfigurationCondition.lastTransitionTime(init: Time.() -> Unit) {
   this as PriorityLevelConfigurationCondition_flowcontrol_apiserver_k8s_io_v1beta2Impl
   Time_meta_v1Impl(this)
     .also { lastTransitionTime = it }
@@ -3263,7 +3263,7 @@ fun PriorityLevelConfigurationCondition_flowcontrol_apiserver_k8s_io_v1beta2.las
 /** `metadata` is the standard object's metadata. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata */
 @K8sDslMarker
-fun PriorityLevelConfiguration.metadata(init: ObjectMeta.() -> Unit) {
+fun PriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1beta1.metadata(init: ObjectMeta.() -> Unit) {
   this as PriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1beta1Impl
   ObjectMeta_meta_v1Impl(this)
     .also { metadata = it }
@@ -3273,7 +3273,7 @@ fun PriorityLevelConfiguration.metadata(init: ObjectMeta.() -> Unit) {
 /** `spec` is the specification of the desired behavior of a "request-priority". More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status */
 @K8sDslMarker
-fun PriorityLevelConfiguration.spec(init: Prioritylevelconfigurationspec.() -> Unit) {
+fun PriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1beta1.spec(init: Prioritylevelconfigurationspec.() -> Unit) {
   this as PriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1beta1Impl
   Prioritylevelconfigurationspec_flowcontrol_apiserver_k8s_io_v1beta1Impl(this)
     .also { spec = it }
@@ -3283,7 +3283,7 @@ fun PriorityLevelConfiguration.spec(init: Prioritylevelconfigurationspec.() -> U
 /** `status` is the current status of a "request-priority". More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status */
 @K8sDslMarker
-fun PriorityLevelConfiguration.status(init: Prioritylevelconfigurationstatus.() -> Unit) {
+fun PriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1beta1.status(init: Prioritylevelconfigurationstatus.() -> Unit) {
   this as PriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1beta1Impl
   Prioritylevelconfigurationstatus_flowcontrol_apiserver_k8s_io_v1beta1Impl(this)
     .also { status = it }
@@ -3293,7 +3293,7 @@ fun PriorityLevelConfiguration.status(init: Prioritylevelconfigurationstatus.() 
 /** `metadata` is the standard object's metadata. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata */
 @K8sDslMarker
-fun PriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1beta2.metadata(init: ObjectMeta.() -> Unit) {
+fun PriorityLevelConfiguration.metadata(init: ObjectMeta.() -> Unit) {
   this as PriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1beta2Impl
   ObjectMeta_meta_v1Impl(this)
     .also { metadata = it }
@@ -4140,7 +4140,7 @@ fun Subject_flowcontrol_apiserver_k8s_io_v1beta1.user(init: UserSubject_flowcont
 
 /** `group` matches based on user group name. */
 @K8sDslMarker
-fun Subject_flowcontrol_apiserver_k8s_io_v1beta2.group(init: GroupSubject_flowcontrol_apiserver_k8s_io_v1beta2.() -> Unit) {
+fun Subject.group(init: GroupSubject.() -> Unit) {
   this as Subject_flowcontrol_apiserver_k8s_io_v1beta2Impl
   GroupSubject_flowcontrol_apiserver_k8s_io_v1beta2Impl(this)
     .also { group = it }
@@ -4149,7 +4149,7 @@ fun Subject_flowcontrol_apiserver_k8s_io_v1beta2.group(init: GroupSubject_flowco
 
 /** `serviceAccount` matches ServiceAccounts. */
 @K8sDslMarker
-fun Subject_flowcontrol_apiserver_k8s_io_v1beta2.serviceAccount(init: ServiceAccountSubject_flowcontrol_apiserver_k8s_io_v1beta2.() -> Unit) {
+fun Subject.serviceAccount(init: ServiceAccountSubject.() -> Unit) {
   this as Subject_flowcontrol_apiserver_k8s_io_v1beta2Impl
   ServiceAccountSubject_flowcontrol_apiserver_k8s_io_v1beta2Impl(this)
     .also { serviceAccount = it }
@@ -4158,7 +4158,7 @@ fun Subject_flowcontrol_apiserver_k8s_io_v1beta2.serviceAccount(init: ServiceAcc
 
 /** `user` matches based on username. */
 @K8sDslMarker
-fun Subject_flowcontrol_apiserver_k8s_io_v1beta2.user(init: UserSubject_flowcontrol_apiserver_k8s_io_v1beta2.() -> Unit) {
+fun Subject.user(init: UserSubject.() -> Unit) {
   this as Subject_flowcontrol_apiserver_k8s_io_v1beta2Impl
   UserSubject_flowcontrol_apiserver_k8s_io_v1beta2Impl(this)
     .also { user = it }

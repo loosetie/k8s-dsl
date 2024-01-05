@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("active", "completedIndexes", "completionTime", "conditions", "failed", "failedIndexes", "ready", "startTime", "succeeded", "terminating", "uncountedTerminatedPods")
 class Jobstatus_batch_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : Jobstatus_batch_v1, HasParent {
   override var active: Int? = null

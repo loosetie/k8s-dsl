@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("apiVersion", "fieldPath")
 class ObjectFieldSelector_core_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : ObjectFieldSelector_core_v1, HasParent {
   override var apiVersion: String? = null

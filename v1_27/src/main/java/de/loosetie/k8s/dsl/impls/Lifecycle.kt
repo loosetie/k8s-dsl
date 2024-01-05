@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("postStart", "preStop")
 class Lifecycle_core_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : Lifecycle_core_v1, HasParent {
   override var postStart: LifecycleHandler_core_v1? = null

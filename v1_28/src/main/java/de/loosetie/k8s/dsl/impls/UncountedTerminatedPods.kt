@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("failed", "succeeded")
 class UncountedTerminatedPods_batch_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : UncountedTerminatedPods_batch_v1, HasParent {
   override var failed: List<String>? = null

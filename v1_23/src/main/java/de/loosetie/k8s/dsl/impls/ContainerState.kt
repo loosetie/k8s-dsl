@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("running", "terminated", "waiting")
 class ContainerState_core_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : ContainerState_core_v1, HasParent {
   override var running: ContainerStateRunning_core_v1? = null

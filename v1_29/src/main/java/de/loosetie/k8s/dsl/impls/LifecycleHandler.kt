@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("exec", "httpGet", "sleep", "tcpSocket")
 class LifecycleHandler_core_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : LifecycleHandler_core_v1, HasParent {
   override var exec: ExecAction_core_v1? = null

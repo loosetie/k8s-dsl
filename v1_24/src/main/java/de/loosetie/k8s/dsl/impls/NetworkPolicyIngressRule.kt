@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("from", "ports")
 class NetworkPolicyIngressRule_networking_k8s_io_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : NetworkPolicyIngressRule_networking_k8s_io_v1, HasParent {
   override var from: List<NetworkPolicyPeer_networking_k8s_io_v1>? = null

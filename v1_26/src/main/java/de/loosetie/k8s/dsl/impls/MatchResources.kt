@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("excludeResourceRules", "matchPolicy", "namespaceSelector", "objectSelector", "resourceRules")
 class MatchResources_admissionregistration_k8s_io_v1alpha1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : MatchResources_admissionregistration_k8s_io_v1alpha1, HasParent {
   override var excludeResourceRules: List<NamedRuleWithOperations_admissionregistration_k8s_io_v1alpha1>? = null

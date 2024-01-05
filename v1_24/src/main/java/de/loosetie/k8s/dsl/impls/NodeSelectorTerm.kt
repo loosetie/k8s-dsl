@@ -9,7 +9,8 @@ import de.loosetie.k8s.dsl.manifests.*
 @JsonPropertyOrder("matchExpressions", "matchFields")
 class NodeSelectorTerm_core_v1Impl(
   @JsonIgnore
-  override val parent: K8sManifest? = null
+  override val parent: K8sManifest? = null,
+  
 )
 : NodeSelectorTerm_core_v1, HasParent {
   override var matchExpressions: List<NodeSelectorRequirement_core_v1>? = null
