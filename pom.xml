@@ -49,11 +49,6 @@
       </dependency>
       <dependency>
         <groupId>de.loosetie.k8s</groupId>
-        <artifactId>lt-k8s-dsl-shared</artifactId>
-        <version>${project.parent.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>de.loosetie.k8s</groupId>
         <artifactId>lt-k8s-dsl-util-k8s</artifactId>
         <version>${project.parent.version}</version>
       </dependency>

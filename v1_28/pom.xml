@@ -26,10 +26,6 @@
       <groupId>de.loosetie.k8s</groupId>
       <artifactId>lt-k8s-dsl-util-k8s</artifactId>
     </dependency>
-    <dependency>
-      <groupId>de.loosetie.k8s</groupId>
-      <artifactId>lt-k8s-dsl-shared</artifactId>
-    </dependency>
 
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
