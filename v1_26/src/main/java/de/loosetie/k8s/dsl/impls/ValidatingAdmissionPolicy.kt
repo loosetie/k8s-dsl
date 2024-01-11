@@ -7,7 +7,7 @@ import de.loosetie.k8s.dsl.HasParent
 import de.loosetie.k8s.dsl.manifests.*
 
 @JsonPropertyOrder("apiVersion", "kind", "metadata", "spec")
-class ValidatingAdmissionPolicy_admissionregistration_k8s_io_v1alpha1Impl(
+open class ValidatingAdmissionPolicy_admissionregistration_k8s_io_v1alpha1Impl(
   @JsonIgnore
   override val parent: K8sManifest? = null,
   

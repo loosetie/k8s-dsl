@@ -7,7 +7,7 @@ import de.loosetie.k8s.dsl.HasParent
 import de.loosetie.k8s.dsl.manifests.*
 
 @JsonPropertyOrder("host", "httpHeaders", "path", "port", "scheme")
-class HTTPGetAction_core_v1Impl(
+open class HTTPGetAction_core_v1Impl(
   @JsonIgnore
   override val parent: K8sManifest? = null,
   

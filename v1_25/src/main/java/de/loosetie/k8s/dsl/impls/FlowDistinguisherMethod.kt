@@ -7,7 +7,7 @@ import de.loosetie.k8s.dsl.HasParent
 import de.loosetie.k8s.dsl.manifests.*
 
 @JsonPropertyOrder("type")
-class FlowDistinguisherMethod_flowcontrol_apiserver_k8s_io_v1beta1Impl(
+open class FlowDistinguisherMethod_flowcontrol_apiserver_k8s_io_v1beta1Impl(
   @JsonIgnore
   override val parent: K8sManifest? = null,
   
@@ -17,7 +17,7 @@ class FlowDistinguisherMethod_flowcontrol_apiserver_k8s_io_v1beta1Impl(
 }
 
 @JsonPropertyOrder("type")
-class FlowDistinguisherMethod_flowcontrol_apiserver_k8s_io_v1beta2Impl(
+open class FlowDistinguisherMethod_flowcontrol_apiserver_k8s_io_v1beta2Impl(
   @JsonIgnore
   override val parent: K8sManifest? = null,
   

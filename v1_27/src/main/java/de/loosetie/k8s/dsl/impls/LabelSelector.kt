@@ -7,7 +7,7 @@ import de.loosetie.k8s.dsl.HasParent
 import de.loosetie.k8s.dsl.manifests.*
 
 @JsonPropertyOrder("matchExpressions", "matchLabels")
-class LabelSelector_meta_v1Impl(
+open class LabelSelector_meta_v1Impl(
   @JsonIgnore
   override val parent: K8sManifest? = null,
   

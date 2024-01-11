@@ -7,7 +7,7 @@ import de.loosetie.k8s.dsl.HasParent
 import de.loosetie.k8s.dsl.manifests.*
 
 @JsonPropertyOrder("apiVersion", "kind", "metadata", "spec", "status")
-class TokenRequest_authentication_k8s_io_v1Impl(
+open class TokenRequest_authentication_k8s_io_v1Impl(
   @JsonIgnore
   override val parent: K8sManifest? = null,
   
@@ -22,7 +22,7 @@ class TokenRequest_authentication_k8s_io_v1Impl(
 }
 
 @JsonPropertyOrder("audience", "expirationSeconds")
-class TokenRequest_storage_k8s_io_v1Impl(
+open class TokenRequest_storage_k8s_io_v1Impl(
   @JsonIgnore
   override val parent: K8sManifest? = null,
   

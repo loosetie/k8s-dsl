@@ -7,7 +7,7 @@ import de.loosetie.k8s.dsl.HasParent
 import de.loosetie.k8s.dsl.manifests.*
 
 @JsonPropertyOrder("kind", "name", "causes", "group", "retryAfterSeconds", "uid")
-class StatusDetails_meta_v1Impl(
+open class StatusDetails_meta_v1Impl(
   @JsonIgnore
   override val parent: K8sManifest? = null,
   

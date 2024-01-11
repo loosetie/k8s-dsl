@@ -7,7 +7,7 @@ import de.loosetie.k8s.dsl.HasParent
 import de.loosetie.k8s.dsl.manifests.*
 
 @JsonPropertyOrder("apiVersion", "kind", "metadata", "data", "revision")
-class ControllerRevision_apps_v1Impl(
+open class ControllerRevision_apps_v1Impl(
   @JsonIgnore
   override val parent: K8sManifest? = null,
   

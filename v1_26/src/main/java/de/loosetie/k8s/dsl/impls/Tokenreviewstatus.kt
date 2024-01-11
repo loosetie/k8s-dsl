@@ -7,7 +7,7 @@ import de.loosetie.k8s.dsl.HasParent
 import de.loosetie.k8s.dsl.manifests.*
 
 @JsonPropertyOrder("audiences", "authenticated", "error", "user")
-class Tokenreviewstatus_authentication_k8s_io_v1Impl(
+open class Tokenreviewstatus_authentication_k8s_io_v1Impl(
   @JsonIgnore
   override val parent: K8sManifest? = null,
   

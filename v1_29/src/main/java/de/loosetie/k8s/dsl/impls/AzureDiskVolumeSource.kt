@@ -7,7 +7,7 @@ import de.loosetie.k8s.dsl.HasParent
 import de.loosetie.k8s.dsl.manifests.*
 
 @JsonPropertyOrder("kind", "cachingMode", "diskName", "diskURI", "fsType", "readOnly")
-class AzureDiskVolumeSource_core_v1Impl(
+open class AzureDiskVolumeSource_core_v1Impl(
   @JsonIgnore
   override val parent: K8sManifest? = null,
   

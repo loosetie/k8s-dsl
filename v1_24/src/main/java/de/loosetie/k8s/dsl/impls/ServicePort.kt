@@ -7,7 +7,7 @@ import de.loosetie.k8s.dsl.HasParent
 import de.loosetie.k8s.dsl.manifests.*
 
 @JsonPropertyOrder("name", "appProtocol", "nodePort", "port", "protocol", "targetPort")
-class ServicePort_core_v1Impl(
+open class ServicePort_core_v1Impl(
   @JsonIgnore
   override val parent: K8sManifest? = null,
   

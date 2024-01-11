@@ -7,7 +7,7 @@ import de.loosetie.k8s.dsl.HasParent
 import de.loosetie.k8s.dsl.manifests.*
 
 @JsonPropertyOrder("allocation", "deallocationRequested", "driverName", "reservedFor")
-class Resourceclaimstatus_resource_k8s_io_v1alpha2Impl(
+open class Resourceclaimstatus_resource_k8s_io_v1alpha2Impl(
   @JsonIgnore
   override val parent: K8sManifest? = null,
   

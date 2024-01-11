@@ -7,7 +7,7 @@ import de.loosetie.k8s.dsl.HasParent
 import de.loosetie.k8s.dsl.manifests.*
 
 @JsonPropertyOrder("attacher", "nodeName", "source")
-class Volumeattachmentspec_storage_k8s_io_v1Impl(
+open class Volumeattachmentspec_storage_k8s_io_v1Impl(
   @JsonIgnore
   override val parent: K8sManifest? = null,
   

@@ -7,7 +7,7 @@ import de.loosetie.k8s.dsl.HasParent
 import de.loosetie.k8s.dsl.manifests.*
 
 @JsonPropertyOrder("lastTransitionTime", "message", "reason", "status", "type")
-class PriorityLevelConfigurationCondition_flowcontrol_apiserver_k8s_io_v1Impl(
+open class PriorityLevelConfigurationCondition_flowcontrol_apiserver_k8s_io_v1Impl(
   @JsonIgnore
   override val parent: K8sManifest? = null,
   

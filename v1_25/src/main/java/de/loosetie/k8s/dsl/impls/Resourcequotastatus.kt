@@ -7,7 +7,7 @@ import de.loosetie.k8s.dsl.HasParent
 import de.loosetie.k8s.dsl.manifests.*
 
 @JsonPropertyOrder("hard", "used")
-class Resourcequotastatus_core_v1Impl(
+open class Resourcequotastatus_core_v1Impl(
   @JsonIgnore
   override val parent: K8sManifest? = null,
   

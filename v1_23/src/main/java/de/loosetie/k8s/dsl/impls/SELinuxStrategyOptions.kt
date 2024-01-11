@@ -7,7 +7,7 @@ import de.loosetie.k8s.dsl.HasParent
 import de.loosetie.k8s.dsl.manifests.*
 
 @JsonPropertyOrder("rule", "seLinuxOptions")
-class SELinuxStrategyOptions_policy_v1beta1Impl(
+open class SELinuxStrategyOptions_policy_v1beta1Impl(
   @JsonIgnore
   override val parent: K8sManifest? = null,
   

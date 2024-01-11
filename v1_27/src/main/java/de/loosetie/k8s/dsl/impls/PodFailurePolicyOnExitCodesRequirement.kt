@@ -7,7 +7,7 @@ import de.loosetie.k8s.dsl.HasParent
 import de.loosetie.k8s.dsl.manifests.*
 
 @JsonPropertyOrder("containerName", "operator", "values")
-class PodFailurePolicyOnExitCodesRequirement_batch_v1Impl(
+open class PodFailurePolicyOnExitCodesRequirement_batch_v1Impl(
   @JsonIgnore
   override val parent: K8sManifest? = null,
   

@@ -7,7 +7,7 @@ import de.loosetie.k8s.dsl.HasParent
 import de.loosetie.k8s.dsl.manifests.*
 
 @JsonPropertyOrder("describedObject", "metric", "target")
-class ObjectMetricSource_autoscaling_v2Impl(
+open class ObjectMetricSource_autoscaling_v2Impl(
   @JsonIgnore
   override val parent: K8sManifest? = null,
   

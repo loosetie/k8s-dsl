@@ -7,7 +7,7 @@ import de.loosetie.k8s.dsl.HasParent
 import de.loosetie.k8s.dsl.manifests.*
 
 @JsonPropertyOrder("apiVersion", "kind", "metadata", "spec", "status")
-class HorizontalPodAutoscaler_autoscaling_v1Impl(
+open class HorizontalPodAutoscaler_autoscaling_v1Impl(
   @JsonIgnore
   override val parent: K8sManifest? = null,
   
@@ -22,7 +22,7 @@ class HorizontalPodAutoscaler_autoscaling_v1Impl(
 }
 
 @JsonPropertyOrder("apiVersion", "kind", "metadata", "spec", "status")
-class HorizontalPodAutoscaler_autoscaling_v2Impl(
+open class HorizontalPodAutoscaler_autoscaling_v2Impl(
   @JsonIgnore
   override val parent: K8sManifest? = null,
   

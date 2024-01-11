@@ -7,7 +7,7 @@ import de.loosetie.k8s.dsl.HasParent
 import de.loosetie.k8s.dsl.manifests.*
 
 @JsonPropertyOrder("minReadySeconds", "persistentVolumeClaimRetentionPolicy", "podManagementPolicy", "replicas", "revisionHistoryLimit", "selector", "serviceName", "template", "updateStrategy", "volumeClaimTemplates")
-class Statefulsetspec_apps_v1Impl(
+open class Statefulsetspec_apps_v1Impl(
   @JsonIgnore
   override val parent: K8sManifest? = null,
   

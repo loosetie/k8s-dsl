@@ -7,7 +7,7 @@ import de.loosetie.k8s.dsl.HasParent
 import de.loosetie.k8s.dsl.manifests.*
 
 @JsonPropertyOrder("controllerExpandSecretRef", "controllerPublishSecretRef", "driver", "fsType", "nodeExpandSecretRef", "nodePublishSecretRef", "nodeStageSecretRef", "readOnly", "volumeAttributes", "volumeHandle")
-class CSIPersistentVolumeSource_core_v1Impl(
+open class CSIPersistentVolumeSource_core_v1Impl(
   @JsonIgnore
   override val parent: K8sManifest? = null,
   

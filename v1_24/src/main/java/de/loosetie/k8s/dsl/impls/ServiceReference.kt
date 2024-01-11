@@ -7,7 +7,7 @@ import de.loosetie.k8s.dsl.HasParent
 import de.loosetie.k8s.dsl.manifests.*
 
 @JsonPropertyOrder("namespace", "name", "path", "port")
-class ServiceReference_admissionregistration_k8s_io_v1Impl(
+open class ServiceReference_admissionregistration_k8s_io_v1Impl(
   @JsonIgnore
   override val parent: K8sManifest? = null,
   
@@ -20,7 +20,7 @@ class ServiceReference_admissionregistration_k8s_io_v1Impl(
 }
 
 @JsonPropertyOrder("namespace", "name", "path", "port")
-class ServiceReference_apiextensions_k8s_io_v1Impl(
+open class ServiceReference_apiextensions_k8s_io_v1Impl(
   @JsonIgnore
   override val parent: K8sManifest? = null,
   
@@ -33,7 +33,7 @@ class ServiceReference_apiextensions_k8s_io_v1Impl(
 }
 
 @JsonPropertyOrder("namespace", "name", "port")
-class ServiceReference_apiregistration_k8s_io_v1Impl(
+open class ServiceReference_apiregistration_k8s_io_v1Impl(
   @JsonIgnore
   override val parent: K8sManifest? = null,
   

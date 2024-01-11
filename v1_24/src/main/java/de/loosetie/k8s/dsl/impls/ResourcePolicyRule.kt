@@ -7,7 +7,7 @@ import de.loosetie.k8s.dsl.HasParent
 import de.loosetie.k8s.dsl.manifests.*
 
 @JsonPropertyOrder("apiGroups", "clusterScope", "namespaces", "resources", "verbs")
-class ResourcePolicyRule_flowcontrol_apiserver_k8s_io_v1beta2Impl(
+open class ResourcePolicyRule_flowcontrol_apiserver_k8s_io_v1beta2Impl(
   @JsonIgnore
   override val parent: K8sManifest? = null,
   

@@ -7,7 +7,7 @@ import de.loosetie.k8s.dsl.HasParent
 import de.loosetie.k8s.dsl.manifests.*
 
 @JsonPropertyOrder("resource", "service")
-class IngressBackend_networking_k8s_io_v1Impl(
+open class IngressBackend_networking_k8s_io_v1Impl(
   @JsonIgnore
   override val parent: K8sManifest? = null,
   

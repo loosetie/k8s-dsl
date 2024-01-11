@@ -7,7 +7,7 @@ import de.loosetie.k8s.dsl.HasParent
 import de.loosetie.k8s.dsl.manifests.*
 
 @JsonPropertyOrder("matchExpressions")
-class ScopeSelector_core_v1Impl(
+open class ScopeSelector_core_v1Impl(
   @JsonIgnore
   override val parent: K8sManifest? = null,
   

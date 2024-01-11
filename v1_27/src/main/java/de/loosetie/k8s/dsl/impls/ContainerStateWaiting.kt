@@ -7,7 +7,7 @@ import de.loosetie.k8s.dsl.HasParent
 import de.loosetie.k8s.dsl.manifests.*
 
 @JsonPropertyOrder("message", "reason")
-class ContainerStateWaiting_core_v1Impl(
+open class ContainerStateWaiting_core_v1Impl(
   @JsonIgnore
   override val parent: K8sManifest? = null,
   

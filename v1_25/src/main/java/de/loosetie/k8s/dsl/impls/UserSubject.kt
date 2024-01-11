@@ -7,7 +7,7 @@ import de.loosetie.k8s.dsl.HasParent
 import de.loosetie.k8s.dsl.manifests.*
 
 @JsonPropertyOrder("name")
-class UserSubject_flowcontrol_apiserver_k8s_io_v1beta1Impl(
+open class UserSubject_flowcontrol_apiserver_k8s_io_v1beta1Impl(
   @JsonIgnore
   override val parent: K8sManifest? = null,
   
@@ -17,7 +17,7 @@ class UserSubject_flowcontrol_apiserver_k8s_io_v1beta1Impl(
 }
 
 @JsonPropertyOrder("name")
-class UserSubject_flowcontrol_apiserver_k8s_io_v1beta2Impl(
+open class UserSubject_flowcontrol_apiserver_k8s_io_v1beta2Impl(
   @JsonIgnore
   override val parent: K8sManifest? = null,
   

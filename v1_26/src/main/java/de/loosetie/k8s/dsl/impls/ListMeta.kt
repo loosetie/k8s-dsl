@@ -7,7 +7,7 @@ import de.loosetie.k8s.dsl.HasParent
 import de.loosetie.k8s.dsl.manifests.*
 
 @JsonPropertyOrder("continue", "remainingItemCount", "resourceVersion", "selfLink")
-class ListMeta_meta_v1Impl(
+open class ListMeta_meta_v1Impl(
   @JsonIgnore
   override val parent: K8sManifest? = null,
   

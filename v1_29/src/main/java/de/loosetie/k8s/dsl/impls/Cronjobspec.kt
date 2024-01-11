@@ -7,7 +7,7 @@ import de.loosetie.k8s.dsl.HasParent
 import de.loosetie.k8s.dsl.manifests.*
 
 @JsonPropertyOrder("concurrencyPolicy", "failedJobsHistoryLimit", "jobTemplate", "schedule", "startingDeadlineSeconds", "successfulJobsHistoryLimit", "suspend", "timeZone")
-class Cronjobspec_batch_v1Impl(
+open class Cronjobspec_batch_v1Impl(
   @JsonIgnore
   override val parent: K8sManifest? = null,
   

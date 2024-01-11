@@ -7,7 +7,7 @@ import de.loosetie.k8s.dsl.HasParent
 import de.loosetie.k8s.dsl.manifests.*
 
 @JsonPropertyOrder("name", "admissionReviewVersions", "clientConfig", "failurePolicy", "matchConditions", "matchPolicy", "namespaceSelector", "objectSelector", "reinvocationPolicy", "rules", "sideEffects", "timeoutSeconds")
-class MutatingWebhook_admissionregistration_k8s_io_v1Impl(
+open class MutatingWebhook_admissionregistration_k8s_io_v1Impl(
   @JsonIgnore
   override val parent: K8sManifest? = null,
   

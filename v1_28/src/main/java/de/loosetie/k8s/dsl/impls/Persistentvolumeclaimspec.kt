@@ -7,7 +7,7 @@ import de.loosetie.k8s.dsl.HasParent
 import de.loosetie.k8s.dsl.manifests.*
 
 @JsonPropertyOrder("accessModes", "dataSource", "dataSourceRef", "resources", "selector", "storageClassName", "volumeMode", "volumeName")
-class Persistentvolumeclaimspec_core_v1Impl(
+open class Persistentvolumeclaimspec_core_v1Impl(
   @JsonIgnore
   override val parent: K8sManifest? = null,
   

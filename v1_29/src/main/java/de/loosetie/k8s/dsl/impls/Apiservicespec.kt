@@ -7,7 +7,7 @@ import de.loosetie.k8s.dsl.HasParent
 import de.loosetie.k8s.dsl.manifests.*
 
 @JsonPropertyOrder("caBundle", "group", "groupPriorityMinimum", "insecureSkipTLSVerify", "service", "version", "versionPriority")
-class Apiservicespec_apiregistration_k8s_io_v1Impl(
+open class Apiservicespec_apiregistration_k8s_io_v1Impl(
   @JsonIgnore
   override val parent: K8sManifest? = null,
   

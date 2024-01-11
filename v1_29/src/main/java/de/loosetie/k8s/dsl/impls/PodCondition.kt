@@ -7,7 +7,7 @@ import de.loosetie.k8s.dsl.HasParent
 import de.loosetie.k8s.dsl.manifests.*
 
 @JsonPropertyOrder("lastProbeTime", "lastTransitionTime", "message", "reason", "status", "type")
-class PodCondition_core_v1Impl(
+open class PodCondition_core_v1Impl(
   @JsonIgnore
   override val parent: K8sManifest? = null,
   

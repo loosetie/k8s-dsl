@@ -7,7 +7,7 @@ import de.loosetie.k8s.dsl.HasParent
 import de.loosetie.k8s.dsl.manifests.*
 
 @JsonPropertyOrder("name", "appProtocol", "port", "protocol")
-class EndpointPort_core_v1Impl(
+open class EndpointPort_core_v1Impl(
   @JsonIgnore
   override val parent: K8sManifest? = null,
   
@@ -20,7 +20,7 @@ class EndpointPort_core_v1Impl(
 }
 
 @JsonPropertyOrder("name", "appProtocol", "port", "protocol")
-class EndpointPort_discovery_k8s_io_v1Impl(
+open class EndpointPort_discovery_k8s_io_v1Impl(
   @JsonIgnore
   override val parent: K8sManifest? = null,
   

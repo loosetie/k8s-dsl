@@ -7,7 +7,7 @@ import de.loosetie.k8s.dsl.HasParent
 import de.loosetie.k8s.dsl.manifests.*
 
 @JsonPropertyOrder("policies", "selectPolicy", "stabilizationWindowSeconds")
-class HPAScalingRules_autoscaling_v2Impl(
+open class HPAScalingRules_autoscaling_v2Impl(
   @JsonIgnore
   override val parent: K8sManifest? = null,
   

@@ -7,7 +7,7 @@ import de.loosetie.k8s.dsl.HasParent
 import de.loosetie.k8s.dsl.manifests.*
 
 @JsonPropertyOrder("name")
-class ResourceClaim_core_v1Impl(
+open class ResourceClaim_core_v1Impl(
   @JsonIgnore
   override val parent: K8sManifest? = null,
   
@@ -17,7 +17,7 @@ class ResourceClaim_core_v1Impl(
 }
 
 @JsonPropertyOrder("apiVersion", "kind", "metadata", "spec", "status")
-class ResourceClaim_resource_k8s_io_v1alpha2Impl(
+open class ResourceClaim_resource_k8s_io_v1alpha2Impl(
   @JsonIgnore
   override val parent: K8sManifest? = null,
   

@@ -7,7 +7,7 @@ import de.loosetie.k8s.dsl.HasParent
 import de.loosetie.k8s.dsl.manifests.*
 
 @JsonPropertyOrder("active", "completedIndexes", "completionTime", "conditions", "failed", "ready", "startTime", "succeeded", "uncountedTerminatedPods")
-class Jobstatus_batch_v1Impl(
+open class Jobstatus_batch_v1Impl(
   @JsonIgnore
   override val parent: K8sManifest? = null,
   

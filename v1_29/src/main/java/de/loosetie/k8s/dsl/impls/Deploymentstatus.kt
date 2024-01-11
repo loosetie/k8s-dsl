@@ -7,7 +7,7 @@ import de.loosetie.k8s.dsl.HasParent
 import de.loosetie.k8s.dsl.manifests.*
 
 @JsonPropertyOrder("availableReplicas", "collisionCount", "conditions", "observedGeneration", "readyReplicas", "replicas", "unavailableReplicas", "updatedReplicas")
-class Deploymentstatus_apps_v1Impl(
+open class Deploymentstatus_apps_v1Impl(
   @JsonIgnore
   override val parent: K8sManifest? = null,
   

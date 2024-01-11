@@ -7,7 +7,7 @@ import de.loosetie.k8s.dsl.HasParent
 import de.loosetie.k8s.dsl.manifests.*
 
 @JsonPropertyOrder("rollingUpdate", "type")
-class StatefulSetUpdateStrategy_apps_v1Impl(
+open class StatefulSetUpdateStrategy_apps_v1Impl(
   @JsonIgnore
   override val parent: K8sManifest? = null,
   

@@ -7,7 +7,7 @@ import de.loosetie.k8s.dsl.HasParent
 import de.loosetie.k8s.dsl.manifests.*
 
 @JsonPropertyOrder("apiVersion", "kind", "metadata", "template")
-class PodTemplate_core_v1Impl(
+open class PodTemplate_core_v1Impl(
   @JsonIgnore
   override val parent: K8sManifest? = null,
   

@@ -7,7 +7,7 @@ import de.loosetie.k8s.dsl.HasParent
 import de.loosetie.k8s.dsl.manifests.*
 
 @JsonPropertyOrder("apiVersion", "kind", "metadata", "capacity", "maximumVolumeSize", "nodeTopology", "storageClassName")
-class CSIStorageCapacity_storage_k8s_io_v1beta1Impl(
+open class CSIStorageCapacity_storage_k8s_io_v1beta1Impl(
   @JsonIgnore
   override val parent: K8sManifest? = null,
   

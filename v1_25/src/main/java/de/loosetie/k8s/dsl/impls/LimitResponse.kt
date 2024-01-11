@@ -7,7 +7,7 @@ import de.loosetie.k8s.dsl.HasParent
 import de.loosetie.k8s.dsl.manifests.*
 
 @JsonPropertyOrder("queuing", "type")
-class LimitResponse_flowcontrol_apiserver_k8s_io_v1beta1Impl(
+open class LimitResponse_flowcontrol_apiserver_k8s_io_v1beta1Impl(
   @JsonIgnore
   override val parent: K8sManifest? = null,
   
@@ -18,7 +18,7 @@ class LimitResponse_flowcontrol_apiserver_k8s_io_v1beta1Impl(
 }
 
 @JsonPropertyOrder("queuing", "type")
-class LimitResponse_flowcontrol_apiserver_k8s_io_v1beta2Impl(
+open class LimitResponse_flowcontrol_apiserver_k8s_io_v1beta2Impl(
   @JsonIgnore
   override val parent: K8sManifest? = null,
   

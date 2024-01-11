@@ -7,7 +7,7 @@ import de.loosetie.k8s.dsl.HasParent
 import de.loosetie.k8s.dsl.manifests.*
 
 @JsonPropertyOrder("borrowingLimitPercent", "lendablePercent", "limitResponse", "nominalConcurrencyShares")
-class LimitedPriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1Impl(
+open class LimitedPriorityLevelConfiguration_flowcontrol_apiserver_k8s_io_v1Impl(
   @JsonIgnore
   override val parent: K8sManifest? = null,
   

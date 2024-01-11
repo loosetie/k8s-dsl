@@ -7,7 +7,7 @@ import de.loosetie.k8s.dsl.HasParent
 import de.loosetie.k8s.dsl.manifests.*
 
 @JsonPropertyOrder("apiVersion", "kind", "metadata", "roleRef", "subjects")
-class ClusterRoleBinding_rbac_authorization_k8s_io_v1Impl(
+open class ClusterRoleBinding_rbac_authorization_k8s_io_v1Impl(
   @JsonIgnore
   override val parent: K8sManifest? = null,
   

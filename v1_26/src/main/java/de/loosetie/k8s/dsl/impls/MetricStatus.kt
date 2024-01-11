@@ -7,7 +7,7 @@ import de.loosetie.k8s.dsl.HasParent
 import de.loosetie.k8s.dsl.manifests.*
 
 @JsonPropertyOrder("containerResource", "external", "object", "pods", "resource", "type")
-class MetricStatus_autoscaling_v2Impl(
+open class MetricStatus_autoscaling_v2Impl(
   @JsonIgnore
   override val parent: K8sManifest? = null,
   
