@@ -26,7 +26,7 @@ Now in your code you're able to create Kubernetes manifests by using the `k8sApi
         // your IDE will tell you, what's possible here
     }
     // the following lines will serialize the manifest definitions to yaml
-    maifests.forEach {
+    manifests.forEach {
       val jsonString = yamlPrinter
         .writeValueAsString(it)
       println(jsonString)
